@@ -31,12 +31,16 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
   const displayDesc = tbcDisplayText(card.description)
 
   return (
-    <div className="bg-container text-container-foreground flex w-full flex-col rounded-xs shadow-sm">
+    <div className="bg-container text-container-foreground flex h-[340px] w-full flex-col shadow-sm">
       <div className="px-6 pt-6">
         <h2 className="text-2xl leading-tight font-bold">{card.title}</h2>
       </div>
-      <div className="text-md px-6 py-4 opacity-80">
-        <p className={`whitespace-pre-line ${tbc ? '' : 'line-clamp-6'}`}>{displayDesc}</p>
+      <div className="text-md relative flex-1 overflow-hidden px-6 py-4 opacity-80">
+        <p className={`whitespace-pre-line ${tbc ? 'line-clamp-5' : 'line-clamp-6'}`}>{displayDesc}</p>
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-container via-container/80 to-transparent"
+          aria-hidden="true"
+        />
       </div>
 
       {(tbc || (card.sections && card.sections.length > 0)) && (
@@ -218,7 +222,7 @@ export default function CallsPage() {
 
   return (
     <section className="mx-auto mb-8 max-w-7xl px-4">
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden shadow-sm">
         <img src={`${basePath}/calls.png`} alt="Calls Image" className="w-full object-cover" />
         <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
@@ -228,7 +232,7 @@ export default function CallsPage() {
         </div>
       </div>
 
-      <div className="mb-8" />
+      <div className="py-6" />
       {active ? (
         <FocusMainCard card={active} onBack={() => setActiveId(null)} />
       ) : (
