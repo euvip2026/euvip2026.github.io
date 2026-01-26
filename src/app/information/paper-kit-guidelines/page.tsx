@@ -2,18 +2,22 @@ import Information from '@/components/Images/Information'
 
 export default function PaperKitGuidelines() {
   return (
-    <div className="mx-auto w-full max-w-7xl px-6 md:px-8">
-      <Information className="mb-6" />
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">
-            Paper Kit & Guidelines
-          </h2>
-          <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+    <>
+      <section className="mx-auto max-w-7xl px-4">
+        <div className="relative overflow-hidden shadow-sm">
+          <Information className="w-full object-cover" />
+          <div className="absolute inset-0 bg-black/25" aria-hidden="true" />
+
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              Paper Kit &amp; Guidelines
+            </h2>
+            <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
+          </div>
         </div>
-      </div>
-      <div>
-        {/* <div className="bg-background mx-auto mt-4 mb-8 max-w-2xl rounded-3xl shadow-md"> */}
+      </section>
+
+      <div className="mx-auto w-full max-w-7xl px-4 py-6">
         <section className="bg-background text-container-foreground mt-4 mb-8">
           <div className="space-y-4 text-lg leading-relaxed">
             <p>
@@ -83,6 +87,6 @@ export default function PaperKitGuidelines() {
           </div>
         </section>
       </div>
-    </div>
+    </>
   )
 }
