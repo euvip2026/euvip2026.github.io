@@ -236,7 +236,7 @@ export default function CallsPage() {
       {active ? (
         <FocusMainCard card={active} onBack={() => setActiveId(null)} />
       ) : (
-        <div className="grid grid-cols-1 gap-6 px-4 md:grid-cols-2 md:px-0 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-6 md:px-0 lg:grid-cols-3">
           {cards.map((c) => (
             <CompactMainCard key={c.id} card={c} onOpen={() => setActiveId(c.id)} />
           ))}
