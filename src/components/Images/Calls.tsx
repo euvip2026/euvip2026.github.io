@@ -1,3 +1,4 @@
 export default function Calls({ className }: { className?: string }) {
-  return <img className={className} src="/calls.png" alt="Calls Image" />
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+  return <img className={className} src={`${basePath}/calls.png`} alt="Calls Image" />
 }
