@@ -18,11 +18,13 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
-        <div className="relative w-full text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.55)]">
-          <h1 className="ml-24 text-6xl leading-[1.3] font-extrabold">
+        <div className="relative w-full text-center text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.55)] sm:text-left">
+          <h1 className="ml-0 text-4xl leading-[1.15] font-extrabold sm:ml-10 sm:text-5xl sm:leading-[1.2] lg:ml-24 lg:text-6xl lg:leading-[1.3]">
             14th European Conference on <br /> Visual Information Processing <br /> EUVIP 2026 <br />
           </h1>
-          <p className="mt-16 ml-24 text-2xl font-bold">28th September-1st October 2026, Luxembourg</p>
+          <p className="mt-8 ml-0 text-lg font-bold sm:mt-10 sm:ml-10 sm:text-xl lg:mt-16 lg:ml-24 lg:text-2xl">
+            28th September-1st October 2026, Luxembourg
+          </p>
         </div>
       </section>
 

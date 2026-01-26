@@ -7,14 +7,7 @@ import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
 
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/Dropdown'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/Dropdown'
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
@@ -81,7 +74,9 @@ export function Header() {
       return `${base} border-transparent bg-black/40 text-white`
     }
 
-    return `${base} border-muted bg-background/85 text-container-foreground backdrop-blur-md`
+    // On some mobile browsers, backdrop-filter on the header can interfere with fixed-position children.
+    // Keep blur for desktop only.
+    return `${base} border-muted bg-background/85 text-container-foreground lg:backdrop-blur-md`
   }, [isHome, isScrolled])
 
   const navLinkClassName = (isActive: boolean) =>
@@ -104,7 +99,7 @@ export function Header() {
 
   return (
     <header className={headerClassName}>
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 md:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6">
         <Link href="/">
           <Image
             src={`${basePath}/logo.png`}
@@ -114,7 +109,7 @@ export function Header() {
             className={isHome && !isScrolled ? 'drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]' : undefined}
           />
         </Link>
-        <nav className="hidden h-[81px] items-center gap-8 text-sm font-medium md:flex">
+        <nav className="hidden h-[81px] items-center gap-8 text-sm font-medium lg:flex">
           <Link href="/" className={navLinkClassName(pathname === '/')}>
             HOME
           </Link>
@@ -173,7 +168,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-current/15 bg-black/0 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xs border border-current/15 bg-black/0 lg:hidden"
           aria-label="Open menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(true)}
@@ -183,14 +178,14 @@ export function Header() {
       </div>
 
       {mobileOpen ? (
-        <div className="bg-background text-container-foreground fixed inset-0 z-1000">
+        <div className="text-container-foreground fixed inset-0 z-9999 bg-white">
           <div className="flex min-h-[81px] items-center justify-between px-6">
             <Link href="/" onClick={() => setMobileOpen(false)}>
               <Image src={`${basePath}/logo.png`} alt="Logo" width={100} height={100} />
             </Link>
             <button
               type="button"
-              className="border-muted inline-flex h-10 w-10 items-center justify-center rounded-md border"
+              className="border-muted inline-flex h-10 w-10 items-center justify-center rounded-xs border"
               aria-label="Close menu"
               onClick={() => setMobileOpen(false)}
             >
@@ -199,7 +194,7 @@ export function Header() {
           </div>
 
           <nav className="px-6 pt-8">
-            <ul className="flex flex-col gap-6 text-2xl font-extrabold">
+            <ul className="flex flex-col gap-6 text-xl font-extrabold sm:text-2xl">
               <li>
                 <Link
                   href="/"
@@ -243,7 +238,7 @@ export function Header() {
                   />
                 </button>
                 {mobileInformationOpen ? (
-                  <ul className="mt-4 flex flex-col gap-3 pl-4 text-base font-semibold">
+                  <ul className="mt-4 flex flex-col gap-3 pl-4 text-sm font-semibold sm:text-base">
                     {INFORMATION_ITEMS.map((item) => (
                       <li key={item.href}>
                         <Link

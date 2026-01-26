@@ -1,0 +1,202 @@
+{
+  "days": [
+    {
+      "date": "2026-09-28",
+      "label": "Day 1",
+      "title": "Tutorials & Welcome",
+      "sessions": [
+        {
+          "time": "09:00 - 10:30",
+          "title": "Tutorial I",
+          "type": "tutorial"
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "11:00 - 12:30",
+          "title": "Tutorial I (continued)",
+          "type": "tutorial"
+        },
+        {
+          "time": "12:30 - 13:30",
+          "title": "Lunch",
+          "type": "break"
+        },
+        {
+          "time": "13:30 - 15:00",
+          "title": "Tutorial II",
+          "type": "tutorial"
+        },
+        {
+          "time": "15:00 - 15:30",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "15:30 - 17:00",
+          "title": "Tutorial II (continued)",
+          "type": "tutorial"
+        },
+        {
+          "time": "17:30 - 19:00",
+          "title": "Guided Tour & Welcome Dinner",
+          "type": "social"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "label": "Day 2",
+      "title": "Conference & Sessions",
+      "sessions": [
+        {
+          "time": "09:00 - 09:30",
+          "title": "Opening of EUVIP",
+          "type": "ceremony"
+        },
+        {
+          "time": "09:30 - 10:30",
+          "title": "Keynote Speaker I",
+          "type": "keynote"
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "11:00 - 12:40",
+          "title": "Oral Session I",
+          "description": "4 papers: 20 min + 5 min Q&A",
+          "type": "session"
+        },
+        {
+          "time": "12:40 - 14:00",
+          "title": "Lunch",
+          "type": "break"
+        },
+        {
+          "time": "14:00 - 15:30",
+          "title": "Oral Session II",
+          "description": "4 papers: 20 min + 5 min Q&A",
+          "type": "session"
+        },
+        {
+          "time": "15:30 - 16:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "title": "Poster Session I",
+          "type": "poster"
+        },
+        {
+          "time": "19:00",
+          "title": "Dinner for the Organizing Committee",
+          "type": "social"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "label": "Day 3",
+      "title": "Conference & Sessions",
+      "sessions": [
+        {
+          "time": "09:30 - 10:30",
+          "title": "Keynote Speaker II",
+          "type": "keynote"
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "11:00 - 12:40",
+          "title": "Oral Session III",
+          "description": "4 papers: 20 min + 5 min Q&A",
+          "type": "session"
+        },
+        {
+          "time": "12:40 - 14:00",
+          "title": "Lunch",
+          "type": "break"
+        },
+        {
+          "time": "14:00 - 15:30",
+          "title": "Oral Session IV",
+          "description": "4 papers: 20 min + 5 min Q&A",
+          "type": "session"
+        },
+        {
+          "time": "15:30 - 16:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "16:00 - 17:30",
+          "title": "Poster Session II",
+          "type": "poster"
+        },
+        {
+          "time": "19:00",
+          "title": "Gala Dinner",
+          "type": "social"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "label": "Day 4",
+      "title": "Industry & Closing",
+      "sessions": [
+        {
+          "time": "09:30 - 10:30",
+          "title": "Keynote Speaker III",
+          "type": "keynote"
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "11:00 - 12:40",
+          "title": "Oral Session V",
+          "description": "4 papers: 20 min + 5 min Q&A",
+          "type": "session"
+        },
+        {
+          "time": "12:40 - 14:00",
+          "title": "Lunch",
+          "type": "break"
+        },
+        {
+          "time": "14:00 - 15:30",
+          "title": "Industrial Exhibition",
+          "type": "session"
+        },
+        {
+          "time": "15:30 - 16:00",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "16:00 - 17:00",
+          "title": "Panel Discussion",
+          "type": "session"
+        },
+        {
+          "time": "17:00 - 17:30",
+          "title": "Closing Ceremony",
+          "type": "ceremony"
+        }
+      ]
+    }
+  ]
+}
