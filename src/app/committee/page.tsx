@@ -4,7 +4,7 @@ import { committeeMembers } from '@/data/committeeMembers'
 export default function Committee() {
   return (
     <main className="bg-background text-container-foreground">
-      <div className="mx-auto w-full pt-12 md:pt-16">
+      <div className="mx-auto w-full pt-6 md:pt-10">
         <header className="mx-auto mb-10 max-w-7xl px-8">
           <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">Organizing Committee</h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed opacity-80 md:text-lg">
@@ -12,7 +12,7 @@ export default function Committee() {
           </p>
         </header>
 
-        <div className="pt-4">
+        <div className="">
           {Object.entries(committeeMembers).map(([sectionName, members], sectionIndex) => (
             <section
               key={sectionName}

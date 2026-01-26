@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
+import Calls from '@/components/Images/Calls'
 
 type Section = {
   id: string
@@ -30,11 +31,11 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
   const displayDesc = tbcDisplayText(card.description)
 
   return (
-    <div className="border-information bg-container text-container-foreground flex w-full flex-col rounded-3xl border shadow-sm">
+    <div className="bg-container text-container-foreground flex w-full flex-col rounded-2xl shadow-sm">
       <div className="px-6 pt-6">
-        <h2 className="text-xl leading-tight font-bold">{card.title}</h2>
+        <h2 className="text-2xl leading-tight font-bold">{card.title}</h2>
       </div>
-      <div className="px-6 py-4 text-sm opacity-80">
+      <div className="text-md px-6 py-4 opacity-80">
         <p className={`whitespace-pre-line ${tbc ? '' : 'line-clamp-6'}`}>{displayDesc}</p>
       </div>
 
@@ -42,7 +43,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
         <button
           type="button"
           onClick={onOpen}
-          className="border-information hover:bg-container/80 mt-auto flex w-full items-center justify-center gap-2 rounded-b-3xl border-t px-6 py-4 text-sm font-semibold transition"
+          className="border-information hover:bg-container/80 text-md mt-auto flex w-full items-center justify-center gap-2 rounded-b-2xl border-t px-6 py-4 font-semibold transition"
         >
           More details
           <ChevronDown className="h-4 w-4" />
@@ -55,17 +56,17 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
 function SectionCard({ section }: { section: Section }) {
   return (
     <div className="border-information bg-container text-container-foreground rounded-3xl border p-6 shadow-sm">
-      <h3 className="text-lg leading-tight font-bold">{section.title}</h3>
+      <h3 className="text-xl leading-tight font-bold">{section.title}</h3>
 
       {section.bullets?.length ? (
-        <ul className="mt-4 list-disc space-y-2 pl-5 text-sm opacity-90">
+        <ul className="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90">
           {section.bullets.map((b) => (
             <li key={b}>{b}</li>
           ))}
         </ul>
       ) : null}
 
-      {section.content ? <div className="mt-4 text-sm opacity-90">{section.content}</div> : null}
+      {section.content ? <div className="mt-4 text-lg opacity-90">{section.content}</div> : null}
     </div>
   )
 }
@@ -91,11 +92,11 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
 
           {tbc ? (
             <>
-              <p className="mt-3 text-sm opacity-80">{displayDesc}</p>
-              <p className="mt-2 text-sm opacity-80">More details will be announced shortly.</p>
+              <p className="text-md mt-3 opacity-80">{displayDesc}</p>
+              <p className="mt-2 text-lg opacity-80">More details will be announced shortly.</p>
             </>
           ) : (
-            <p className="mt-3 text-sm whitespace-pre-line opacity-80">{displayDesc}</p>
+            <p className="mt-3 text-lg whitespace-pre-line opacity-80">{displayDesc}</p>
           )}
         </div>
       </div>
@@ -109,7 +110,6 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
           </div>
         </div>
       ) : (
-        // Keep spacing nice for TBC focus
         <div className="px-6 pt-2 pb-6" />
       )}
     </div>
@@ -215,9 +215,14 @@ export default function CallsPage() {
   const active = activeId ? cards.find((c) => c.id === activeId) : null
 
   return (
-    <section className="mx-auto max-w-7xl px-4 py-10">
-      <h1 className="text-container-foreground mb-8 text-3xl font-bold">Calls</h1>
-
+    <section className="mx-auto mb-8 max-w-7xl px-4">
+      <Calls className="mb-6" />
+      <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">Calls</h2>
+          <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+        </div>
+      </div>
       {active ? (
         <FocusMainCard card={active} onBack={() => setActiveId(null)} />
       ) : (

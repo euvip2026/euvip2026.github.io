@@ -21,6 +21,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 const NAV_ITEMS = [
   { href: '/', label: 'HOME' },
   { href: '/committee', label: 'COMMITTEE' },
+  { href: '/calls', label: 'CALLS' },
   { href: '/program', label: 'PROGRAM' },
   { href: '/contact', label: 'CONTACT' },
   { href: '/sponsors', label: 'SPONSORS' },
@@ -120,6 +121,9 @@ export function Header() {
           <Link href="/committee" className={navLinkClassName(pathname.includes('/committee'))}>
             COMMITTEE
           </Link>
+          <Link href="/calls" className={navLinkClassName(pathname.includes('/calls'))}>
+            CALLS
+          </Link>
 
           <DropdownMenu open={desktopInformationOpen} onOpenChange={setDesktopInformationOpen} modal={false}>
             <DropdownMenuTrigger
@@ -212,6 +216,15 @@ export function Header() {
                   className={pathname.includes('/committee') ? 'text-accent-foreground' : 'text-container-foreground'}
                 >
                   COMMITTEE
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/calls"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/calls') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  CALLS
                 </Link>
               </li>
 
