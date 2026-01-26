@@ -26,9 +26,7 @@ export default function LogisticsPage() {
 
       {/* Location */}
       <section className="bg-background text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
-          <div className="py-6" />
-
+        <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
             <div className="max-w-2xl">
               <p className="text-base leading-relaxed opacity-80 md:text-lg">The conference will take place at:</p>
@@ -43,7 +41,7 @@ export default function LogisticsPage() {
               </p>
 
               <a
-                className="border-muted bg-background hover:bg-background/80 mt-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition"
+                className="border-muted bg-background hover:bg-background/80 mt-6 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
                 href="https://www.google.com/maps/search/?api=1&query=Parc%20Alvisse%20Hotel%20Conference%20%26%20Spa%2C%20Luxembourg"
                 target="_blank"
                 rel="noreferrer"
@@ -52,7 +50,7 @@ export default function LogisticsPage() {
               </a>
             </div>
 
-            <div className="border-muted bg-background overflow-hidden rounded-md border shadow-sm">
+            <div className="border-muted bg-background overflow-hidden border shadow-sm">
               <div className="aspect-4/3 w-full">
                 <iframe
                   title="Parc Alvisse Hotel Conference & Spa (Luxembourg) map"
@@ -69,7 +67,7 @@ export default function LogisticsPage() {
       </section>
 
       {/* About Luxembourg */}
-      <section className="bg-container text-container-foreground">
+      <section className="bg-container text-container-foreground py-8">
         <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
           <div>
             <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">
@@ -136,7 +134,7 @@ export default function LogisticsPage() {
       </section>
 
       {/* Getting There */}
-      <section className="bg-container text-container-foreground">
+      <section className="bg-container text-container-foreground py-8">
         <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
           <div>
             <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">
@@ -148,7 +146,7 @@ export default function LogisticsPage() {
         <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
           <div className="bg-container rounded-lg">
             <div className="prose prose-lg max-w-none">
-              <p className="text-container-foreground mb-6 text-lg leading-relaxed">
+              <p className="text-container-foreground mb-10 text-lg leading-relaxed">
                 Luxembourg is centrally located in Europe and well connected by air, train, and road.
               </p>
 
@@ -169,17 +167,17 @@ export default function LogisticsPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
-                      Geneva
+                      Airport is ~10 minutes from city centre
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Airport is ~10 minutes from city centre
+                      Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
+                      Geneva
                     </li>
                   </ul>
                 </div>
 
-                <div className="border-container-foreground border-l-2 pl-8">
+                <div className="border-container-foreground/60 border-l-2 pl-8">
                   <h3 className="text-container-foreground mb-4 flex items-center gap-3 text-xl font-bold">
                     By Train or Car
                   </h3>
@@ -209,7 +207,7 @@ export default function LogisticsPage() {
                   </div>
                 </div>
 
-                <div className="border-container-foreground border-l-2 pl-8">
+                <div className="border-container-foreground/60 border-l-2 pl-8">
                   <h3 className="text-container-foreground mb-4 flex items-center gap-3 text-xl font-bold">
                     Local Mobility
                   </h3>
