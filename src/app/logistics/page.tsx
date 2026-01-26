@@ -1,7 +1,5 @@
 'use client'
 
-import Logistics from '@/components/Images/Logistics'
-
 const travelTimes = [
   { city: 'Brussels', byCar: '2h', byTrain: '3h20' },
   { city: 'Cologne', byCar: '2h30', byTrain: '4h' },
@@ -10,19 +8,26 @@ const travelTimes = [
 ]
 
 export default function LogisticsPage() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
   return (
     <div className="">
-      <Logistics className="mx-auto w-full px-6 md:px-8" />
+      <section className="mx-auto max-w-7xl px-4">
+        <div className="relative overflow-hidden shadow-sm">
+          <img src={`${basePath}/logistics.png`} alt="Logistics Image" className="w-full object-cover" />
+          <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Logistics</h2>
+            <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
+          </div>
+        </div>
+      </section>
 
       {/* Location */}
       <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Conference Venue</h2>
-              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
-            </div>
-          </div>
+          <div className="py-6" />
 
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
             <div className="max-w-2xl">
@@ -155,20 +160,20 @@ export default function LogisticsPage() {
                   </p>
                   <ul className="text-container-foreground space-y-2">
                     <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Direct flights from numerous European destinations
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Direct flights to more than 100 destinations
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
                       Geneva
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Airport is ~10 minutes from city centre
                     </li>
                   </ul>
@@ -210,11 +215,11 @@ export default function LogisticsPage() {
                   </h3>
                   <ul className="text-container-foreground space-y-2">
                     <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Public transport is free of charge nationwide, including buses, trams, and trains
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 flex-shrink-0 rounded-full" />
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Taxi services are widely available, including app-based services such as Uber and Webtaxi
                     </li>
                   </ul>

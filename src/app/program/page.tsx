@@ -16,23 +16,28 @@ const sessionTypeColors: Record<string, string> = {
 
 export default function SchedulePage() {
   const [activeDay, setActiveDay] = useState(0)
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
   return (
     <>
       {/* Hero */}
-      <Program className="mx-auto w-full px-6 md:px-8" />
+      <section className="mx-auto max-w-7xl px-4">
+        <div className="relative overflow-hidden shadow-sm">
+          <img src={`${basePath}/program.png`} alt="Program Image" className="w-full object-cover" />
+          <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Program Schedule</h2>
+            <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
+          </div>
+        </div>
+      </section>
 
       <section className="bg-background text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-6 py-2 py-8 md:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Program Schedule</h2>
-              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
-            </div>
-          </div>
+        <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
-              Four days of cutting-edge research and networking (Timeschedule is not finalized yet).
+              Four days of cutting-edge research and networking (time schedule is not finalized yet).
             </p>
           </div>
         </div>
@@ -47,7 +52,7 @@ export default function SchedulePage() {
               <button
                 key={day.date}
                 onClick={() => setActiveDay(index)}
-                className={`text-md rounded-lg px-6 py-4 font-medium transition-all ${
+                className={`text-md px-6 py-4 font-medium transition-all hover:cursor-pointer ${
                   activeDay === index
                     ? 'bg-primary text-primary-foreground shadow-lg'
                     : 'bg-background text-container-foreground hover:bg-muted'
@@ -81,12 +86,12 @@ export default function SchedulePage() {
               {schedule.days[activeDay].sessions.map((session, index) => (
                 <div
                   key={index}
-                  className={`overflow-hidden rounded-lg ${session.type === 'break' ? 'bg-[#FCECD8]' : 'text-container-foreground bg-container'}`}
+                  className={`overflow-hidden ${session.type === 'break' ? 'bg-[#FCECD8]' : 'text-container-foreground bg-container'}`}
                 >
                   <div className="flex flex-col sm:flex-row">
                     {/* Time */}
                     <div
-                      className={`flex-shrink-0 p-4 sm:w-36 ${session.type === 'break' ? 'bg-[#E3CDC1]' : 'bg-primary/10'}`}
+                      className={`shrink-0 p-4 sm:w-36 ${session.type === 'break' ? 'bg-[#E3CDC1]' : 'bg-primary/10'}`}
                     >
                       <span className="text-primary font-semibold">{session.time}</span>
                     </div>
