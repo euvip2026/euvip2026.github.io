@@ -8,7 +8,7 @@ export interface CommitteeMember {
 }
 
 export const committeeMembers: { [key: string]: CommitteeMember[] } = {
-  "General Chairs": [
+  'General Chairs': [
     {
       firstName: 'Djamila',
       lastName: 'Aouada',
@@ -24,9 +24,9 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       country: 'France',
       imageUrl: '/committee/AzeddineBeghdadi.jpg', // Replace with actual image path
       cvLink: 'https://www.linkedin.com/in/azeddine-beghdadi-8616ba20/',
-    }
+    },
   ],
-  "Technical Program Chairs": [
+  'Technical Program Chairs': [
     {
       firstName: 'Enjie',
       lastName: 'Ghorbel',
@@ -48,11 +48,11 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Kacem',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/AnisKacem.jpeg',
+      imageUrl: '/committee/AnisKacem.png',
       cvLink: 'https://lu.linkedin.com/in/aniskacem',
     },
   ],
-  "Plenary Chairs": [
+  'Plenary Chairs': [
     {
       firstName: 'Samia',
       lastName: 'Ainouz',
@@ -70,7 +70,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://lu.linkedin.com/in/raphaël-frank-66925132',
     },
   ],
-  "Tutorials Chairs": [
+  'Tutorials Chairs': [
     {
       firstName: 'Stefania',
       lastName: 'Colonnese',
@@ -82,7 +82,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     {
       firstName: 'Rachid',
       lastName: 'Jennane',
-      organization: 'Université d\'Orléans',
+      organization: "Université d'Orléans",
       country: 'France',
       imageUrl: '/committee/RachidJennane.jpg',
       cvLink: 'https://fr.linkedin.com/in/rachid-jennane-5051539b',
@@ -96,7 +96,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://www.linkedin.com/in/habib-zaidi-fieee-faimbe-faapm-fiomp-faaia-fbir-4264684/',
     },
   ],
-  "Student Session Chairs": [
+  'Student Session Chairs': [
     {
       firstName: 'Shekoufeh Gorgi',
       lastName: 'Zadeh',
@@ -114,7 +114,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://fr.linkedin.com/in/mtliba',
     },
   ],
-  "Awards Chairs": [
+  'Awards Chairs': [
     {
       firstName: 'Nuno Miguel Morais',
       lastName: 'Rodrigues',
@@ -131,24 +131,24 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       imageUrl: '/committee/VincentGaudilliere.jpg',
       cvLink: '',
     },
-    {
-      firstName: 'Aladine',
-      lastName: 'Chetouani',
-      organization: 'Universite Sorbonne Paris Nord',
-      country: 'France',
-      imageUrl: '/committee/AladineChetouani.jpg',
-      cvLink: 'https://www.linkedin.com/in/aladine-chetouani-2aa66038/',
-    },
-    {
-      firstName: 'Francesco',
-      lastName: 'Agustoni',
-      organization: 'Università degli Studi di Pavia',
-      country: 'Italy',
-      imageUrl: '/committee/FrancescoAgustoni.jpg',
-      cvLink: '',
-    },
+    // {
+    //   firstName: 'Aladine',
+    //   lastName: 'Chetouani',
+    //   organization: 'Universite Sorbonne Paris Nord',
+    //   country: 'France',
+    //   imageUrl: '/committee/AladineChetouani.jpg',
+    //   cvLink: 'https://www.linkedin.com/in/aladine-chetouani-2aa66038/',
+    // },
+    // {
+    //   firstName: 'Francesco',
+    //   lastName: 'Agustoni',
+    //   organization: 'Università degli Studi di Pavia',
+    //   country: 'Italy',
+    //   imageUrl: '/committee/FrancescoAgustoni.jpg',
+    //   cvLink: '',
+    // },
   ],
-  "Industry Liaison Chairs": [
+  'Industry Liaison Chairs': [
     {
       firstName: 'Tedjani',
       lastName: 'Mesbahi',
@@ -157,14 +157,14 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       imageUrl: '/committee/TedjaniMesbahi.jpg',
       cvLink: '',
     },
-    {
-      firstName: 'Marcin',
-      lastName: 'Seredynski',
-      organization: 'SnT, University of Luxembourg',
-      country: 'Luxembourg',
-      imageUrl: '/committee/MarcinSeredynski.jpg',
-      cvLink: '',
-    },
+    // {
+    //   firstName: 'Marcin',
+    //   lastName: 'Seredynski',
+    //   organization: 'SnT, University of Luxembourg',
+    //   country: 'Luxembourg',
+    //   imageUrl: '/committee/MarcinSeredynski.jpg',
+    //   cvLink: '',
+    // },
     {
       firstName: 'Faouzi Alaya',
       lastName: 'Cheikh',
@@ -174,33 +174,33 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://www.linkedin.com/in/faouzi-alaya-cheikh-1559582/',
     },
   ],
-  "Demos & Exhibition Session Chairs": [
+  'Demos & Exhibition Session Chairs': [
     {
       firstName: 'Arunkumar',
       lastName: 'Rathinam',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/ArunkumarRathinam.jpg',
+      imageUrl: '/committee/ArunkumarRathinam.png',
       cvLink: '',
     },
-    {
-      firstName: 'Tiziana',
-      lastName: 'Cattai',
-      organization: 'Sapienza University of Rome',
-      country: 'Italy',
-      imageUrl: '/committee/TizianaCattai.jpg',
-      cvLink: 'https://www.linkedin.com/in/tiziana-cattai-919902145/',
-    },
+    // {
+    //   firstName: 'Tiziana',
+    //   lastName: 'Cattai',
+    //   organization: 'Sapienza University of Rome',
+    //   country: 'Italy',
+    //   imageUrl: '/committee/TizianaCattai.jpg',
+    //   cvLink: 'https://www.linkedin.com/in/tiziana-cattai-919902145/',
+    // },
   ],
-  "Panel Discussion Chair": [
-    {
-      firstName: 'Jenny',
-      lastName: 'Benois-Pineau',
-      organization: 'Université de Bordeaux',
-      country: 'France',
-      imageUrl: '/committee/JennyBenoisPineau.jpg',
-      cvLink: 'https://www.linkedin.com/in/jenny-benois-pineau-5726b94a/',
-    },
+  'Panel Discussion Chair': [
+    // {
+    //   firstName: 'Jenny',
+    //   lastName: 'Benois-Pineau',
+    //   organization: 'Université de Bordeaux',
+    //   country: 'France',
+    //   imageUrl: '/committee/JennyBenoisPineau.jpg',
+    //   cvLink: 'https://www.linkedin.com/in/jenny-benois-pineau-5726b94a/',
+    // },
     {
       firstName: 'David',
       lastName: 'Fofi',
@@ -210,33 +210,33 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: '',
     },
   ],
-  "Publications Chairs": [
-    {
-      firstName: 'Meriem',
-      lastName: 'Outtas',
-      organization: 'INSA, Rennes',
-      country: 'France',
-      imageUrl: '/committee/MeriemOuttas.jpg',
-      cvLink: 'https://www.linkedin.com/in/meriem-outtas-298baa34/',
-    },
-    {
-      firstName: 'Mohamed Ali',
-      lastName: 'Qureshi',
-      organization: 'IUB, Bahawalpur',
-      country: 'Pakistan',
-      imageUrl: '/committee/MohamedAliQureshi.jpg',
-      cvLink: '',
-    },
+  'Publications Chairs': [
+    // {
+    //   firstName: 'Meriem',
+    //   lastName: 'Outtas',
+    //   organization: 'INSA, Rennes',
+    //   country: 'France',
+    //   imageUrl: '/committee/MeriemOuttas.jpg',
+    //   cvLink: 'https://www.linkedin.com/in/meriem-outtas-298baa34/',
+    // },
+    // {
+    //   firstName: 'Mohamed Ali',
+    //   lastName: 'Qureshi',
+    //   organization: 'IUB, Bahawalpur',
+    //   country: 'Pakistan',
+    //   imageUrl: '/committee/MohamedAliQureshi.jpg',
+    //   cvLink: '',
+    // },
   ],
-  "Publicity Chairs": [
-    {
-      firstName: 'Estefania Talavera',
-      lastName: 'Martinez',
-      organization: 'UT-EEMCS',
-      country: 'Netherlands',
-      imageUrl: '/committee/EstefaniaTalaveraMartinez.jpg',
-      cvLink: '',
-    },
+  'Publicity Chairs': [
+    // {
+    //   firstName: 'Estefania Talavera',
+    //   lastName: 'Martinez',
+    //   organization: 'UT-EEMCS',
+    //   country: 'Netherlands',
+    //   imageUrl: '/committee/EstefaniaTalaveraMartinez.jpg',
+    //   cvLink: '',
+    // },
     {
       firstName: 'Hantao',
       lastName: 'Liu',
@@ -245,24 +245,24 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       imageUrl: '/committee/HantaoLiu.jpg',
       cvLink: 'https://www.linkedin.com/in/hantaoliu/',
     },
-    {
-      firstName: 'Carl James',
-      lastName: 'Debono',
-      organization: 'University of Malta',
-      country: 'Malta',
-      imageUrl: '/committee/CarlJamesDebono.jpg',
-      cvLink: '',
-    },
+    // {
+    //   firstName: 'Carl James',
+    //   lastName: 'Debono',
+    //   organization: 'University of Malta',
+    //   country: 'Malta',
+    //   imageUrl: '/committee/CarlJamesDebono.jpg',
+    //   cvLink: '',
+    // },
   ],
-  "Web Chair": [
-    {
-      firstName: 'Geetanjali',
-      lastName: 'Rajaraman',
-      organization: 'SnT, University of Luxembourg',
-      country: 'Luxembourg',
-      imageUrl: '/committee/GeetanjaliRajaraman.jpg',
-      cvLink: '',
-    },
+  'Web Chair': [
+    // {
+    //   firstName: 'Geetanjali',
+    //   lastName: 'Rajaraman',
+    //   organization: 'SnT, University of Luxembourg',
+    //   country: 'Luxembourg',
+    //   imageUrl: '/committee/GeetanjaliRajaraman.jpg',
+    //   cvLink: '',
+    // },
     {
       firstName: 'Eya',
       lastName: 'Khamassi',
@@ -271,13 +271,13 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       imageUrl: '/committee/EyaKhamassi.jpeg',
       cvLink: 'https://tn.linkedin.com/in/eya-khamassi-920090212',
     },
-    {
-      firstName: 'Zuheng',
-      lastName: 'Ming',
-      organization: 'Universite Sorbonne Paris Nord',
-      country: 'France',
-      imageUrl: '/committee/ZuhengMing.jpg',
-      cvLink: 'https://www.linkedin.com/in/zuheng-ming-2b910853/',
-    },
+    // {
+    //   firstName: 'Zuheng',
+    //   lastName: 'Ming',
+    //   organization: 'Universite Sorbonne Paris Nord',
+    //   country: 'France',
+    //   imageUrl: '/committee/ZuhengMing.jpg',
+    //   cvLink: 'https://www.linkedin.com/in/zuheng-ming-2b910853/',
+    // },
   ],
 }

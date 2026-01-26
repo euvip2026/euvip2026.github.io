@@ -36,7 +36,7 @@ export default function CommitteeMember({
     <div className="flex flex-col items-center p-4 text-center">
       {/* Image */}
       <div
-        className={`relative mb-4 h-36 w-36 overflow-hidden rounded-xs transition-transform hover:scale-105 hover:shadow-lg md:h-40 md:w-40 ${
+        className={`relative mb-4 h-36 w-36 overflow-hidden rounded-md shadow-sm inset-shadow-sm transition-transform hover:scale-105 hover:shadow-lg md:h-40 md:w-40 ${
           cvLink && cvLink.trim() !== '' ? 'cursor-pointer' : 'cursor-default'
         }`}
         onClick={handleImageClick}
