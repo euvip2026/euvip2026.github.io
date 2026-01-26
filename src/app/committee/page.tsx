@@ -3,34 +3,50 @@ import { committeeMembers } from '@/data/committeeMembers'
 
 export default function Committee() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Committee</h1>
-      
-      {Object.entries(committeeMembers).map(([sectionName, members]) => (
-        <div key={sectionName} className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 text-left border-b-2 border-gray-300 pb-2">
-            {sectionName}
-          </h2>
-          <div 
-            className="grid gap-6 justify-items-center"
-            style={{
-              gridTemplateColumns: `repeat(auto-fit, minmax(200px, 1fr))`,
-            }}
-          >
-            {members.map((member, index) => (
-              <CommitteeMember
-                key={`${sectionName}-${index}`}
-                firstName={member.firstName}
-                lastName={member.lastName}
-                organization={member.organization}
-                country={member.country}
-                imageUrl={member.imageUrl}
-                cvLink={member.cvLink}
-              />
-            ))}
-          </div>
+    <main className="bg-background text-container-foreground">
+      <div className="mx-auto w-full pt-12 md:pt-16">
+        <header className="mx-auto mb-10 max-w-7xl px-8">
+          <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">Organizing Committee</h1>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed opacity-80 md:text-lg">
+            Meet the chairs and committee members supporting EUVIP 2026.
+          </p>
+        </header>
+
+        <div className="pt-4">
+          {Object.entries(committeeMembers).map(([sectionName, members], sectionIndex) => (
+            <section
+              key={sectionName}
+              className={`-mx-6 px-6 py-10 md:-mx-8 md:px-8 md:py-12 ${
+                sectionIndex % 2 === 0 ? 'bg-background' : 'bg-container'
+              }`}
+            >
+              <div className="mx-auto max-w-7xl px-8">
+                <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+                  <div>
+                    <h2 className="text-2xl font-bold tracking-tight md:text-3xl">{sectionName}</h2>
+                    <div className="bg-accent mt-2 h-1 w-16 rounded-full" aria-hidden="true" />
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-x-10 gap-y-16">
+                  {members.map((member, index) => (
+                    <div key={`${sectionName}-${index}`} className="w-full sm:w-[260px]">
+                      <CommitteeMember
+                        firstName={member.firstName}
+                        lastName={member.lastName}
+                        organization={member.organization}
+                        country={member.country}
+                        imageUrl={member.imageUrl}
+                        cvLink={member.cvLink}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </main>
   )
 }

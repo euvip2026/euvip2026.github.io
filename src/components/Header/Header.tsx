@@ -4,26 +4,46 @@ import Link from 'next/link'
 
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import { useEffect, useMemo, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { ChevronDown, Menu, X } from 'lucide-react'
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/Dropdown'
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 const NAV_ITEMS = [
   { href: '/', label: 'HOME' },
   { href: '/committee', label: 'COMMITTEE' },
-  { href: '/information', label: 'INFORMATION FOR AUTHORS' },
   { href: '/program', label: 'PROGRAM' },
   { href: '/contact', label: 'CONTACT' },
   { href: '/sponsors', label: 'SPONSORS' },
   { href: '/awards', label: 'AWARDS' },
 ] as const
 
+const INFORMATION_ITEMS = [
+  { href: '/information/important-dates', label: 'IMPORTANT DATES' },
+  { href: '/information/paper-kit-guidelines', label: 'PAPER KIT & GUIDELINES' },
+  { href: '/information/paper-submission', label: 'PAPER SUBMISSION' },
+  { href: '/information/project-dissemination', label: 'PROJECT DISSEMINATION' },
+  { href: '/information/student-session', label: 'STUDENT SESSION' },
+] as const
+
 export function Header() {
   const pathname = usePathname()
   const isHome = pathname === '/'
+  const isInformationActive = pathname.startsWith('/information')
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileInformationOpen, setMobileInformationOpen] = useState(false)
+  const [desktopInformationOpen, setDesktopInformationOpen] = useState(false)
+  const desktopInfoCloseTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (!isHome) {
@@ -39,6 +59,8 @@ export function Header() {
 
   useEffect(() => {
     setMobileOpen(false)
+    setMobileInformationOpen(false)
+    setDesktopInformationOpen(false)
   }, [pathname])
 
   useEffect(() => {
@@ -66,6 +88,19 @@ export function Header() {
       isActive ? 'border-current font-bold' : 'border-transparent hover:border-current/70'
     }`
 
+  const cancelDesktopInfoClose = () => {
+    if (desktopInfoCloseTimeoutRef.current == null) return
+    window.clearTimeout(desktopInfoCloseTimeoutRef.current)
+    desktopInfoCloseTimeoutRef.current = null
+  }
+
+  const scheduleDesktopInfoClose = () => {
+    cancelDesktopInfoClose()
+    desktopInfoCloseTimeoutRef.current = window.setTimeout(() => {
+      setDesktopInformationOpen(false)
+    }, 120)
+  }
+
   return (
     <header className={headerClassName}>
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 md:px-8">
@@ -79,15 +114,57 @@ export function Header() {
           />
         </Link>
         <nav className="hidden h-[81px] items-center gap-8 text-sm font-medium md:flex">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={navLinkClassName(pathname === item.href || (item.href !== '/' && pathname.includes(item.href)))}
+          <Link href="/" className={navLinkClassName(pathname === '/')}>
+            HOME
+          </Link>
+          <Link href="/committee" className={navLinkClassName(pathname.includes('/committee'))}>
+            COMMITTEE
+          </Link>
+
+          <DropdownMenu open={desktopInformationOpen} onOpenChange={setDesktopInformationOpen} modal={false}>
+            <DropdownMenuTrigger
+              className={`${navLinkClassName(isInformationActive)} gap-2 outline-none data-[state=open]:border-current`}
+              onMouseEnter={() => {
+                cancelDesktopInfoClose()
+                setDesktopInformationOpen(true)
+              }}
+              onMouseLeave={scheduleDesktopInfoClose}
             >
-              {item.label}
-            </Link>
-          ))}
+              INFORMATION FOR AUTHORS
+              <ChevronDown className="h-4 w-4 opacity-80" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="start"
+              className="border-muted bg-background/95 text-container-foreground min-w-[280px] p-2 shadow-lg backdrop-blur-md"
+              onMouseEnter={cancelDesktopInfoClose}
+              onMouseLeave={scheduleDesktopInfoClose}
+            >
+              {INFORMATION_ITEMS.map((item) => (
+                <DropdownMenuItem
+                  key={item.href}
+                  asChild
+                  className="focus:bg-container focus:text-container-foreground rounded-xl px-3 py-2 text-sm font-medium"
+                >
+                  <Link href={item.href} className="w-full">
+                    {item.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Link href="/program" className={navLinkClassName(pathname.includes('/program'))}>
+            PROGRAM
+          </Link>
+          <Link href="/contact" className={navLinkClassName(pathname.includes('/contact'))}>
+            CONTACT
+          </Link>
+          <Link href="/sponsors" className={navLinkClassName(pathname.includes('/sponsors'))}>
+            SPONSORS
+          </Link>
+          <Link href="/awards" className={navLinkClassName(pathname.includes('/awards'))}>
+            AWARDS
+          </Link>
         </nav>
 
         <button
@@ -102,14 +179,14 @@ export function Header() {
       </div>
 
       {mobileOpen ? (
-        <div className="fixed inset-0 z-1000 bg-background text-container-foreground">
+        <div className="bg-background text-container-foreground fixed inset-0 z-1000">
           <div className="flex min-h-[81px] items-center justify-between px-6">
             <Link href="/" onClick={() => setMobileOpen(false)}>
               <Image src={`${basePath}/logo.png`} alt="Logo" width={100} height={100} />
             </Link>
             <button
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-muted"
+              className="border-muted inline-flex h-10 w-10 items-center justify-center rounded-md border"
               aria-label="Close menu"
               onClick={() => setMobileOpen(false)}
             >
@@ -119,20 +196,92 @@ export function Header() {
 
           <nav className="px-6 pt-8">
             <ul className="flex flex-col gap-6 text-2xl font-extrabold">
-              {NAV_ITEMS.map((item) => {
-                const isActive = pathname === item.href || (item.href !== '/' && pathname.includes(item.href))
-                return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setMobileOpen(false)}
-                      className={isActive ? 'text-accent-foreground' : 'text-container-foreground'}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                )
-              })}
+              <li>
+                <Link
+                  href="/"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname === '/' ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/committee"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/committee') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  COMMITTEE
+                </Link>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  className={`flex w-full items-center justify-between ${
+                    isInformationActive ? 'text-accent-foreground' : 'text-container-foreground'
+                  }`}
+                  aria-expanded={mobileInformationOpen}
+                  onClick={() => setMobileInformationOpen((v) => !v)}
+                >
+                  INFORMATION FOR AUTHORS
+                  <ChevronDown
+                    className={`h-6 w-6 transition-transform ${mobileInformationOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                {mobileInformationOpen ? (
+                  <ul className="mt-4 flex flex-col gap-3 pl-4 text-base font-semibold">
+                    {INFORMATION_ITEMS.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                          className={pathname === item.href ? 'text-accent-foreground' : 'text-container-foreground'}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </li>
+
+              <li>
+                <Link
+                  href="/program"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/program') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  PROGRAM
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/contact') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  CONTACT
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/sponsors"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/sponsors') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  SPONSORS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/awards"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/awards') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  AWARDS
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

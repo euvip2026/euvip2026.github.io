@@ -33,7 +33,7 @@ export default function CommitteeMember({
     <div className="flex flex-col items-center p-4 text-center">
       {/* Circular Image */}
       <div
-        className={`relative w-32 h-32 mb-4 rounded-full overflow-hidden transition-transform hover:scale-105 hover:shadow-lg ${
+        className={`relative mb-4 h-32 w-32 overflow-hidden rounded-full transition-transform hover:scale-105 hover:shadow-lg ${
           cvLink && cvLink.trim() !== '' ? 'cursor-pointer' : 'cursor-default'
         }`}
         onClick={handleImageClick}
@@ -49,42 +49,27 @@ export default function CommitteeMember({
               }
             : undefined
         }
-        aria-label={
-          cvLink && cvLink.trim() !== ''
-            ? `View CV of ${firstName} ${lastName}`
-            : `${firstName} ${lastName}`
-        }
+        aria-label={cvLink && cvLink.trim() !== '' ? `View CV of ${firstName} ${lastName}` : `${firstName} ${lastName}`}
       >
         {isExternalImage ? (
           // Use regular img for external URLs (or configure next.config.ts with image domains)
-          <img
-            src={imageUrl}
-            alt={`${firstName} ${lastName}`}
-            className="w-full h-full object-cover"
-          />
+          <img src={imageUrl} alt={`${firstName} ${lastName}`} className="h-full w-full object-cover" />
         ) : (
           // Use Next.js Image for local images
-          <Image
-            src={imageUrl}
-            alt={`${firstName} ${lastName}`}
-            fill
-            className="object-cover"
-            sizes="128px"
-          />
+          <Image src={imageUrl} alt={`${firstName} ${lastName}`} fill className="object-cover" sizes="128px" />
         )}
       </div>
 
       {/* Name */}
-      <h3 className="text-lg font-semibold mb-1">
+      <h3 className="mb-1 text-lg font-semibold">
         {firstName} {lastName}
       </h3>
 
       {/* Organization */}
       <p className="text-sm text-gray-600">{organization}</p>
-      
+
       {/* Country */}
       <p className="text-sm text-gray-600">{country}</p>
     </div>
   )
 }
-
