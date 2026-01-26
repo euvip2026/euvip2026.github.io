@@ -31,7 +31,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
   const displayDesc = tbcDisplayText(card.description)
 
   return (
-    <div className="bg-container text-container-foreground flex w-full flex-col rounded-2xl shadow-sm">
+    <div className="bg-container text-container-foreground flex w-full flex-col rounded-xs shadow-sm">
       <div className="px-6 pt-6">
         <h2 className="text-2xl leading-tight font-bold">{card.title}</h2>
       </div>
@@ -211,18 +211,24 @@ export default function CallsPage() {
     [],
   )
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
   const [activeId, setActiveId] = useState<string | null>(null)
   const active = activeId ? cards.find((c) => c.id === activeId) : null
 
   return (
     <section className="mx-auto mb-8 max-w-7xl px-4">
-      <Calls className="mb-6" />
-      <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">Calls</h2>
-          <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+      <div className="relative overflow-hidden">
+        <img src={`${basePath}/calls.png`} alt="Calls Image" className="w-full object-cover" />
+        <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+
+        <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Calls</h2>
+          <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
         </div>
       </div>
+
+      <div className="mb-8" />
       {active ? (
         <FocusMainCard card={active} onBack={() => setActiveId(null)} />
       ) : (

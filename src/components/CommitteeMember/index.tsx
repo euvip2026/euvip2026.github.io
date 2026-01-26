@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import React from 'react'
 
 interface CommitteeMemberProps {
   firstName: string
@@ -20,6 +19,8 @@ export default function CommitteeMember({
   imageUrl,
   cvLink,
 }: CommitteeMemberProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
   const handleImageClick = () => {
     if (cvLink && cvLink.trim() !== '') {
       window.open(cvLink, '_blank', 'noopener,noreferrer')
@@ -28,6 +29,8 @@ export default function CommitteeMember({
 
   // Check if image is external URL
   const isExternalImage = imageUrl.startsWith('http://') || imageUrl.startsWith('https://')
+  const localPath = imageUrl.startsWith('/') ? imageUrl : `/${imageUrl}`
+  const srcWithBasePath = `${basePath}${localPath}`
 
   return (
     <div className="flex flex-col items-center p-4 text-center">
@@ -56,7 +59,7 @@ export default function CommitteeMember({
           <img src={imageUrl} alt={`${firstName} ${lastName}`} className="h-full w-full object-cover" />
         ) : (
           // Use Next.js Image for local images
-          <Image src={imageUrl} alt={`${firstName} ${lastName}`} fill className="object-cover" sizes="128px" />
+          <Image src={srcWithBasePath} alt={`${firstName} ${lastName}`} fill className="object-cover" sizes="128px" />
         )}
       </div>
 
