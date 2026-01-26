@@ -1,8 +1,10 @@
 'use client'
 
 import Link from 'next/link'
+
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/Dropdown'
 
@@ -13,7 +15,9 @@ export function Header() {
   return (
     <header className="bg-background fixed top-0 right-0 left-0 z-900 flex min-h-[81px] items-center border-b border-gray-100">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-8">
-        <Link href="/">{/* <Logo /> */}</Link>
+        <Link href="/">
+          <Image src="/logo.png" alt="Logo" width={100} height={100} />
+        </Link>
         <div className="flex items-center gap-12">
           <nav className="text-container-foreground flex h-[81px] items-center gap-8 text-sm font-medium">
             <Link
