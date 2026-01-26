@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
+import { Roboto } from 'next/font/google'
 import { Header } from '@/components'
 import './globals.css'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'EUVIP 2026 - Luxembourg',
@@ -14,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${roboto.variable} antialiased`}>
         <Header />
-        {children}
+        <div className="mt-20">{children}</div>
       </body>
     </html>
   )
