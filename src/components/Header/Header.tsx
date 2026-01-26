@@ -16,6 +16,7 @@ const NAV_ITEMS = [
   { href: '/committee', label: 'COMMITTEE' },
   { href: '/calls', label: 'CALLS' },
   { href: '/program', label: 'PROGRAM' },
+  { href: '/logistics', label: 'LOGISTICS' },
   { href: '/contact', label: 'CONTACT' },
   { href: '/sponsors', label: 'SPONSORS' },
   { href: '/awards', label: 'AWARDS' },
@@ -155,6 +156,9 @@ export function Header() {
           <Link href="/program" className={navLinkClassName(pathname.includes('/program'))}>
             PROGRAM
           </Link>
+          <Link href="/logistics" className={navLinkClassName(pathname.includes('/logistics'))}>
+            LOGISTICS
+          </Link>
           <Link href="/contact" className={navLinkClassName(pathname.includes('/contact'))}>
             CONTACT
           </Link>
@@ -261,6 +265,15 @@ export function Header() {
                   className={pathname.includes('/program') ? 'text-accent-foreground' : 'text-container-foreground'}
                 >
                   PROGRAM
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/logistics"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/logistics') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  LOGISTICS
                 </Link>
               </li>
               <li>
