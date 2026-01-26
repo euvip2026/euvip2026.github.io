@@ -221,7 +221,7 @@ export default function CallsPage() {
   const active = activeId ? cards.find((c) => c.id === activeId) : null
 
   return (
-    <section className="mx-auto mb-8 max-w-7xl px-4">
+    <section className="mx-auto mb-8 max-w-7xl md:px-4">
       <div className="relative h-56 overflow-hidden shadow-sm sm:h-[208px]">
         <img src={`${basePath}/calls.png`} alt="Calls Image" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
