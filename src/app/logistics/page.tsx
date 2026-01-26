@@ -15,7 +15,7 @@ export default function LogisticsPage() {
       <section className="mx-auto max-w-7xl px-4">
         <div className="relative overflow-hidden shadow-sm">
           <img src={`${basePath}/logistics.png`} alt="Logistics Image" className="w-full object-cover" />
-          <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+          <div className="absolute inset-0" aria-hidden="true" />
 
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Logistics</h2>

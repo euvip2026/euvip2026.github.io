@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
+      <body className={`${roboto.variable} antialiased min-h-screen flex flex-col`}>
         <Header />
-        <div className="mt-20">{children}</div>
+        <main className="mt-20 flex-1">{children}</main>
         <Footer />
       </body>
     </html>
