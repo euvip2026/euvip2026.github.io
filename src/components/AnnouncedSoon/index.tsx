@@ -17,7 +17,7 @@ export default function AnnouncedSoonSection() {
         </div>
       </section>
 
-      <section className="bg-background text-container-foreground mb-85">
+      <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
