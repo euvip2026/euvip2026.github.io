@@ -38,7 +38,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
       <div className="text-md relative flex-1 overflow-hidden px-6 py-4 opacity-80">
         <p className={`whitespace-pre-line ${tbc ? 'line-clamp-5' : 'line-clamp-6'}`}>{displayDesc}</p>
         <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-container via-container/80 to-transparent"
+          className="from-container via-container/80 pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-linear-to-t to-transparent"
           aria-hidden="true"
         />
       </div>
@@ -47,7 +47,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
         <button
           type="button"
           onClick={onOpen}
-          className="border-information hover:bg-container/80 text-md mt-auto flex w-full items-center justify-center gap-2 rounded-b-2xl border-t px-6 py-4 font-semibold transition"
+          className="border-information hover:bg-container/80 text-md mt-auto flex w-full items-center justify-center gap-2 border-t px-6 py-4 font-semibold transition"
         >
           More details
           <ChevronDown className="h-4 w-4" />
@@ -59,7 +59,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
 
 function SectionCard({ section }: { section: Section }) {
   return (
-    <div className="border-information bg-container text-container-foreground rounded-3xl border p-6 shadow-sm">
+    <div className="border-information bg-container text-container-foreground border p-6 shadow-sm">
       <h3 className="text-xl leading-tight font-bold">{section.title}</h3>
 
       {section.bullets?.length ? (
@@ -80,12 +80,12 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
   const displayDesc = tbcDisplayText(card.description)
 
   return (
-    <div className="border-information bg-container text-container-foreground w-full rounded-3xl border shadow-sm">
+    <div className="bg-container text-container-foreground w-full shadow-sm">
       <div className="px-6 pt-6">
         <button
           type="button"
           onClick={onBack}
-          className="border-information bg-container hover:bg-container/80 inline-flex shrink-0 items-center gap-2 rounded-2xl border px-4 py-2 text-sm font-semibold transition"
+          className="border-information bg-container hover:bg-container/80 inline-flex shrink-0 items-center gap-2 border px-4 py-2 text-sm font-semibold transition hover:cursor-pointer"
         >
           <ArrowLeft className="h-4 w-4" />
           Back
