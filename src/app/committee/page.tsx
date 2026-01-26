@@ -6,9 +6,9 @@ export default function Committee() {
 
   return (
     <>
-      <section className="mx-auto max-w-7xl px-4">
-        <div className="relative overflow-hidden shadow-sm">
-          <img src={`${basePath}/committee.png`} alt="Committee Image" className="w-full object-cover blur-xs" />
+      <section className="mx-auto max-w-7xl md:px-4">
+        <div className="relative h-56 overflow-hidden shadow-sm sm:h-[208px]">
+          <img src={`${basePath}/committee.png`} alt="Committee Image" className="h-full w-full object-cover blur-xs" />
           <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
