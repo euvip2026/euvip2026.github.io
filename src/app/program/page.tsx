@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import schedule from '@/data/schedule.json'
+import { Program } from '@/components/Images'
 
 const sessionTypeColors: Record<string, string> = {
   keynote: 'bg-accent text-white',
@@ -19,15 +20,26 @@ export default function SchedulePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary relative pt-32 pb-20">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="mb-6 text-4xl font-bold text-white sm:text-5xl">Program Schedule</h1>
-          <p className="mx-auto max-w-2xl text-xl text-white/80">Four days of cutting-edge research and networking</p>
+      <Program className="mx-auto w-full px-6 md:px-8" />
+
+      <section className="bg-background text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-2 py-8 md:px-8">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Program Schedule</h2>
+              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+            </div>
+          </div>
+          <div className="mt-4">
+            <p className="text-container-foreground text-base leading-relaxed md:text-lg">
+              Four days of cutting-edge research and networking (Timeschedule is not finalized yet).
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Schedule Content */}
-      <section className="bg-white py-16">
+      <section className="bg-background py-8">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Day Tabs */}
           <div className="mb-12 flex flex-wrap justify-center gap-3">
@@ -35,18 +47,18 @@ export default function SchedulePage() {
               <button
                 key={day.date}
                 onClick={() => setActiveDay(index)}
-                className={`rounded-lg px-6 py-4 font-medium transition-all ${
+                className={`text-md rounded-lg px-6 py-4 font-medium transition-all ${
                   activeDay === index
-                    ? 'bg-primary text-white shadow-lg'
-                    : 'bg-container-bg text-gray-700 hover:bg-gray-200'
+                    ? 'bg-primary text-primary-foreground shadow-lg'
+                    : 'bg-background text-container-foreground hover:bg-muted'
                 }`}
               >
                 <span
-                  className={`block text-xs tracking-wider uppercase ${activeDay === index ? 'text-white/70' : 'text-gray-500'}`}
+                  className={`text-md block tracking-wider uppercase ${activeDay === index ? 'text-primary-foreground' : 'text-muted-500'}`}
                 >
                   {day.label}
                 </span>
-                <span className="block font-semibold">{day.title}</span>
+                <span className="text-md block font-semibold">{day.title}</span>
               </button>
             ))}
           </div>
@@ -55,7 +67,7 @@ export default function SchedulePage() {
           <div>
             <div className="mb-10 text-center">
               <h2 className="text-primary mb-2 text-2xl font-bold">{schedule.days[activeDay].title}</h2>
-              <p className="text-gray-600">
+              <p className="text-container-foreground-600">
                 {new Date(schedule.days[activeDay].date).toLocaleDateString('en-US', {
                   weekday: 'long',
                   month: 'long',
@@ -69,29 +81,19 @@ export default function SchedulePage() {
               {schedule.days[activeDay].sessions.map((session, index) => (
                 <div
                   key={index}
-                  className={`overflow-hidden rounded-lg ${
-                    session.type === 'break' ? 'bg-gray-100' : 'bg-container-bg'
-                  }`}
+                  className={`overflow-hidden rounded-lg ${session.type === 'break' ? 'bg-[#FCECD8]' : 'text-container-foreground bg-container'}`}
                 >
                   <div className="flex flex-col sm:flex-row">
                     {/* Time */}
                     <div
-                      className={`flex-shrink-0 p-4 sm:w-36 ${session.type === 'break' ? 'bg-gray-200' : 'bg-primary/10'}`}
+                      className={`flex-shrink-0 p-4 sm:w-36 ${session.type === 'break' ? 'bg-[#E3CDC1]' : 'bg-primary/10'}`}
                     >
                       <span className="text-primary font-semibold">{session.time}</span>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-4">
-                      <div className="mb-2 flex flex-wrap items-start gap-2">
-                        <span
-                          className={`inline-block rounded px-3 py-1 text-xs font-medium ${
-                            sessionTypeColors[session.type] || 'bg-gray-200 text-gray-700'
-                          }`}
-                        >
-                          {session.type.charAt(0).toUpperCase() + session.type.slice(1)}
-                        </span>
-                      </div>
+                      <div className="mb-2 flex flex-wrap items-start gap-2"></div>
                       <h3 className="text-lg font-semibold text-gray-900">{session.title}</h3>
                       {session.description && <p className="mt-1 text-sm text-gray-600">{session.description}</p>}
                     </div>
@@ -100,29 +102,6 @@ export default function SchedulePage() {
               ))}
             </div>
           </div>
-
-          {/* Legend */}
-          <div className="bg-container-bg mt-12 rounded-lg p-6">
-            <h3 className="mb-4 text-sm font-semibold tracking-wider text-gray-900 uppercase">Session Types</h3>
-            <div className="flex flex-wrap gap-4">
-              {Object.entries(sessionTypeColors).map(([type, color]) => (
-                <div key={type} className="flex items-center">
-                  <span className={`h-4 w-4 rounded ${color} mr-2`} />
-                  <span className="text-sm text-gray-600 capitalize">{type}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Download Schedule CTA */}
-      <section className="bg-container-bg py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="mb-4 text-gray-700">
-            The detailed program will be available after paper acceptance notifications.
-          </p>
-          <p className="text-sm text-gray-500">Check back for updates or subscribe to our newsletter.</p>
         </div>
       </section>
     </>
