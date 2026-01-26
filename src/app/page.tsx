@@ -1,11 +1,13 @@
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
   return (
     <>
       {/* Hero */}
       <section className="relative isolate -mt-20 flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20 pb-16">
         <video
           className="absolute inset-0 h-full w-full object-cover"
-          src="/hero.mp4"
+          src={`${basePath}/hero.mp4`}
           autoPlay
           muted
           loop
