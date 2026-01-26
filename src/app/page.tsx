@@ -129,7 +129,7 @@ export default function Home() {
               </p>
 
               <a
-                className="border-muted bg-background hover:bg-background/80 mt-6 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition"
+                className="border-muted bg-background hover:bg-background/80 mt-6 inline-flex items-center gap-2 rounded-sm border px-4 py-2 text-sm font-semibold shadow-sm transition"
                 href="https://www.google.com/maps/search/?api=1&query=Parc%20Alvisse%20Hotel%20Conference%20%26%20Spa%2C%20Luxembourg"
                 target="_blank"
                 rel="noreferrer"
