@@ -32,7 +32,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Ghorbel',
       organization: 'CRISTAL, ENSI, University of Manouba',
       country: 'Tunisia',
-      imageUrl: '/committee/EnjieGhorbel.jpeg',
+      imageUrl: '/committee/EnjieGhorbel.jpg',
       cvLink: 'https://lu.linkedin.com/in/enjie-ghorbel-0282919a',
     },
     {
@@ -58,7 +58,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Ainouz',
       organization: 'INSA Rouen',
       country: 'France',
-      imageUrl: '/committee/SamiaAinouz.jpeg',
+      imageUrl: '/committee/SamiaAinouz.jpg',
       cvLink: 'https://fr.linkedin.com/in/samia-ainouz-65636978',
     },
     {
@@ -66,7 +66,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Frank',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/RaphaelFrank.jpeg',
+      imageUrl: '/committee/RaphaelFrank.jpg',
       cvLink: 'https://lu.linkedin.com/in/raphaël-frank-66925132',
     },
   ],
@@ -84,7 +84,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Jennane',
       organization: 'Université d\'Orléans',
       country: 'France',
-      imageUrl: '/committee/RachidJennane.jpeg',
+      imageUrl: '/committee/RachidJennane.jpg',
       cvLink: 'https://fr.linkedin.com/in/rachid-jennane-5051539b',
     },
     {
@@ -102,7 +102,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Zadeh',
       organization: 'LCSB, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/ShekoufehGorgiZadeh.jpeg',
+      imageUrl: '/committee/ShekoufehGorgiZadeh.jpg',
       cvLink: 'https://orcid.org/0000-0002-3314-2262',
     },
     {
@@ -110,7 +110,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Tliba',
       organization: 'Université de Sorbonne Paris Nord',
       country: 'France',
-      imageUrl: '/committee/MarouaneTliba.jpeg',
+      imageUrl: '/committee/MarouaneTliba.jpg',
       cvLink: 'https://fr.linkedin.com/in/mtliba',
     },
   ],
@@ -180,7 +180,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Rathinam',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/ArunkumarRathinam.jpeg',
+      imageUrl: '/committee/ArunkumarRathinam.jpg',
       cvLink: '',
     },
     {
@@ -260,7 +260,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Rajaraman',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/GeetanjaliRajaraman.jpeg',
+      imageUrl: '/committee/GeetanjaliRajaraman.jpg',
       cvLink: '',
     },
     {
