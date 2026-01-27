@@ -27,10 +27,10 @@ export default function Home() {
         </div>
 
         <a
-          href="https://www.youtube.com/watch?v=MBWjQOBidwk"
+          href="https://lmih.lu/en/tools/videos/economy/luxembourg-our-common-ground-en/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-[20px] right-[30px] z-10 text-white/80 hover:text-white transition-colors text-2xl font-medium cursor-pointer"
+          className="absolute bottom-[20px] right-[30px] z-10 text-white/80 hover:text-white transition-colors text-xl md:text-2xl font-medium cursor-pointer"
           title="Video source: LuXembourg - Our Common Ground | Fête Nationale 2023 VO ST FR"
           aria-label="Video source: LuXembourg - Our Common Ground | Fête Nationale 2023 VO ST FR"
         >
