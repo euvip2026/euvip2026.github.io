@@ -54,9 +54,10 @@ export default function Home() {
               from 28th of September to 1st of October 2026.
             </p>
             <p>
-              EUVIP 2026 will bring together researchers and practitioners from academia and industry working in the
-              field of visual information processing, covering a broad range of visual modalities, processing tasks,
-              performance assessment methodologies, and applications.
+              EUVIP 2026 will bring together researchers and practitioners from academia and industry working in the field 
+              of visual information processing, an important branch of Artificial Intelligence (AI). 
+              EUVIP covers a broad range of visual modalities, processing tasks, performance assessment methodologies, 
+              and applications.
             </p>
             <p>
               The first day of the conference will be dedicated to one-day tutorials. The main conference programme will
