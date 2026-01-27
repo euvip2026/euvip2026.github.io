@@ -127,7 +127,7 @@ export default function CallsPage() {
         id: 'cfp',
         title: 'Call for Papers',
         description:
-          'The 14th European Conference on Visual Information Processing will be held on, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as special sessions and tutorials.\n\nTopics of interest include, but are not limited to:',
+          'The 14th European Conference on Visual Information Processing will be held on, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.\n\nTopics of interest include, but are not limited to:',
         sections: [
           {
             id: 'modalities',
@@ -206,10 +206,10 @@ export default function CallsPage() {
         ],
       },
 
-      { id: 'special-sessions', title: 'Call for Special Sessions', description: 'TBC' },
-      { id: 'project-dissemination', title: 'Call for Project Dissemination Papers', description: 'TBC' },
+      // { id: 'special-sessions', title: 'Call for Special Sessions', description: 'TBC' },
+      // { id: 'project-dissemination', title: 'Call for Project Dissemination Papers', description: 'TBC' },
       { id: 'industrial-demo', title: 'Call for Industrial Exhibition and Demo Papers', description: 'TBC' },
-      { id: 'student-session', title: 'Call for Student Session', description: 'TBC' },
+      { id: 'student-session', title: 'Call for Student Grants', description: 'TBC' },
       { id: 'tutorials', title: 'Call for Tutorials', description: 'TBC' },
     ],
     [],
