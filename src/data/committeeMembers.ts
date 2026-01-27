@@ -66,7 +66,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Frank',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/RaphaelFrank.jpg',
+      imageUrl: '/committee/RaphaelFrank.jpeg',
       cvLink: 'https://lu.linkedin.com/in/raphaël-frank-66925132',
     },
   ],

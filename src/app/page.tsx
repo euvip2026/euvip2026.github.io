@@ -51,7 +51,7 @@ export default function Home() {
           <div className="mt-8 space-y-5 text-base leading-relaxed opacity-80 md:text-lg">
             <p>
               The 14th European Conference on Visual Information Processing (EUVIP 2026) will take place in Luxembourg
-              from 28 September to 1 October 2026.
+              from 28th of September to 1st of October 2026.
             </p>
             <p>
               EUVIP 2026 will bring together researchers and practitioners from academia and industry working in the
