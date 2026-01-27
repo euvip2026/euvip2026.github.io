@@ -237,14 +237,14 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     //   imageUrl: '/committee/EstefaniaTalaveraMartinez.jpg',
     //   cvLink: '',
     // },
-    {
-      firstName: 'Hantao',
-      lastName: 'Liu',
-      organization: 'Cardiff University',
-      country: 'UK',
-      imageUrl: '/committee/HantaoLiu.jpg',
-      cvLink: 'https://www.linkedin.com/in/hantaoliu/',
-    },
+    // {
+    //   firstName: 'Hantao',
+    //   lastName: 'Liu',
+    //   organization: 'Cardiff University',
+    //   country: 'UK',
+    //   imageUrl: '/committee/HantaoLiu.jpg',
+    //   cvLink: 'https://www.linkedin.com/in/hantaoliu/',
+    // },
     // {
     //   firstName: 'Carl James',
     //   lastName: 'Debono',
