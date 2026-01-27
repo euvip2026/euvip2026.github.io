@@ -15,7 +15,6 @@ export default function Home() {
           preload="auto"
           aria-hidden="true"
         />
-
         <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
         <div className="relative w-full text-center text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.55)] sm:text-left">
@@ -26,6 +25,17 @@ export default function Home() {
             28th September-1st October 2026, Luxembourg
           </p>
         </div>
+
+        <a
+          href="https://www.youtube.com/watch?v=MBWjQOBidwk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-[20px] right-[30px] z-10 text-white/80 hover:text-white transition-colors text-2xl font-medium cursor-pointer"
+          title="Video source: LuXembourg - Our Common Ground | Fête Nationale 2023 VO ST FR"
+          aria-label="Video source: LuXembourg - Our Common Ground | Fête Nationale 2023 VO ST FR"
+        >
+          ©LMIH
+        </a>
       </section>
 
       {/* About */}
