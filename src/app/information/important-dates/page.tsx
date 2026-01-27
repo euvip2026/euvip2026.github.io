@@ -3,7 +3,7 @@ import Information from '@/components/Images/Information'
 export default function ImportantDates() {
   const rows = [
     ['Tutorial Proposals', '30 April 2026'],
-    ['Tutorial Notifications', '15 April 2026'],
+    ['Tutorial Notifications', '15 May 2026'],
     ['Paper Submissions', '30 May 2026'],
     ['Paper Notifications', '5 August 2026'],
     ['Demo Submissions', '7 August 2026'],
