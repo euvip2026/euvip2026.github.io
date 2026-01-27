@@ -18,7 +18,7 @@ export default function ProjectDissemination() {
       <div className="mx-auto w-full max-w-7xl px-4 py-6">
         <section className="bg-background text-container-foreground mt-4 mb-8">
           <div className="space-y-4 text-2xl leading-relaxed">
-            <p>Will be announced soon.</p>
+            <p>To be announced soon.</p>
           </div>
         </section>
       </div>

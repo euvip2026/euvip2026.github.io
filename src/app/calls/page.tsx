@@ -23,7 +23,7 @@ function isTBC(desc: string) {
 }
 
 function tbcDisplayText(desc: string) {
-  return isTBC(desc) ? 'To be continued' : desc
+  return isTBC(desc) ? 'To be announced soon.' : desc
 }
 
 function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void }) {
@@ -97,7 +97,7 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
           {tbc ? (
             <>
               <p className="text-md mt-3 opacity-80">{displayDesc}</p>
-              <p className="mt-2 text-lg opacity-80">More details will be announced shortly.</p>
+              {/* <p className="mt-2 text-lg opacity-80">More details will be announced shortly.</p> */}
             </>
           ) : (
             <p className="mt-3 text-lg whitespace-pre-line opacity-80">{displayDesc}</p>

@@ -17,8 +17,8 @@ export default function ContactPage() {
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground mb-5 text-2xl leading-relaxed font-bold">Contact us at:</p>
-            <a href="mailto:cvi2@gmail.com" className="hover:text-accent underline transition-colors">
-              cvi2@gmail.com
+            <a href="mailto:cvi2.snt@gmail.com" className="hover:text-accent underline transition-colors">
+              cvi2.snt@gmail.com
             </a>
           </div>
         </div>

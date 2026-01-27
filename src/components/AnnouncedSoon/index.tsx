@@ -21,7 +21,7 @@ export default function AnnouncedSoonSection() {
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
-              Please check back later to see the announcements.
+              To be announced soon.
             </p>
           </div>
         </div>

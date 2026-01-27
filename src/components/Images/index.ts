@@ -1,6 +1,6 @@
 export { default as Information } from './Information'
 export { default as Calls } from './Calls'
-export { default as Logistics } from './Logistics'
+export { default as Attend } from './Attend'
 export { default as Program } from './Program'
 export { default as Contact } from './Contact'
 export { default as AnnouncedSoon } from './AnnouncedSoon'

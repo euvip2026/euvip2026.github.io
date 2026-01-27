@@ -16,7 +16,7 @@ const NAV_ITEMS = [
   { href: '/committee', label: 'COMMITTEE' },
   { href: '/calls', label: 'CALLS' },
   { href: '/program', label: 'PROGRAM' },
-  { href: '/logistics', label: 'LOGISTICS' },
+  { href: '/attend', label: 'ATTEND' },
   { href: '/contact', label: 'CONTACT' },
   { href: '/sponsors', label: 'SPONSORS' },
   { href: '/awards', label: 'AWARDS' },
@@ -26,8 +26,9 @@ const INFORMATION_ITEMS = [
   { href: '/information/important-dates', label: 'IMPORTANT DATES' },
   { href: '/information/paper-kit-guidelines', label: 'PAPER KIT & GUIDELINES' },
   { href: '/information/paper-submission', label: 'PAPER SUBMISSION' },
-  { href: '/information/project-dissemination', label: 'PROJECT DISSEMINATION' },
-  { href: '/information/student-session', label: 'STUDENT SESSION' },
+  { href: '/information/tutorial-submission', label: 'TUTORIAL SUBMISSION' },
+  // { href: '/information/project-dissemination', label: 'PROJECT DISSEMINATION' },
+  // { href: '/information/student-session', label: 'STUDENT SESSION' },
 ] as const
 
 export function Header() {
@@ -156,8 +157,8 @@ export function Header() {
           <Link href="/program" className={navLinkClassName(pathname.includes('/program'))}>
             PROGRAM
           </Link>
-          <Link href="/logistics" className={navLinkClassName(pathname.includes('/logistics'))}>
-            LOGISTICS
+          <Link href="/attend" className={navLinkClassName(pathname.includes('/attend'))}>
+            ATTEND
           </Link>
           <Link href="/contact" className={navLinkClassName(pathname.includes('/contact'))}>
             CONTACT
@@ -269,11 +270,11 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  href="/logistics"
+                  href="/attend"
                   onClick={() => setMobileOpen(false)}
-                  className={pathname.includes('/logistics') ? 'text-accent-foreground' : 'text-container-foreground'}
+                  className={pathname.includes('/attend') ? 'text-accent-foreground' : 'text-container-foreground'}
                 >
-                  LOGISTICS
+                  ATTEND
                 </Link>
               </li>
               <li>
