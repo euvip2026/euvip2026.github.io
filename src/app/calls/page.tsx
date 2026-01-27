@@ -16,6 +16,7 @@ type MainCard = {
   title: string
   description: string
   sections?: Section[]
+  additional?: React.ReactNode
 }
 
 function isTBC(desc: string) {
@@ -116,6 +117,12 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
       ) : (
         <div className="px-6 pt-2 pb-6" />
       )}
+
+      {card.additional && (
+        <div className="px-6 pb-6">
+          <div className="text-lg opacity-80">{card.additional}</div>
+        </div>
+      )}
     </div>
   )
 }
@@ -188,22 +195,36 @@ export default function CallsPage() {
               'Emerging applications, services, architectures and systems',
             ],
           },
-          {
-            id: 'submission-awards',
-            title: 'Submission & Awards',
-            content: (
-              <p className="leading-relaxed">
-                Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
-                content, figures, and references, through the submission system (page 6 should contain only references).
-                Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
-                lecture or poster session. Regular papers presented at the conference will be included in the conference
-                proceedings. As for the previous EUVIP editions, all accepted regular papers are expected to be included
-                in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, for the
-                most distinguished regular paper, as well as the Best Student Paper Award and the Student Demo Award.
-              </p>
-            ),
-          },
+          // {
+          //   id: 'submission-awards',
+          //   title: 'Submission & Awards',
+          //   content: (
+          //     <p className="leading-relaxed">
+          //       Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
+          //       content, figures, and references, through the submission system (page 6 should contain only references).
+          //       Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
+          //       lecture or poster session. Regular papers presented at the conference will be included in the conference
+          //       proceedings. As for the previous EUVIP editions, all accepted regular papers are expected to be included
+          //       in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, for the
+          //       most distinguished regular paper, as well as the Best Student Paper Award and the Student Demo Award.
+          //     </p>
+          //   ),
+          // },
         ],
+        additional: (
+          <>
+            <h2 className="text-2xl leading-tight font-bold opacity-100 mb-4">Submission & Awards</h2>
+            <p className="leading-relaxed">
+              Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
+              content, figures, and references, through the submission system (page 6 should contain only references).
+              Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
+              lecture or poster session. Regular papers presented at the conference will be included in the conference
+              proceedings. As for the previous EUVIP editions, all accepted regular papers are expected to be included
+              in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, for the
+              most distinguished regular paper, as well as the Best Student Paper Award and the Student Demo Award.
+            </p>
+          </>
+        ),
       },
 
       // { id: 'special-sessions', title: 'Call for Special Sessions', description: 'TBC' },
