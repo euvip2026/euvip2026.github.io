@@ -32,7 +32,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Ghorbel',
       organization: 'CRISTAL, ENSI, University of Manouba',
       country: 'Tunisia',
-      imageUrl: '/committee/EnjieGhorbel.jpg',
+      imageUrl: '/committee/EnjieGhorbel.jpeg',
       cvLink: 'https://lu.linkedin.com/in/enjie-ghorbel-0282919a',
     },
     {
@@ -128,7 +128,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Gaudilliere',
       organization: 'University of Lorraine',
       country: 'France',
-      imageUrl: '/committee/VincentGaudilliere.jpg',
+      imageUrl: '/committee/VincentGaudilliere.png',
       cvLink: '',
     },
     // {
