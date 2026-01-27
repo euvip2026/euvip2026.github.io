@@ -15,8 +15,10 @@ type MainCard = {
   id: string
   title: string
   description: string
+  sectionsTitle?: string
   sections?: Section[]
   additional?: React.ReactNode
+  daterows?: [string, string][]
 }
 
 function isTBC(desc: string) {
@@ -106,8 +108,34 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
         </div>
       </div>
 
+      {card.daterows && card.daterows.length > 0 && (
+        <div className="px-6 pb-6">
+          <div className="bg-background mx-auto mt-8 max-w-2xl shadow-md">
+            <table className="w-full border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-container-foreground border-b">
+                  <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Event</th>
+                  <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">Date</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {card.daterows.map(([event, date], idx) => (
+                  <tr key={`${event}-${idx}`} className={idx % 2 === 0 ? 'bg-container' : ''}>
+                    <td className="text-container-foreground px-6 py-4 text-lg">{event}</td>
+                    <td className="text-container-foreground px-6 py-4 text-right text-lg whitespace-nowrap">{date}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
       {!tbc && card.sections?.length ? (
         <div className="px-6 pt-6 pb-6">
+          {card.sectionsTitle && (
+            <p className="text-lg mt-3 opacity-80 mb-6">{card.sectionsTitle}</p>
+          )}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {card.sections.map((s) => (
               <SectionCard key={s.id} section={s} />
@@ -123,6 +151,7 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
           <div className="text-lg opacity-80">{card.additional}</div>
         </div>
       )}
+
     </div>
   )
 }
@@ -134,7 +163,8 @@ export default function CallsPage() {
         id: 'cfp',
         title: 'Call for Papers',
         description:
-          'The 14th European Conference on Visual Information Processing will be held on, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.\n\nTopics of interest include, but are not limited to:',
+          'The 14th European Conference on Visual Information Processing will be held on, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
+        sectionsTitle: 'Topics of interest include, but are not limited to:',
         sections: [
           {
             id: 'modalities',
@@ -225,13 +255,31 @@ export default function CallsPage() {
             </p>
           </>
         ),
+        daterows: [
+          ['Paper Submissions', '30 May 2026'],
+          ['Camera Ready Paper Submissions', '15 August 2026'],
+        ],
       },
 
       // { id: 'special-sessions', title: 'Call for Special Sessions', description: 'TBC' },
       // { id: 'project-dissemination', title: 'Call for Project Dissemination Papers', description: 'TBC' },
-      { id: 'industrial-demo', title: 'Call for Industrial Exhibition and Demo Papers', description: 'TBC' },
-      { id: 'student-session', title: 'Call for Student Grants', description: 'TBC' },
-      { id: 'tutorials', title: 'Call for Tutorials', description: 'TBC' },
+      { id: 'industrial-demo', 
+        title: 'Call for Industrial Exhibition and Demo Papers', 
+        description: 'TBC',
+        daterows: [
+          ['Demo Submissions', '7 August 2026'],
+          ['Demo Notifications', '28 August 2026'],
+        ],
+      },
+      // { id: 'student-grants', title: 'Call for Student Grants', description: 'TBC' },
+      { id: 'tutorials', 
+        title: 'Call for Tutorials', 
+        description: 'TBC',
+        daterows: [
+          ['Tutorial Proposals', '30 April 2026'],
+          ['Tutorial Notifications', '15 May 2026'],
+        ],
+      },
     ],
     [],
   )
