@@ -35,20 +35,26 @@ export default function Committee() {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap justify-center gap-x-10 gap-y-16">
-                    {members.map((member, index) => (
-                      <div key={`${sectionName}-${index}`} className="w-full sm:w-[260px]">
-                        <CommitteeMember
-                          firstName={member.firstName}
-                          lastName={member.lastName}
-                          organization={member.organization}
-                          country={member.country}
-                          imageUrl={member.imageUrl}
-                          cvLink={member.cvLink}
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  {members.length === 0 ? (
+                    <div className="py-12 text-left">
+                      <p className="text-lg text-gray-500 italic">To be announced soon.</p>
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap justify-center gap-x-10 gap-y-16">
+                      {members.map((member, index) => (
+                        <div key={`${sectionName}-${index}`} className="w-full sm:w-[260px]">
+                          <CommitteeMember
+                            firstName={member.firstName}
+                            lastName={member.lastName}
+                            organization={member.organization}
+                            country={member.country}
+                            imageUrl={member.imageUrl}
+                            cvLink={member.cvLink}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </section>
             ))}
