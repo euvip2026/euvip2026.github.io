@@ -1,3 +1,5 @@
+import ContactForm from '@/components/ContactForm'
+
 export default function ContactPage() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
   return (
@@ -16,10 +18,10 @@ export default function ContactPage() {
       <div className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
-            <p className="text-container-foreground mb-5 text-2xl leading-relaxed font-bold">Contact us at:</p>
-            <a href="mailto:cvi2.snt@gmail.com" className="hover:text-accent underline transition-colors">
-              cvi2.snt@gmail.com
-            </a>
+            <p className="text-container-foreground mb-6 text-lg opacity-80">
+              Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+            <ContactForm />
           </div>
         </div>
       </div>
