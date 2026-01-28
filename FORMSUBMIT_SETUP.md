@@ -10,14 +10,44 @@ FormSubmit is a simple service that forwards form submissions to your email addr
 
 ## Setup (Takes 30 seconds!)
 
-### Option 1: Use Environment Variable (Recommended)
+### Option 1: Use Encrypted Token (Recommended - More Secure)
+
+After your first form submission, FormSubmit will send you an email with an encrypted token. Use this token instead of your email to prevent email harvesting.
+
+1. Check your email after first submission - FormSubmit will send you a message with a token like: `abc123def456...`
+
+2. Update `.env.local`:
+   ```env
+   NEXT_PUBLIC_FORMSUBMIT_TOKEN=your_encrypted_token_here
+   ```
+
+3. The form will use the encrypted token (your email is hidden from the code).
+
+### Option 2: Use Email Address (Works but less secure)
 
 1. Update `.env.local`:
    ```env
    NEXT_PUBLIC_RECIPIENT_EMAIL=your-email@gmail.com
    ```
 
-2. The form will automatically use this email address.
+2. The form will use your email address directly (visible in code).
+
+### Option 3: Multiple Recipients
+
+FormSubmit supports sending to multiple email addresses using comma-separated emails:
+
+1. Update `.env.local`:
+   ```env
+   NEXT_PUBLIC_RECIPIENT_EMAIL=email1@gmail.com,email2@gmail.com,email3@gmail.com
+   ```
+
+2. All recipients will receive the form submission.
+
+**Important Notes:**
+- ✅ **Comma-separated emails work** with `NEXT_PUBLIC_RECIPIENT_EMAIL`
+- ⚠️ **Encrypted tokens** (`NEXT_PUBLIC_FORMSUBMIT_TOKEN`) typically work for single emails only
+- 💡 **Alternative:** Set up a group/distribution email (e.g., `contact@yourdomain.com`) that forwards to multiple recipients
+- 💡 **Alternative:** Use your email provider's forwarding rules to send to multiple addresses
 
 ### Option 2: Hardcode Email (Simplest)
 
@@ -40,12 +70,23 @@ Since `NEXT_PUBLIC_RECIPIENT_EMAIL` is a public environment variable, you can se
 
 The workflow file (`.github/workflows/deploy.yml`) is already set up. Just add the secret:
 
+**For Encrypted Token (Recommended):**
+1. Go to your GitHub repository
+2. **Settings** → **Secrets and variables** → **Actions**
+3. Click **New repository secret**
+4. Add:
+   - Name: `NEXT_PUBLIC_FORMSUBMIT_TOKEN`
+   - Value: `your_encrypted_token_from_formsubmit`
+5. Click **Add secret**
+
+**Or for Email Address (Single or Multiple):**
 1. Go to your GitHub repository
 2. **Settings** → **Secrets and variables** → **Actions**
 3. Click **New repository secret**
 4. Add:
    - Name: `NEXT_PUBLIC_RECIPIENT_EMAIL`
-   - Value: `youruser@gmail.com` (or your email)
+   - Value: `youruser@gmail.com` (single email)
+   - Or: `email1@gmail.com,email2@gmail.com,email3@gmail.com` (multiple emails - comma-separated)
 5. Click **Add secret**
 
 ### Option B: Hardcode in Code

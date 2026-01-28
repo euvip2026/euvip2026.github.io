@@ -34,7 +34,8 @@ jobs:
       - name: Build Next.js
         env:
           # FormSubmit Configuration (from GitHub Secrets)
-          # No API keys needed - just the recipient email!
+          # Use encrypted token (recommended) or email address
+          NEXT_PUBLIC_FORMSUBMIT_TOKEN: ${{ secrets.NEXT_PUBLIC_FORMSUBMIT_TOKEN }}
           NEXT_PUBLIC_RECIPIENT_EMAIL: ${{ secrets.NEXT_PUBLIC_RECIPIENT_EMAIL }}
         run: npm run build
 

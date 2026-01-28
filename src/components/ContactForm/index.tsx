@@ -96,12 +96,17 @@ export default function ContactForm() {
 
     try {
       // Send email using FormSubmit (no registration required!)
-      // Email is retrieved from environment variable NEXT_PUBLIC_RECIPIENT_EMAIL
-      const recipientEmail = process.env.NEXT_PUBLIC_RECIPIENT_EMAIL
-      if (!recipientEmail) {
-        throw new Error('Recipient email is not configured.')
+      // Use encrypted token from NEXT_PUBLIC_FORMSUBMIT_TOKEN (recommended for security)
+      // Or fallback to email(s) from NEXT_PUBLIC_RECIPIENT_EMAIL
+      // For multiple recipients, use comma-separated emails: email1@example.com,email2@example.com
+      const formsubmitToken = process.env.NEXT_PUBLIC_FORMSUBMIT_TOKEN || process.env.NEXT_PUBLIC_RECIPIENT_EMAIL
+      if (!formsubmitToken) {
+        throw new Error('FormSubmit configuration is missing.')
       }
-      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+      
+      // Encode the token/email(s) for URL (handles comma-separated emails)
+      const encodedRecipient = encodeURIComponent(formsubmitToken)
+      const response = await fetch(`https://formsubmit.co/ajax/${encodedRecipient}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
