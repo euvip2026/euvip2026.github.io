@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
-import Calls from '@/components/Images/Calls'
+
 
 type Section = {
   id: string
