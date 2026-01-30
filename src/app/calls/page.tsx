@@ -3,7 +3,6 @@
 import React, { useMemo, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
 
-
 type Section = {
   id: string
   title: string
@@ -133,9 +132,7 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
       )}
       {!tbc && card.sections?.length ? (
         <div className="px-6 pt-6 pb-6">
-          {card.sectionsTitle && (
-            <p className="text-lg mt-3 opacity-80 mb-6">{card.sectionsTitle}</p>
-          )}
+          {card.sectionsTitle && <p className="mt-3 mb-6 text-lg opacity-80">{card.sectionsTitle}</p>}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {card.sections.map((s) => (
               <SectionCard key={s.id} section={s} />
@@ -151,7 +148,6 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
           <div className="text-lg opacity-80">{card.additional}</div>
         </div>
       )}
-
     </div>
   )
 }
@@ -243,7 +239,7 @@ export default function CallsPage() {
         ],
         additional: (
           <>
-            <h2 className="text-2xl leading-tight font-bold opacity-100 mb-4">Submission & Awards</h2>
+            <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Submission & Awards</h2>
             <p className="leading-relaxed">
               Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
               content, figures, and references, through the submission system (page 6 should contain only references).
@@ -263,8 +259,9 @@ export default function CallsPage() {
 
       // { id: 'special-sessions', title: 'Call for Special Sessions', description: 'TBC' },
       // { id: 'project-dissemination', title: 'Call for Project Dissemination Papers', description: 'TBC' },
-      { id: 'industrial-demo', 
-        title: 'Call for Industrial Exhibition and Demo Papers', 
+      {
+        id: 'industrial-demo',
+        title: 'Call for Industrial Exhibition and Demo Papers',
         description: 'TBC',
         daterows: [
           ['Demo Submissions', '7 August 2026'],
@@ -272,8 +269,9 @@ export default function CallsPage() {
         ],
       },
       // { id: 'student-grants', title: 'Call for Student Grants', description: 'TBC' },
-      { id: 'tutorials', 
-        title: 'Call for Tutorials', 
+      {
+        id: 'tutorials',
+        title: 'Call for Tutorials',
         description: 'TBC',
         daterows: [
           ['Tutorial Proposals', '30 April 2026'],
@@ -305,11 +303,21 @@ export default function CallsPage() {
       {active ? (
         <FocusMainCard card={active} onBack={() => setActiveId(null)} />
       ) : (
-        <div className="grid grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-6 md:px-0 lg:grid-cols-3">
-          {cards.map((c) => (
-            <CompactMainCard key={c.id} card={c} onOpen={() => setActiveId(c.id)} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-6 md:px-0 lg:grid-cols-3">
+            {cards.map((c) => (
+              <CompactMainCard key={c.id} card={c} onOpen={() => setActiveId(c.id)} />
+            ))}
+          </div>
+          <section className="mt-12 px-4 md:px-0">
+            <h2 className="text-container-foreground text-2xl font-bold">Acknowledgment</h2>
+            <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This
+              service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud
+              services as well as for software development and support.
+            </p>
+          </section>
+        </>
       )}
     </section>
   )
