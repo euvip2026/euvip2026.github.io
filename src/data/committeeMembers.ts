@@ -136,7 +136,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Chetouani',
       organization: 'Universite Sorbonne Paris Nord',
       country: 'France',
-      imageUrl: '/committee/AladineChetouani.jpg',
+      imageUrl: '/committee/AladineChetouani.jpeg',
       cvLink: 'https://www.linkedin.com/in/aladine-chetouani-2aa66038/',
     },
     {
