@@ -14,14 +14,14 @@ export const speakers: Speaker[] = [
     name: 'Dima Damen',
     affiliation:'Professor and head of research group, and senior research scientist at University of Bristol, Google DeepMind, UK',
     imageUrl: '/speakers/DimaDamen.jpg',
-    talkTitle: 'Video Understanding Through Egocentric Vision'
+    // talkTitle: 'Video Understanding Through Egocentric Vision'
   },
   {
     name: 'Elisa Ricci',
     affiliation:
       'Professor and head of reearch unit at University of Trento, Fondazione Bruno Kessler, Italy',
     imageUrl: '/speakers/ElisaRicci.jpeg',
-    talkTitle: 'Continual and Adaptive Learning in Computer Vision',
+    // talkTitle: 'Continual and Adaptive Learning in Computer Vision',
   },
   {
     name: 'Fatma Güney',
