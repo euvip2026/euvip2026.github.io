@@ -1,3 +1,6 @@
+import Speaker from '@/components/Speaker'
+import { speakers } from '@/data/speakers'
+
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
@@ -69,28 +72,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Keynote speakers */}
-      {/* <section className="bg-container text-container-foreground">
+      {/* Speakers */}
+      <section className="bg-container text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Keynote speakers</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Speakers</h2>
               <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
             </div>
-            <div className="text-sm font-medium opacity-70">To be announced</div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="border-muted bg-background/70 rounded-3xl border p-6 shadow-sm backdrop-blur-sm">
-                <div className="bg-muted h-14 w-14 rounded-2xl" aria-hidden="true" />
-                <div className="mt-5 text-lg font-bold">Speaker name</div>
-                <div className="mt-1 text-sm opacity-70">Affiliation</div>
+          <div className="mt-10 space-y-6">
+            {speakers.length === 0 ? (
+              <div className="py-12 text-center">
+                <p className="text-lg text-gray-500 italic">To be announced soon.</p>
               </div>
-            ))}
+            ) : (
+              speakers.map((speaker, index) => (
+                <Speaker
+                  key={`speaker-${index}`}
+                  name={speaker.name}
+                  affiliation={speaker.affiliation}
+                  country={speaker.country}
+                  imageUrl={speaker.imageUrl}
+                  talkTitle={speaker.talkTitle}
+                  profileUrl={speaker.profileUrl}
+                />
+              ))
+            )}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Partners */}
       {/* <section className="bg-background text-container-foreground">
@@ -117,7 +129,7 @@ export default function Home() {
       </section> */}
 
       {/* Location */}
-      <section className="bg-container text-container-foreground">
+      <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
