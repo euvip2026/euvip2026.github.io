@@ -33,7 +33,7 @@ export default function Home() {
           href="https://lmih.lu/en/tools/videos/economy/luxembourg-our-common-ground-en/"
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-[20px] right-[30px] z-10 text-white/80 hover:text-white transition-colors text-xl md:text-2xl font-medium cursor-pointer"
+          className="absolute right-[30px] bottom-[20px] z-10 cursor-pointer text-xl font-medium text-white/80 transition-colors hover:text-white md:text-2xl"
           title="Video source: LuXembourg - Our Common Ground | Fête Nationale 2023 VO ST FR"
           aria-label="Video source: LuXembourg - Our Common Ground | Fête Nationale 2023 VO ST FR"
         >
@@ -57,10 +57,10 @@ export default function Home() {
               from 28th of September to 1st of October 2026.
             </p>
             <p>
-              EUVIP 2026 will bring together researchers and practitioners from academia and industry working in the field 
-              of visual information processing, an important branch of Artificial Intelligence (AI). 
-              EUVIP covers a broad range of visual modalities, processing tasks, performance assessment methodologies, 
-              and applications.
+              EUVIP 2026 will bring together researchers and practitioners from academia and industry working in the
+              field of visual information processing, an important branch of Artificial Intelligence (AI). EUVIP covers
+              a broad range of visual modalities, processing tasks, performance assessment methodologies, and
+              applications.
             </p>
             <p>
               The first day of the conference will be dedicated to one-day tutorials. The main conference programme will
@@ -93,6 +93,7 @@ export default function Home() {
                   key={`speaker-${index}`}
                   name={speaker.name}
                   affiliation={speaker.affiliation}
+                  description={speaker.description}
                   country={speaker.country}
                   imageUrl={speaker.imageUrl}
                   talkTitle={speaker.talkTitle}
@@ -152,7 +153,7 @@ export default function Home() {
               </p>
 
               <a
-                className="border-muted bg-background hover:bg-background/80 mt-6 inline-flex items-center gap-2 rounded-sm border px-4 py-2 text-sm font-semibold shadow-sm transition"
+                className="border-muted bg-background hover:bg-background/80 rounded-x mt-6 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
                 href="https://www.google.com/maps/search/?api=1&query=Parc%20Alvisse%20Hotel%20Conference%20%26%20Spa%2C%20Luxembourg"
                 target="_blank"
                 rel="noreferrer"
@@ -161,7 +162,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="border-muted bg-background overflow-hidden rounded-md border shadow-sm">
+            <div className="border-muted bg-background overflow-hidden rounded-xs border shadow-sm">
               <div className="aspect-4/3 w-full">
                 <iframe
                   title="Parc Alvisse Hotel Conference & Spa (Luxembourg) map"

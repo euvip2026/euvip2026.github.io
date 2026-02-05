@@ -5,13 +5,22 @@ import Image from 'next/image'
 interface SpeakerProps {
   name: string
   affiliation: string
+  description: string
   country?: string
   imageUrl: string
   talkTitle?: string
   profileUrl?: string
 }
 
-export default function Speaker({ name, affiliation, country, imageUrl, talkTitle, profileUrl }: SpeakerProps) {
+export default function Speaker({
+  name,
+  affiliation,
+  description,
+  country,
+  imageUrl,
+  talkTitle,
+  profileUrl,
+}: SpeakerProps) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
   // Check if image is external URL
@@ -20,7 +29,7 @@ export default function Speaker({ name, affiliation, country, imageUrl, talkTitl
   const srcWithBasePath = `${basePath}${localPath}`
 
   return (
-    <div className="bg-background text-container-foreground flex w-full flex-col gap-6 rounded-md border border-gray-200 p-6 shadow-sm md:flex-row">
+    <div className="bg-background text-container-foreground flex w-full flex-col gap-6 rounded-xs border border-gray-200 p-6 shadow-sm md:flex-row">
       {/* Left side - Picture section (1/4) */}
       <div className="flex flex-col items-center md:w-1/4">
         {/* Image */}
@@ -37,7 +46,8 @@ export default function Speaker({ name, affiliation, country, imageUrl, talkTitl
           <h3 className="mb-1 text-center text-lg font-semibold hover:underline">{name}</h3>
         </a>
         {/* Affiliation */}
-        <p className="text-center text-sm text-gray-600">{affiliation}</p>
+        <p className="text-center text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: affiliation }} />
+        <p className="text-center text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: description }} />
 
         {/* Country (if provided) */}
         {country && <p className="text-center text-sm text-gray-600">{country}</p>}

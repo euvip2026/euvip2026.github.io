@@ -19,10 +19,10 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  
+
   // Track form start time for bot detection
   const formStartTime = useRef<number>(Date.now())
-  
+
   // Honeypot field (hidden from users, bots will fill it)
   const honeypotRef = useRef<HTMLInputElement>(null)
 
@@ -71,7 +71,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!validate()) {
       return
     }
@@ -103,7 +103,7 @@ export default function ContactForm() {
       if (!formsubmitToken) {
         throw new Error('FormSubmit configuration is missing.')
       }
-      
+
       // Encode the token/email(s) for URL (handles comma-separated emails)
       const encodedRecipient = encodeURIComponent(formsubmitToken)
       const response = await fetch(`https://formsubmit.co/ajax/${encodedRecipient}`, {
@@ -127,7 +127,7 @@ export default function ContactForm() {
       }
 
       const data = await response.json()
-      
+
       if (!data.success) {
         throw new Error(data.message || 'Failed to send message. Please try again.')
       }
@@ -139,10 +139,10 @@ export default function ContactForm() {
         subject: '',
         message: '',
       })
-      
+
       // Reset form start time for next submission
       formStartTime.current = Date.now()
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitStatus('idle')
@@ -159,7 +159,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="mt-6 space-y-6">
       <div>
-        <label htmlFor="name" className="block text-container-foreground text-sm font-medium mb-2">
+        <label htmlFor="name" className="text-container-foreground mb-2 block text-sm font-medium">
           Name <span className="text-red-500">*</span>
         </label>
         <input
@@ -169,13 +169,13 @@ export default function ContactForm() {
           required
           value={formData.name}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-background text-container-foreground transition-colors"
+          className="border-muted focus:ring-accent bg-background text-container-foreground w-full rounded-xs border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
           placeholder="Your full name"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-container-foreground text-sm font-medium mb-2">
+        <label htmlFor="email" className="text-container-foreground mb-2 block text-sm font-medium">
           Email <span className="text-red-500">*</span>
         </label>
         <input
@@ -185,13 +185,13 @@ export default function ContactForm() {
           required
           value={formData.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-background text-container-foreground transition-colors"
+          className="border-muted focus:ring-accent bg-background text-container-foreground w-full rounded-xs border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
           placeholder="your.email@example.com"
         />
       </div>
 
       <div>
-        <label htmlFor="subject" className="block text-container-foreground text-sm font-medium mb-2">
+        <label htmlFor="subject" className="text-container-foreground mb-2 block text-sm font-medium">
           Subject <span className="text-red-500">*</span>
         </label>
         <input
@@ -201,13 +201,13 @@ export default function ContactForm() {
           required
           value={formData.subject}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-background text-container-foreground transition-colors"
+          className="border-muted focus:ring-accent bg-background text-container-foreground w-full rounded-xs border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
           placeholder="What is your message about?"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-container-foreground text-sm font-medium mb-2">
+        <label htmlFor="message" className="text-container-foreground mb-2 block text-sm font-medium">
           Message <span className="text-red-500">*</span>
         </label>
         <textarea
@@ -217,7 +217,7 @@ export default function ContactForm() {
           rows={6}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 border border-muted rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-background text-container-foreground transition-colors resize-y"
+          className="border-muted focus:ring-accent bg-background text-container-foreground w-full resize-y rounded-xs border px-4 py-3 transition-colors focus:border-transparent focus:ring-2"
           placeholder="Your message..."
         />
       </div>
@@ -241,25 +241,24 @@ export default function ContactForm() {
       />
 
       {submitStatus === 'error' && errorMessage && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-          {errorMessage}
-        </div>
+        <div className="rounded-xs border border-red-200 bg-red-50 px-4 py-3 text-red-700">{errorMessage}</div>
       )}
 
       {submitStatus === 'success' && (
-        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
+        <div className="rounded-xs border border-green-200 bg-green-50 px-4 py-3 text-green-700">
           Thank you for your message! We will get back to you soon.
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-accent hover:bg-accent/90 text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
-      </button>
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="border-muted bg-container hover:bg-background mt-2 rounded-xs border px-10 py-4 text-sm font-semibold shadow-sm transition hover:cursor-pointer"
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+      </div>
     </form>
   )
 }
-

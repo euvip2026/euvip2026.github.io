@@ -50,9 +50,9 @@ export default function PaperKitGuidelines() {
             </p>
 
             <p>
-              Given the double-blind review process, applicable to Full Papers only, authors should not know the names
-              of the reviewers of their papers, and reviewers should not know the names of the authors. Please prepare
-              your paper in a way that preserves the anonymity of the authors.
+              Given the <span className="font-bold">double-blind</span> review process, applicable to Full Papers only,
+              authors should not know the names of the reviewers of their papers, and reviewers should not know the
+              names of the authors. Please prepare your paper in a way that preserves the anonymity of the authors.
             </p>
 
             <ul className="ml-6 list-disc space-y-2">

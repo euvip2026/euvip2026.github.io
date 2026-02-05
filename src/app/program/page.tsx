@@ -37,7 +37,8 @@ export default function SchedulePage() {
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
-              Four days of cutting-edge research and networking (time schedule is not finalized yet).
+              Four days of cutting-edge research and networking (time schedule is not finalized yet) all in CET (UTC+1)
+              timezone.
             </p>
           </div>
         </div>

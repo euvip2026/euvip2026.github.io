@@ -288,37 +288,66 @@ export default function CallsPage() {
   const active = activeId ? cards.find((c) => c.id === activeId) : null
 
   return (
-    <section className="mx-auto mb-8 max-w-7xl md:px-4">
-      <div className="relative h-56 overflow-hidden shadow-sm sm:h-[208px]">
-        <img src={`${basePath}/calls.png`} alt="Calls Image" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
+    <section className="mx-auto">
+      <div className="mx-auto max-w-7xl md:px-4">
+        <div className="relative h-56 overflow-hidden shadow-sm sm:h-[208px]">
+          <img src={`${basePath}/calls.png`} alt="Calls Image" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
-        <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Calls</h2>
-          <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Calls</h2>
+            <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
+          </div>
         </div>
       </div>
 
       <div className="py-6" />
       {active ? (
-        <FocusMainCard card={active} onBack={() => setActiveId(null)} />
+        <div className="mx-auto max-w-7xl px-0 md:px-4">
+          <FocusMainCard card={active} onBack={() => setActiveId(null)} />
+        </div>
       ) : (
         <>
-          <div className="grid grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-6 md:px-0 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-6 md:px-4 lg:grid-cols-3">
             {cards.map((c) => (
               <CompactMainCard key={c.id} card={c} onOpen={() => setActiveId(c.id)} />
             ))}
           </div>
-          <section className="mt-12 px-4 md:px-0">
-            <h2 className="text-container-foreground text-2xl font-bold">Acknowledgment</h2>
-            <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
-              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This
-              service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud
-              services as well as for software development and support.
-            </p>
-          </section>
         </>
       )}
+
+      <section className="bg-container mt-12 px-4 md:px-0">
+        <div className="mx-auto max-w-7xl py-8 md:px-4">
+          <h2 className="text-container-foreground text-2xl font-bold">Submission</h2>
+          <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+            All papers must be submitted electronically via the Microsoft CMT submission system (
+            <a
+              href="https://cmt3.research.microsoft.com/EUVIP2026"
+              target="_blank"
+              rel="noreferrer"
+              className="font-bold hover:underline"
+            >
+              https://cmt3.research.microsoft.com/EUVIP2026
+            </a>
+            ):
+          </p>
+          <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+            The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service
+            was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as
+            well as for software development and support.
+          </p>
+          <div className="flex w-full justify-center">
+            <a
+              className="border-muted bg-background hover:bg-background/80 mt-8 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
+              href="https://cmt3.research.microsoft.com/EUVIP2026"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Submit in Microsoft CMT
+            </a>
+          </div>
+        </div>
+      </section>
     </section>
   )
 }

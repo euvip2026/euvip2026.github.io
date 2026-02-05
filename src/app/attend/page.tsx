@@ -159,20 +159,20 @@ export default function AttendPage() {
                   <ul className="text-container-foreground space-y-2">
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Direct flights from numerous European destinations
+                      Direct flights from numerous European destinations.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Direct flights to more than 100 destinations
+                      Direct flights to more than 100 destinations.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Airport is ~10 minutes from city centre
+                      Airport is ~10 minutes from city centre.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
                       Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
-                      Geneva
+                      Geneva.
                     </li>
                   </ul>
                 </div>
@@ -214,11 +214,26 @@ export default function AttendPage() {
                   <ul className="text-container-foreground space-y-2">
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Public transport is free of charge nationwide, including buses, trams, and trains
+                      Public transport is free of charge nationwide, including buses, trams, and trains.
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
-                      Taxi services are widely available, including app-based services such as Uber and Webtaxi
+                      Taxi services are widely available, including app-based services such as Uber and Webtaxi.
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                      <span>
+                        For public transport information in Luxembourg, please consult the Mobiliteit (
+                        <a
+                          href="https://www.mobiliteit.lu/"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="font-bold hover:underline"
+                        >
+                          https://www.mobiliteit.lu/
+                        </a>
+                        ).
+                      </span>
                     </li>
                   </ul>
                 </div>

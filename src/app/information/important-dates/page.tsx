@@ -31,7 +31,9 @@ export default function ImportantDates() {
             <thead>
               <tr className="border-container-foreground border-b">
                 <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Event</th>
-                <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">Date</th>
+                <th className="text-container-foreground flex flex-col px-6 py-4 text-right text-2xl font-semibold">
+                  Date <span className="text-xs font-normal">(CET, UTC+1)</span>
+                </th>
               </tr>
             </thead>
 
