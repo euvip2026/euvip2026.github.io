@@ -1,5 +1,3 @@
-import Speaker from '@/components/Speaker'
-import { speakers } from '@/data/speakers'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
