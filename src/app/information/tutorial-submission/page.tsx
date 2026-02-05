@@ -1,4 +1,10 @@
 import Information from '@/components/Images/Information'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Tutorial Submission',
+  alternates: { canonical: '/information/tutorial-submission/' },
+}
 
 export default function TutorialSubmission() {
   return (

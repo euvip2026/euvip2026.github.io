@@ -1,4 +1,10 @@
 import Information from '@/components/Images/Information'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Student Session',
+  alternates: { canonical: '/information/student-session/' },
+}
 
 export default function StudentSession() {
   return (

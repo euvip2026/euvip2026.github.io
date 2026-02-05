@@ -1,4 +1,10 @@
 import ContactForm from '@/components/ContactForm'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  alternates: { canonical: '/contact/' },
+}
 
 export default function ContactPage() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''

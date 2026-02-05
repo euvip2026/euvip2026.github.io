@@ -1,5 +1,10 @@
 import Speaker from '@/components/Speaker'
 import { speakers } from '@/data/speakers'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
@@ -72,39 +77,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speakers */}
-      <section className="bg-container text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Speakers</h2>
-              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
-            </div>
-          </div>
-
-          <div className="mt-10 space-y-6">
-            {speakers.length === 0 ? (
-              <div className="py-12 text-center">
-                <p className="text-lg text-gray-500 italic">To be announced soon.</p>
-              </div>
-            ) : (
-              speakers.map((speaker, index) => (
-                <Speaker
-                  key={`speaker-${index}`}
-                  name={speaker.name}
-                  affiliation={speaker.affiliation}
-                  description={speaker.description}
-                  country={speaker.country}
-                  imageUrl={speaker.imageUrl}
-                  talkTitle={speaker.talkTitle}
-                  profileUrl={speaker.profileUrl}
-                />
-              ))
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Partners */}
       {/* <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
@@ -130,7 +102,7 @@ export default function Home() {
       </section> */}
 
       {/* Location */}
-      <section className="bg-background text-container-foreground">
+      <section className="bg-container text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>

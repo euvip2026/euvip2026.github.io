@@ -1,4 +1,10 @@
 import Information from '@/components/Images/Information'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Project Dissemination',
+  alternates: { canonical: '/information/project-dissemination/' },
+}
 
 export default function ProjectDissemination() {
   return (

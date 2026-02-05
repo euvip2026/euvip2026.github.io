@@ -1,4 +1,10 @@
 import Information from '@/components/Images/Information'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Paper Kit & Guidelines',
+  alternates: { canonical: '/information/paper-kit-guidelines/' },
+}
 
 export default function PaperKitGuidelines() {
   return (

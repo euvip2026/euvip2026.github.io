@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Sponsors',
+  alternates: { canonical: '/sponsors/' },
+}
+
 export default function AwardsPage() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
   return (

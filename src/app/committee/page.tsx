@@ -1,5 +1,11 @@
 import CommitteeMember from '@/components/CommitteeMember'
 import { committeeMembers } from '@/data/committeeMembers'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Committee',
+  alternates: { canonical: '/committee/' },
+}
 
 export default function Committee() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''

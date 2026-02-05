@@ -11,17 +11,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
-const NAV_ITEMS = [
-  { href: '/', label: 'HOME' },
-  { href: '/committee', label: 'COMMITTEE' },
-  { href: '/calls', label: 'CALLS' },
-  { href: '/program', label: 'PROGRAM' },
-  { href: '/attend', label: 'ATTEND' },
-  { href: '/contact', label: 'CONTACT' },
-  { href: '/sponsors', label: 'SPONSORS' },
-  { href: '/awards', label: 'AWARDS' },
-] as const
-
 const INFORMATION_ITEMS = [
   { href: '/information/important-dates', label: 'IMPORTANT DATES' },
   { href: '/information/paper-kit-guidelines', label: 'PAPER KIT & GUIDELINES' },
@@ -118,6 +107,9 @@ export function Header() {
           <Link href="/committee" className={navLinkClassName(pathname.includes('/committee'))}>
             COMMITTEE
           </Link>
+          <Link href="/speakers" className={navLinkClassName(pathname.includes('/speakers'))}>
+            SPEAKERS
+          </Link>
           <Link href="/calls" className={navLinkClassName(pathname.includes('/calls'))}>
             CALLS
           </Link>
@@ -131,7 +123,7 @@ export function Header() {
               }}
               onMouseLeave={scheduleDesktopInfoClose}
             >
-              INFORMATION FOR AUTHORS
+              FOR AUTHORS
               <ChevronDown className="h-4 w-4 opacity-80" />
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -220,6 +212,15 @@ export function Header() {
               </li>
               <li>
                 <Link
+                  href="/speakers"
+                  onClick={() => setMobileOpen(false)}
+                  className={pathname.includes('/speakers') ? 'text-accent-foreground' : 'text-container-foreground'}
+                >
+                  SPEAKERS
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/calls"
                   onClick={() => setMobileOpen(false)}
                   className={pathname.includes('/calls') ? 'text-accent-foreground' : 'text-container-foreground'}
@@ -237,7 +238,7 @@ export function Header() {
                   aria-expanded={mobileInformationOpen}
                   onClick={() => setMobileInformationOpen((v) => !v)}
                 >
-                  INFORMATION FOR AUTHORS
+                  FOR AUTHORS
                   <ChevronDown
                     className={`h-6 w-6 transition-transform ${mobileInformationOpen ? 'rotate-180' : ''}`}
                   />

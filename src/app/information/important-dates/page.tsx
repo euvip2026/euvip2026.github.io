@@ -1,4 +1,10 @@
 import Information from '@/components/Images/Information'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Important Dates',
+  alternates: { canonical: '/information/important-dates/' },
+}
 
 export default function ImportantDates() {
   const rows = [
