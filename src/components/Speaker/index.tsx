@@ -11,14 +11,7 @@ interface SpeakerProps {
   profileUrl?: string
 }
 
-export default function Speaker({
-  name,
-  affiliation,
-  country,
-  imageUrl,
-  talkTitle,
-  profileUrl,
-}: SpeakerProps) {
+export default function Speaker({ name, affiliation, country, imageUrl, talkTitle, profileUrl }: SpeakerProps) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
   // Check if image is external URL
@@ -40,8 +33,9 @@ export default function Speaker({
         </div>
 
         {/* Name */}
-        <h3 className="mb-1 text-center text-lg font-semibold">{name}</h3>
-
+        <a href={profileUrl ?? ''} target="_blank" rel="noopener noreferrer">
+          <h3 className="mb-1 text-center text-lg font-semibold hover:underline">{name}</h3>
+        </a>
         {/* Affiliation */}
         <p className="text-center text-sm text-gray-600">{affiliation}</p>
 
@@ -73,4 +67,3 @@ export default function Speaker({
     </div>
   )
 }
-

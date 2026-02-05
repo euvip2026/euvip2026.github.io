@@ -49,7 +49,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
         <button
           type="button"
           onClick={onOpen}
-          className="border-information hover:bg-container/80 text-md mt-auto flex w-full items-center justify-center gap-2 border-t px-6 py-4 font-semibold transition"
+          className="border-information hover:bg-container/80 text-md mt-auto flex w-full items-center justify-center gap-2 border-t px-6 py-4 font-semibold transition hover:cursor-pointer"
         >
           More details
           <ChevronDown className="h-4 w-4" />

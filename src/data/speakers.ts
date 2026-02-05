@@ -1,32 +1,34 @@
 export interface Speaker {
-    name: string
-    affiliation: string
-    country?: string
-    imageUrl: string
-    talkTitle?: string
-    profileUrl?: string
-  }
+  name: string
+  affiliation: string
+  country?: string
+  imageUrl: string
+  talkTitle?: string
+  profileUrl?: string
+}
 
 export const speakers: Speaker[] = [
   // Add your speakers here
   // Example:
   {
     name: 'Dima Damen',
-    affiliation:'Professor and head of research group, and senior research scientist at University of Bristol, Google DeepMind, UK',
+    affiliation:
+      'Professor and head of research group, and senior research scientist at University of Bristol, Google DeepMind, UK',
     imageUrl: '/speakers/DimaDamen.jpg',
+    profileUrl: 'https://dimadamen.github.io/',
     // talkTitle: 'Video Understanding Through Egocentric Vision'
   },
   {
     name: 'Elisa Ricci',
-    affiliation:
-      'Professor and head of reearch unit at University of Trento, Fondazione Bruno Kessler, Italy',
+    affiliation: 'Professor and head of reearch unit at University of Trento, Fondazione Bruno Kessler, Italy',
     imageUrl: '/speakers/ElisaRicci.jpeg',
+    profileUrl: 'https://eliricci.eu/',
     // talkTitle: 'Continual and Adaptive Learning in Computer Vision',
   },
   {
     name: 'Fatma Güney',
-    affiliation:
-      'Assistant Professor at the Department of Computer Engineering at Koç University, Istanbul',
+    affiliation: 'Assistant Professor at the Department of Computer Engineering at Koç University, Istanbul',
     imageUrl: '/speakers/FatmaGüney.jpeg',
-  }
+    profileUrl: 'https://mysite.ku.edu.tr/fguney/',
+  },
 ]
