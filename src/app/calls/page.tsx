@@ -338,7 +338,7 @@ export default function CallsPage() {
           </p>
           <div className="flex w-full justify-center">
             <a
-              className="border-muted bg-background hover:bg-background/80 mt-8 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
+              className="text-container-foreground border-muted bg-background hover:bg-background/80 mt-8 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
               href="https://cmt3.research.microsoft.com/EUVIP2026"
               target="_blank"
               rel="noreferrer"
