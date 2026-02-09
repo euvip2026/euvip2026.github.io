@@ -36,7 +36,7 @@ export default function SpeakersPage() {
                 key={`speaker-${index}`}
                 name={speaker.name}
                 affiliation={speaker.affiliation}
-                description={speaker.description}
+                // description={speaker.description}
                 country={speaker.country}
                 imageUrl={speaker.imageUrl}
                 talkTitle={speaker.talkTitle}
