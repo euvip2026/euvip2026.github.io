@@ -3,6 +3,8 @@
 import React, { useMemo, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
 type Section = {
   id: string
   title: string
@@ -13,6 +15,7 @@ type Section = {
 type MainCard = {
   id: string
   title: string
+  pdf?: string
   description: string
   sectionsTitle?: string
   sections?: Section[]
@@ -80,6 +83,7 @@ function SectionCard({ section }: { section: Section }) {
 function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void }) {
   const tbc = isTBC(card.description)
   const displayDesc = tbcDisplayText(card.description)
+  const pdfHref = card.pdf ? (card.pdf.startsWith('http') ? card.pdf : `${basePath}${card.pdf}`) : null
 
   return (
     <div className="bg-container text-container-foreground w-full shadow-sm">
@@ -102,7 +106,16 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
               {/* <p className="mt-2 text-lg opacity-80">More details will be announced shortly.</p> */}
             </>
           ) : (
-            <p className="mt-3 text-lg whitespace-pre-line opacity-80">{displayDesc}</p>
+            <>
+              <p className="mt-3 text-lg whitespace-pre-line opacity-80">{displayDesc}</p>
+              {pdfHref && (
+                <p className="mt-3 text-lg opacity-90">
+                  <a href={pdfHref} download className="font-bold hover:underline">
+                    Download the Call for Papers (PDF)
+                  </a>
+                </p>
+              )}
+            </>
           )}
         </div>
       </div>
@@ -158,6 +171,7 @@ export default function CallsPage() {
       {
         id: 'cfp',
         title: 'Call for Papers',
+        pdf: '/cfp.pdf',
         description:
           'The 14th European Conference on Visual Information Processing will be held on, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
         sectionsTitle: 'Topics of interest include, but are not limited to:',
@@ -256,9 +270,6 @@ export default function CallsPage() {
           ['Camera Ready Paper Submissions', '15 August 2026'],
         ],
       },
-
-      // { id: 'special-sessions', title: 'Call for Special Sessions', description: 'TBC' },
-      // { id: 'project-dissemination', title: 'Call for Project Dissemination Papers', description: 'TBC' },
       {
         id: 'industrial-demo',
         title: 'Call for Industrial Exhibition and Demo Papers',
@@ -268,7 +279,6 @@ export default function CallsPage() {
           ['Demo Notifications', '28 August 2026'],
         ],
       },
-      // { id: 'student-grants', title: 'Call for Student Grants', description: 'TBC' },
       {
         id: 'tutorials',
         title: 'Call for Tutorials',
@@ -281,8 +291,6 @@ export default function CallsPage() {
     ],
     [],
   )
-
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
   const [activeId, setActiveId] = useState<string | null>(null)
   const active = activeId ? cards.find((c) => c.id === activeId) : null
