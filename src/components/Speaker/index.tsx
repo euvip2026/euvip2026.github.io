@@ -32,7 +32,7 @@ function stripHtmlToText(html: string): string {
 interface SpeakerProps {
   name: string
   affiliation: string
-  description: string
+  // description: string
   country?: string
   imageUrl: string
   talkTitle?: string
@@ -44,7 +44,7 @@ interface SpeakerProps {
 export default function Speaker({
   name,
   affiliation,
-  description,
+  // description,
   country,
   imageUrl,
   talkTitle,
@@ -123,7 +123,7 @@ export default function Speaker({
         </a>
         {/* Affiliation */}
         <p className="text-center text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: affiliation }} />
-        <p className="text-center text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: description }} />
+        {/* <p className="text-center text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: description }} /> */}
 
         {/* Country (if provided) */}
         {country && <p className="text-center text-sm text-gray-600">{country}</p>}
