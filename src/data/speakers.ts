@@ -41,7 +41,12 @@ export const speakers: Speaker[] = [
     // description: 'Turkey',
     imageUrl: '/speakers/FatmaGüney.jpeg',
     profileUrl: 'https://mysite.ku.edu.tr/fguney/',
-  },
+    talkTitle: 'Is Computer Vision ready for Autonomous Systems?',
+    talkAbstract:
+      'Computer vision is, in many ways, finally working. We are witnessing a shift toward agents that can leverage the reasoning capabilities of large models, alongside major advances in 3D scene understanding and long term point tracking, even under severe occlusions. But what do these developments actually mean for the success of autonomous systems in the real world, such as cars or robots? Can large models operate under real time and memory constraints? Can detailed 3D models or capable trackers be deployed on embodied platforms, for example to reconstruct a tabletop scene or to track points from the ego view of a robot? And, crucially, are these systems safe enough? Do they anticipate danger, reason under uncertainty, and recognize their own failures? In my group, we study these questions at the intersection of computer vision and robotics, evaluating vision models in realistic settings to create a feedback loop that prioritizes robustness, safety, and uncertainty aware decision making under practical constraints.',
+    bio: 'Fatma Güney is an asstistant Professor at the Deptement of Computer Engineering at Koç University in Istanbul.Previously, I was a postdoctoral researcher in the Visual Geometry Group (VGG) at the University of Oxford, working with Andrea Vedaldi and Andrew Zisserman. I completed my Ph.D. at the Max Planck Institute for Intelligent Systems, under the supervision of Andreas Geiger. My research focuses on computer vision for autonomous driving. In recent years, I\’ve published work on topics such as 3D Gaussian Splatting, point tracking, and end-to-end learning of autonomous driving. I lead a small research group with amazing students. We work on a broad range of topics at the intersection of computer vision and autonomous driving. We\’re always looking for enthusiastic students to join us. If interested, check open positions.',
+    },
+
 
   {
     name: 'Silvia Zuffi',
