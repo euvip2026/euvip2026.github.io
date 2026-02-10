@@ -134,7 +134,44 @@ export default function Speaker({
         {/* Talk Title (if provided) */}
         {talkTitle ? (
           <>
-            <h3 className="mb-1 text-xl font-bold md:text-2xl">Biography</h3>
+            <h3 className="mb-1 text-xl font-bold md:text-2xl">{talkTitle}</h3>
+            {abstractPreview ? (
+              <>
+                <p id={abstractId} className="text-container-foreground/70 text-md">
+                  {isAbstractExpanded ? abstractFull : abstractPreview}
+                </p>
+                {shouldTruncateAbstract ? (
+                  <button
+                    type="button"
+                    onClick={() => setIsAbstractExpanded((v) => !v)}
+                    aria-expanded={isAbstractExpanded}
+                    aria-controls={abstractId}
+                    className="text-container-foreground/80 mt-2 inline-flex w-fit cursor-pointer items-center gap-1.5 rounded-sm py-1 text-sm font-semibold transition hover:bg-gray-50"
+                  >
+                    <span>{isAbstractExpanded ? 'Show less' : 'Show more'}</span>
+                    {isAbstractExpanded ? (
+                      <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor">
+                        <path
+                          fillRule="evenodd"
+                          d="M14.78 12.53a.75.75 0 0 1-1.06.25L10 10.06 6.28 12.78a.75.75 0 0 1-.88-1.22l4.15-3.05a.75.75 0 0 1 .88 0l4.15 3.05a.75.75 0 0 1 .25 1.06Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    ) : (
+                      <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor">
+                        <path
+                          fillRule="evenodd"
+                          d="M5.22 7.47a.75.75 0 0 1 1.06-.25L10 9.94l3.72-2.72a.75.75 0 1 1 .88 1.22l-4.15 3.05a.75.75 0 0 1-.88 0L5.4 8.53a.75.75 0 0 1-.18-1.06Z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    )}
+                  </button>
+                ) : null}
+              </>
+            ) : null}
+
+            <h3 className="mt-6 mb-1 text-xl font-bold md:text-2xl">Biography</h3>
 
             {bioPreview ? (
               <>
@@ -180,53 +217,6 @@ export default function Speaker({
                 ) : null}
               </>
             ) : null}
-
-            <h3 className="mt-6 mb-1 text-xl font-bold md:text-2xl">{talkTitle}</h3>
-            {abstractPreview ? (
-              <>
-                <p id={abstractId} className="text-container-foreground/70 text-md">
-                  {isAbstractExpanded ? abstractFull : abstractPreview}
-                </p>
-                {shouldTruncateAbstract ? (
-                  <button
-                    type="button"
-                    onClick={() => setIsAbstractExpanded((v) => !v)}
-                    aria-expanded={isAbstractExpanded}
-                    aria-controls={abstractId}
-                    className="text-container-foreground/80 mt-2 inline-flex w-fit cursor-pointer items-center gap-1.5 rounded-sm py-1 text-sm font-semibold transition hover:bg-gray-50"
-                  >
-                    <span>{isAbstractExpanded ? 'Show less' : 'Show more'}</span>
-                    {isAbstractExpanded ? (
-                      <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor">
-                        <path
-                          fillRule="evenodd"
-                          d="M14.78 12.53a.75.75 0 0 1-1.06.25L10 10.06 6.28 12.78a.75.75 0 0 1-.88-1.22l4.15-3.05a.75.75 0 0 1 .88 0l4.15 3.05a.75.75 0 0 1 .25 1.06Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    ) : (
-                      <svg aria-hidden="true" viewBox="0 0 20 20" className="h-4 w-4" fill="currentColor">
-                        <path
-                          fillRule="evenodd"
-                          d="M5.22 7.47a.75.75 0 0 1 1.06-.25L10 9.94l3.72-2.72a.75.75 0 1 1 .88 1.22l-4.15 3.05a.75.75 0 0 1-.88 0L5.4 8.53a.75.75 0 0 1-.18-1.06Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    )}
-                  </button>
-                ) : null}
-              </>
-            ) : null}
-
-            {/* Read more button (inactive) */}
-            {/* <button
-              type="button"
-              disabled
-              className="border-muted bg-background/50 text-muted-foreground w-fit cursor-not-allowed rounded-sm border px-4 py-2 text-sm font-semibold opacity-50 transition"
-              aria-label="Read more about this topic"
-            >
-              Read more
-            </button> */}
           </>
         ) : (
           <div className="text-lg text-gray-500 italic">Talk title to be announced.</div>
