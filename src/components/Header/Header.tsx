@@ -59,7 +59,7 @@ export function Header() {
 
   const headerClassName = useMemo(() => {
     const base =
-      'fixed top-0 right-0 left-0 z-900 flex min-h-[81px] items-center border-b transition-colors duration-300'
+      'fixed top-0 right-0 left-0 z-900 flex min-h-[81px] items-center border-b transition-colors duration-400'
 
     if (isHome && !isScrolled) {
       return `${base} border-transparent bg-black/40 text-white`
@@ -71,7 +71,7 @@ export function Header() {
   }, [isHome, isScrolled])
 
   const navLinkClassName = (isActive: boolean) =>
-    `flex h-full items-center border-b-2 pt-2 pb-2 transition-colors ${
+    `flex h-full items-center border-b-2 pt-2 pb-2 ${
       isActive ? 'border-current font-bold' : 'border-transparent hover:border-current/70'
     }`
 
@@ -93,7 +93,7 @@ export function Header() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6">
         <Link href="/">
           <Image
-            src={`${basePath}/logo.png`}
+            src={`${basePath}${isHome && !isScrolled ? '/logo-dark.svg' : '/logo-light.svg'}`}
             alt="Logo"
             width={100}
             height={100}
@@ -115,16 +115,18 @@ export function Header() {
           </Link>
 
           <DropdownMenu open={desktopInformationOpen} onOpenChange={setDesktopInformationOpen} modal={false}>
-            <DropdownMenuTrigger
-              className={`${navLinkClassName(isInformationActive)} gap-2 outline-none data-[state=open]:border-current`}
-              onMouseEnter={() => {
-                cancelDesktopInfoClose()
-                setDesktopInformationOpen(true)
-              }}
-              onMouseLeave={scheduleDesktopInfoClose}
-            >
-              FOR AUTHORS
-              <ChevronDown className="h-4 w-4 opacity-80" />
+            <DropdownMenuTrigger asChild>
+              <button
+                className={`${navLinkClassName(isInformationActive)} gap-2 bg-transparent outline-none`}
+                onMouseEnter={() => {
+                  cancelDesktopInfoClose()
+                  setDesktopInformationOpen(true)
+                }}
+                onMouseLeave={scheduleDesktopInfoClose}
+              >
+                FOR AUTHORS
+                <ChevronDown className="h-4 w-4 opacity-80" />
+              </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
@@ -178,7 +180,7 @@ export function Header() {
         <div className="text-container-foreground fixed inset-0 z-9999 bg-white">
           <div className="flex min-h-[81px] items-center justify-between px-6">
             <Link href="/" onClick={() => setMobileOpen(false)}>
-              <Image src={`${basePath}/logo.png`} alt="Logo" width={100} height={100} />
+              <Image src={`${basePath}/logo-light.svg`} alt="Logo" width={100} height={100} />
             </Link>
             <button
               type="button"

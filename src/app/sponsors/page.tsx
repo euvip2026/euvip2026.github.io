@@ -1,17 +1,167 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Sponsors',
   alternates: { canonical: '/sponsors/' },
 }
 
-export default function AwardsPage() {
+const packages = [
+  {
+    title: "PLATINUM PACKAGE",
+    price: "10.000€",
+    bgColor: "bg-[#f7fbfc]",
+    imageSrc: "/sponsors-platinum.png",
+    imageAlt: "Platinum Package Crown Icon",
+    features: [
+      "Top logo placement on the Conference website sponsors page (first-listed Platinum Sponsor)",
+      "Top logo placement in all pre-conference e-blasts and promotional materials",
+      "Top logo placement in the Conference Program",
+      "Logo displayed on keynote and plenary session opening and closing slides",
+      "Logo and special mention included in post-conference communications",
+      "Special mention on Best Paper Award certificates",
+      "Opportunity to include company promotional items in the Conference bag",
+      "Acknowledgment by the Chair during the Opening Session, Closing Session, and Gala Dinner",
+      "Invitation to nominate a representative to participate in the Conference panel discussion session (Chair-approved)",
+      "250-word corporate profile on the Conference website (with hyperlink)",
+      "250-word corporate profile in the Conference Program",
+      "Full double-page advertisement in the Conference Program",
+      "Complimentary premium large exhibition booth (5 units) with first-priority placement",
+      "5 complimentary full delegate registrations, including access to all sessions, coffee breaks, lunches, Welcome Reception, and Conference Dinner",
+    ],
+  },
+  {
+    title: "GOLD PACKAGE",
+    price: "5.000€",
+    bgColor: "bg-[#fcfaf2]",
+    imageSrc: "/sponsors-gold.png",
+    imageAlt: "Gold Package Trophy Icon",
+    features: [
+      "Logo placement on the Conference website sponsors page (first-listed Gold Sponsor)",
+      "Logo placement in all pre-conference e-blasts and promotional materials",
+      "Logo placement in the Conference Program",
+      "Logo displayed on keynote and plenary session opening and closing slides",
+      "Logo included in post-conference communications",
+      "Opportunity to include company promotional items in the Conference bag",
+      "Acknowledgment by the Chair during the Opening Session and Closing Session",
+      "Invitation to nominate a representative to participate in the Conference panel discussion session (Chair-approved)",
+      "150-word corporate profile on the Conference website (with hyperlink)",
+      "150-word corporate profile in the Conference Program",
+      "Full page advertisement in the Conference Program",
+      "Complimentary premium exhibition booth (3 units) with second-priority placement",
+      "3 complimentary full delegate registrations, including access to all sessions, coffee breaks, lunches, Welcome Reception, and Conference Dinner",
+    ],
+  },
+  {
+    title: "SILVER PACKAGE",
+    price: "3.000€",
+    bgColor: "bg-[#f6f6f6]",
+    imageSrc: "/sponsors-silver.png",
+    imageAlt: "Silver Package Mermaid Icon",
+    features: [
+      "Logo placement on the Conference website sponsors page (first-listed Silver Sponsor)",
+      "Logo placement in the Conference Program",
+      "Acknowledgment by the Chair during the Closing Session",
+      "100-word corporate profile on the Conference website",
+      "100-word corporate profile in the Conference Program",
+      "Half page advertisement in the Conference Program",
+      "Complimentary exhibition booth (2 units) with third-priority placement",
+      "2 complimentary full delegate registrations, including access to all sessions, coffee breaks, lunches, Welcome Reception, and Conference Dinner",
+    ],
+  },
+  {
+    title: "BRONZE PACKAGE",
+    price: "1.500€",
+    bgColor: "bg-[#ede4d9]",
+    imageSrc: "/sponsors-bronze.png",
+    imageAlt: "Bronze Package Horse Icon",
+    features: [
+      "Logo placement on the Conference website sponsors page (first-listed Bronze Sponsor)",
+      "Logo placement in the Conference Program",
+      "75-word corporate profile on the Conference website",
+      "75-word corporate profile in the Conference Program",
+      "Quarter page advertisement in the Conference Program",
+      "Complimentary exhibition booth (1 unit) with fourth-priority placement",
+      "1 complimentary full delegate registration, including access to all sessions, coffee breaks, lunches, Welcome Reception, and Conference Dinner",
+    ],
+  },
+]
+
+interface PackageSectionProps {
+  title: string
+  price: string
+  bgColor: string
+  features: string[]
+  imageSrc: string
+  imageAlt: string
+}
+
+function PackageSection({ title, price, bgColor, features, imageSrc, imageAlt }: PackageSectionProps) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
+  return (
+    <section className={`relative w-full overflow-hidden ${bgColor}`}>
+      <div className="max-w-7xl mx-auto md:px-4 py-12 lg:py-16">
+        {/* Header Tab */}
+        <div className="w-[90%] sm:w-[80%] md:w-[65%] lg:w-[45%] max-w-[500px] bg-[#2f566e] text-white rounded-r-[100px] py-3 pl-4 sm:pl-8 pr-8 shadow-md relative z-10 mb-6 lg:mb-8 font-['Roboto',sans-serif] flex items-center gap-4 min-h-[90px]">
+          {/* Header Icon */}
+          <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 flex items-center justify-center">
+            <img
+              src={`${basePath}${imageSrc}`}
+              alt=""
+              className="w-full h-full object-contain opacity-90"
+              style={{ filter: "brightness(0) invert(1) opacity(0.8)" }}
+            />
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-semibold uppercase tracking-wide leading-tight">
+              {title}
+            </h2>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold mt-1 opacity-90 leading-tight">
+              {price}
+            </p>
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <div className="px-6 sm:px-12 md:px-20 lg:px-24 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          {/* Left Column: Features List */}
+          <div className="text-[#2f566e] font-['Roboto',sans-serif] text-sm md:text-base leading-relaxed lg:col-span-2">
+            <ul className="list-disc space-y-2 pl-5 marker:text-[#2f566e]">
+              {features.map((feature, index) => (
+                <li key={index} className="pl-2">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Column: Image */}
+          <div
+            className="relative min-h-[300px] bg-no-repeat bg-center lg:bg-right bg-contain"
+            style={{ backgroundImage: `url(${basePath}${imageSrc})` }}
+            role="img"
+            aria-label={imageAlt}
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default function SponsorsPage() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
   return (
     <>
       <section className="mx-auto max-w-7xl md:px-4">
         <div className="relative h-56 overflow-hidden shadow-sm sm:h-[208px]">
-          <img src={`${basePath}/sponsors.png`} alt="Contact Image" className="h-full w-full object-cover" />
+          <img
+            src={`${basePath}/sponsors-hero.png`}
+            alt="Sponsors Hero Image"
+            className="h-full w-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
@@ -21,15 +171,19 @@ export default function AwardsPage() {
         </div>
       </section>
 
-      <section className="bg-background text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-4 py-6">
-          <div className="mt-4">
-            <p className="text-container-foreground text-base leading-relaxed md:text-lg">
-              To be announced soon.
-            </p>
-          </div>
-        </div>
-      </section>
+      <main className="bg-gray-50">
+        {packages.map((pkg) => (
+          <PackageSection
+            key={pkg.title}
+            title={pkg.title}
+            price={pkg.price}
+            bgColor={pkg.bgColor}
+            features={pkg.features}
+            imageSrc={pkg.imageSrc}
+            imageAlt={pkg.imageAlt}
+          />
+        ))}
+      </main>
     </>
   )
 }
