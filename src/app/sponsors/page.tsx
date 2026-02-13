@@ -102,48 +102,52 @@ function PackageSection({ title, price, bgColor, features, imageSrc, imageAlt }:
   return (
     <section className={`relative w-full overflow-hidden ${bgColor}`}>
       <div className="mx-auto max-w-7xl py-12 md:px-4 lg:py-16">
-        {/* Header Tab */}
-        <div className="relative z-10 mb-6 flex min-h-[90px] w-[90%] max-w-[500px] items-center gap-4 rounded-r-[100px] bg-[#2f566e] py-3 pr-8 pl-4 font-['Roboto',sans-serif] text-white shadow-md sm:w-[80%] sm:pl-8 md:w-[65%] lg:mb-8 lg:w-[45%]">
-          {/* Header Icon */}
-          <div className="flex h-14 w-14 items-center justify-center md:h-20 md:w-20">
-            <img
-              src={`${basePath}${imageSrc}`}
-              alt=""
-              className="h-full w-full object-contain opacity-90"
-              style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
+        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
+          {/* Left Section: Header + Features */}
+          <div className="lg:col-span-2">
+            {/* Header Tab */}
+            <div className="relative z-10 mb-6 flex min-h-[90px] w-[90%] max-w-[500px] items-center gap-4 rounded-r-[100px] bg-[#2f566e] py-3 pr-8 pl-4 font-['Roboto',sans-serif] text-white shadow-md sm:w-[80%] sm:pl-8 md:w-[65%] lg:mb-8 lg:w-[70%]">
+              {/* Header Icon */}
+              <div className="flex h-12 w-12 items-center justify-center md:h-20 md:w-20">
+                <img
+                  src={`${basePath}${imageSrc}`}
+                  alt=""
+                  className="h-full w-full object-contain opacity-90"
+                  style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
+                />
+              </div>
+
+              <div className="flex flex-col justify-center">
+                <h2 className="text-lg leading-tight font-semibold tracking-wide uppercase sm:text-xl md:text-2xl lg:text-[28px]">
+                  {title}
+                </h2>
+                <p className="mt-1 text-lg leading-tight font-bold opacity-90 sm:text-xl md:text-2xl lg:text-[28px]">
+                  {price}
+                </p>
+              </div>
+            </div>
+
+            {/* Features List */}
+            <div className="px-6 font-['Roboto',sans-serif] text-sm leading-relaxed text-[#2f566e] sm:px-12 md:px-20 md:text-base lg:px-0">
+              <ul className="list-disc marker:text-[#2f566e] lg:pl-10">
+                {features.map((feature, index) => (
+                  <li key={index} className="pl-2">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Right Section: Image spanning full height */}
+          <div className="lg:col-span-1">
+            <div
+              className="relative aspect-square bg-contain bg-center bg-no-repeat lg:bg-top"
+              style={{ backgroundImage: `url(${basePath}${imageSrc})` }}
+              role="img"
+              aria-label={imageAlt}
             />
           </div>
-
-          <div className="flex flex-col justify-center">
-            <h2 className="text-lg leading-tight font-semibold tracking-wide uppercase sm:text-xl md:text-2xl lg:text-[28px]">
-              {title}
-            </h2>
-            <p className="mt-1 text-lg leading-tight font-bold opacity-90 sm:text-xl md:text-2xl lg:text-[28px]">
-              {price}
-            </p>
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="grid grid-cols-1 items-start gap-8 px-6 sm:px-12 md:px-20 lg:grid-cols-3 lg:px-24">
-          {/* Left Column: Features List */}
-          <div className="font-['Roboto',sans-serif] text-sm leading-relaxed text-[#2f566e] md:text-base lg:col-span-2">
-            <ul className="list-disc space-y-2 pl-5 marker:text-[#2f566e]">
-              {features.map((feature, index) => (
-                <li key={index} className="pl-2">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Right Column: Image */}
-          <div
-            className="relative min-h-[300px] bg-contain bg-center bg-no-repeat lg:bg-right"
-            style={{ backgroundImage: `url(${basePath}${imageSrc})` }}
-            role="img"
-            aria-label={imageAlt}
-          />
         </div>
       </div>
     </section>
