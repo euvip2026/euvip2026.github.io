@@ -173,7 +173,7 @@ export default function CallsPage() {
         title: 'Call for Papers',
         pdf: '/cfp.pdf',
         description:
-          'The 14th European Conference on Visual Information Processing will be held on, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
+          'The 14 th European Conference on Visual Information Processing will be held, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
         sectionsTitle: 'Topics of interest include, but are not limited to:',
         sections: [
           {
@@ -255,13 +255,7 @@ export default function CallsPage() {
           <>
             <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Submission & Awards</h2>
             <p className="leading-relaxed">
-              Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
-              content, figures, and references, through the submission system (page 6 should contain only references).
-              Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
-              lecture or poster session. Regular papers presented at the conference will be included in the conference
-              proceedings. As for the previous EUVIP editions, all accepted regular papers are expected to be included
-              in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, for the
-              most distinguished regular paper, as well as the Best Student Paper Award and the Student Demo Award.
+            Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical content , figures, and references, through the submission system (page 6 should contain only references). Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a lecture or poster session. Regular papers p resented at the conference will be included in the conference proceedings and are expected to be included in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, as well as the Best Student Paper Award and the Student Demo Award.
             </p>
           </>
         ),

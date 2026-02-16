@@ -147,6 +147,14 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       imageUrl: '/committee/AlessandroBruno.jpg',
       cvLink: 'https://www.iulm.it/it/iulm/ateneo/docenti-e-collaboratori/bruno-alessandro',
     },
+    {
+      firstName: 'Faten',
+      lastName: 'Chaieb',
+      organization: 'EFREI, Paris',
+      country: 'France',
+      imageUrl: '/committee/FatenChaieb.jpeg',
+      cvLink: 'https://scholar.google.com/citations?user=H0pWEEgAAAAJ&hl=fr',
+    },
   ],
   'Industry Liaison Chairs': [
     {
