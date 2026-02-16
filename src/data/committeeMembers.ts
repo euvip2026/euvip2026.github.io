@@ -102,7 +102,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Zadeh',
       organization: 'LCSB, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/ShekoufehGorgiZadeh.jpg',
+      imageUrl: '/committee/ShekoufehGorgiZadeh.jpeg',
       cvLink: 'https://orcid.org/0000-0002-3314-2262',
     },
     {
@@ -129,7 +129,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'University of Lorraine',
       country: 'France',
       imageUrl: '/committee/VincentGaudilliere.png',
-      cvLink: 'https://www.linkedin.com/in/vincent-gaudilliere-b7965182/',
+      cvLink: '',
     },
     {
       firstName: 'Aladine',
@@ -145,7 +145,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'IULM University, Milano',
       country: 'Italy',
       imageUrl: '/committee/AlessandroBruno.jpg',
-      cvLink: 'https://www.linkedin.com/in/alessandrobrun0/',
+      cvLink: 'https://www.iulm.it/it/iulm/ateneo/docenti-e-collaboratori/bruno-alessandro',
     },
   ],
   'Industry Liaison Chairs': [
@@ -155,7 +155,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'INSA Strasbourg',
       country: 'France',
       imageUrl: '/committee/TejaniMesbahi.png',
-      cvLink: 'https://www.linkedin.com/in/dr-tedjani-mesbahi-78b4b1136/',
+      cvLink: '',
     },
     // {
     //   firstName: 'Marcin',
@@ -181,15 +181,23 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
       imageUrl: '/committee/ArunkumarRathinam.png',
-      cvLink: 'https://www.linkedin.com/in/arunsz/',
+      cvLink: '',
     },
     {
-      firstName: 'Mouhib',
-      lastName: 'Ullah',
+      firstName:'Mouhib',
+    lastName: 'Ullah',
       organization: 'Norwegian University of Science and Technology, Gjovik',
       country: 'Norway',
       imageUrl: '/committee/MouhibUllah.jpeg',
       cvLink: 'https://www.linkedin.com/in/mohib-ullah-71776b32/?originalSubdomain=no',
+    },
+    {
+      firstName:'Tiziana',
+    lastName: 'Cattai',
+      organization: 'Sapienza University, Rome',
+      country: 'Italy',
+      imageUrl: '/committee/TizianaCattai.jpeg',
+      cvLink: 'https://scholar.google.com/citations?user=NdmYwK0AAAAJ&hl=it',
     },
   ],
   'Panel Discussion Chair': [
@@ -207,7 +215,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'Université de Bourgogne',
       country: 'France',
       imageUrl: '/committee/DavidFofi.png',
-      cvLink: 'https://www.linkedin.com/in/davidfofi/',
+      cvLink: '',
     },
   ],
   'Publications Chairs': [
@@ -220,22 +228,22 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://www.linkedin.com/in/meriem-outtas-298baa34/',
     },
     {
-      firstName: 'Muhammad Ali',
+      firstName: 'Mohamed Ali',
       lastName: 'Qureshi',
       organization: 'IUB, Bahawalpur',
       country: 'Pakistan',
       imageUrl: '/committee/MohamedAliQureshi.jpg',
-      cvLink: 'https://orcid.org/0000-0003-4390-2461',
+      cvLink: '',
     },
   ],
   'Publicity Chairs': [
     {
       firstName: 'Estefania Talavera',
       lastName: 'Martinez',
-      organization: 'University of Twente',
+      organization: 'UT-EEMCS',
       country: 'Netherlands',
       imageUrl: '/committee/EstefaniaTalaveraMartinez.png',
-      cvLink: 'https://www.linkedin.com/in/estefaniatalavera/',
+      cvLink: '',
     },
     // {
     //   firstName: 'Hantao',
@@ -251,7 +259,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'University of Malta',
       country: 'Malta',
       imageUrl: '/committee/CarlJamesDebono.png',
-      cvLink: 'https://www.linkedin.com/in/carl-james-debono-4163b88/',
+      cvLink: '',
     },
   ],
   'Web Chair': [
@@ -277,7 +285,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
       imageUrl: '/committee/NesryneMejri.jpeg',
-      cvLink: 'https://www.linkedin.com/in/nmejri/?locale=fr_FR',
+      cvLink: 'https://www.linkedin.com/in/zuheng-ming-2b910853/',
     },
   ],
 }
