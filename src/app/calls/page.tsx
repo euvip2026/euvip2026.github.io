@@ -171,7 +171,7 @@ export default function CallsPage() {
       {
         id: 'cfp',
         title: 'Call for Papers',
-        pdf: '/cfp.pdf',
+        pdf: '/C4P.pdf',
         description:
           'The 14 th European Conference on Visual Information Processing will be held, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
         sectionsTitle: 'Topics of interest include, but are not limited to:',

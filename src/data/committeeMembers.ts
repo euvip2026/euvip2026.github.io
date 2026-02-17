@@ -236,11 +236,11 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://www.linkedin.com/in/meriem-outtas-298baa34/',
     },
     {
-      firstName: 'Mohamed Ali',
+      firstName: 'Muhammad Ali',
       lastName: 'Qureshi',
       organization: 'IUB, Bahawalpur',
       country: 'Pakistan',
-      imageUrl: '/committee/MohamedAliQureshi.jpg',
+      imageUrl: '/committee/MohamedAliQureshi.png',
       cvLink: '',
     },
   ],
