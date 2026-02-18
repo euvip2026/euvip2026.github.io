@@ -292,7 +292,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       lastName: 'Mejri',
       organization: 'SnT, University of Luxembourg',
       country: 'Luxembourg',
-      imageUrl: '/committee/NesryneMejri.jpeg',
+      imageUrl: '/committee/NesryneMejri.jpg',
       cvLink: 'https://www.linkedin.com/in/zuheng-ming-2b910853/',
     },
   ],
