@@ -12,22 +12,18 @@ type SliderProps = {
 }
 
 const DEFAULT_IMAGES = [
-  '1-KACHEN.jpeg',
+  '1-LFF.jpg',
   '2-LFF.jpg',
-  '3-LFF.jpg',
-  '4-LMIH Focalize.jpg',
-  '5-Passion Meets Creativity.jpg',
+  '3-Sabino Parente.jpg',
+  '4-Sabino Parente.jpg',
+  '5-Sabino Parente.jpg',
   '6-Sabino Parente.jpg',
   '7-Sabino Parente.jpg',
   '8-Sabino Parente.jpg',
   '9-Sabino Parente.jpg',
   '10-Sabino Parente.jpg',
-  '11-Sabino Parente.jpg',
-  '12-Sabino Parente.jpg',
-  '13-Sabino Parente.jpg',
-  '14-Sabino Parente.jpg',
-  '15-Sabino Parente.jpg',
-  '16-Sabino Parente.jpg',
+  '11-KACHEN.jpeg',
+  '12-Passion Meets Creativity.jpg',
 ]
 
 function getCreditFromFilename(filename: string) {
