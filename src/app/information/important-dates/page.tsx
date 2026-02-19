@@ -10,11 +10,11 @@ export default function ImportantDates() {
   const rows = [
     ['Tutorial Proposals', '30 April 2026'],
     ['Tutorial Notifications', '15 May 2026'],
-    ['Paper Submissions', '30 May 2026'],
-    ['Paper Notifications', '5 August 2026'],
-    ['Demo Submissions', '7 August 2026'],
-    ['Demo Notifications', '28 August 2026'],
-    ['Camera Ready Paper Submissions', '15 August 2026'],
+    ['Paper Submissions', '21 May 2026'],
+    ['Paper Notifications', '18 July 2026'],
+    ['Demo Submissions', '15 July 2026'],
+    ['Demo Notifications', '18 July 2026'],
+    ['Camera Ready Paper Submissions', '25 July 2026'],
   ]
 
   return (

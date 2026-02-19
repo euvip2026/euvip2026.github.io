@@ -260,8 +260,9 @@ export default function CallsPage() {
           </>
         ),
         daterows: [
-          ['Paper Submissions', '30 May 2026'],
-          ['Camera Ready Paper Submissions', '15 August 2026'],
+          ['Paper Submissions', '21 May 2026'],
+          ['Camera Ready Paper Submissions', '25 July 2026'],
+          ['Paper Notifications', '18 July 2026'],
         ],
       },
       {
@@ -269,8 +270,8 @@ export default function CallsPage() {
         title: 'Call for Industrial Exhibition and Demo Papers',
         description: 'TBC',
         daterows: [
-          ['Demo Submissions', '7 August 2026'],
-          ['Demo Notifications', '28 August 2026'],
+          ['Demo Submissions', '15 July 2026'],
+          ['Demo Notifications', '18 July 2026'],
         ],
       },
       {
