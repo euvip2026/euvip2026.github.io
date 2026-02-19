@@ -1,5 +1,7 @@
 'use client'
 
+import Slider from '@/components/Slider'
+
 const travelTimes = [
   { city: 'Brussels', byCar: '2h', byTrain: '3h20' },
   { city: 'Cologne', byCar: '2h30', byTrain: '4h' },
@@ -100,6 +102,10 @@ export default function AttendPage() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="mx-auto mb-4 max-w-4xl">
+          <Slider />
         </div>
       </section>
 
