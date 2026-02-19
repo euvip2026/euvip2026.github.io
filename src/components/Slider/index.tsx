@@ -12,13 +12,13 @@ type SliderProps = {
 }
 
 const DEFAULT_IMAGES = [
-  '1-LFF.jpg',
+  '1-Sabino Parente.jpg',
   '2-LFF.jpg',
   '3-Sabino Parente.jpg',
   '4-Sabino Parente.jpg',
   '5-Sabino Parente.jpg',
   '6-Sabino Parente.jpg',
-  '7-Sabino Parente.jpg',
+  '7-LFF.jpg',
   '8-Sabino Parente.jpg',
   '9-Sabino Parente.jpg',
   '10-Sabino Parente.jpg',
