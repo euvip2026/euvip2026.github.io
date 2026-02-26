@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ImportantDates from '@/components/ImportantDates'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
-
+  const pdfHref = `${basePath}/C4P.pdf`
   return (
     <>
       {/* Hero */}
@@ -30,6 +31,31 @@ export default function Home() {
           <p className="mt-8 ml-0 text-lg font-bold sm:mt-10 sm:ml-10 sm:text-xl lg:mt-16 lg:ml-24 lg:text-2xl">
             28th September-1st October 2026, Luxembourg
           </p>
+          <div className="mt-8 flex flex-col items-center gap-4 sm:ml-10 sm:flex-row sm:items-start lg:ml-24">
+            <a
+              href="https://www.linkedin.com/company/euvip-2026/about/"
+              target="_blank"
+              className="border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:bg-white/20"
+            >
+              Follow us on LinkedIn
+            </a>
+
+            <a
+              href="https://x.com/Euvip2026"
+              target="_blank"
+              className="border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:bg-white/20"
+            >
+              Follow us on X
+            </a>
+
+            <a
+              href="https://bsky.app/profile/euvip2026.bsky.social"
+              target="_blank"
+              className="border border-white/30 bg-white/10 px-5 py-3 text-sm font-semibold text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:bg-white/20"
+            >
+              Follow us on Bluesky
+            </a>
+          </div>
         </div>
 
         <a
@@ -75,6 +101,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Announcements */}
+      <section className="bg-container text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Announcements</h2>
+              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <div className="border-muted/60 bg-primary/20 border p-6 shadow-sm inset-shadow-sm">
+              <ul className="text-container-foreground mt-2 list-disc space-y-3 pl-6 marker:text-2xl">
+                <li className="text-container-foreground text-lg">
+                  <strong className="text-xl">Feb 16:</strong>{' '}
+                  <a href={pdfHref} download className="text-container-foreground underline hover:text-blue-700">
+                    Call for Papers
+                  </a>{' '}
+                  is posted and can be downloaded
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Important dates */}
+      <section className="bg-background text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Important Dates</h2>
+              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+            </div>
+          </div>
+
+          <ImportantDates />
+        </div>
+      </section>
       {/* Partners */}
       {/* <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
