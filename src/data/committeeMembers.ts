@@ -208,14 +208,14 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://scholar.google.com/citations?user=NdmYwK0AAAAJ&hl=it',
     },
   ],
-  'Panel Discussion Chair': [
+  'Panel Discussion Chairs': [
     {
       firstName: 'Jenny',
       lastName: 'Benois-Pineau',
       organization: 'Université de Bordeaux',
       country: 'France',
       imageUrl: '/committee/JennyBenoisPineau.jpg',
-      cvLink: 'https://www.linkedin.com/in/jenny-benois-pineau-5726b94a/',
+      cvLink: 'https://scholar.google.com/citations?user=ZHHc360AAAAJ&hl=fr',
     },
     {
       firstName: 'David',
