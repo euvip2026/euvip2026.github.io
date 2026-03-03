@@ -54,6 +54,10 @@ export const speakers: Speaker[] = [
     // description: 'Turkey',
     imageUrl: '/speakers/SilviaZuffi.jpg',
     profileUrl: 'https://scholar.google.com/citations?user=-d7Ib5UAAAAJ&hl=en',
+    talkTitle: 'Understanding Animals from Visual Data',
+    talkAbstract:
+      'Understanding animals from visual data is a complex challenge with important applications in ecology, veterinary science, robotics, and computer graphics. In this talk, I will present our work toward automatic 3D and 4D reconstruction of animals, focusing on the development of realistic and controllable animal models. I will show how these models can be used to infer the 3D pose and shape of animals from images and video, ultimately providing a foundation for the development of automated methods for behaviour analysis.',
+    bio: 'Silvia Zuffi is a Senior Research Scientist at the IMATI (Institute of Applied Mathematics and Information Technologies) of the Italian National Research Council (CNR) in Milan. She holds a PhD in Computer Science from Brown University, where her thesis focused on “Shape models of the human body for distributed inference” under the supervision of Prof. Michael J. Black. Her academic background also includes a degree in Electronic Engineering from the University of Bologna. She held also a postdoctoral position at the Perceiving Systems group of the Max Planck Institute for Intelligent Systems (Tübingen, Germany). Her research lies at the intersection of computer vision, graphics, and machine learning, with a special emphasis on pose and shape estimation for humans and animals from images and video data. Over her career, she has contributed to realistic modeling of articulated bodies, and the development of generative models for animal 3D shape and pose reconstruction. Her earlier work includes research in color imaging, multispectral imaging, and visual perception. Silvia’s ongoing projects address challenges in reconstructing 3D shape and pose of animals from “in the wild” imagery, contributing tools for applications in ecology, conservation, animal wellness and visual computing.,
   },
 ]
 
