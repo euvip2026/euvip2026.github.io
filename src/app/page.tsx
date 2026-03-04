@@ -119,7 +119,7 @@ export default function Home() {
                   <a href={pdfHref} download className="text-container-foreground underline hover:text-blue-700">
                     Call for Papers
                   </a>{' '}
-                  is posted and can be downloaded
+                  is posted and can be downloaded.
                 </li>
               </ul>
             </div>
