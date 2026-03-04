@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
+const PARTNERS = ['luxembourg-convention-bureau.png']
+
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
   const pdfHref = `${basePath}/C4P.pdf`
@@ -140,29 +142,6 @@ export default function Home() {
           <ImportantDates />
         </div>
       </section>
-      {/* Partners */}
-      {/* <section className="bg-background text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Partners</h2>
-              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
-            </div>
-            <div className="text-sm font-medium opacity-70">Interested in partnering? Contact us.</div>
-          </div>
-
-          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <div
-                key={i}
-                className="border-muted bg-container flex h-20 items-center justify-center rounded-2xl border"
-              >
-                <div className="text-sm font-semibold opacity-70">Logo</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Location */}
       <section className="bg-container text-container-foreground">
@@ -209,6 +188,30 @@ export default function Home() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section className="bg-background text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Partners</h2>
+              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+            </div>
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+            {PARTNERS.map((filename) => (
+              <div key={filename} className="flex h-30 items-center justify-center">
+                <img
+                  src={`${basePath}/partners/${filename}`}
+                  alt={filename.replace(/\.[^/.]+$/, '').replace(/-/g, ' ')}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

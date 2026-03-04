@@ -87,15 +87,9 @@ export default function Slider({ className, images = DEFAULT_IMAGES, autoPlayMs 
           />
         </div>
 
-        {credit.length > 0 && (
-          <div className="absolute bottom-3 left-3 rounded-full bg-black/40 px-3 py-1 text-xs font-medium text-white/70 backdrop-blur">
-            © {credit}
-          </div>
-        )}
-
         <button
           type="button"
-          className="absolute top-1/2 left-3 -translate-y-1/2 rounded-full bg-black/45 p-2 text-white backdrop-blur transition hover:cursor-pointer hover:bg-black/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/45 p-2 text-white backdrop-blur transition hover:cursor-pointer hover:bg-black/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
           onClick={goPrev}
           aria-label="Previous slide"
         >
@@ -104,15 +98,26 @@ export default function Slider({ className, images = DEFAULT_IMAGES, autoPlayMs 
 
         <button
           type="button"
-          className="absolute top-1/2 right-3 -translate-y-1/2 rounded-full bg-black/45 p-2 text-white backdrop-blur transition hover:cursor-pointer hover:bg-black/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/45 p-2 text-white backdrop-blur transition hover:cursor-pointer hover:bg-black/55 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
           onClick={goNext}
           aria-label="Next slide"
         >
           <ChevronRight className="h-5 w-5" aria-hidden="true" />
         </button>
 
-        <div className="absolute right-3 bottom-3 rounded-full bg-black/45 px-3 py-1 text-xs font-medium text-white/90 backdrop-blur">
-          {safeIndex + 1}/{count}
+        <div className="absolute right-0 bottom-0 left-0 flex items-center justify-between bg-black/45 px-3 text-xs font-medium text-white/90 backdrop-blur">
+          <span>© {credit}</span>
+          <div className="h-10 w-40 shrink-0 overflow-hidden">
+            <img
+              src={`${basePath}/slider/provider.png`}
+              alt="Provider"
+              loading="lazy"
+              className="w-fullobject-cover h-full object-center"
+            />
+          </div>
+          <span>
+            {safeIndex + 1}/{count}
+          </span>
         </div>
       </div>
 
@@ -124,7 +129,7 @@ export default function Slider({ className, images = DEFAULT_IMAGES, autoPlayMs 
               key={i}
               type="button"
               className={cn(
-                'h-2.5 w-2.5 rounded-full transition hover:cursor-pointer',
+                'h-2.5 w-2.5 transition hover:cursor-pointer',
                 isActive ? 'bg-accent' : 'bg-muted hover:bg-muted/80',
               )}
               onClick={() => setIndex(i)}

@@ -96,9 +96,22 @@ export default function AttendPage() {
                 research, innovation, and technology, with strategic focus areas including artificial intelligence,
                 space, cybersecurity, mobility, 6G, and FinTech.
               </p>
-              <p className="text-container-foreground text-lg leading-relaxed">
+              <p className="text-container-foreground mb-6 text-lg leading-relaxed">
                 Luxembourg City is also known for its UNESCO-listed Old Town and historic fortifications, as well as for
                 its cultural life, natural landscapes, and high quality of life.
+              </p>
+              <p className="text-container-foreground text-lg leading-relaxed">
+                To get inspired about what you can do and discover during your trip to Luxembourg, take some time to
+                explore{' '}
+                <a
+                  href="https://www.visitluxembourg.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-bold underline"
+                >
+                  visitluxembourg.com
+                </a>
+                .
               </p>
             </div>
           </div>
@@ -208,23 +221,19 @@ export default function AttendPage() {
                     Local Mobility
                   </h3>
                   <ul className="text-container-foreground list-disc space-y-2 pl-6 marker:text-[#2f566e]">
-                    <li>
-                      Public transport is free of charge nationwide, including buses, trams, and trains.
-                    </li>
-                    <li>
-                      Taxi services are widely available, including app-based services such as Uber and Webtaxi.
-                    </li>
+                    <li>Public transport is free of charge nationwide, including buses, trams, and trains.</li>
+                    <li>Taxi services are widely available, including app-based services such as Uber and Webtaxi.</li>
                     <li>
                       For public transport information in Luxembourg, please consult the Mobiliteit (
-                        <a
-                          href="https://www.mobiliteit.lu/"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="font-bold hover:underline"
-                        >
-                          https://www.mobiliteit.lu/
-                        </a>
-                        ).
+                      <a
+                        href="https://www.mobiliteit.lu/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="font-bold hover:underline"
+                      >
+                        https://www.mobiliteit.lu/
+                      </a>
+                      ).
                     </li>
                   </ul>
                 </div>
