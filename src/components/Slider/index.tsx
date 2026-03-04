@@ -105,17 +105,17 @@ export default function Slider({ className, images = DEFAULT_IMAGES, autoPlayMs 
           <ChevronRight className="h-5 w-5" aria-hidden="true" />
         </button>
 
-        <div className="absolute right-0 bottom-0 left-0 flex items-center justify-between bg-black/45 px-3 text-xs font-medium text-white/90 backdrop-blur">
-          <span>© {credit}</span>
-          <div className="h-10 w-40 shrink-0 overflow-hidden">
+        <div className="absolute right-0 bottom-0 left-0 grid grid-cols-3 items-center gap-3 bg-black/45 px-3 text-xs font-medium text-white/90 backdrop-blur">
+          <span className="text-left">© {credit}</span>
+          <div className="flex h-10 justify-center overflow-hidden">
             <img
               src={`${basePath}/slider/provider.png`}
               alt="Provider"
               loading="lazy"
-              className="w-fullobject-cover h-full object-center"
+              className="h-full w-auto object-contain object-center"
             />
           </div>
-          <span>
+          <span className="text-right">
             {safeIndex + 1}/{count}
           </span>
         </div>
