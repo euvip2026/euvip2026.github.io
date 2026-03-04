@@ -162,11 +162,11 @@ export default function AttendPage() {
                   <p className="text-container-foreground mb-4 text-lg leading-relaxed">
                     Luxembourg is well connected within Europe and internationally.
                   </p>
-                  <ul className="text-container-foreground list-disc space-y-2 marker:text-[#2f566e]">
-                    <li className="flex items-start gap-2">Direct flights from numerous European destinations.</li>
-                    <li className="flex items-start gap-2">Direct flights to more than 100 destinations.</li>
-                    <li className="flex items-start gap-2">Airport is ~10 minutes from city centre.</li>
-                    <li className="flex items-start gap-2">
+                  <ul className="text-container-foreground list-disc space-y-2 pl-6 marker:text-[#2f566e]">
+                    <li>Direct flights from numerous European destinations.</li>
+                    <li>Direct flights to more than 100 destinations.</li>
+                    <li>Airport is ~10 minutes from city centre.</li>
+                    <li>
                       Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
                       Geneva.
                     </li>
@@ -207,16 +207,15 @@ export default function AttendPage() {
                   <h3 className="text-container-foreground mb-4 flex items-center gap-3 text-xl font-bold">
                     Local Mobility
                   </h3>
-                  <ul className="text-container-foreground list-disc space-y-2 marker:text-[#2f566e]">
-                    <li className="flex items-start gap-2">
+                  <ul className="text-container-foreground list-disc space-y-2 pl-6 marker:text-[#2f566e]">
+                    <li>
                       Public transport is free of charge nationwide, including buses, trams, and trains.
                     </li>
-                    <li className="flex items-start gap-2">
+                    <li>
                       Taxi services are widely available, including app-based services such as Uber and Webtaxi.
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span>
-                        For public transport information in Luxembourg, please consult the Mobiliteit (
+                    <li>
+                      For public transport information in Luxembourg, please consult the Mobiliteit (
                         <a
                           href="https://www.mobiliteit.lu/"
                           target="_blank"
@@ -226,7 +225,6 @@ export default function AttendPage() {
                           https://www.mobiliteit.lu/
                         </a>
                         ).
-                      </span>
                     </li>
                   </ul>
                 </div>
