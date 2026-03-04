@@ -163,20 +163,16 @@ export default function AttendPage() {
                     Luxembourg is well connected within Europe and internationally.
                   </p>
                   <ul className="text-container-foreground space-y-2">
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       Direct flights from numerous European destinations.
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       Direct flights to more than 100 destinations.
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       Airport is ~10 minutes from city centre.
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
                       Geneva.
                     </li>
@@ -218,16 +214,13 @@ export default function AttendPage() {
                     Local Mobility
                   </h3>
                   <ul className="text-container-foreground space-y-2">
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       Public transport is free of charge nationwide, including buses, trams, and trains.
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       Taxi services are widely available, including app-based services such as Uber and Webtaxi.
                     </li>
-                    <li className="flex items-start gap-2">
-                      <span className="bg-accent mt-2 h-2 w-2 shrink-0 rounded-full" />
+                    <li className="flex list-disc items-start gap-2 marker:text-[#2f566e]">
                       <span>
                         For public transport information in Luxembourg, please consult the Mobiliteit (
                         <a
