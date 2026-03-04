@@ -94,7 +94,7 @@ export default function ImportantDates() {
         </p>
       </div>
 
-      <div className="border-container mt-10 overflow-hidden rounded-2xl border shadow-sm">
+      <div className="border-container mt-10 overflow-hidden border shadow-sm">
         <table className="w-full border-collapse text-left">
           <thead className="bg-container">
             <tr>
