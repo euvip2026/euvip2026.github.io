@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
-const PARTNERS = ['luxembourg-convention-bureau.png']
+const PARTNERS = ['luxembourg-convention-bureau.png', 'ieee.png']
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
             {PARTNERS.map((filename) => (
               <div key={filename} className="flex h-30 items-center justify-center">
                 <img
