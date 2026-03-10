@@ -174,7 +174,11 @@ export default function Home() {
             </p>
             <p>
               If you would like to be considered for this support, please complete the{' '}
-              <a href={`${basePath}/contact/`} className="font-bold underline hover:text-blue-700">
+              <a
+                href={`https://forms.gle/SuqN2dMZDuKKsoYRA`}
+                target="_blank"
+                className="font-bold underline hover:text-blue-700"
+              >
                 travel support application
               </a>
               .
