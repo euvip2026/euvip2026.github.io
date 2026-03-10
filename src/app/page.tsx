@@ -114,11 +114,11 @@ export default function Home() {
           </div>
 
           <div className="mt-6">
-            <div className="border-muted/60 bg-primary/20 border p-6 shadow-sm inset-shadow-sm">
-              <ul className="text-container-foreground mt-2 list-disc space-y-3 pl-6 marker:text-2xl">
-                <li className="text-container-foreground text-lg">
+            <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
+              <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
+                <li className="text-lg">
                   <strong className="text-xl">Feb 16:</strong>{' '}
-                  <a href={pdfHref} download className="text-container-foreground underline hover:text-blue-700">
+                  <a href={pdfHref} download className="underline hover:text-blue-700">
                     Call for Papers
                   </a>{' '}
                   is posted and can be downloaded.
@@ -143,6 +143,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Broadening Participation (BP) */}
       <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
@@ -173,13 +174,13 @@ export default function Home() {
             </p>
             <p>
               If you would like to be considered for this support, please complete the{' '}
-              <a href={`${basePath}/contact/`} className="underline hover:text-blue-700">
+              <a href={`${basePath}/contact/`} className="font-bold underline hover:text-blue-700">
                 travel support application
               </a>
               .
               <p>
                 If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
-                <a href={`${basePath}/contact/`} className="underline hover:text-blue-700">
+                <a href={`${basePath}/contact/`} className="font-bold underline hover:text-blue-700">
                   contact us
                 </a>
                 .

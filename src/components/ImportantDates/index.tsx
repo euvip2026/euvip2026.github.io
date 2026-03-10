@@ -87,7 +87,7 @@ export default function ImportantDates() {
 
   return (
     <>
-      <div className="bg-background mt-8 space-y-5 text-base leading-relaxed opacity-80 md:text-lg">
+      <div className="mt-8 space-y-5 text-base leading-relaxed opacity-80 md:text-lg">
         <p>
           The call for papers and the call for tutorials will be published in early 2025. Follow us on LinkedIn, X, or
           Bluesky to stay updated on the latest news.
@@ -96,7 +96,7 @@ export default function ImportantDates() {
 
       <div className="border-container mt-10 overflow-hidden border shadow-sm">
         <table className="w-full border-collapse text-left">
-          <thead className="bg-primary/20">
+          <thead className="bg-primary text-white">
             <tr>
               <th className="px-6 py-4 text-lg font-semibold">Event</th>
               <th className="px-6 py-4 text-right text-lg font-semibold">Date</th>
