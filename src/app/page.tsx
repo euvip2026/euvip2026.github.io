@@ -140,6 +140,48 @@ export default function Home() {
           </div>
 
           <ImportantDates />
+
+          <div className="mt-12 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Broadening Participation (BP)</h2>
+              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+            </div>
+          </div>
+
+          <div className="mt-8 space-y-5 text-base leading-relaxed opacity-80 md:text-lg">
+            <p>
+              The EUVIP community is committed to fostering a diverse, equitable, and inclusive conference. This year,
+              over 40% of the scientific committee and all four keynote speakers are women.
+            </p>
+            <p>
+              For EUVIP 2026, the organizing committee is working to help broaden participation at the conference.
+              Specifically, we will support the following:
+            </p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>10 travel grants of €500 for PhD students, prioritizing those from lower-income regions;</li>
+              <li>reduced registration fees for students;</li>
+              <li>networking events designed to build connections across communities.</li>
+            </ul>
+            <p>
+              EUVIP 2026 is proud to collaborate with the IEEE Student Branch of the University of Luxembourg, who will
+              actively contribute to the conference organization and benefit from dedicated mentorship and networking
+              opportunities with senior researchers and industry professionals.
+            </p>
+            <p>
+              If you would like to be considered for this support, please complete the{' '}
+              <a href={`${basePath}/contact/`} className="underline hover:text-blue-700">
+                travel support application
+              </a>
+              .
+              <p>
+                If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
+                <a href={`${basePath}/contact/`} className="underline hover:text-blue-700">
+                  contact us
+                </a>
+                .
+              </p>
+            </p>
+          </div>
         </div>
       </section>
 
