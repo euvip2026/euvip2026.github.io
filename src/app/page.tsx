@@ -118,7 +118,7 @@ export default function Home() {
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
                 <li className="text-lg">
                   <strong className="text-xl">Feb 16:</strong>{' '}
-                  <a href={pdfHref} download className="underline hover:text-blue-700">
+                  <a href={pdfHref} download className="underline">
                     Call for Papers
                   </a>{' '}
                   is posted and can be downloaded.
@@ -174,17 +174,13 @@ export default function Home() {
             </p>
             <p>
               If you would like to be considered for this support, please complete the{' '}
-              <a
-                href={`https://forms.gle/SuqN2dMZDuKKsoYRA`}
-                target="_blank"
-                className="font-bold underline hover:text-blue-700"
-              >
+              <a href={`https://forms.gle/SuqN2dMZDuKKsoYRA`} target="_blank" className="font-bold underline">
                 travel support application
               </a>
               .
               <p>
                 If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
-                <a href={`${basePath}/contact/`} className="font-bold underline hover:text-blue-700">
+                <a href={`${basePath}/contact/`} className="font-bold underline">
                   contact us
                 </a>
                 .
