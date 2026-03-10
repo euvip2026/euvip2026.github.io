@@ -96,7 +96,7 @@ export default function ImportantDates() {
 
       <div className="border-container mt-10 overflow-hidden border shadow-sm">
         <table className="w-full border-collapse text-left">
-          <thead className="bg-container">
+          <thead className="bg-primary/20">
             <tr>
               <th className="px-6 py-4 text-lg font-semibold">Event</th>
               <th className="px-6 py-4 text-right text-lg font-semibold">Date</th>

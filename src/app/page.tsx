@@ -73,7 +73,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="bg-background text-container-foreground">
+      <section className="bg-container text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* Announcements */}
-      <section className="bg-container text-container-foreground">
+      <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -130,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* Important dates */}
-      <section className="bg-background text-container-foreground">
+      <section className="bg-container text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -140,8 +140,12 @@ export default function Home() {
           </div>
 
           <ImportantDates />
+        </div>
+      </section>
 
-          <div className="mt-12 flex flex-wrap items-end justify-between gap-4">
+      <section className="bg-background text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Broadening Participation (BP)</h2>
               <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
