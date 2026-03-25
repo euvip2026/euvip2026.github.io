@@ -8,6 +8,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 type Section = {
   id: string
   title: string
+  lead?: string
   bullets?: string[]
   content?: React.ReactNode
 }
@@ -66,6 +67,8 @@ function SectionCard({ section }: { section: Section }) {
   return (
     <div className="border-information bg-container text-container-foreground border p-6 shadow-sm">
       <h3 className="text-xl leading-tight font-bold">{section.title}</h3>
+
+      {section.lead ? <p className="mt-4 text-lg opacity-90">{section.lead}</p> : null}
 
       {section.bullets?.length ? (
         <ul className="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90">
@@ -277,10 +280,61 @@ export default function CallsPage() {
       {
         id: 'tutorials',
         title: 'Call for Tutorials',
-        description: 'TBC',
+        description:
+          'The EUVIP 2026 organizing committee invites proposals for tutorials on established or emerging topics of interest for the computer vision, visual information processing, biomedical imaging, and pattern recognition communities. Half-day (about 3 hours each), in person tutorials on topics related to the conference themes are welcome. Tutorial sessions will be held on 28th September 2026. A EUVIP tutorial should aim to give a comprehensive overview of a specific topic related to computer vision, visual information processing, biomedical imaging or pattern recognition. Tutorials are intended to be educational rather than just a cursory survey of techniques. The topic should be of sufficient relevance and importance to attract significant interest from the EUVIP community. Typical tutorial audiences consist of Master and PhD students, as well as researchers and practitioners from both academia and industry.',
+        sections: [
+          {
+            id: 'tutorial-required-info',
+            title: 'Required Proposal Information',
+            bullets: [
+              'Title: A short descriptive title.',
+              'Presenters: Names, affiliation, contact information (email and mailing address), and short bio for each presenter.',
+              'Description: A description of the tutorial topic, providing a sense of both the scope and depth of the tutorial, along with a tutorial outline.',
+              'Expected audience: Include the background of the expected audience.',
+              'Recent publications: List of recent publications related to the tutorial topic from the speakers in the past 3 years.',
+              'Relevance: Address the importance and timeliness of the proposal, and its relevance to researchers and engineers.',
+              'Previous editions: If the tutorial was given before, describe when and where it was given, and explain how it will be modified for EUVIP 2026. If possible, provide a link to slides of the previous tutorial presentation.',
+              'Presentation material: If a draft of the tutorial material (to be distributed to tutorial participants) is available that can aid in assessing the proposal and enable the committee to provide more constructive suggestions for the content.',
+            ],
+          },
+          {
+            id: 'tutorial-evaluation',
+            title: 'Evaluation Criteria',
+            lead: 'Proposals will be reviewed by the Tutorial Committee using the following criteria:',
+            bullets: [
+              'Timeliness of the proposal: Importance of the topic in 2026 and relevance to EUVIP.',
+              'Quality of the proposal: State-of-the art coverage of the topic, coherence, and experience of the speakers.',
+              'Spectrum of the proposal: Topic is of broad interest to academia and/or industry, researchers and/or engineers.',
+              'Accessibility of presentation material: Presentation can be understood by the broad EUVIP audience, including graduate students, practicing engineers, researchers, and professors.',
+            ],
+          },
+          {
+            id: 'tutorial-submission',
+            title: 'Submission Instructions',
+            content: (
+              <p className="leading-relaxed">
+                Prospective tutorial proposers are welcome to submit their proposals to the Tutorials Chairs, who would
+                be happy to also answer questions and provide preliminary feedback:
+                <br />
+                <br />
+                <a href="mailto:stefania.colonnese@uniroma1.it" className="font-semibold hover:underline">
+                  stefania.colonnese@uniroma1.it
+                </a>
+                <br />
+                <a href="mailto:rachid.jennane@univ-orleans.fr" className="font-semibold hover:underline">
+                  rachid.jennane@univ-orleans.fr
+                </a>
+                <br />
+                <a href="mailto:Habib.Zaidi@hcuge.ch" className="font-semibold hover:underline">
+                  Habib.Zaidi@hcuge.ch
+                </a>
+              </p>
+            ),
+          },
+        ],
         daterows: [
-          ['Tutorial Proposals', '30 April 2026'],
-          ['Tutorial Notifications', '15 May 2026'],
+          ['Deadline for Tutorial Proposals', '15 May 2026'],
+          ['Notification of Tutorial Acceptance', '20 May 2026'],
         ],
       },
     ],
