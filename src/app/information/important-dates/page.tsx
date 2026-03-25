@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function ImportantDates() {
   const rows = [
-    ['Tutorial Proposals', '30 April 2026'],
-    ['Tutorial Notifications', '15 May 2026'],
+    ['Tutorial Proposals', '15 May 2026'],
+    ['Tutorial Notifications', '20 May 2026'],
     ['Paper Submissions', '21 May 2026'],
     ['Paper Notifications', '18 July 2026'],
     ['Demo Submissions', '15 July 2026'],
