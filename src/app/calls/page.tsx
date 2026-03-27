@@ -258,7 +258,13 @@ export default function CallsPage() {
           <>
             <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Submission & Awards</h2>
             <p className="leading-relaxed">
-            Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical content , figures, and references, through the submission system (page 6 should contain only references). Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a lecture or poster session. Regular papers p resented at the conference will be included in the conference proceedings and are expected to be included in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, as well as the Best Student Paper Award and the Student Demo Award.
+              Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
+              content , figures, and references, through the submission system (page 6 should contain only references).
+              Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
+              lecture or poster session. Regular papers p resented at the conference will be included in the conference
+              proceedings and are expected to be included in IEEE Xplore. EUVIP 2026 will recognize outstanding
+              contributions with the Best Paper Award, as well as the Best Student Paper Award and the Student Demo
+              Award.
             </p>
           </>
         ),
@@ -269,12 +275,63 @@ export default function CallsPage() {
         ],
       },
       {
-        id: 'industrial-demo',
-        title: 'Call for Industrial Exhibition and Demo Papers',
-        description: 'TBC',
+        id: 'project-dissemination',
+        title: 'Call for Project Dissemination Papers',
+        description:
+          'Following the success of previous editions, the EUVIP 2026 Project Dissemination Session is an opportunity for project leaders and/or partners to present their objectives and achievements and interact with colleagues from academia and industry working in similar or complementary research areas, contributing to the dissemination of results and the sharing of good practices.',
+        sections: [
+          {
+            id: 'pd-submission-guidelines',
+            title: 'Submission Guidelines',
+            content: (
+              <p className="leading-relaxed">
+                Potential authors are invited to submit a two-page project paper using the official EUVIP 2026
+                full-paper template, available at{' '}
+                <a
+                  href="https://euvip2026.github.io"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold hover:underline"
+                >
+                  https://euvip2026.github.io
+                </a>
+                . Accepted project papers will be included in the conference booklet.
+              </p>
+            ),
+          },
+          {
+            id: 'pd-assessment',
+            title: 'Assessment Criteria',
+            bullets: [
+              'Relevance of the project topic to EUVIP 2026 themes',
+              "Novelty of the project's technical objectives",
+              'Excellence of results already achieved',
+              'Editorial quality of the project paper',
+            ],
+          },
+          {
+            id: 'pd-regular-authors',
+            title: 'Regular Paper Authors',
+            lead: 'Authors of regular papers accepted through the EUVIP 2026 double-blind peer review process may be invited to present their work in the Project Dissemination Session, notably when the paper describes work developed within a funded research project.',
+          },
+          {
+            id: 'pd-submission-instructions',
+            title: 'Submission Instructions',
+            content: (
+              <p className="leading-relaxed">
+                Project papers should be submitted by email to{' '}
+                <a href="mailto:euvip2026@uni.lu" className="font-semibold hover:underline">
+                  euvip2026@uni.lu
+                </a>
+                . Authors will be informed of decisions by email.
+              </p>
+            ),
+          },
+        ],
         daterows: [
-          ['Demo Submissions', '15 July 2026'],
-          ['Demo Notifications', '18 July 2026'],
+          ['Submission Deadline', '30 July 2026'],
+          ['Decision Notifications', '15 August 2026'],
+          ['Conference', '28 September – 01 October 2026, Luxembourg'],
         ],
       },
       {
