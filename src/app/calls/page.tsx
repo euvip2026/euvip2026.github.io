@@ -114,7 +114,7 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
               {pdfHref && (
                 <p className="mt-3 text-lg opacity-90">
                   <a href={pdfHref} download className="font-bold hover:underline">
-                    Download the Call for Papers (PDF)
+                    Download (PDF)
                   </a>
                 </p>
               )}
@@ -277,6 +277,7 @@ export default function CallsPage() {
       {
         id: 'project-dissemination',
         title: 'Call for Project Dissemination Papers',
+        pdf: '/C4project.pdf',
         description:
           'Following the success of previous editions, the EUVIP 2026 Project Dissemination Session is an opportunity for project leaders and/or partners to present their objectives and achievements and interact with colleagues from academia and industry working in similar or complementary research areas, contributing to the dissemination of results and the sharing of good practices.',
         sections: [
@@ -331,12 +332,12 @@ export default function CallsPage() {
         daterows: [
           ['Submission Deadline', '30 July 2026'],
           ['Decision Notifications', '15 August 2026'],
-          ['Conference', '28 September – 01 October 2026, Luxembourg'],
         ],
       },
       {
         id: 'tutorials',
         title: 'Call for Tutorials',
+        pdf: '/C4Tutorials.pdf',
         description:
           'The EUVIP 2026 organizing committee invites proposals for tutorials on established or emerging topics of interest for the computer vision, visual information processing, biomedical imaging, and pattern recognition communities. Half-day (about 3 hours each), in person tutorials on topics related to the conference themes are welcome. Tutorial sessions will be held on 28th September 2026. A EUVIP tutorial should aim to give a comprehensive overview of a specific topic related to computer vision, visual information processing, biomedical imaging or pattern recognition. Tutorials are intended to be educational rather than just a cursory survey of techniques. The topic should be of sufficient relevance and importance to attract significant interest from the EUVIP community. Typical tutorial audiences consist of Master and PhD students, as well as researchers and practitioners from both academia and industry.',
         sections: [
