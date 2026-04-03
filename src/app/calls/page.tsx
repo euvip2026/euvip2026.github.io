@@ -472,8 +472,8 @@ export default function CallsPage() {
 
 
         daterows: [
-          ['Deadline for Tutorial Proposals', '30 April 2026'],
-          ['Notification of Tutorial Acceptance', '08 May 2026'],
+          ['Special Sessions Submissions', '30 April 2026'],
+          ['Special Sessions Notifications', '08 May 2026'],
         ],
       },
     ],
