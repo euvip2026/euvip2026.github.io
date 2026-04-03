@@ -17,6 +17,8 @@ export default function ImportantDates() {
     ['Camera Ready Paper Submissions', '25 July 2026'],
     ['Project Dissemination Papers Submission', '30 July 2026'],
     ['Project Dissemination Papers Notifications', '15 August 2026'],
+    ['Special Sessions Submissions', '30 April 2026'],
+    ['Special Sessions Notifications', '8 May 2026'],
   ]
 
   return (
@@ -40,7 +42,7 @@ export default function ImportantDates() {
               <tr className="border-container-foreground border-b">
                 <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Event</th>
                 <th className="text-container-foreground flex flex-col px-6 py-4 text-right text-2xl font-semibold">
-                  Date <span className="text-xs font-normal">(CET, UTC+1)</span>
+                  Date <span className="text-xs font-normal">(CEST, UTC+2)</span>
                 </th>
               </tr>
             </thead>

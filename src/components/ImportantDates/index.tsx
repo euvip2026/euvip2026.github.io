@@ -62,6 +62,8 @@ export default function ImportantDates() {
     ['Camera Ready Paper Submissions', '25 July 2026'],
     ['Project Dissemination Papers Submission', '30 July 2026'],
     ['Project Dissemination Papers Notifications', '15 August 2026'],
+    ['Special Sessions Submissions', '30 April 2026'],
+    ['Special Sessions Notifications', '8 May 2026'],
   ]
 
   const [now, setNow] = useState<Date>(() => new Date())

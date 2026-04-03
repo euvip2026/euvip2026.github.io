@@ -395,6 +395,82 @@ export default function CallsPage() {
           ['Notification of Tutorial Acceptance', '20 May 2026'],
         ],
       },
+
+      {
+        id: 'Special Sessions ',
+        title: 'Call for Special Sessions ',
+        pdf: '/C4Tutorials.pdf',
+        description:
+          'The Organizing Committee of EUVIP 2026 (European Workshop on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br />  Each Special Session is expected to:  • Provide a coherent and clearly defined theme   • Attract high-quality contributions from leading researchers   • Stimulate discussion and future research directions   Broad or generic topics already covered by regular EUVIP tracks should be avoided.    ',
+        sections: [
+          {
+            id: 'Special-session-required-info',
+            title: 'Required Proposal Information',
+            lead: 'Each Special Session is expected to:',
+            bullets: [
+              'Provide a coherent and clearly defined theme ',
+              'Attract high-quality contributions from leading researchers ',
+              'Stimulate discussion and future research directions ',
+              'Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
+            ],
+          },
+          {
+            id: 'Special-session-evaluation',
+            title: 'Evaluation Criteria',
+            lead: 'Special Session proposals will be evaluated based on:',
+            bullets: [
+              'Scientific relevance to the core themes of EUVIP ',
+              'Timeliness and novelty of the topic ',
+              'Potential to attract high-quality submissions',
+              'Track record and expertise of the organizers ',
+            ],
+          },
+          {
+            id: 'Special-session-submission',
+            title: 'Submission Instructions',
+            content: (
+              <p className="leading-relaxed">
+                Proposals should include:
+                <br />
+                <b> 1. Session Title and Description</b>
+                <br /> 
+                A clear and engaging description (less than 1 page) covering: 
+                <br />
+                 • Motivation and rationale  
+                 <br />
+                  • Relevance to EUVIP <br />
+                  • Key topics and scope  <br />
+                   • Expected scientific and/or application impact  
+                   <br />
+                   <br />
+                    <b> 2. Organizers </b>  
+                    <br />• Names, affiliations, and contact details  
+                    <br /> • Short biographies highlighting expertise and relevance to the topic  
+                    <br />
+                    <br />
+                    <b> 3. Tentative Contributions </b>
+                     <br />
+                     • A preliminary list of potential contributing authors and papers (if available), demonstrating the session’s attractiveness and viability   
+              </p>
+            ),
+          },
+        ],
+        additional: (
+          <>
+            <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Session Format</h2>
+            <p className="leading-relaxed">
+             Each Special Session will include 4–5 accepted papers <br /> All submissions will undergo the standard peer-review process of EUVIP <br /> Accepted papers will be published in the official conference proceedings 
+
+            </p>
+          </>
+        ),
+
+
+        daterows: [
+          ['Deadline for Tutorial Proposals', '30 April 2026'],
+          ['Notification of Tutorial Acceptance', '08 May 2026'],
+        ],
+      },
     ],
     [],
   )
