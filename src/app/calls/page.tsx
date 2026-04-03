@@ -42,7 +42,7 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
         <h2 className="text-2xl leading-tight font-bold">{card.title}</h2>
       </div>
       <div className="text-md relative flex-1 overflow-hidden px-6 py-4 opacity-80">
-        <p className={`whitespace-pre-line ${tbc ? 'line-clamp-5' : 'line-clamp-6'}`}>{displayDesc}</p>
+        <div className={`whitespace-pre-line ${tbc ? 'line-clamp-5' : 'line-clamp-6'}`} dangerouslySetInnerHTML={{ __html: displayDesc }} />
         <div
           className="from-container via-container/80 pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-linear-to-t to-transparent"
           aria-hidden="true"
@@ -110,7 +110,7 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
             </>
           ) : (
             <>
-              <p className="mt-3 text-lg whitespace-pre-line opacity-80">{displayDesc}</p>
+              <div className="mt-3 text-lg whitespace-pre-line opacity-80" dangerouslySetInnerHTML={{ __html: displayDesc }} />
               {pdfHref && (
                 <p className="mt-3 text-lg opacity-90">
                   <a href={pdfHref} download className="font-bold hover:underline">
@@ -401,7 +401,7 @@ export default function CallsPage() {
         title: 'Call for Special Sessions ',
         pdf: '/C4Tutorials.pdf',
         description:
-          'The Organizing Committee of EUVIP 2026 (European Workshop on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br />  Each Special Session is expected to:  • Provide a coherent and clearly defined theme   • Attract high-quality contributions from leading researchers   • Stimulate discussion and future research directions   Broad or generic topics already covered by regular EUVIP tracks should be avoided.    ',
+          'The Organizing Committee of EUVIP 2026 (European Workshop on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /><br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br /><br />  Each Special Session is expected to: <ul class="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90"><li>Provide a coherent and clearly defined theme</li><li>Attract high-quality contributions from leading researchers</li><li>Stimulate discussion and future research directions</li></ul> <br/>Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
         sections: [
           {
             id: 'Special-session-required-info',
@@ -429,29 +429,34 @@ export default function CallsPage() {
             id: 'Special-session-submission',
             title: 'Submission Instructions',
             content: (
-              <p className="leading-relaxed">
-                Proposals should include:
-                <br />
-                <b> 1. Session Title and Description</b>
-                <br /> 
-                A clear and engaging description (less than 1 page) covering: 
-                <br />
-                 • Motivation and rationale  
-                 <br />
-                  • Relevance to EUVIP <br />
-                  • Key topics and scope  <br />
-                   • Expected scientific and/or application impact  
-                   <br />
-                   <br />
-                    <b> 2. Organizers </b>  
-                    <br />• Names, affiliations, and contact details  
-                    <br /> • Short biographies highlighting expertise and relevance to the topic  
-                    <br />
-                    <br />
-                    <b> 3. Tentative Contributions </b>
-                     <br />
-                     • A preliminary list of potential contributing authors and papers (if available), demonstrating the session’s attractiveness and viability   
-              </p>
+              <div className="leading-relaxed">
+                <p>Proposals should include:</p>
+                <ol className="mt-4 list-decimal space-y-4 pl-5 text-lg opacity-90">
+                  <li>
+                    <b>Session Title and Description</b>
+                    <p className="mt-1">A clear and engaging description (less than 1 page) covering:</p>
+                    <ul className="mt-2 list-disc space-y-2 pl-5">
+                      <li>Motivation and rationale</li>
+                      <li>Relevance to EUVIP</li>
+                      <li>Key topics and scope</li>
+                      <li>Expected scientific and/or application impact</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Organizers</b>
+                    <ul className="mt-2 list-disc space-y-2 pl-5">
+                      <li>Names, affiliations, and contact details</li>
+                      <li>Short biographies highlighting expertise and relevance to the topic</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Tentative Contributions</b>
+                    <ul className="mt-2 list-disc space-y-2 pl-5">
+                      <li>A preliminary list of potential contributing authors and papers (if available), demonstrating the session’s attractiveness and viability</li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
             ),
           },
         ],
