@@ -399,7 +399,7 @@ export default function CallsPage() {
       {
         id: 'Special Sessions ',
         title: 'Call for Special Sessions ',
-        pdf: '/C4Tutorials.pdf',
+        pdf: '/C4Special_Sessions.pdf',
         description:
           'The Organizing Committee of EUVIP 2026 (European Workshop on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /><br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br /><br />  Each Special Session is expected to: <ul class="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90"><li>Provide a coherent and clearly defined theme</li><li>Attract high-quality contributions from leading researchers</li><li>Stimulate discussion and future research directions</li></ul> <br/>Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
         sections: [
