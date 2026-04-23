@@ -456,6 +456,7 @@ export default function CallsPage() {
                     </ul>
                   </li>
                 </ol>
+                <p className="mt-6">Special Session proposals should be submitted by email to <a href="mailto:euvip2026@uni.lu" target="_blank" rel="noreferrer" className="font-bold hover:underline">euvip2026@uni.lu</a>. Papers for the Special Session must then be submitted through the official Microsoft CMT system and will follow the standard EUVIP peer-review process.</p>
               </div>
             ),
           },
