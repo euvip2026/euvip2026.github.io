@@ -477,6 +477,73 @@ export default function CallsPage() {
           ['Special Sessions Notifications', '08 May 2026'],
         ],
       },
+
+
+      {
+        id: 'Demo',
+        title: 'Call for Demos',
+        pdf: '/Call4Demos.pdf',
+        description:
+          'The EUVIP 2026 committee is hereby releasing a call for: <b>Demonstrations</b> of recent research outputs or innovations related to the topics covered by the conference, and <b>Exhibitions</b> of new equipment or technology related to the topics covered by the conference. <br /><br /> <b>Objective</b> The objective of the demo and exhibition session is to provide a lively forum for researchers in both industry and academia to present their work and to foster stimulating discussions and constructive feedback from leading experts in the field.',
+        sections: [
+          {
+            id: 'demo-required-info',
+            title: 'Submission Instructions',
+            bullets: [
+              'For Exhibitions: We ask interested participants to submit a short description of their proposed exhibition maximum 1 page, in PDF format. The exhibition could be, for example, showing new research equipment related to the topics covered by the conference, new tools or software that could be relevant to the conference attendees, etc.',
+              'For Demos: We ask interested participants to submit a 1-2 page description (in PDF) of their proposed demonstration. The description should include the following:',
+              'Demonstration title',
+              'Name(s), affiliation(s), email(s) of the demo contributors',
+              'Technical Description: A short description of the technology behind the demo and a brief introduction of the equipment used in the demo (which would be required at the conference).',
+              'The demo could be, for example, an implemented algorithm of a new technology (related to the topics in the conference) that can run on a computer and generate visible output, or videos showing recent research outputs, etc. Note that the demos can relate to previously published work, or to ongoing research that the authors have the right to disclose publicly.',
+            ],
+          },
+          {
+            id: 'demo-evaluation',
+            title: 'Evaluation Criteria',
+            lead: 'For both the exhibition and demo proposals, submissions will be judged for acceptance based on:',
+            bullets: [
+              'Technical merit and innovation',
+              'Relevance to the conference topics',
+              'Potential to stimulate interesting discussions and exchange of ideas.',
+              'Presentation Format: At the conference, before the start of the Demo & Exhibition session, we will ask one representative for each of the accepted exhibitions and demos to present a 1-minute “advertisement” (with 1 PowerPoint or PDF slide) to the audience, to encourage them to come and see the demo/exhibition. ',
+            ],
+          },
+          {
+            id: 'demo-submission',
+            title: 'Submission',
+            content: (
+              <p className="leading-relaxed">
+                Submissions (and any questions related to the industrial exhibitions and demos) should be emailed to the exhibition and demo session chairs at:
+                <br />
+                <br />
+                <a href="mailto:arunkumar.rathinam@uni.lu" className="font-semibold hover:underline">
+                arunkumar.rathinam@uni.lu
+                </a>
+                <br />
+                <a href="mailto:mohib.ullah@ntnu.no" className="font-semibold hover:underline">
+                  mohib.ullah@ntnu.no
+                </a>
+                <br />
+                <a href="mailto:tiziana.cattai@uniroma1.it" className="font-semibold hover:underline">
+                  tiziana.cattai@uniroma1.it
+                </a>
+              </p>
+            ),
+          },
+
+          {
+            id: 'demo-awards',
+            title: 'Awards',
+            lead: 'There will be a prize offered for the Best Demo at the EUVIP 2026 conference award ceremony.',
+          },
+        ],
+        daterows: [
+          ['Deadline for Industrial Exhibition and Demo Proposals', '15 July 2026'],
+          ['Notification of Acceptance', '18 July 2026'],
+        ],
+      },
+
     ],
     [],
   )
