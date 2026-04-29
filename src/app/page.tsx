@@ -178,14 +178,14 @@ export default function Home() {
                 travel support application
               </a>
               .
-              <p>
+
                 If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
                 <a href={`${basePath}/contact/`} className="font-bold underline">
                   contact us
                 </a>
                 .
               </p>
-            </p>
+          
           </div>
         </div>
       </section>
