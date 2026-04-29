@@ -506,8 +506,12 @@ export default function CallsPage() {
               'Technical merit and innovation',
               'Relevance to the conference topics',
               'Potential to stimulate interesting discussions and exchange of ideas.',
-              'Presentation Format: At the conference, before the start of the Demo & Exhibition session, we will ask one representative for each of the accepted exhibitions and demos to present a 1-minute “advertisement” (with 1 PowerPoint or PDF slide) to the audience, to encourage them to come and see the demo/exhibition. ',
             ],
+          },
+          {
+            id: 'demo-presentation',
+            title: 'Presentation Format',
+            lead: 'At the conference, before the start of the Demo & Exhibition session, we will ask one representative for each of the accepted exhibitions and demos to present a 1-minute “advertisement” (with 1 PowerPoint or PDF slide) to the audience, to encourage them to come and see the demo/exhibition.',
           },
           {
             id: 'demo-submission',
@@ -544,6 +548,69 @@ export default function CallsPage() {
         ],
       },
 
+      {
+        id: 'Student Session',
+        title: 'Call for Student Session',
+        pdf: '/C4Student_session.pdf',
+        description:
+          'EUVIP 2026 invites BSc, MSc, and early-stage PhD students to contribute to the EUVIP 2026 Student Poster Session. <br /><br /> The EUVIP 2026 Student Session aims to promote interactions and exchanges between early-stage researchers, providing a unique opportunity to integrate into an international conference, showcase ongoing research, and receive constructive feedback from leading experts in academia.',
+        sections: [
+          {
+            id: 'Student-session-required-info',
+            title: 'Eligibility & Originality',
+            bullets: [
+              'Student status: The first author and presenter must be a registered BSc, MSc, or PhD student at the time of submission.',
+              'Scope: The presented work can include the student thesis progress, ongoing research, preliminary results, or late-breaking findings aligned with the core themes of EUVIP 2026.',
+              'Originality: By submitting a manuscript, the authors guarantee that it has not been previously published elsewhere in a substantially similar form. Please note that there are no formal proceedings for this session, and the abstract will not be officially indexed',
+            ],
+          },
+          {
+            id: 'Student-session-evaluation',
+            title: 'Submission & Formatting Guidelines',
+            bullets: [
+              'To participate students are encouraged to submit a two-pages extended abstract presenting their research, results and scientific perspectives (including figures, tables, and references). ',
+              'Note: Do not submit a poster file. Posters will be created and presented in person only by authors of accepted abstracts). All submissions must be in English, and use the IEEE one-column format. We recommend using the Word or LaTeX templates (available at  https://euvip2026.github.io) and ensuring your page setup uses the A4-size layout. Abstracts that do not conform to these guidelines will not be considered.',
+              'The submission of an extended abstract implies the intention of the student to register to EUVIP 2026 and present their work in the student poster session',
+              'All contributions will be peer-reviewed, and evaluated according to their scientific rigour, originality and their potential for future developments.',
+            ],
+          },
+          {
+            id: 'Student-session-presentation',
+            title: 'Registration & Presentation',
+            lead: 'EUVIP 2026 requires each accepted student abstract to be presented in-person at the conference site during the dedicated student session.',
+          },
+          {
+            id: 'Studnet-session-submission',
+            title: 'Submission',
+            content: (
+              <p className="leading-relaxed">
+                Further questions regarding the Student Session may be directed to the chairs:
+                <br />
+                <br />
+                <a href="mailto:tlibamaroine3@gmail.com" className="font-semibold hover:underline">
+                tlibamaroine3@gmail.com
+                </a>
+                <br />
+                <a href="mailto:shekoufeh.gorgizadeh@uni.lu" className="font-semibold hover:underline">
+                shekoufeh.gorgizadeh@uni.lu
+                </a>
+               
+              </p>
+            ),
+          },
+
+          {
+            id: 'Student-session-awards',
+            title: 'Awards',
+            lead: 'The best student poster selected by a dedicated committee, will receive an award certificate.',
+          },
+        ],
+        daterows: [
+          ['Deadline for Student Session Submissions', '31 July 2026'],
+          ['Notification of Acceptance', '15 August 2026'],
+          ['Camera Ready Submissions', '22 August 2026'],
+        ],
+      },
     ],
     [],
   )
