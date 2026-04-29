@@ -473,8 +473,10 @@ export default function CallsPage() {
 
 
         daterows: [
-          ['Special Sessions Submissions', '30 April 2026'],
-          ['Special Sessions Notifications', '08 May 2026'],
+          ['Special Sessions Submissions',
+            <>15 May 2026 (<s>30 April 2026</s>)</>
+          ],
+          ['Special Sessions Notifications', <>23 May 2026 (<s>8 May 2026</s>)</>],
         ],
       },
 
@@ -553,7 +555,7 @@ export default function CallsPage() {
         title: 'Call for Student Session',
         pdf: '/C4Student_session.pdf',
         description:
-          'EUVIP 2026 invites BSc, MSc, and early-stage PhD students to contribute to the EUVIP 2026 Student Poster Session. <br /><br /> The EUVIP 2026 Student Session aims to promote interactions and exchanges between early-stage researchers, providing a unique opportunity to integrate into an international conference, showcase ongoing research, and receive constructive feedback from leading experts in academia.',
+          'EUVIP 2026 invites BSc, MSc, and early-stage PhD students to contribute to the EUVIP 2026 Student Poster Session. <br /><br /> The EUVIP 2026 Student Session aims to promote interactions and exchanges between early-stage researchers, providing a unique opportunity to integrate into an international conference, showcase ongoing research, and receive constructive feedback from leading experts in computer vision and imaging from both academia and industry.',
         sections: [
           {
             id: 'Student-session-required-info',
@@ -604,6 +606,36 @@ export default function CallsPage() {
             title: 'Awards',
             lead: 'The best student poster selected by a dedicated committee, will receive an award certificate.',
           },
+          {
+            id: 'Student-session-grants',
+            title: 'Student Grants',
+            lead: 'For EUVIP 2026, the organizing committee is working to help broaden participation at the conference. Specifically, we will support the following:',
+            bullets: [
+              '10 travel grants of €500 for PhD students, prioritizing those from lower-income regions;',
+              'reduced registration fees for students;',
+              'networking events designed to build connections across communities.',
+            ],
+
+      
+              content: (
+                <p className="leading-relaxed">
+
+                  <br />If you would like to be considered for this support, please complete the{' '}
+              <a href={`https://forms.gle/SuqN2dMZDuKKsoYRA`} target="_blank" className="font-bold underline">
+                travel support application
+              </a>
+              .
+              <br />
+              <br /> If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
+                <a href={`${basePath}/contact/`} className="font-bold underline">
+                  contact us
+                </a>
+                .
+            
+                </p>
+              ),
+            },
+        
         ],
         daterows: [
           ['Deadline for Student Session Submissions', '31 July 2026'],

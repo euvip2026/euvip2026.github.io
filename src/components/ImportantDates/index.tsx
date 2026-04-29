@@ -62,8 +62,8 @@ export default function ImportantDates() {
     ['Camera Ready Paper Submissions', '22 August 2026'],
     ['Project Dissemination Papers Submission', '30 July 2026'],
     ['Project Dissemination Papers Notifications', '15 August 2026'],
-    ['Special Sessions Submissions', '30 April 2026'],
-    ['Special Sessions Notifications', '8 May 2026'],
+    ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
+    ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
     ['Student Sessions Submissions', '31 July 2026'],
     ['Student Sessions Notifications', '15 August 2026'],
   ]
@@ -114,7 +114,7 @@ export default function ImportantDates() {
             {rowsWithCountdown.map((row, idx) => (
               <tr key={row.event} className={idx % 2 === 0 ? 'bg-container/40' : ''}>
                 <td className="px-6 py-4 text-lg">{row.event}</td>
-                <td className="px-6 py-4 text-right text-lg whitespace-nowrap">{row.dateString}</td>
+                <td className="px-6 py-4 text-right text-lg whitespace-nowrap"><span dangerouslySetInnerHTML={{ __html: row.dateString }} /></td>
                 <td className="text-accent px-6 py-4 text-right font-semibold whitespace-nowrap">
                   {row.countdownLabel}
                 </td>
