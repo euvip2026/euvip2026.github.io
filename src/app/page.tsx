@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
-const PARTNERS = ['luxembourg-convention-bureau.png', 'ieee.png', 'EURASIP.png', 'snt-logo.png']
+const PARTNERS = ['google.png', 'luxembourg-convention-bureau.png', 'ieee.png', 'EURASIP.png', 'snt-logo.png']
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
