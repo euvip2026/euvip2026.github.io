@@ -244,7 +244,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Partners</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Sponsors</h2>
               <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
             </div>
           </div>
