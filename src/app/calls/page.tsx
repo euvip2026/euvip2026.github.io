@@ -474,9 +474,9 @@ export default function CallsPage() {
 
         daterows: [
           ['Special Sessions Submissions',
-            <>15 May 2026 (<s>30 April 2026</s>)</>
+            '15 May 2026 (<s>30 April 2026</s>)'
           ],
-          ['Special Sessions Notifications', <>23 May 2026 (<s>8 May 2026</s>)</>],
+          ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
         ],
       },
 
