@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import ImportantDates from '@/components/ImportantDates'
+import SponsorsScroll from '@/components/SponsorScroll'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
-
-const PARTNERS = ['google.png', 'luxembourg-convention-bureau.png', 'ieee.png', 'EURASIP.png', 'snt-logo.png']
 
 export default function Home() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
@@ -177,15 +176,12 @@ export default function Home() {
               <a href={`https://forms.gle/SuqN2dMZDuKKsoYRA`} target="_blank" className="font-bold underline">
                 travel support application
               </a>
+              . If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
+              <a href={`${basePath}/contact/`} className="font-bold underline">
+                contact us
+              </a>
               .
-
-                If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
-                <a href={`${basePath}/contact/`} className="font-bold underline">
-                  contact us
-                </a>
-                .
-              </p>
-          
+            </p>
           </div>
         </div>
       </section>
@@ -248,18 +244,7 @@ export default function Home() {
               <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
             </div>
           </div>
-
-          <div className="mt-8 grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
-            {PARTNERS.map((filename) => (
-              <div key={filename} className="flex h-30 items-center justify-center">
-                <img
-                  src={`${basePath}/partners/${filename}`}
-                  alt={filename.replace(/\.[^/.]+$/, '').replace(/-/g, ' ')}
-                  className="h-full w-full object-contain"
-                />
-              </div>
-            ))}
-          </div>
+          <SponsorsScroll speed={55} />
         </div>
       </section>
     </>
