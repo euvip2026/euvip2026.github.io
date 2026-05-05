@@ -116,6 +116,26 @@ export default function Home() {
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
                 <li className="text-lg">
+                  <strong className="text-xl">May 04:</strong>{' '}
+                  Community & Society Announcement announcement — supported by <strong>IEEE Students</strong>
+                </li>
+                <li className="text-lg">
+                  <strong className="text-xl">Apr 30:</strong>{' '}
+                  Sponsorship announcement — supported by <strong>Google</strong>
+                </li>
+                <li className="text-lg">
+                  <strong className="text-xl">Mar 20:</strong>{' '}
+                  Community & Society Announcement announcement — supported by <strong>IEEE Benelux</strong>
+                </li>
+                <li className="text-lg">
+                  <strong className="text-xl">Mar 06:</strong>{' '}
+                  Community & Society Announcement - supported by <strong>EURASIP</strong>
+                </li>
+                <li className="text-lg">
+                  <strong className="text-xl">Feb 26:</strong>{' '}
+                  Sponsorship announcement — supported by <strong>Luxembourg convention bureau</strong>
+                </li>
+                <li className="text-lg">
                   <strong className="text-xl">Feb 16:</strong>{' '}
                   <a href={pdfHref} download className="underline">
                     Call for Papers
