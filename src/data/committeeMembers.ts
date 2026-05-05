@@ -194,7 +194,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     {
       firstName:'Mouhib',
     lastName: 'Ullah',
-      organization: 'Norwegian University of Science and Technology, Gjovik',
+      organization: ' Kristiania University of Applied Sciences, Oslo',
       country: 'Norway',
       imageUrl: '/committee/MouhibUllah.jpeg',
       cvLink: 'https://www.linkedin.com/in/mohib-ullah-71776b32/?originalSubdomain=no',
