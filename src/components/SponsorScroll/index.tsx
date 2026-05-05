@@ -7,9 +7,9 @@ import { EURASIP, Google, IEEE, LuxembourgConventionBureau, SnTLogo, IEEEStudent
 
 type LogoComp = React.ComponentType<{ className?: string }>
 
-export default function SponsorsSection({ speed = 50 }: { speed?: number }) {
+export default function SponsorsSection({ speed = 100 }: { speed?: number }) {
   const logos = useMemo<LogoComp[]>(
-    () => [EURASIP, Google, IEEE, IEEEStudents, LuxembourgConventionBureau, SnTLogo],
+    () => [EURASIP, Google, IEEE, LuxembourgConventionBureau, SnTLogo],
     [],
   )
 
