@@ -117,15 +117,15 @@ export default function Home() {
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
                 <li className="text-lg">
                   <strong className="text-xl">May 04:</strong>{' '}
-                  Community & Society Announcement announcement — supported by <strong>IEEE Students</strong>
+                  Community & Society Announcement — supported by <strong>IEEE Students</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Apr 30:</strong>{' '}
-                  Sponsorship announcement — supported by <strong>Google</strong>
+                  Sponsorship Announcement — supported by <strong>Google</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Mar 20:</strong>{' '}
-                  Community & Society Announcement announcement — supported by <strong>IEEE Benelux</strong>
+                  Community & Society Announcement — supported by <strong>IEEE Benelux</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Mar 06:</strong>{' '}
@@ -133,7 +133,7 @@ export default function Home() {
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Feb 26:</strong>{' '}
-                  Sponsorship announcement — supported by <strong>Luxembourg convention bureau</strong>
+                  Sponsorship Announcement — supported by <strong>Luxembourg convention bureau</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Feb 16:</strong>{' '}
