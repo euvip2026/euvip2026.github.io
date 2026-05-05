@@ -7,18 +7,21 @@ export const metadata: Metadata = {
 }
 
 export default function ImportantDates() {
-  const rows = [
-    ['Tutorial Proposals', '15 May 2026'],
-    ['Tutorial Notifications', '20 May 2026'],
-    ['Paper Submissions', '21 May 2026'],
-    ['Paper Notifications', '18 July 2026'],
-    ['Demo Submissions', '15 July 2026'],
-    ['Demo Notifications', '18 July 2026'],
-    ['Camera Ready Paper Submissions', '25 July 2026'],
-    ['Project Dissemination Papers Submission', '30 July 2026'],
-    ['Project Dissemination Papers Notifications', '15 August 2026'],
-    ['Special Sessions Submissions', '30 April 2026'],
-    ['Special Sessions Notifications', '8 May 2026'],
+  const rows: Array<[string, string]> = [
+      ['Tutorial Proposals', '15 May 2026'],
+      ['Tutorial Notifications', '20 May 2026'],
+      ['Paper Submissions', '21 May 2026'],
+      ['Paper Notifications', '18 July 2026'],
+      ['Demo Submissions', '15 July 2026'],
+      ['Demo Notifications', '18 July 2026'],
+      ['Camera Ready Paper Submissions', '22 August 2026'],
+      ['Project Dissemination Papers Submission', '30 July 2026'],
+      ['Project Dissemination Papers Notifications', '15 August 2026'],
+      ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
+      ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
+      ['Student Sessions Submissions', '31 July 2026'],
+      ['Student Sessions Notifications', '15 August 2026'],
+  
   ]
 
   return (
@@ -51,7 +54,9 @@ export default function ImportantDates() {
               {rows.map(([event, date], idx) => (
                 <tr key={event} className={idx % 2 === 0 ? 'bg-container' : ''}>
                   <td className="text-container-foreground px-6 py-4 text-lg">{event}</td>
-                  <td className="text-container-foreground px-6 py-4 text-right text-lg whitespace-nowrap">{date}</td>
+                  <td className="text-container-foreground px-6 py-4 text-right text-lg whitespace-nowrap">
+                    <span dangerouslySetInnerHTML={{ __html: date }} />
+                  </td>
                 </tr>
               ))}
             </tbody>
