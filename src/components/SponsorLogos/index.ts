@@ -3,3 +3,4 @@ export { default as LuxembourgConventionBureau } from './LuxembourgConventionBur
 export { default as IEEE } from './IEEE'
 export { default as EURASIP } from './EURASIP'
 export { default as SnTLogo } from './SnTlogo'
+export { default as IEEEStudents } from './IEEEStudents'

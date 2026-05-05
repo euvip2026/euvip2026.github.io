@@ -3,12 +3,15 @@
 import React, { useMemo } from 'react'
 import Marquee from 'react-fast-marquee'
 
-import { EURASIP, Google, IEEE, LuxembourgConventionBureau, SnTLogo } from '@/components/SponsorLogos'
+import { EURASIP, Google, IEEE, LuxembourgConventionBureau, SnTLogo, IEEEStudents } from '@/components/SponsorLogos'
 
 type LogoComp = React.ComponentType<{ className?: string }>
 
 export default function SponsorsSection({ speed = 50 }: { speed?: number }) {
-  const logos = useMemo<LogoComp[]>(() => [EURASIP, Google, IEEE, LuxembourgConventionBureau, SnTLogo], [])
+  const logos = useMemo<LogoComp[]>(
+    () => [EURASIP, Google, IEEE, IEEEStudents, LuxembourgConventionBureau, SnTLogo],
+    [],
+  )
 
   return (
     <section className="bg-background text-container-foreground">
