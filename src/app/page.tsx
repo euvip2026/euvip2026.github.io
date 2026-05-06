@@ -264,7 +264,7 @@ export default function Home() {
               <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
             </div>
           </div>
-          <SponsorsScroll speed={55} />
+          <img src={`${basePath}/partners/sponsors.png`} alt="Sponsors Image" className="w-full object-cover" />
         </div>
       </section>
     </>

@@ -172,6 +172,12 @@ export default function SponsorsPage() {
       </section>
 
       <main className="bg-gray-50">
+          <section className={`relative w-full overflow-hidden`}>
+            <div className="mx-auto max-w-7xl py-12 md:px-4 lg:py-16">
+              <img src={`${basePath}/partners/sponsors.png`} alt="Sponsors Image" className="w-full object-cover" />
+            </div>
+          </section>
+
         {packages.map((pkg) => (
           <PackageSection
             key={pkg.title}
