@@ -24,7 +24,48 @@ export default function TutorialSubmission() {
       <div className="mx-auto w-full max-w-7xl px-4 py-6">
         <section className="bg-background text-container-foreground mt-4 mb-8">
           <div className="space-y-4 text-2xl leading-relaxed">
-            <p>To be announced soon.</p>
+            <section className="bg-container mt-12 px-4 md:px-0">
+            <div className="mx-auto max-w-7xl py-8 md:px-4">
+              <h2 className="text-container-foreground text-2xl font-bold">
+                Submission Instructions
+              </h2>
+
+              <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+                Prospective tutorial proposers are welcome to submit their proposals to the
+                Tutorials Chairs, who would be happy to also answer questions and provide
+                preliminary feedback:
+              </p>
+
+              <div className="text-container-foreground/80 mt-6 space-y-3 text-lg">
+                <p>
+                  <a
+                    href="mailto:stefania.colonnese@uniroma1.it"
+                    className="font-semibold hover:underline"
+                  >
+                    stefania.colonnese@uniroma1.it
+                  </a>
+                </p>
+
+                <p>
+                  <a
+                    href="mailto:rachid.jennane@univ-orleans.fr"
+                    className="font-semibold hover:underline"
+                  >
+                    rachid.jennane@univ-orleans.fr
+                  </a>
+                </p>
+
+                <p>
+                  <a
+                    href="mailto:Habib.Zaidi@hcuge.ch"
+                    className="font-semibold hover:underline"
+                  >
+                    Habib.Zaidi@hcuge.ch
+                  </a>
+                </p>
+              </div>
+            </div>
+          </section>
           </div>
         </section>
       </div>
