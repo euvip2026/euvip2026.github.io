@@ -270,7 +270,7 @@ export default function CallsPage() {
         ),
         daterows: [
           ['Paper Submissions', '21 May 2026'],
-          ['Camera Ready Paper Submissions', '25 July 2026'],
+          ['Camera Ready Paper Submissions', '22 August 2026'],
           ['Paper Notifications', '18 July 2026'],
         ],
       },
@@ -474,9 +474,9 @@ export default function CallsPage() {
 
         daterows: [
           ['Special Sessions Submissions',
-            '15 May 2026 (<s>30 April 2026</s>)'
+            '15 May 2026'
           ],
-          ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
+          ['Special Sessions Notifications', '23 May 2026'],
         ],
       },
 
