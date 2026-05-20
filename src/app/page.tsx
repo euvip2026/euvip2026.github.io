@@ -115,7 +115,13 @@ export default function Home() {
           <div className="mt-6">
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
+
+              <li className="text-lg">
+              <strong className="text-xl">May 19:</strong>{' '}
+               Community & Society Announcement — supported by <strong>IEEE Signal Processing Society</strong>
+             </li>
                 <li className="text-lg">
+  
                   <strong className="text-xl">May 04:</strong>{' '}
                   Community & Society Announcement — supported by <strong>IEEE Students</strong>
                 </li>
@@ -129,7 +135,7 @@ export default function Home() {
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Mar 06:</strong>{' '}
-                  Community & Society Announcement - supported by <strong>EURASIP</strong>
+                  Community & Society Announcement — supported by <strong>EURASIP</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Feb 26:</strong>{' '}
