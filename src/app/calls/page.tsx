@@ -113,9 +113,13 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
               <div className="mt-3 text-lg whitespace-pre-line opacity-80" dangerouslySetInnerHTML={{ __html: displayDesc }} />
               {pdfHref && (
                 <p className="mt-3 text-lg opacity-90">
-                  <a href={pdfHref} download className="font-bold hover:underline">
+                  {/* <a href={pdfHref} download className="font-bold hover:underline">
+                    Download (PDF)
+                  </a> */}
+                  <a className="font-bold opacity-50 cursor-not-allowed">
                     Download (PDF)
                   </a>
+                  <span className="ml-2 italic">coming soon</span>
                 </p>
               )}
             </>
@@ -138,7 +142,8 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
                 {card.daterows.map(([event, date], idx) => (
                   <tr key={`${event}-${idx}`} className={idx % 2 === 0 ? 'bg-container' : ''}>
                     <td className="text-container-foreground px-6 py-4 text-lg">{event}</td>
-                    <td className="text-container-foreground px-6 py-4 text-right text-lg whitespace-nowrap">{date}</td>
+                    {/* <td className="text-container-foreground px-6 py-4 text-right text-lg whitespace-nowrap">{date}</td> */}
+                     <td className="px-6 py-4 text-right text-lg whitespace-nowrap"><span dangerouslySetInnerHTML={{ __html: date }} /></td>
                   </tr>
                 ))}
               </tbody>
@@ -176,7 +181,7 @@ export default function CallsPage() {
         title: 'Call for Papers',
         pdf: '/C4P.pdf',
         description:
-          'The 14 th European Conference on Visual Information Processing will be held, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
+          'The 14th European Conference on Visual Information Processing will be held, in Luxembourg; the first day will be dedicated to (one-day) tutorials. The conference will bring together leading experts from academia and industry interested in visual information processing, applications and performance assessment for all types of visual modalities. The program will feature lecture, poster and plenary sessions, as well as tutorials and demo/industrial exhibitions.',
         sectionsTitle: 'Topics of interest include, but are not limited to:',
         sections: [
           {
@@ -259,19 +264,22 @@ export default function CallsPage() {
             <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Submission & Awards</h2>
             <p className="leading-relaxed">
               Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
-              content , figures, and references, through the submission system (page 6 should contain only references).
+              content, figures, and references, through the submission system (page 6 should contain only references).
               Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
-              lecture or poster session. Regular papers p resented at the conference will be included in the conference
-              proceedings and are expected to be included in IEEE Xplore. EUVIP 2026 will recognize outstanding
+              lecture or poster session. Regular papers presented at the conference will be included in the conference
+              proceedings and will be included in IEEE Xplore. EUVIP 2026 will recognize outstanding
               contributions with the Best Paper Award, as well as the Best Student Paper Award and the Student Demo
               Award.
             </p>
           </>
         ),
         daterows: [
-          ['Paper Submissions', '21 May 2026'],
-          ['Camera Ready Paper Submissions', '22 August 2026'],
+          // ['Paper Submissions', '21 May 2026'],
+          // ['Paper Notifications', '18 July 2026'],
+          // ['Camera Ready Paper Submissions', '22 August 2026'],
+          ['Paper Submissions', '5 June 2026 (<s>21 May 2026</s>)'],
           ['Paper Notifications', '18 July 2026'],
+          ['Camera Ready Paper Submissions', '5 August 2026'],
         ],
       },
       {
@@ -401,7 +409,7 @@ export default function CallsPage() {
         title: 'Call for Special Sessions ',
         pdf: '/C4Special_Sessions.pdf',
         description:
-          'The Organizing Committee of EUVIP 2026 (European Workshop on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /><br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br /><br />  Each Special Session is expected to: <ul class="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90"><li>Provide a coherent and clearly defined theme</li><li>Attract high-quality contributions from leading researchers</li><li>Stimulate discussion and future research directions</li></ul> <br/>Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
+          'The Organizing Committee of EUVIP 2026 (European Conference on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /><br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br /><br />  Each Special Session is expected to: <ul class="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90"><li>Provide a coherent and clearly defined theme</li><li>Attract high-quality contributions from leading researchers</li><li>Stimulate discussion and future research directions</li></ul> <br/>Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
         sections: [
           {
             id: 'Special-session-required-info',
@@ -640,7 +648,6 @@ export default function CallsPage() {
         daterows: [
           ['Deadline for Student Session Submissions', '31 July 2026'],
           ['Notification of Acceptance', '15 August 2026'],
-          ['Camera Ready Submissions', '22 August 2026'],
         ],
       },
     ],
@@ -679,7 +686,7 @@ export default function CallsPage() {
         </>
       )}
 
-      {(!active || active.id === 'cfp') && (
+      {(active && active.id === 'cfp') && (
       <section className="bg-container mt-12 px-4 md:px-0">
         <div className="mx-auto max-w-7xl py-8 md:px-4">
           <h2 className="text-container-foreground text-2xl font-bold">Submission</h2>
