@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ImportantDates from '@/components/ImportantDates'
-import SponsorsScroll from '@/components/SponsorScroll'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -115,13 +114,15 @@ export default function Home() {
           <div className="mt-6">
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
-
-              <li className="text-lg">
-              <strong className="text-xl">May 19:</strong>{' '}
-               Community & Society Announcement — supported by <strong>IEEE Signal Processing Society</strong>
-             </li>
                 <li className="text-lg">
-  
+                  <strong className="text-xl">May 20:</strong>{' '}
+                  Paper submission deadline extended to 5 June 2026.
+                </li>
+                <li className="text-lg">
+                  <strong className="text-xl">May 19:</strong>{' '}
+                  Community & Society Announcement — supported by <strong>IEEE Signal Processing Society</strong>
+                </li>
+                <li className="text-lg">
                   <strong className="text-xl">May 04:</strong>{' '}
                   Community & Society Announcement — supported by <strong>IEEE Students</strong>
                 </li>

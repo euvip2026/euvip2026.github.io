@@ -1,4 +1,4 @@
-import ContactForm from '@/components/ContactForm'
+// import ContactForm from '@/components/ContactForm'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -25,9 +25,13 @@ export default function ContactPage() {
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground mb-6 text-lg opacity-80">
-              Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.
+              Have a question or need more information? Please contact us at{' '}
+              <a href="mailto:euvip2026@uni.lu" className="font-medium underline">
+                euvip2026@uni.lu
+              </a>
+              .
             </p>
-            <ContactForm />
+            {/* <ContactForm /> */}
           </div>
         </div>
       </div>

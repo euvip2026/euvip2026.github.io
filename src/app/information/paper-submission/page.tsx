@@ -54,6 +54,9 @@ export default function PaperSubmission() {
                   </a>
                 </div>
                 <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+                  <span className="font-bold">Note:</span> For special session submissions to EUVIP, use the same CMT link, but be sure to select the appropriate track (special session) when creating your submission.
+                </p>
+                <p className="text-container-foreground/80 text-lg leading-relaxed">
                   The Microsoft CMT service was used for managing the peer-reviewing process for this conference.
                   This service was provided for free by Microsoft and they bore all expenses, including costs for
                   Azure cloud services as well as for software development and support.

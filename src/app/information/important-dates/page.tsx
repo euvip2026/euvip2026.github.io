@@ -8,20 +8,32 @@ export const metadata: Metadata = {
 
 export default function ImportantDates() {
   const rows: Array<[string, string]> = [
-      ['Tutorial Proposals', '15 May 2026'],
-      ['Tutorial Notifications', '20 May 2026'],
-      ['Paper Submissions', '21 May 2026'],
-      ['Paper Notifications', '18 July 2026'],
-      ['Demo Submissions', '15 July 2026'],
-      ['Demo Notifications', '18 July 2026'],
-      ['Camera Ready Paper Submissions', '22 August 2026'],
-      ['Project Dissemination Papers Submission', '30 July 2026'],
-      ['Project Dissemination Papers Notifications', '15 August 2026'],
-      ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
-      ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
-      ['Student Sessions Submissions', '31 July 2026'],
-      ['Student Sessions Notifications', '15 August 2026'],
-  
+      // ['Tutorial Proposals', '15 May 2026'],
+      // ['Tutorial Notifications', '20 May 2026'],
+      // ['Paper Submissions', '21 May 2026'],
+      // ['Paper Notifications', '18 July 2026'],
+      // ['Demo Submissions', '15 July 2026'],
+      // ['Demo Notifications', '18 July 2026'],
+      // ['Camera Ready Paper Submissions', '22 August 2026'],
+      // ['Project Dissemination Papers Submission', '30 July 2026'],
+      // ['Project Dissemination Papers Notifications', '15 August 2026'],
+      // ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
+      // ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
+      // ['Student Sessions Submissions', '31 July 2026'],
+      // ['Student Sessions Notifications', '15 August 2026'],
+    ['Tutorial Proposals', '15 May 2026'],
+    ['Tutorial Notifications', '20 May 2026'],
+    ['Paper Submissions', '5 June 2026 (<s>21 May 2026</s>)'],
+    ['Paper Notifications', '18 July 2026'],
+    ['Demo Submissions', '15 July 2026'],
+    ['Demo Notifications', '18 July 2026'],
+    ['Camera Ready Paper Submissions', '5 August 2026'],
+    ['Project Dissemination Papers Submission', '30 July 2026'],
+    ['Project Dissemination Papers Notifications', '15 August 2026'],
+    ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
+    ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
+    ['Student Sessions Submissions', '31 July 2026'],
+    ['Student Sessions Notifications', '15 August 2026'],
   ]
 
   return (
@@ -39,7 +51,7 @@ export default function ImportantDates() {
       </section>
 
       <div className="mx-auto w-full max-w-7xl px-4 py-6">
-        <div className="bg-background mx-auto mt-4 mb-8 max-w-2xl shadow-md">
+        <div className="bg-background mx-auto mt-4 mb-8 max-w-3xl shadow-md">
           <table className="w-full border-collapse text-left text-sm">
             <thead>
               <tr className="border-container-foreground border-b">
