@@ -113,13 +113,13 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
               <div className="mt-3 text-lg whitespace-pre-line opacity-80" dangerouslySetInnerHTML={{ __html: displayDesc }} />
               {pdfHref && (
                 <p className="mt-3 text-lg opacity-90">
-                  <a href={pdfHref} download className="font-bold hover:underline">
+                  {/* <a href={pdfHref} download className="font-bold hover:underline">
+                    Download (PDF)
+                  </a> */}
+                  <a className="font-bold opacity-50 cursor-not-allowed">
                     Download (PDF)
                   </a>
-                  {/* <a className="font-bold opacity-50 cursor-not-allowed">
-                    Download (PDF)
-                  </a>
-                  <span className="ml-2 italic">coming soon</span> */}
+                  <span className="ml-2 italic">coming soon</span>
                 </p>
               )}
             </>
