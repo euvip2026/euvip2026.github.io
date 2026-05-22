@@ -20,15 +20,34 @@ const INFORMATION_ITEMS = [
   // { href: '/information/student-session', label: 'STUDENT SESSION' },
 ] as const
 
+const SPECIAL_SESSION_ITEMS = [
+  {
+    href: '/special-sessions/1',
+    label: 'GENERATIVE AI FOR 3D FACE AND BODY ANIMATION',
+  },
+  {
+    href: '/special-sessions/2',
+    label: 'MULTIMODAL DATA FUSION AND VISUAL ARTIFICIAL INTELLIGENCE FOR EARTH OBSERVATION',
+  },
+  {
+    href: '/special-sessions/3',
+    label: 'TRUSTWORTHY AI FOR REAL AND SYNTHETIC BIOMEDICAL IMAGING',
+  },
+] as const
+
 export function Header() {
   const pathname = usePathname()
   const isHome = pathname === '/'
   const isInformationActive = pathname.startsWith('/information')
+  const isSpecialSessionsActive = pathname.startsWith('/special-sessions')
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileInformationOpen, setMobileInformationOpen] = useState(false)
+  const [mobileSpecialSessionsOpen, setMobileSpecialSessionsOpen] = useState(false)
   const [desktopInformationOpen, setDesktopInformationOpen] = useState(false)
+  const [desktopSpecialSessionsOpen, setDesktopSpecialSessionsOpen] = useState(false)
   const desktopInfoCloseTimeoutRef = useRef<number | null>(null)
+  const desktopSpecialSessionsCloseTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (!isHome) {
@@ -46,6 +65,8 @@ export function Header() {
     setMobileOpen(false)
     setMobileInformationOpen(false)
     setDesktopInformationOpen(false)
+    setMobileSpecialSessionsOpen(false)
+    setDesktopSpecialSessionsOpen(false)
   }, [pathname])
 
   useEffect(() => {
@@ -88,6 +109,19 @@ export function Header() {
     }, 120)
   }
 
+  const cancelDesktopSpecialSessionsClose = () => {
+    if (desktopSpecialSessionsCloseTimeoutRef.current == null) return
+    window.clearTimeout(desktopSpecialSessionsCloseTimeoutRef.current)
+    desktopSpecialSessionsCloseTimeoutRef.current = null
+  }
+
+  const scheduleDesktopSpecialSessionsClose = () => {
+    cancelDesktopSpecialSessionsClose()
+    desktopSpecialSessionsCloseTimeoutRef.current = window.setTimeout(() => {
+      setDesktopSpecialSessionsOpen(false)
+    }, 120)
+  }
+
   return (
     <header className={headerClassName}>
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6">
@@ -100,7 +134,7 @@ export function Header() {
             className={isHome && !isScrolled ? 'drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]' : undefined}
           />
         </Link>
-        <nav className="hidden h-[81px] items-center gap-8 text-sm font-medium lg:flex">
+        <nav className="hidden h-[81px] items-center gap-6 text-sm font-medium lg:flex">
           <Link href="/" className={navLinkClassName(pathname === '/')}>
             HOME
           </Link>
@@ -113,6 +147,44 @@ export function Header() {
           <Link href="/calls" className={navLinkClassName(pathname.includes('/calls'))}>
             CALLS
           </Link>
+
+          <DropdownMenu
+            open={desktopSpecialSessionsOpen}
+            onOpenChange={setDesktopSpecialSessionsOpen}
+            modal={false}
+          >
+            <DropdownMenuTrigger asChild>
+              <button
+                className={`${navLinkClassName(isSpecialSessionsActive)} gap-2 bg-transparent outline-none`}
+                onMouseEnter={() => {
+                  cancelDesktopSpecialSessionsClose()
+                  setDesktopSpecialSessionsOpen(true)
+                }}
+                onMouseLeave={scheduleDesktopSpecialSessionsClose}
+              >
+                SPECIAL SESSIONS
+                <ChevronDown className="h-4 w-4 opacity-80" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              align="start"
+              className="border-muted bg-background/95 text-container-foreground min-w-[280px] max-w-[420px] p-2 shadow-lg backdrop-blur-md"
+              onMouseEnter={cancelDesktopSpecialSessionsClose}
+              onMouseLeave={scheduleDesktopSpecialSessionsClose}
+            >
+              {SPECIAL_SESSION_ITEMS.map((item) => (
+                <DropdownMenuItem
+                  key={item.href}
+                  asChild
+                  className="focus:bg-container focus:text-container-foreground rounded-xl px-3 py-2 text-sm font-medium"
+                >
+                  <Link href={item.href} className="w-full whitespace-normal">
+                    {item.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
 
           <DropdownMenu open={desktopInformationOpen} onOpenChange={setDesktopInformationOpen} modal={false}>
             <DropdownMenuTrigger asChild>
@@ -229,6 +301,37 @@ export function Header() {
                 >
                   CALLS
                 </Link>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  className={`flex w-full items-center justify-between ${
+                    isSpecialSessionsActive ? 'text-accent-foreground' : 'text-container-foreground'
+                  }`}
+                  aria-expanded={mobileSpecialSessionsOpen}
+                  onClick={() => setMobileSpecialSessionsOpen((v) => !v)}
+                >
+                  SPECIAL SESSIONS
+                  <ChevronDown
+                    className={`h-6 w-6 transition-transform ${mobileSpecialSessionsOpen ? 'rotate-180' : ''}`}
+                  />
+                </button>
+                {mobileSpecialSessionsOpen ? (
+                  <ul className="mt-4 flex flex-col gap-3 pl-4 text-sm font-semibold sm:text-base">
+                    {SPECIAL_SESSION_ITEMS.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="text-container-foreground"
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
 
               <li>
