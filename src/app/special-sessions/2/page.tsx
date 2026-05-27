@@ -175,6 +175,32 @@ export default function SpecialSessionsPage() {
             </div>
           </div>
         </div>
+        <section className="bg-container mt-4 px-4 md:px-0">
+          <div className="mx-auto max-w-7xl py-8 md:px-4">
+            <h2 className="text-container-foreground text-2xl font-bold">Submission</h2>
+            <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+              Submissions must be made through the official CMT system of EUVIP, by choosing the track <span className="font-bold">[Special Session] Multimodal Data Fusion and Visual Artificial Intelligence for Earth Observation @ EUVIP 2026</span>. The direct link is provided below: <br/>
+              <a
+                href="https://cmt3.research.microsoft.com/EUVIP2026/Track/3/Submission/Create"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold hover:underline"
+              >
+                https://cmt3.research.microsoft.com/EUVIP2026/Track/3/Submission/Create
+              </a>
+            </p>
+            <div className="flex w-full justify-center">
+              <a
+                className="text-container-foreground border-muted bg-background hover:bg-background/80 mt-8 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
+                href="https://cmt3.research.microsoft.com/EUVIP2026/Track/3/Submission/Create"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Submit in Microsoft CMT
+              </a>
+            </div>
+          </div>
+        </section>
       </section>
     </>
   )
