@@ -53,8 +53,8 @@ function parseLocalEndOfDay(dateString: string) {
 
 export default function ImportantDates() {
   const rows: Array<[string, string]> = [
-    ['Tutorial Proposals', '15 May 2026'],
-    ['Tutorial Notifications', '20 May 2026'],
+    ['Tutorial Proposals', '9 June 2026 (<s>15 May 2026</s>)'],
+    ['Tutorial Notifications', '25 June 2026 (<s>20 May 2026</s>)'],
     ['Paper Submissions', '5 June 2026 (<s>21 May 2026</s>)'],
     ['Paper Notifications', '18 July 2026'],
     ['Demo Submissions', '15 July 2026'],

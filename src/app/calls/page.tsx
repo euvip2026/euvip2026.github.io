@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { ArrowLeft, ChevronDown } from 'lucide-react'
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
@@ -177,7 +177,7 @@ export default function CallsPage() {
   const cards = useMemo<MainCard[]>(
     () => [
       {
-        id: 'cfp',
+        id: 'papers',
         title: 'Call for Papers',
         pdf: '/C4P.pdf',
         description:
@@ -399,13 +399,12 @@ export default function CallsPage() {
           },
         ],
         daterows: [
-          ['Deadline for Tutorial Proposals', '15 May 2026'],
-          ['Notification of Tutorial Acceptance', '20 May 2026'],
+          ['Deadline for Tutorial Proposals', '9 June 2026 (<s>15 May 2026</s>)'],
+          ['Notification of Tutorial Acceptance', '25 June 2026 (<s>20 May 2026</s>)'],
         ],
       },
-
       {
-        id: 'Special Sessions ',
+        id: 'special-sessions',
         title: 'Call for Special Sessions ',
         pdf: '/C4Special_Sessions.pdf',
         description:
@@ -487,10 +486,8 @@ export default function CallsPage() {
           ['Special Sessions Notifications', '23 May 2026'],
         ],
       },
-
-
       {
-        id: 'Demo',
+        id: 'demos',
         title: 'Call for Demos',
         pdf: '/Call4Demos.pdf',
         description:
@@ -557,9 +554,8 @@ export default function CallsPage() {
           ['Notification of Acceptance', '18 July 2026'],
         ],
       },
-
       {
-        id: 'Student Session',
+        id: 'student-sessions',
         title: 'Call for Student Session',
         pdf: '/C4Student_session.pdf',
         description:
@@ -657,6 +653,31 @@ export default function CallsPage() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const active = activeId ? cards.find((c) => c.id === activeId) : null
 
+  useEffect(() => {
+    const validIds = new Set(cards.map((c) => c.id))
+    const syncFromHash = () => {
+      const hash = decodeURIComponent(window.location.hash.replace(/^#/, ''))
+      setActiveId(hash && validIds.has(hash) ? hash : null)
+    }
+    syncFromHash()
+    window.addEventListener('hashchange', syncFromHash)
+    window.addEventListener('popstate', syncFromHash)
+    return () => {
+      window.removeEventListener('hashchange', syncFromHash)
+      window.removeEventListener('popstate', syncFromHash)
+    }
+  }, [cards])
+
+  const openCard = useCallback((id: string) => {
+    window.history.pushState(null, '', `#${encodeURIComponent(id)}`)
+    setActiveId(id)
+  }, [])
+
+  const closeCard = useCallback(() => {
+    window.history.pushState(null, '', window.location.pathname + window.location.search)
+    setActiveId(null)
+  }, [])
+
   return (
     <section className="mx-auto">
       <div className="mx-auto max-w-7xl md:px-4">
@@ -674,13 +695,13 @@ export default function CallsPage() {
       <div className="py-6" />
       {active ? (
         <div className="mx-auto max-w-7xl px-0 md:px-4">
-          <FocusMainCard card={active} onBack={() => setActiveId(null)} />
+          <FocusMainCard card={active} onBack={closeCard} />
         </div>
       ) : (
         <>
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 md:grid-cols-2 md:gap-6 md:px-4 lg:grid-cols-3">
             {cards.map((c) => (
-              <CompactMainCard key={c.id} card={c} onOpen={() => setActiveId(c.id)} />
+              <CompactMainCard key={c.id} card={c} onOpen={() => openCard(c.id)} />
             ))}
           </div>
         </>
