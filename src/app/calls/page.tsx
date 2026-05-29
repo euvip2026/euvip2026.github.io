@@ -19,6 +19,7 @@ type MainCard = {
   pdf?: string
   description: string
   sectionsTitle?: string
+  sectionsVertical?: boolean
   sections?: Section[]
   additional?: React.ReactNode
   daterows?: [string, string][]
@@ -154,7 +155,7 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
       {!tbc && card.sections?.length ? (
         <div className="px-6 pt-6 pb-6">
           {card.sectionsTitle && <p className="mt-3 mb-6 text-lg opacity-80">{card.sectionsTitle}</p>}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className={card.sectionsVertical ? 'grid grid-cols-1 gap-6' : 'grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'}>
             {card.sections.map((s) => (
               <SectionCard key={s.id} section={s} />
             ))}
@@ -405,85 +406,39 @@ export default function CallsPage() {
       },
       {
         id: 'special-sessions',
-        title: 'Call for Special Sessions ',
-        pdf: '/C4Special_Sessions.pdf',
+        title: 'Special Sessions',
         description:
-          'The Organizing Committee of EUVIP 2026 (European Conference on Visual Information Processing) invites proposals for Special Sessions to complement the conference technical program.  Special Sessions aim to highlight emerging, high-impact, and focused research topics within the broad field of visual information processing. Proposals should address cutting-edge scientific challenges, novel methodologies, or rapidly evolving application domains that are of strong interest to the EUVIP community.  <br /><br /> In addition to focussed sessions, cross-disciplinary and forward-looking topics—especially those bridging visual processing with fields such as machine learning, multimodal systems, computational imaging, or applied domains—are particularly encouraged.  <br /><br />  Each Special Session is expected to: <ul class="mt-4 list-disc space-y-2 pl-5 text-lg opacity-90"><li>Provide a coherent and clearly defined theme</li><li>Attract high-quality contributions from leading researchers</li><li>Stimulate discussion and future research directions</li></ul> <br/>Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
+          'The following Special Sessions have been accepted for EUVIP 2026. Select a session to view its full details, topics, and submission instructions.',
+        sectionsTitle: 'Accepted Special Sessions:',
+        sectionsVertical: true,
         sections: [
           {
-            id: 'Special-session-required-info',
-            title: 'Required Proposal Information',
-            lead: 'Each Special Session is expected to:',
-            bullets: [
-              'Provide a coherent and clearly defined theme ',
-              'Attract high-quality contributions from leading researchers ',
-              'Stimulate discussion and future research directions ',
-              'Broad or generic topics already covered by regular EUVIP tracks should be avoided.',
-            ],
-          },
-          {
-            id: 'Special-session-evaluation',
-            title: 'Evaluation Criteria',
-            lead: 'Special Session proposals will be evaluated based on:',
-            bullets: [
-              'Scientific relevance to the core themes of EUVIP ',
-              'Timeliness and novelty of the topic ',
-              'Potential to attract high-quality submissions',
-              'Track record and expertise of the organizers ',
-            ],
-          },
-          {
-            id: 'Special-session-submission',
-            title: 'Submission Instructions',
+            id: 'ss-1',
+            title: 'Generative AI for 3D Face and Body Animation',
             content: (
-              <div className="leading-relaxed">
-                <p>Proposals should include:</p>
-                <ol className="mt-4 list-decimal space-y-4 pl-5 text-lg opacity-90">
-                  <li>
-                    <b>Session Title and Description</b>
-                    <p className="mt-1">A clear and engaging description (less than 1 page) covering:</p>
-                    <ul className="mt-2 list-disc space-y-2 pl-5">
-                      <li>Motivation and rationale</li>
-                      <li>Relevance to EUVIP</li>
-                      <li>Key topics and scope</li>
-                      <li>Expected scientific and/or application impact</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <b>Organizers</b>
-                    <ul className="mt-2 list-disc space-y-2 pl-5">
-                      <li>Names, affiliations, and contact details</li>
-                      <li>Short biographies highlighting expertise and relevance to the topic</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <b>Tentative Contributions</b>
-                    <ul className="mt-2 list-disc space-y-2 pl-5">
-                      <li>A preliminary list of potential contributing authors and papers (if available), demonstrating the session’s attractiveness and viability</li>
-                    </ul>
-                  </li>
-                </ol>
-                <p className="mt-6">Special Session proposals should be submitted by email to <a href="mailto:euvip2026@uni.lu" target="_blank" rel="noreferrer" className="font-bold hover:underline">euvip2026@uni.lu</a>. Papers for the Special Session must then be submitted through the official Microsoft CMT system and will follow the standard EUVIP peer-review process.</p>
-              </div>
+              <a href={`${basePath}/special-sessions/1/`} className="font-semibold hover:underline">
+                View session details
+              </a>
             ),
           },
-        ],
-        additional: (
-          <>
-            <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Session Format</h2>
-            <p className="leading-relaxed">
-             Each Special Session will include 4–5 accepted papers <br /> All submissions will undergo the standard peer-review process of EUVIP <br /> Accepted papers will be published in the official conference proceedings 
-
-            </p>
-          </>
-        ),
-
-
-        daterows: [
-          ['Special Sessions Submissions',
-            '15 May 2026'
-          ],
-          ['Special Sessions Notifications', '23 May 2026'],
+          {
+            id: 'ss-2',
+            title: 'Multimodal Data Fusion and Visual Artificial Intelligence for Earth Observation',
+            content: (
+              <a href={`${basePath}/special-sessions/2/`} className="font-semibold hover:underline">
+                View session details
+              </a>
+            ),
+          },
+          {
+            id: 'ss-3',
+            title: 'Trustworthy AI for Real and Synthetic Biomedical Imaging',
+            content: (
+              <a href={`${basePath}/special-sessions/3/`} className="font-semibold hover:underline">
+                View session details
+              </a>
+            ),
+          },
         ],
       },
       {
