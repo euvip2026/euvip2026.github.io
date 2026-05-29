@@ -11,6 +11,7 @@ type Section = {
   lead?: string
   bullets?: string[]
   content?: React.ReactNode
+  href?: string
 }
 
 type MainCard = {
@@ -65,8 +66,8 @@ function CompactMainCard({ card, onOpen }: { card: MainCard; onOpen: () => void 
 }
 
 function SectionCard({ section }: { section: Section }) {
-  return (
-    <div className="border-information bg-container text-container-foreground border p-6 shadow-sm">
+  const inner = (
+    <>
       <h3 className="text-xl leading-tight font-bold">{section.title}</h3>
 
       {section.lead ? <p className="mt-4 text-lg opacity-90">{section.lead}</p> : null}
@@ -80,8 +81,21 @@ function SectionCard({ section }: { section: Section }) {
       ) : null}
 
       {section.content ? <div className="mt-4 text-lg opacity-90">{section.content}</div> : null}
-    </div>
+    </>
   )
+
+  if (section.href) {
+    return (
+      <a
+        href={section.href}
+        className="border-information bg-container text-container-foreground hover:bg-container/80 block border p-6 shadow-sm transition hover:cursor-pointer"
+      >
+        {inner}
+      </a>
+    )
+  }
+
+  return <div className="border-information bg-container text-container-foreground border p-6 shadow-sm">{inner}</div>
 }
 
 function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void }) {
@@ -415,29 +429,20 @@ export default function CallsPage() {
           {
             id: 'ss-1',
             title: 'Generative AI for 3D Face and Body Animation',
-            content: (
-              <a href={`${basePath}/special-sessions/1/`} className="font-semibold hover:underline">
-                View session details
-              </a>
-            ),
+            href: `${basePath}/special-sessions/1/`,
+            content: <span className="font-semibold hover:underline">View session details</span>,
           },
           {
             id: 'ss-2',
             title: 'Multimodal Data Fusion and Visual Artificial Intelligence for Earth Observation',
-            content: (
-              <a href={`${basePath}/special-sessions/2/`} className="font-semibold hover:underline">
-                View session details
-              </a>
-            ),
+            href: `${basePath}/special-sessions/2/`,
+            content: <span className="font-semibold hover:underline">View session details</span>,
           },
           {
             id: 'ss-3',
             title: 'Trustworthy AI for Real and Synthetic Biomedical Imaging',
-            content: (
-              <a href={`${basePath}/special-sessions/3/`} className="font-semibold hover:underline">
-                View session details
-              </a>
-            ),
+            href: `${basePath}/special-sessions/3/`,
+            content: <span className="font-semibold hover:underline">View session details</span>,
           },
         ],
       },
