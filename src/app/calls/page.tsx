@@ -149,7 +149,9 @@ function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void })
               <thead>
                 <tr className="border-container-foreground border-b">
                   <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Event</th>
-                  <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">Date</th>
+                  <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">
+                    Date <span className="text-xs font-normal">(AoE)</span>
+                  </th>
                 </tr>
               </thead>
 
@@ -292,9 +294,9 @@ export default function CallsPage() {
           // ['Paper Submissions', '21 May 2026'],
           // ['Paper Notifications', '18 July 2026'],
           // ['Camera Ready Paper Submissions', '22 August 2026'],
-          ['Paper Submissions', '5 June 2026 (<s>21 May 2026</s>)'],
-          ['Paper Notifications', '18 July 2026'],
-          ['Camera Ready Paper Submissions', '5 August 2026'],
+          ['Paper Submissions', '5 June 2026, 23:59 (<s>21 May 2026</s>)'],
+          ['Paper Notifications', '18 July 2026, 23:59'],
+          ['Camera Ready Paper Submissions', '5 August 2026, 23:59'],
         ],
       },
       {
@@ -353,8 +355,8 @@ export default function CallsPage() {
           },
         ],
         daterows: [
-          ['Submission Deadline', '30 July 2026'],
-          ['Decision Notifications', '15 August 2026'],
+          ['Submission Deadline', '30 July 2026, 23:59'],
+          ['Decision Notifications', '15 August 2026, 23:59'],
         ],
       },
       {
@@ -414,8 +416,8 @@ export default function CallsPage() {
           },
         ],
         daterows: [
-          ['Deadline for Tutorial Proposals', '9 June 2026 (<s>15 May 2026</s>)'],
-          ['Notification of Tutorial Acceptance', '25 June 2026 (<s>20 May 2026</s>)'],
+          ['Deadline for Tutorial Proposals', '9 June 2026, 23:59 (<s>15 May 2026</s>)'],
+          ['Notification of Tutorial Acceptance', '25 June 2026, 23:59 (<s>20 May 2026</s>)'],
         ],
       },
       {
@@ -510,8 +512,8 @@ export default function CallsPage() {
           },
         ],
         daterows: [
-          ['Deadline for Industrial Exhibition and Demo Proposals', '15 July 2026'],
-          ['Notification of Acceptance', '18 July 2026'],
+          ['Deadline for Industrial Exhibition and Demo Proposals', '15 July 2026, 23:59'],
+          ['Notification of Acceptance', '18 July 2026, 23:59'],
         ],
       },
       {
@@ -602,8 +604,8 @@ export default function CallsPage() {
         
         ],
         daterows: [
-          ['Deadline for Student Session Submissions', '31 July 2026'],
-          ['Notification of Acceptance', '15 August 2026'],
+          ['Deadline for Student Session Submissions', '31 July 2026, 23:59'],
+          ['Notification of Acceptance', '15 August 2026, 23:59'],
         ],
       },
     ],

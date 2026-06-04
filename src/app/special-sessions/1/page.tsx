@@ -14,10 +14,10 @@ export default function SpecialSessionsPage() {
   ]
 
   const schedule: Array<[string, string]> = [
-    ['Paper submission deadline', '30 June 2026'],
-    ['Review period', '30 June – 15 July 2026'],
-    ['Decision to authors', '18 July 2026'],
-    ['Camera Ready', '5 August 2026'],
+    ['Paper submission deadline', '30 June 2026, 23:59'],
+    ['Review period', '30 June 2026, 23:59 – 15 July 2026, 23:59'],
+    ['Decision to authors', '18 July 2026, 23:59'],
+    ['Camera Ready', '5 August 2026, 23:59'],
   ]
 
   const topics: string[] = [
@@ -78,7 +78,9 @@ export default function SpecialSessionsPage() {
                 <thead>
                   <tr className="border-container-foreground border-b">
                     <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Event</th>
-                    <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">Date</th>
+                    <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">
+                      Date <span className="text-xs font-normal">(AoE)</span>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

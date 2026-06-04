@@ -116,11 +116,11 @@ export default function Home() {
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
                 <li className="text-lg">
                   <strong className="text-xl">May 28:</strong>{' '}
-                  Tutorial submission deadline extended to 9 June 2026.
+                  Tutorial submission deadline extended to 9 June 2026, 23:59 AoE.
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">May 20:</strong>{' '}
-                  Paper submission deadline extended to 5 June 2026.
+                  Paper submission deadline extended to 5 June 2026, 23:59 AoE.
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">May 19:</strong>{' '}

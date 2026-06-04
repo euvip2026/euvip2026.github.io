@@ -21,19 +21,19 @@ export default function ImportantDates() {
       // ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
       // ['Student Sessions Submissions', '31 July 2026'],
       // ['Student Sessions Notifications', '15 August 2026'],
-    ['Tutorial Proposals', '9 June 2026 (<s>15 May 2026</s>)'],
-    ['Tutorial Notifications', '25 June 2026 (<s>20 May 2026</s>)'],
-    ['Paper Submissions', '5 June 2026 (<s>21 May 2026</s>)'],
-    ['Paper Notifications', '18 July 2026'],
-    ['Demo Submissions', '15 July 2026'],
-    ['Demo Notifications', '18 July 2026'],
-    ['Camera Ready Paper Submissions', '5 August 2026'],
-    ['Project Dissemination Papers Submission', '30 July 2026'],
-    ['Project Dissemination Papers Notifications', '15 August 2026'],
-    ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
-    ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
-    ['Student Sessions Submissions', '31 July 2026'],
-    ['Student Sessions Notifications', '15 August 2026'],
+    ['Tutorial Proposals', '9 June 2026, 23:59 (<s>15 May 2026</s>)'],
+    ['Tutorial Notifications', '25 June 2026, 23:59 (<s>20 May 2026</s>)'],
+    ['Paper Submissions', '5 June 2026, 23:59 (<s>21 May 2026</s>)'],
+    ['Paper Notifications', '18 July 2026, 23:59'],
+    ['Demo Submissions', '15 July 2026, 23:59'],
+    ['Demo Notifications', '18 July 2026, 23:59'],
+    ['Camera Ready Paper Submissions', '5 August 2026, 23:59'],
+    ['Project Dissemination Papers Submission', '30 July 2026, 23:59'],
+    ['Project Dissemination Papers Notifications', '15 August 2026, 23:59'],
+    ['Special Sessions Submissions', '15 May 2026, 23:59 (<s>30 April 2026</s>)'],
+    ['Special Sessions Notifications', '23 May 2026, 23:59 (<s>8 May 2026</s>)'],
+    ['Student Sessions Submissions', '31 July 2026, 23:59'],
+    ['Student Sessions Notifications', '15 August 2026, 23:59'],
   ]
 
   return (
@@ -57,7 +57,7 @@ export default function ImportantDates() {
               <tr className="border-container-foreground border-b">
                 <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Event</th>
                 <th className="text-container-foreground flex flex-col px-6 py-4 text-right text-2xl font-semibold">
-                  Date <span className="text-xs font-normal">(CEST, UTC+2)</span>
+                  Date <span className="text-xs font-normal">(AoE)</span>
                 </th>
               </tr>
             </thead>

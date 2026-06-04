@@ -27,10 +27,14 @@ function formatCountdown(target: Date, now: Date) {
   return `${String(weeks).padStart(2, '0')} weeks ${String(days).padStart(2, '0')} days ${HH}:${MM}:${SS}`
 }
 
-function parseLocalEndOfDay(dateString: string) {
-  const [dayStr, monthStr, yearStr] = dateString.split(' ')
-  const day = Number(dayStr)
-  const year = Number(yearStr)
+function parseDeadlineInstant(dateString: string) {
+  // Read the leading active date, ignoring any appended time or struck-out date.
+  const match = dateString.match(/^(\d+)\s+([A-Za-z]+)\s+(\d{4})/)
+  if (!match) return new Date(NaN)
+
+  const day = Number(match[1])
+  const monthStr = match[2]
+  const year = Number(match[3])
 
   const monthMap: Record<string, number> = {
     January: 0,
@@ -48,24 +52,26 @@ function parseLocalEndOfDay(dateString: string) {
   }
 
   const month = monthMap[monthStr]
-  return new Date(year, month, day, 23, 59, 59)
+  // Deadlines are 23:59 Anywhere on Earth (AoE = UTC-12). That instant is
+  // 23:59 + 12h = 11:59 UTC on the following calendar day.
+  return new Date(Date.UTC(year, month, day + 1, 11, 59, 59))
 }
 
 export default function ImportantDates() {
   const rows: Array<[string, string]> = [
-    ['Tutorial Proposals', '9 June 2026 (<s>15 May 2026</s>)'],
-    ['Tutorial Notifications', '25 June 2026 (<s>20 May 2026</s>)'],
-    ['Paper Submissions', '5 June 2026 (<s>21 May 2026</s>)'],
-    ['Paper Notifications', '18 July 2026'],
-    ['Demo Submissions', '15 July 2026'],
-    ['Demo Notifications', '18 July 2026'],
-    ['Camera Ready Paper Submissions', '5 August 2026'],
-    ['Project Dissemination Papers Submission', '30 July 2026'],
-    ['Project Dissemination Papers Notifications', '15 August 2026'],
-    ['Special Sessions Submissions', '15 May 2026 (<s>30 April 2026</s>)'],
-    ['Special Sessions Notifications', '23 May 2026 (<s>8 May 2026</s>)'],
-    ['Student Sessions Submissions', '31 July 2026'],
-    ['Student Sessions Notifications', '15 August 2026'],
+    ['Tutorial Proposals', '9 June 2026, 23:59 (<s>15 May 2026</s>)'],
+    ['Tutorial Notifications', '25 June 2026, 23:59 (<s>20 May 2026</s>)'],
+    ['Paper Submissions', '5 June 2026, 23:59 (<s>21 May 2026</s>)'],
+    ['Paper Notifications', '18 July 2026, 23:59'],
+    ['Demo Submissions', '15 July 2026, 23:59'],
+    ['Demo Notifications', '18 July 2026, 23:59'],
+    ['Camera Ready Paper Submissions', '5 August 2026, 23:59'],
+    ['Project Dissemination Papers Submission', '30 July 2026, 23:59'],
+    ['Project Dissemination Papers Notifications', '15 August 2026, 23:59'],
+    ['Special Sessions Submissions', '15 May 2026, 23:59 (<s>30 April 2026</s>)'],
+    ['Special Sessions Notifications', '23 May 2026, 23:59 (<s>8 May 2026</s>)'],
+    ['Student Sessions Submissions', '31 July 2026, 23:59'],
+    ['Student Sessions Notifications', '15 August 2026, 23:59'],
   ]
 
   const [now, setNow] = useState<Date>(() => new Date())
@@ -83,7 +89,7 @@ export default function ImportantDates() {
 
   const rowsWithCountdown = useMemo(() => {
     return rows.map(([event, dateString]) => {
-      const targetDate = parseLocalEndOfDay(dateString)
+      const targetDate = parseDeadlineInstant(dateString)
       const countdownLabel = formatCountdown(targetDate, now)
       return { event, dateString, countdownLabel }
     })
@@ -105,7 +111,9 @@ export default function ImportantDates() {
           <thead className="bg-primary text-white">
             <tr>
               <th className="px-6 py-4 text-lg font-semibold">Event</th>
-              <th className="px-6 py-4 text-right text-lg font-semibold">Date</th>
+              <th className="px-6 py-4 text-right text-lg font-semibold">
+                Date <span className="text-xs font-normal">(AoE)</span>
+              </th>
               <th className="px-6 py-4 text-right text-lg font-semibold">Countdown</th>
             </tr>
           </thead>
