@@ -15,7 +15,7 @@ export default function SpecialSessionsPage() {
 
   const schedule: Array<[string, string]> = [
     ['Paper submission deadline', '30 June 2026, 23:59'],
-    ['Review period', '30 June 2026, 23:59 – 15 July 2026, 23:59'],
+    ['Review period', '30 June 2026 – 15 July 2026, 23:59'],
     ['Decision to authors', '18 July 2026, 23:59'],
     ['Camera Ready', '5 August 2026, 23:59'],
   ]
