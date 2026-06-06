@@ -294,7 +294,7 @@ export default function CallsPage() {
           // ['Paper Submissions', '21 May 2026'],
           // ['Paper Notifications', '18 July 2026'],
           // ['Camera Ready Paper Submissions', '22 August 2026'],
-          ['Paper Submissions', '5 June 2026, 23:59 (<s>21 May 2026</s>)'],
+          ['Paper Submissions', '15 June 2026, 23:59 (<s>5 June 2026</s>)'],
           ['Paper Notifications', '18 July 2026, 23:59'],
           ['Camera Ready Paper Submissions', '5 August 2026, 23:59'],
         ],

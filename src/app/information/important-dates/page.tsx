@@ -23,7 +23,7 @@ export default function ImportantDates() {
       // ['Student Sessions Notifications', '15 August 2026'],
     ['Tutorial Proposals', '9 June 2026, 23:59 (<s>15 May 2026</s>)'],
     ['Tutorial Notifications', '25 June 2026, 23:59 (<s>20 May 2026</s>)'],
-    ['Paper Submissions', '5 June 2026, 23:59 (<s>21 May 2026</s>)'],
+    ['Paper Submissions', '15 June 2026, 23:59 (<s>5 June 2026</s>)'],
     ['Paper Notifications', '18 July 2026, 23:59'],
     ['Demo Submissions', '15 July 2026, 23:59'],
     ['Demo Notifications', '18 July 2026, 23:59'],

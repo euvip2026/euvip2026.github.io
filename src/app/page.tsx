@@ -114,6 +114,10 @@ export default function Home() {
           <div className="mt-6">
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
+              <li className="text-lg">
+                  <strong className="text-xl">June 5:</strong>{' '}
+                  Paper submission deadline extended to 15 June 2026, 23:59 AoE.
+                </li>
                 <li className="text-lg">
                   <strong className="text-xl">May 28:</strong>{' '}
                   Tutorial submission deadline extended to 9 June 2026, 23:59 AoE.
