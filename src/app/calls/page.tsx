@@ -669,7 +669,7 @@ export default function CallsPage() {
         </>
       )}
 
-      {(active && active.id === 'cfp') && (
+      {(active && active.id === 'papers') && (
       <section className="bg-container mt-12 px-4 md:px-0">
         <div className="mx-auto max-w-7xl py-8 md:px-4">
           <h2 className="text-container-foreground text-2xl font-bold">Submission</h2>
