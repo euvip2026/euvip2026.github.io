@@ -95,7 +95,7 @@ function SectionCard({ section }: { section: Section }) {
     )
   }
 
-  return <div className="border-information bg-container text-container-foreground border p-6 shadow-sm">{inner}</div>
+  return <div className="border-information bg-container text-container-foreground min-w-0 border p-6 shadow-sm">{inner}</div>
 }
 
 function FocusMainCard({ card, onBack }: { card: MainCard; onBack: () => void }) {
@@ -302,7 +302,7 @@ export default function CallsPage() {
       {
         id: 'project-dissemination',
         title: 'Call for Project Dissemination Papers',
-        pdf: '/C4project.pdf',
+        //pdf: '/C4project.pdf',
         description:
           'Following the success of previous editions, the EUVIP 2026 Project Dissemination Session is an opportunity for project leaders and/or partners to present their objectives and achievements and interact with colleagues from academia and industry working in similar or complementary research areas, contributing to the dissemination of results and the sharing of good practices.',
         sections: [
@@ -362,7 +362,7 @@ export default function CallsPage() {
       {
         id: 'tutorials',
         title: 'Call for Tutorials',
-        pdf: '/C4Tutorials.pdf',
+        //pdf: '/C4Tutorials.pdf',
         description:
           'The EUVIP 2026 organizing committee invites proposals for tutorials on established or emerging topics of interest for the computer vision, visual information processing, biomedical imaging, and pattern recognition communities. Half-day (about 3 hours each), in person tutorials on topics related to the conference themes are welcome. Tutorial sessions will be held on 28th September 2026. A EUVIP tutorial should aim to give a comprehensive overview of a specific topic related to computer vision, visual information processing, biomedical imaging or pattern recognition. Tutorials are intended to be educational rather than just a cursory survey of techniques. The topic should be of sufficient relevance and importance to attract significant interest from the EUVIP community. Typical tutorial audiences consist of Master and PhD students, as well as researchers and practitioners from both academia and industry.',
         sections: [
@@ -451,7 +451,7 @@ export default function CallsPage() {
       {
         id: 'demos',
         title: 'Call for Demos',
-        pdf: '/Call4Demos.pdf',
+        //pdf: '/Call4Demos.pdf',
         description:
           'The EUVIP 2026 committee is hereby releasing a call for: <b>Demonstrations</b> of recent research outputs or innovations related to the topics covered by the conference, and <b>Exhibitions</b> of new equipment or technology related to the topics covered by the conference. <br /><br /> <b>Objective</b> The objective of the demo and exhibition session is to provide a lively forum for researchers in both industry and academia to present their work and to foster stimulating discussions and constructive feedback from leading experts in the field.',
         sections: [
@@ -519,7 +519,7 @@ export default function CallsPage() {
       {
         id: 'student-sessions',
         title: 'Call for Student Session',
-        pdf: '/C4Student_session.pdf',
+        //pdf: '/C4Student_session.pdf',
         description:
           'We are thrilled to announce the expanded Student Session at EUVIP, designed specifically as an immersive conference experience for early-career researchers and PhD students. <br /><br /> This session provides a unique platform for junior researchers to showcase their work, experience a vibrant academic environment, and network alongside established, world-class researchers in the field. <br /><br /> To accommodate researchers at various stages of their academic journey, we have expanded our submission formats. We invite students to submit their work in one of the following 2-page formats:',
         sections: [
@@ -563,17 +563,17 @@ export default function CallsPage() {
                   All contributions will be peer-reviewed, and evaluated according to their scientific rigour, and
                   originality.
                 </p>
-                <p className="mt-4 leading-relaxed">
-                  Submissions will be handled via Microsoft CMT: (
+                <p className="mt-4 leading-relaxed break-words">
+                  Submissions will be handled via{' '}
                   <a
                     href="https://cmt3.research.microsoft.com/EUVIP2026/Track/6/Submission/Create"
                     target="_blank"
                     rel="noreferrer"
-                    className="font-semibold hover:underline"
+                    className="font-semibold whitespace-nowrap hover:underline"
                   >
-                    https://cmt3.research.microsoft.com/EUVIP2026
+                    Microsoft CMT
                   </a>
-                  ).
+                  .
                 </p>
               </>
             ),
@@ -722,6 +722,41 @@ export default function CallsPage() {
             <a
               className="text-container-foreground border-muted bg-background hover:bg-background/80 mt-8 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
               href="https://cmt3.research.microsoft.com/EUVIP2026"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Submit in Microsoft CMT
+            </a>
+          </div>
+        </div>
+      </section>
+      )}
+
+      {(active && active.id === 'student-sessions') && (
+      <section className="bg-container mt-12 px-4 md:px-0">
+        <div className="mx-auto max-w-7xl py-8 md:px-4">
+          <h2 className="text-container-foreground text-2xl font-bold">Submission</h2>
+          <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+            All student session submissions must be submitted electronically via the Microsoft CMT submission system (
+            <a
+              href="https://cmt3.research.microsoft.com/EUVIP2026/Track/6/Submission/Create"
+              target="_blank"
+              rel="noreferrer"
+              className="font-bold whitespace-nowrap hover:underline"
+            >
+              Microsoft CMT
+            </a>
+            ):
+          </p>
+          <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
+            The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service
+            was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as
+            well as for software development and support.
+          </p>
+          <div className="flex w-full justify-center">
+            <a
+              className="text-container-foreground border-muted bg-background hover:bg-background/80 mt-8 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
+              href="https://cmt3.research.microsoft.com/EUVIP2026/Track/6/Submission/Create"
               target="_blank"
               rel="noreferrer"
             >
