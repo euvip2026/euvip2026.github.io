@@ -521,32 +521,64 @@ export default function CallsPage() {
         title: 'Call for Student Session',
         pdf: '/C4Student_session.pdf',
         description:
-          'EUVIP 2026 invites BSc, MSc, and early-stage PhD students to contribute to the EUVIP 2026 Student Poster Session. <br /><br /> The EUVIP 2026 Student Session aims to promote interactions and exchanges between early-stage researchers, providing a unique opportunity to integrate into an international conference, showcase ongoing research, and receive constructive feedback from leading experts in computer vision and imaging from both academia and industry.',
+          'We are thrilled to announce the expanded Student Session at EUVIP, designed specifically as an immersive conference experience for early-career researchers and PhD students. <br /><br /> This session provides a unique platform for junior researchers to showcase their work, experience a vibrant academic environment, and network alongside established, world-class researchers in the field. <br /><br /> To accommodate researchers at various stages of their academic journey, we have expanded our submission formats. We invite students to submit their work in one of the following 2-page formats:',
         sections: [
           {
-            id: 'Student-session-required-info',
-            title: 'Eligibility & Originality',
+            id: 'Student-session-Submission-Tracks',
+            title: 'Submission Tracks',
             bullets: [
-              'Student status: The first author and presenter must be a registered BSc, MSc, or PhD student at the time of submission.',
-              'Scope: The presented work can include the student thesis progress, ongoing research, preliminary results, or late-breaking findings aligned with the core themes of EUVIP 2026.',
-              'Originality: By submitting a manuscript, the authors guarantee that it has not been previously published elsewhere in a substantially similar form. Please note that there are no formal proceedings for this session, and the abstract will not be officially indexed',
+              'Track A: Technical Extended Abstract (2 Pages): Ideal for students presenting specific technical results, or preliminary findings. Accepted technical abstracts will be included in the IEEE Conference Proceedings.',
+              'Track B: PhD Thesis Description (2 Pages): Ideal for students who wish to present the overarching vision, problem statement, and methodology of their ongoing PhD thesis.',
             ],
           },
           {
-            id: 'Student-session-evaluation',
-            title: 'Submission & Formatting Guidelines',
+            id: 'Student-session-Presentation-Formats',
+            title: 'Presentation Formats',
+            lead: 'To foster dynamic engagement, accepted students will present their work interactively via:',
             bullets: [
-              'To participate students are encouraged to submit a two-pages extended abstract presenting their research, results and scientific perspectives (including figures, tables, and references). ',
-              'Note: Do not submit a poster file. Posters will be created and presented in person only by authors of accepted abstracts). All submissions must be in English, and use the IEEE one-column format. We recommend using the Word or LaTeX templates (available at  https://euvip2026.github.io) and ensuring your page setup uses the A4-size layout. Abstracts that do not conform to these guidelines will not be considered.',
-              'The submission of an extended abstract implies the intention of the student to register to EUVIP 2026 and present their work in the student poster session',
-              'All contributions will be peer-reviewed, and evaluated according to their scientific rigour, originality and their potential for future developments.',
+              'Poster Presentation: Engage in one-on-one discussions with attendees. ',
+              'Live Demonstration (Demo): Showcase your algorithms, software, or hardware setups in real-time.',
             ],
           },
           {
-            id: 'Student-session-presentation',
-            title: 'Registration & Presentation',
-            lead: 'EUVIP 2026 requires each accepted student abstract to be presented in-person at the conference site during the dedicated student session.',
+            id: 'Student-session-Grants-Registration',
+            title: 'Grants & Registration',
+            bullets: [
+              'PhD Grants: We highly encourage students to apply, as dedicated PhD grants are available to help support travel and participation. (Note: highlight specific link to grants if available). ',
+              'Reduced Fees: Participating students will benefit from reduced registration fee rates.',
+              'The submission of an extended abstract implies the intention of the student to register to EUVIP 2025 and present their work in the student poster session.'
+            ],
           },
+          {
+            id: 'Student-session-submission-guidelines',
+            title: 'Submission Guidelines',
+            content: (
+              <>
+                <p className="leading-relaxed">
+                  All submissions must be exactly 2 pages in length and formatted according to the standard IEEE
+                  double-column conference template. Templates and specific structural guidelines for both the
+                  Technical Abstract and the Thesis Description can be found on our website.
+                </p>
+                <p className="mt-4 leading-relaxed">
+                  All contributions will be peer-reviewed, and evaluated according to their scientific rigour, and
+                  originality.
+                </p>
+                <p className="mt-4 leading-relaxed">
+                  Submissions will be handled via Microsoft CMT: (
+                  <a
+                    href="https://cmt3.research.microsoft.com/EUVIP2026/Track/6/Submission/Create"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-semibold hover:underline"
+                  >
+                    https://cmt3.research.microsoft.com/EUVIP2026
+                  </a>
+                  ).
+                </p>
+              </>
+            ),
+          },
+
           {
             id: 'Studnet-session-submission',
             title: 'Submission',
@@ -567,11 +599,7 @@ export default function CallsPage() {
             ),
           },
 
-          {
-            id: 'Student-session-awards',
-            title: 'Awards',
-            lead: 'The best student poster selected by a dedicated committee, will receive an award certificate.',
-          },
+         
           {
             id: 'Student-session-grants',
             title: 'Student Grants',
@@ -604,8 +632,8 @@ export default function CallsPage() {
         
         ],
         daterows: [
-          ['Deadline for Student Session Submissions', '31 July 2026, 23:59'],
-          ['Notification of Acceptance', '15 August 2026, 23:59'],
+          ['Deadline for Student Session Submissions', '30 June 2026, 23:59'],
+          ['Notification of Acceptance', '20 July 2026, 23:59'],
         ],
       },
     ],
