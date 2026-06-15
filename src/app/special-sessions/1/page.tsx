@@ -11,6 +11,7 @@ export default function SpecialSessionsPage() {
   const organizers: Array<{ name: string; affiliation: string }> = [
     { name: 'Stefano Berretti', affiliation: 'Univ. of Florence, Italy' },
     { name: 'Claudio Ferrari', affiliation: 'Univ. of Florence, Italy' },
+    { name: 'Davide Boscaini', affiliation: 'Fondazione Bruno Kessler, Italy'},
   ]
 
   const schedule: Array<[string, string]> = [
