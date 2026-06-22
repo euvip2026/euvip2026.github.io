@@ -530,6 +530,20 @@ export default function CallsPage() {
               'Track A: Technical Extended Abstract (2 Pages): Ideal for students presenting specific technical results, or preliminary findings. Accepted technical abstracts will be included in the IEEE Conference Proceedings.',
               'Track B: PhD Thesis Description (2 Pages): Ideal for students who wish to present the overarching vision, problem statement, and methodology of their ongoing PhD thesis.',
             ],
+            content: (
+              <p className="mt-4 leading-relaxed break-words">
+                Please download the detailed submission guidelines for each track {' '}
+                <a
+                  href="/EUVIP2026_Guideliens_for_2-page_papers_ShGZ.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold whitespace-nowrap hover:underline"
+                >
+                  here
+                </a>
+                .
+              </p>
+            ),
           },
           {
             id: 'Student-session-Presentation-Formats',
@@ -581,10 +595,10 @@ export default function CallsPage() {
 
           {
             id: 'Studnet-session-submission',
-            title: 'Submission',
+            title: 'Questions and Contact',
             content: (
               <p className="leading-relaxed">
-                Further questions regarding the Student Session may be directed to the chairs:
+                Further questions regarding the Student Session may be directed to the chairs: Dr. Marouane Tliba and Dr. Shekoufeh GorgiZadeh via email: 
                 <br />
                 <br />
                 <a href="mailto:tlibamaroine3@gmail.com" className="font-semibold hover:underline">
