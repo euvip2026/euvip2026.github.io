@@ -560,7 +560,7 @@ export default function CallsPage() {
             bullets: [
               'PhD Grants: We highly encourage students to apply, as dedicated PhD grants are available to help support travel and participation. (Note: highlight specific link to grants if available). ',
               'Reduced Fees: Participating students will benefit from reduced registration fee rates.',
-              'The submission of an extended abstract implies the intention of the student to register to EUVIP 2025 and present their work in the student poster session.'
+              'The submission of an extended abstract implies the intention of the student to register to EUVIP 2026 and present their work in the student poster session.'
             ],
           },
           {
