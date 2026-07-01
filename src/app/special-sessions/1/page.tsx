@@ -14,12 +14,18 @@ export default function SpecialSessionsPage() {
     { name: 'Davide Boscaini', affiliation: 'Fondazione Bruno Kessler, Italy'},
   ]
 
-  const schedule: Array<[string, string]> = [
-    ['Paper submission deadline', '30 June 2026, 23:59'],
+  const schedule: Array<[string, React.ReactNode]> = [
+    [
+      'Paper submission deadline',
+      <>
+        7 July 2026, 23:59 <s>30 June 2026</s>
+      </>
+    ],
     ['Review period', '30 June 2026 – 15 July 2026, 23:59'],
     ['Decision to authors', '18 July 2026, 23:59'],
     ['Camera Ready', '5 August 2026, 23:59'],
-  ]
+  ];
+  
 
   const topics: string[] = [
     '3D talking heads and speech-driven facial animation',

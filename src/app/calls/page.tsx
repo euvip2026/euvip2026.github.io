@@ -646,7 +646,7 @@ export default function CallsPage() {
         
         ],
         daterows: [
-          ['Deadline for Student Session Submissions', '30 June 2026, 23:59'],
+          ['Deadline for Student Session Submissions', '7 July 2026, 23:59 (<s>30 June 2026</s>)'],
           ['Notification of Acceptance', '20 July 2026, 23:59'],
         ],
       },

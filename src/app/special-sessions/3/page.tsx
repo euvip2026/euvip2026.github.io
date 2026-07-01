@@ -15,12 +15,18 @@ export default function SpecialSessionsPage() {
     { name: 'Aladine Chetouani', affiliation: 'L2TI Laboratory, Sorbonne Paris Nord University, France' },
   ]
 
-  const schedule: Array<[string, string]> = [
-    ['Paper submission deadline', '25 June 2026, 23:59'],
+  const schedule: Array<[string, React.ReactNode]> = [
+    [
+      'Paper submission deadline',
+      <>
+        7 July 2026, 23:59 <s>25 June 2026</s>
+      </>
+    ],
     ['Review period', '30 June 2026 – 15 July 2026, 23:59'],
     ['Decision to authors', '18 July 2026, 23:59'],
     ['Camera Ready', '5 August 2026, 23:59'],
-  ]
+  ];
+  
 
   const topics: string[] = [
     'Synthetic and AI-generated biomedical imaging',

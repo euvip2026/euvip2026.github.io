@@ -21,12 +21,18 @@ export default function SpecialSessionsPage() {
     },
   ]
 
-  const schedule: Array<[string, string]> = [
-    ['Paper submission deadline', '30 June 2026, 23:59'],
+  const schedule: Array<[string, React.ReactNode]> = [
+    [
+      'Paper submission deadline',
+      <>
+        7 July 2026, 23:59 <s>30 June 2026</s>
+      </>
+    ],
     ['Review period', '30 June 2026 – 15 July 2026, 23:59'],
     ['Decision to authors', '18 July 2026, 23:59'],
     ['Camera Ready', '5 August 2026, 23:59'],
-  ]
+  ];
+  
 
   const topics: Array<{ label: string; children?: string[] }> = [
     { label: 'Visual AI for weather, climate, satellite, aerial, UAV, street-view, and other geo-referenced data' },
