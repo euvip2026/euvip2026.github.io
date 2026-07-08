@@ -21,7 +21,7 @@ export default function SpecialSessionsPage() {
     },
   ]
 
-  const schedule: Array<[string, string]> = [
+  const schedule: Array<[string, React.ReactNode]> = [
     [
       'Paper submission deadline',
       <>
