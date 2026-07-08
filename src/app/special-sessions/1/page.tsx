@@ -21,8 +21,8 @@ export default function SpecialSessionsPage() {
         7 July 2026, 23:59 <s>30 June 2026</s>
       </>
     ],
-    ['Review period', '30 June 2026 – 15 July 2026, 23:59'],
-    ['Decision to authors', '18 July 2026, 23:59'],
+    ['Review period', '9 June 2026 – 20 July 2026, 23:59'],
+    ['Decision to authors', '21 July 2026, 23:59'],
     ['Camera Ready', '5 August 2026, 23:59'],
   ];
   
