@@ -180,7 +180,7 @@ export default function AttendPage() {
                     <li>Direct flights to more than 100 destinations.</li>
                     <li>Airport is ~10 minutes from city centre.</li>
                     <li>
-                      Less than one hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
+                      Less than a one-hour flight from major international hubs such as Paris, Frankfurt, Amsterdam, and
                       Geneva.
                     </li>
                   </ul>
