@@ -176,7 +176,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     {
       firstName: 'Faouzi Alaya',
       lastName: 'Cheikh',
-      organization: 'NTNU, Gjovik',
+      organization: 'NTNU, Gjøvik',
       country: 'Norway',
       imageUrl: '/committee/FaouziAlayaCheikh.jpg',
       cvLink: 'https://www.linkedin.com/in/faouzi-alaya-cheikh-1559582/',
