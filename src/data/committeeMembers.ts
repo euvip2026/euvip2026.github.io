@@ -270,7 +270,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: '',
     },
   ],
-  'Web Chair': [
+  'Web Chairs': [
     // {
     //   firstName: 'Geetanjali',
     //   lastName: 'Rajaraman',
