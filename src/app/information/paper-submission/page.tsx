@@ -31,7 +31,7 @@ export default function PaperSubmission() {
                 <p className="text-container-foreground/80 mt-3 text-lg leading-relaxed">
                   Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical content , figures, and references, through the submission system (page 6 should contain only references). Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a lecture or poster session. Regular papers p resented at the conference will be included in the conference proceedings and are expected to be included in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, as well as the Best Student Paper Award and the Student Demo Award.
                   
-                  <p>All papers must be submitted electronically via the Microsoft CMT submission system (
+                  All papers must be submitted electronically via the Microsoft CMT submission system (
                   <a
                     href="https://cmt3.research.microsoft.com/EUVIP2026"
                     target="_blank"
@@ -41,7 +41,6 @@ export default function PaperSubmission() {
                     https://cmt3.research.microsoft.com/EUVIP2026
                   </a>
                   ):
-                </p>
                 </p>
                 <div className="flex w-full justify-center">
                   <a
