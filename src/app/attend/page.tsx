@@ -3,10 +3,10 @@
 import Slider from '@/components/Slider'
 
 const travelTimes = [
-  { city: 'Brussels', byCar: '2h', byTrain: '3h20' },
-  { city: 'Cologne', byCar: '2h30', byTrain: '4h' },
-  { city: 'Paris', byCar: '4h', byTrain: '2h10' },
-  { city: 'Strasbourg', byCar: '2h10', byTrain: '1h40' },
+  { city: 'Brussels', byCar: '2 h', byTrain: '3 h 20 min' },
+  { city: 'Cologne', byCar: '2 h 30 min', byTrain: '4 h' },
+  { city: 'Paris', byCar: '4 h', byTrain: '2 h 10 min' },
+  { city: 'Strasbourg', byCar: '2 h 10 min', byTrain: '1 h 40 min' },
 ]
 
 export default function AttendPage() {
@@ -233,7 +233,7 @@ export default function AttendPage() {
                       >
                         https://www.mobiliteit.lu/
                       </a>
-                      ).
+                      ) journey planner for public-transport routes and schedules..
                     </li>
                   </ul>
                 </div>
