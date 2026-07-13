@@ -32,11 +32,11 @@ export default function AttendPage() {
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
             <div className="max-w-2xl">
               <p className="text-base leading-relaxed opacity-80 md:text-lg">The conference will take place at:</p>
-              <p className="mt-4 text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference &amp; Spa</p>
+              <p className="mt-4 text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference and Spa</p>
               <p className="mt-1 text-base font-semibold opacity-80 md:text-lg">Luxembourg</p>
 
               <p className="mt-6 text-base leading-relaxed opacity-80 md:text-lg">
-                The Parc Alvisse Hotel Conference &amp; Spa is a modern conference venue located in a green and quiet
+                The Parc Alvisse Hotel Conference and Spa is a modern conference venue located in a green and quiet
                 area, while remaining well connected to the city centre. The venue offers dedicated conference
                 facilities, on-site accommodation, restaurant services, and wellness areas, providing a convenient
                 setting for all conference activities.
@@ -134,7 +134,7 @@ export default function AttendPage() {
 
           <div className="max-w-7xl">
             <div className="bg-background mt-8 overflow-hidden">
-              <h3 className="text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference &amp; Spa</h3>
+              <h3 className="text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference and Spa</h3>
               <p className="mt-1 text-base font-semibold opacity-80 md:text-lg">On-site Accommodation</p>
 
               <p className="mt-6 text-base leading-relaxed opacity-80 md:text-lg">
