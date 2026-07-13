@@ -20,7 +20,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     {
       firstName: 'Azeddine',
       lastName: 'Beghdadi',
-      organization: 'Universite Sorbonne Paris Nord',
+      organization: 'Université Sorbonne Paris Nord',
       country: 'France',
       imageUrl: '/committee/AzeddineBeghdadi.jpg', // Replace with actual image path
       cvLink: 'https://www.linkedin.com/in/azeddine-beghdadi-8616ba20/',
@@ -38,7 +38,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     {
       firstName: 'Mihai',
       lastName: 'Mitrea',
-      organization: 'Telecom Paris Sud',
+      organization: 'Télécom SudParis',
       country: 'France',
       imageUrl: '/committee/MihaiMitrea.jpg',
       cvLink: 'https://www.linkedin.com/in/mihai-mitrea-663a6247/',
@@ -134,7 +134,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
     {
       firstName: 'Aladine',
       lastName: 'Chetouani',
-      organization: 'Universite Sorbonne Paris Nord',
+      organization: 'Université Sorbonne Paris Nord',
       country: 'France',
       imageUrl: '/committee/AladineChetouani.jpeg',
       cvLink: 'https://www.linkedin.com/in/aladine-chetouani-2aa66038/',
