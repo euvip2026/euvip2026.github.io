@@ -13,7 +13,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
 
 const INFORMATION_ITEMS = [
   { href: '/information/important-dates', label: 'IMPORTANT DATES' },
-  { href: '/information/paper-kit-guidelines', label: 'PAPER KIT & GUIDELINES' },
+  { href: '/information/paper-kit-guidelines', label: 'PAPER KIT AND GUIDELINES' },
   { href: '/information/paper-submission', label: 'PAPER SUBMISSION' },
   { href: '/information/tutorial-submission', label: 'TUTORIAL SUBMISSION' },
   // { href: '/information/project-dissemination', label: 'PROJECT DISSEMINATION' },

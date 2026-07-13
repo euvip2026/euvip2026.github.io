@@ -2,7 +2,7 @@ import Information from '@/components/Images/Information'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Paper Kit & Guidelines',
+  title: 'Paper Kit and Guidelines',
   alternates: { canonical: '/information/paper-kit-guidelines/' },
 }
 

@@ -116,7 +116,7 @@ export default function Home() {
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
               <li className="text-lg">
                   <strong className="text-xl">June 30:</strong>{' '}
-                  All special sessions & the student session submission deadlines extended to 7 July 2026, 23:59 AoE.
+                  All special sessions and the student session submission deadlines extended to 7 July 2026, 23:59 AoE.
                 </li>
               <li className="text-lg">
                   <strong className="text-xl">June 5:</strong>{' '}
@@ -132,11 +132,11 @@ export default function Home() {
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">May 19:</strong>{' '}
-                  Community & Society Announcement — supported by <strong>IEEE Signal Processing Society</strong>
+                  Community and Society Announcement — supported by <strong>IEEE Signal Processing Society</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">May 04:</strong>{' '}
-                  Community & Society Announcement — supported by <strong>IEEE Students</strong>
+                  Community and Society Announcement — supported by <strong>IEEE Students</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Apr 30:</strong>{' '}
@@ -144,11 +144,11 @@ export default function Home() {
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Mar 20:</strong>{' '}
-                  Community & Society Announcement — supported by <strong>IEEE Benelux</strong>
+                  Community and Society Announcement — supported by <strong>IEEE Benelux</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Mar 06:</strong>{' '}
-                  Community & Society Announcement — supported by <strong>EURASIP</strong>
+                  Community and Society Announcement — supported by <strong>EURASIP</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Feb 26:</strong>{' '}
@@ -261,7 +261,7 @@ export default function Home() {
             <div className="border-muted bg-background overflow-hidden rounded-xs border shadow-sm">
               <div className="aspect-4/3 w-full">
                 <iframe
-                  title="Parc Alvisse Hotel Conference & Spa (Luxembourg) map"
+                  title="Parc Alvisse Hotel Conference and Spa (Luxembourg) map"
                   src="https://www.google.com/maps?q=Parc+Alvisse+Hotel+Conference+%26+Spa,+Luxembourg&output=embed"
                   className="h-full w-full"
                   loading="lazy"

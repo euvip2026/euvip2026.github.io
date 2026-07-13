@@ -15,7 +15,7 @@ export const speakers: Speaker[] = [
   // Example:
   {
     name: 'Dima Damen',
-    affiliation: 'University of Bristol & Google DeepMind',
+    affiliation: 'University of Bristol and Google DeepMind',
     // description: 'United Kingdom',
     imageUrl: '/speakers/DimaDamen.jpg',
     profileUrl: 'https://dimadamen.github.io/',
@@ -26,7 +26,7 @@ export const speakers: Speaker[] = [
   },
   {
     name: 'Elisa Ricci',
-    affiliation: 'University of Trento & Fondazione Bruno Kessler',
+    affiliation: 'University of Trento and Fondazione Bruno Kessler',
     // description: 'Italy',
     imageUrl: '/speakers/ElisaRicci.jpeg',
     profileUrl: 'https://eliricci.eu/',

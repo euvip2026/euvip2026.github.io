@@ -260,25 +260,10 @@ export default function CallsPage() {
               'Emerging applications, services, architectures and systems',
             ],
           },
-          // {
-          //   id: 'submission-awards',
-          //   title: 'Submission & Awards',
-          //   content: (
-          //     <p className="leading-relaxed">
-          //       Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
-          //       content, figures, and references, through the submission system (page 6 should contain only references).
-          //       Submitted papers will undergo a double-blind review process. Accepted papers will be presented in a
-          //       lecture or poster session. Regular papers presented at the conference will be included in the conference
-          //       proceedings. As for the previous EUVIP editions, all accepted regular papers are expected to be included
-          //       in IEEE Xplore. EUVIP 2026 will recognize outstanding contributions with the Best Paper Award, for the
-          //       most distinguished regular paper, as well as the Best Student Paper Award and the Student Demo Award.
-          //     </p>
-          //   ),
-          // },
         ],
         additional: (
           <>
-            <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Submission & Awards</h2>
+            <h2 className="mb-4 text-2xl leading-tight font-bold opacity-100">Submission and Awards</h2>
             <p className="leading-relaxed">
               Prospective authors are invited to submit full-length papers, with a maximum of 6 pages of technical
               content, figures, and references, through the submission system (page 6 should contain only references).
@@ -480,7 +465,7 @@ export default function CallsPage() {
           {
             id: 'demo-presentation',
             title: 'Presentation Format',
-            lead: 'At the conference, before the start of the Demo & Exhibition session, we will ask one representative for each of the accepted exhibitions and demos to present a 1-minute “advertisement” (with 1 PowerPoint or PDF slide) to the audience, to encourage them to come and see the demo/exhibition.',
+            lead: 'At the conference, before the start of the Demo and Exhibition session, we will ask one representative for each of the accepted exhibitions and demos to present a 1-minute “advertisement” (with 1 PowerPoint or PDF slide) to the audience, to encourage them to come and see the demo/exhibition.',
           },
           {
             id: 'demo-submission',
@@ -556,9 +541,9 @@ export default function CallsPage() {
           },
           {
             id: 'Student-session-Grants-Registration',
-            title: 'Grants & Registration',
+            title: 'Grants and Registration',
             bullets: [
-              'PhD Grants: We highly encourage students to apply, as dedicated PhD grants are available to help support travel and participation. (Note: highlight specific link to grants if available). ',
+              'PhD Grants: We highly encourage students to apply, as dedicated PhD grants are available to help support travel and participation.',
               'Reduced Fees: Participating students will benefit from reduced registration fee rates.',
               'The submission of an extended abstract implies the intention of the student to register to EUVIP 2026 and present their work in the student poster session.'
             ],

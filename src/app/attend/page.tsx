@@ -55,7 +55,7 @@ export default function AttendPage() {
             <div className="border-muted bg-background overflow-hidden border shadow-sm">
               <div className="aspect-4/3 w-full">
                 <iframe
-                  title="Parc Alvisse Hotel Conference & Spa (Luxembourg) map"
+                  title="Parc Alvisse Hotel Conference and Spa (Luxembourg) map"
                   src="https://www.google.com/maps?q=Parc+Alvisse+Hotel+Conference+%26+Spa,+Luxembourg&output=embed"
                   className="h-full w-full"
                   loading="lazy"
