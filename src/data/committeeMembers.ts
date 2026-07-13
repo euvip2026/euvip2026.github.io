@@ -52,7 +52,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://lu.linkedin.com/in/aniskacem',
     },
   ],
-  'Plenary Chairs': [
+  'Keynote Chairs': [
     {
       firstName: 'Samia',
       lastName: 'Ainouz',

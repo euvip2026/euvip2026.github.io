@@ -17,7 +17,7 @@ export default function SpeakersPage() {
           <div className="absolute inset-0" aria-hidden="true" />
 
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Plenary Speakers</h2>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Keynote Speakers</h2>
             <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
           </div>
         </div>
