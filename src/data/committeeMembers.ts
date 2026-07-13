@@ -70,7 +70,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://lu.linkedin.com/in/raphaël-frank-66925132',
     },
   ],
-  'Tutorials Chairs': [
+  'Tutorial Chairs': [
     {
       firstName: 'Stefania',
       lastName: 'Colonnese',
@@ -182,7 +182,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://www.linkedin.com/in/faouzi-alaya-cheikh-1559582/',
     },
   ],
-  'Demos & Exhibition Session Chairs': [
+  'Demo and Exhibition Session Chairs': [
     {
       firstName: 'Arunkumar',
       lastName: 'Rathinam',
@@ -226,7 +226,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: '',
     },
   ],
-  'Publications Chairs': [
+  'Publication Chairs': [
     {
       firstName: 'Meriem',
       lastName: 'Outtas',
