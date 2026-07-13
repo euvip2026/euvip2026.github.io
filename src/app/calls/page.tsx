@@ -534,7 +534,7 @@ export default function CallsPage() {
               <p className="mt-4 leading-relaxed break-words">
                 Please download the detailed submission guidelines for each track {' '}
                 <a
-                  href="/EUVIP2026_Guideliens_for_2-page_papers_ShGZ.pdf"
+                  href="/EUVIP2026_Guidelines_for_2-page_papers_ShGZ.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="font-semibold whitespace-nowrap hover:underline"
