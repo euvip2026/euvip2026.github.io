@@ -92,7 +92,7 @@ export default function Home() {
               applications.
             </p>
             <p>
-              The first day of the conference will be dedicated to one-day tutorials. The main conference programme will
+              The first day of the conference will be dedicated to one-day tutorials. The main Conference Programme will
               include keynote talks, oral and poster sessions, special sessions, panel discussions, and
               industry-oriented activities, providing a forum for presenting recent advances and discussing emerging
               challenges in the field.

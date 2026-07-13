@@ -26,7 +26,7 @@ export const committeeMembers: { [key: string]: CommitteeMember[] } = {
       cvLink: 'https://www.linkedin.com/in/azeddine-beghdadi-8616ba20/',
     },
   ],
-  'Technical Program Chairs': [
+  'Technical Programme Chairs': [
     {
       firstName: 'Enjie',
       lastName: 'Ghorbel',
