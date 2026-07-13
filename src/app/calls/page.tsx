@@ -506,7 +506,7 @@ export default function CallsPage() {
         title: 'Call for Student Session',
         //pdf: '/C4Student_session.pdf',
         description:
-          'We are thrilled to announce the expanded Student Session at EUVIP, designed specifically as an immersive conference experience for early-career researchers and PhD students. <br /><br /> This session provides a unique platform for junior researchers to showcase their work, experience a vibrant academic environment, and network alongside established, world-class researchers in the field. <br /><br /> To accommodate researchers at various stages of their academic journey, we have expanded our submission formats. We invite students to submit their work in one of the following 2-page formats:',
+          'We are pleased to announce an expanded Student Session at EUVIP, created to give PhD students and early-career researchers a valuable conference experience. <br /><br /> The session offers junior researchers an opportunity to present their work, engage with the academic community, and connect with leading researchers in the field. <br /><br /> To welcome students at different stages of their research, we now offer several submission options. Students are invited to submit their work in one of the following 2-page formats:',
         sections: [
           {
             id: 'Student-session-Submission-Tracks',
