@@ -152,7 +152,7 @@ export default function Home() {
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Feb 26:</strong>{' '}
-                  Sponsorship Announcement — supported by <strong>Luxembourg convention bureau</strong>
+                  Sponsorship Announcement — supported by <strong>Luxembourg Convention Bureau</strong>
                 </li>
                 <li className="text-lg">
                   <strong className="text-xl">Feb 16:</strong>{' '}
