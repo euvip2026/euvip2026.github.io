@@ -121,9 +121,15 @@ function PackageSection({ title, price, bgColor, features, imageSrc, imageAlt }:
                 <h2 className="text-lg leading-tight font-semibold tracking-wide uppercase sm:text-xl md:text-2xl lg:text-[28px]">
                   {title}
                 </h2>
-                <p className="mt-1 text-lg leading-tight font-bold opacity-90 sm:text-xl md:text-2xl lg:text-[28px]">
-                  {price}
-                </p>
+                <p className="mt-1 leading-tight opacity-90">
+                <span className="text-lg font-bold sm:text-xl md:text-2xl lg:text-[28px]">
+                  {price.replace(/\s*\(excl\. VAT\)$/, '')}
+                </span>
+
+                <span className="ml-2 text-xs font-normal sm:text-sm md:text-base">
+                  (excl. VAT)
+                </span>
+              </p>
               </div>
             </div>
 
