@@ -297,14 +297,14 @@ export default function CallsPage() {
             content: (
               <p className="leading-relaxed">
                 Potential authors are invited to submit a two-page project paper using the official EUVIP 2026
-                full-paper template, available at{' '}
+                full-paper template, available using this {' '}
                 <a
-                  href="https://euvip2026.github.io"
+                  href="https://www.ieee.org/conferences/publishing/templates"
                   target="_blank"
                   rel="noreferrer"
                   className="font-semibold hover:underline"
                 >
-                  https://euvip2026.github.io
+                  link
                 </a>
                 . Accepted project papers will be included in the conference booklet.
               </p>
