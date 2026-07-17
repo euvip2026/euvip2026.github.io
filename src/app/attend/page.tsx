@@ -200,7 +200,7 @@ export default function AttendPage() {
                       1
                     </span>
                     <p className="pt-1 leading-relaxed opacity-80">
-                      Open the hotel&apos;s online booking page using the button below.
+                      Click "Book Your Room" to open the hotel's online booking page.
                     </p>
                   </li>
 
@@ -218,7 +218,7 @@ export default function AttendPage() {
                       3
                     </span>
                     <p className="pt-1 leading-relaxed opacity-80">
-                      Enter the promotional code to get the special rates.
+                      Enter the EUVIP promotional code.
                     </p>
                   </li>
                   <li className="flex gap-4">
@@ -226,7 +226,7 @@ export default function AttendPage() {
                       4
                     </span>
                     <p className="pt-1 leading-relaxed opacity-80">
-                      Click on the SEARCH AVAILABLE ROOMS button to show the available room options.
+                      Click the SEARCH AVAILABLE ROOMS button to show the available room options.
                     </p>
                   </li>
                 </ol>
