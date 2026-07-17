@@ -141,7 +141,7 @@ export default function AttendPage() {
             <h3 className="text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference and Spa</h3>
             <p className="mt-1 text-base font-semibold opacity-80 md:text-lg">On-site accommodation</p>
 
-            <p className="mt-6 max-w-4xl text-base leading-relaxed opacity-80 md:text-lg">
+            <p className="mt-6 w-full text-base leading-relaxed opacity-80 md:text-lg">
               Conference participants can stay directly at the event venue and benefit from preferential EUVIP 2026
               rates. The hotel offers comfortable rooms together with an on-site restaurant, bar, conference
               facilities, and wellness areas.
