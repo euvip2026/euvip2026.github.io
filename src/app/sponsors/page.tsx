@@ -182,8 +182,9 @@ export default function SponsorsPage() {
             <div className="mx-auto max-w-7xl py-12 md:px-4 lg:py-16">
               <img src={`${basePath}/partners/ranked-sponsors/1.png`} alt="Sponsors Image" className="w-full object-cover" />
               <img src={`${basePath}/partners/ranked-sponsors/2.png`} alt="Sponsors Image" className="w-full object-cover" />
-              <img src={`${basePath}/partners/ranked-sponsors/3.png`} alt="Sponsors Image" className="w-full object-cover" />
+              {/* <img src={`${basePath}/partners/ranked-sponsors/3.png`} alt="Sponsors Image" className="w-full object-cover" /> */}
               <img src={`${basePath}/partners/ranked-sponsors/4.png`} alt="Sponsors Image" className="w-full object-cover" />
+              <img src={`${basePath}/partners/ranked-sponsors/5.png`} alt="Sponsors Image" className="w-full object-cover" />
             </div>
           </section>
 
