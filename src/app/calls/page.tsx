@@ -276,11 +276,8 @@ export default function CallsPage() {
           </>
         ),
         daterows: [
-          // ['Paper Submissions', '21 May 2026'],
-          // ['Paper Notifications', '18 July 2026'],
-          // ['Camera Ready Paper Submissions', '22 August 2026'],
           ['Paper Submissions', '15 June 2026, 23:59 (<s>5 June 2026</s>)'],
-          ['Paper Notifications', '18 July 2026, 23:59'],
+          ['Paper Notifications', '23 July 2026, 23:59 (<s>18 July 2026</s>)'],
           ['Camera Ready Paper Submissions', '5 August 2026, 23:59'],
         ],
       },
@@ -498,7 +495,7 @@ export default function CallsPage() {
         ],
         daterows: [
           ['Deadline for Industrial Exhibition and Demo Proposals', '15 July 2026, 23:59'],
-          ['Notification of Acceptance', '18 July 2026, 23:59'],
+          ['Notification of Acceptance', '23 July 2026, 23:59 (<s>18 July 2026</s>)'],
         ],
       },
       {
