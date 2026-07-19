@@ -115,6 +115,10 @@ export default function Home() {
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
               <li className="text-lg">
+                <strong className="text-xl">July 18:</strong>{' '}
+                Regular paper and demo acceptance notifications rescheduled to July 23, 2026, at 23:59 AoE.
+                </li>
+              <li className="text-lg">
                   <strong className="text-xl">June 30:</strong>{' '}
                   All special sessions and the student session submission deadlines extended to 7 July 2026, 23:59 AoE.
                 </li>
