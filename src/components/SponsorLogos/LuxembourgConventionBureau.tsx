@@ -2,7 +2,7 @@ export default function LuxembourgConventionBureau({ className }: { className?: 
   return (
     <img
       className={className}
-      src="/partners/luxembourg-convention-bureau.png"
+      src="/partners/luxembourg_convention_bureau.png"
       alt="Luxembourg Convention Bureau Logo"
     />
   )

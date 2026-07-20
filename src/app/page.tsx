@@ -103,73 +103,372 @@ export default function Home() {
 
       {/* Announcements */}
       <section className="bg-background text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Announcements</h2>
-              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
-            </div>
-          </div>
+      <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+              Announcements
+            </h2>
 
-          <div className="mt-6">
-            <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
-              <ul className="list-disc space-y-3 pl-6 marker:text-2xl">
-              <li className="text-lg">
-                <strong className="text-xl">July 18:</strong>{' '}
-                Regular paper and demo acceptance notifications rescheduled to July 23, 2026, at 23:59 AoE.
-                </li>
-              <li className="text-lg">
-                  <strong className="text-xl">June 30:</strong>{' '}
-                  All special sessions and the student session submission deadlines extended to 7 July 2026, 23:59 AoE.
-                </li>
-              <li className="text-lg">
-                  <strong className="text-xl">June 5:</strong>{' '}
-                  Paper submission deadline extended to 15 June 2026, 23:59 AoE.
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">May 28:</strong>{' '}
-                  Tutorial submission deadline extended to 9 June 2026, 23:59 AoE.
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">May 20:</strong>{' '}
-                  Paper submission deadline extended to 5 June 2026, 23:59 AoE.
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">May 19:</strong>{' '}
-                  Community and Society Announcement — supported by <strong>IEEE Signal Processing Society</strong>
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">May 04:</strong>{' '}
-                  Community and Society Announcement — supported by <strong>IEEE Students</strong>
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">Apr 30:</strong>{' '}
-                  Sponsorship Announcement — supported by <strong>Google</strong>
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">Mar 20:</strong>{' '}
-                  Community and Society Announcement — supported by <strong>IEEE Benelux</strong>
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">Mar 06:</strong>{' '}
-                  Community and Society Announcement — supported by <strong>EURASIP</strong>
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">Feb 26:</strong>{' '}
-                  Sponsorship Announcement — supported by <strong>Luxembourg Convention Bureau</strong>
-                </li>
-                <li className="text-lg">
-                  <strong className="text-xl">Feb 16:</strong>{' '}
-                  <a href={pdfHref} download className="underline">
-                    Call for Papers
-                  </a>{' '}
-                  is posted and can be downloaded.
-                </li>
-              </ul>
-            </div>
+            <div
+              className="bg-accent mt-3 h-1 w-16 rounded-full"
+              aria-hidden="true"
+            />
           </div>
         </div>
-      </section>
+
+        <div className="mt-6">
+          <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
+            <ul className="space-y-4">
+              {/* Incode */}
+              <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                <div className="flex flex-col items-start gap-5 sm:flex-row">
+                  <a
+                    href="https://www.incode.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                    aria-label="Visit Incode website"
+                  >
+                    <img
+                      src={`${basePath}/partners/incode.png`}
+                      alt="Incode logo"
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                    <span
+                      className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white"
+                      aria-hidden="true"
+                    />
+
+                    <div className="min-w-0 flex-1">
+                      <p>
+                        <strong className="text-xl">July 20:</strong>{' '}
+                        Sponsorship Announcement — We are pleased to welcome{' '}
+                        <a
+                          href="https://www.incode.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                        >
+                          Incode
+                        </a>{' '}
+                        as a sponsor.
+                      </p>
+
+                      <div className="mt-4 border-l-4 border-white/50 pl-4">
+                        <p className="text-sm font-semibold uppercase tracking-wider text-white/70">
+                          About Incode
+                        </p>
+
+                        <p className="mt-2 w-full leading-relaxed text-white/90">
+                          Incode Technologies is a global leader in AI-powered
+                          identity verification and biometric authentication.
+                          Powered by in-house developed technology in machine
+                          learning and liveness detection, Incode develops secure,
+                          privacy-conscious identity solutions for governments and
+                          enterprises. Its end-to-end identity orchestration
+                          platform enables automated verification, authentication,
+                          and fraud prevention across digital and in-person
+                          interactions while meeting rigorous security and
+                          compliance standards. By advancing biometric innovation
+                          for high-assurance identity, Incode helps organizations
+                          build trusted digital experiences at scale. Headquartered
+                          in San Francisco, Incode operates globally across North
+                          America, Europe, Latin America, and other international
+                          markets.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              {/* July 18 */}
+              <li className="flex gap-3 text-lg">
+                <span
+                  className="mt-2 h-2 w-2 shrink-0 rounded-full bg-white"
+                  aria-hidden="true"
+                />
+
+                <div>
+                  <strong className="text-xl">July 18:</strong>{' '}
+                  Regular paper and demo acceptance notifications rescheduled to
+                  July 23, 2026, at 23:59 AoE.
+                </div>
+              </li>
+
+              {/* The Dots Luxembourg */}
+              <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                <div className="flex flex-col items-start gap-5 sm:flex-row">
+                  <a
+                    href="https://thedots.lu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                    aria-label="Visit The Dots Luxembourg website"
+                  >
+                    <img
+                      src={`${basePath}/partners/the_dots_luxembourg.png`}
+                      alt="The Dots Luxembourg logo"
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                    <span
+                      className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white"
+                      aria-hidden="true"
+                    />
+
+                    <div className="min-w-0 flex-1">
+                      <p>
+                        <strong className="text-xl">July 17:</strong>{' '}
+                        Sponsorship Announcement — We are pleased to welcome{' '}
+                        <a
+                          href="https://thedots.lu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                        >
+                          The Dots Luxembourg
+                        </a>{' '}
+                        as a sponsor.
+                      </p>
+
+                      <div className="mt-4 border-l-4 border-white/50 pl-4">
+                        <p className="text-sm font-semibold uppercase tracking-wider text-white/70">
+                          About The Dots Luxembourg
+                        </p>
+
+                        <p className="mt-2 w-full leading-relaxed text-white/90">
+                          Based in Luxembourg, The Dots is a marketing and events
+                          agency dedicated to the technology ecosystem. It supports
+                          companies, institutions, startups, and innovative
+                          organizations in building meaningful brands,
+                          strengthening market presence, and engaging key
+                          audiences. Combining strategic communication, branding,
+                          content and media production, community building, lead
+                          generation, and event management, The Dots delivers
+                          tailored, end-to-end solutions that increase visibility,
+                          create lasting impact, foster valuable connections, and
+                          transform ideas into experiences that support sustainable
+                          business growth.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              {/* June 30 */}
+              <li className="text-lg">
+                <strong className="text-xl">June 30:</strong>{' '}
+                All special sessions and the student session submission deadlines
+                extended to 7 July 2026, 23:59 AoE.
+              </li>
+
+              {/* June 5 */}
+              <li className="text-lg">
+                <strong className="text-xl">June 5:</strong>{' '}
+                Paper submission deadline extended to 15 June 2026, 23:59 AoE.
+              </li>
+
+              {/* May 28 */}
+              <li className="text-lg">
+                <strong className="text-xl">May 28:</strong>{' '}
+                Tutorial submission deadline extended to 9 June 2026, 23:59 AoE.
+              </li>
+
+              {/* May 20 */}
+              <li className="text-lg">
+                <strong className="text-xl">May 20:</strong>{' '}
+                Paper submission deadline extended to 5 June 2026, 23:59 AoE.
+              </li>
+
+              {/* May 19 */}
+              <li className="text-lg">
+                <strong className="text-xl">May 19:</strong>{' '}
+                Community and Society Announcement — supported by{' '}
+                <strong>IEEE Signal Processing Society</strong>
+              </li>
+
+              {/* May 4 */}
+              <li className="text-lg">
+                <strong className="text-xl">May 04:</strong>{' '}
+                Community and Society Announcement — supported by{' '}
+                <strong>IEEE Students</strong>
+              </li>
+
+              {/* Google */}
+              <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                <div className="flex flex-col items-start gap-5 sm:flex-row">
+                  <a
+                    href="https://about.google/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                    aria-label="Visit Google website"
+                  >
+                    <img
+                      src={`${basePath}/partners/google.png`}
+                      alt="Google logo"
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                    <span
+                      className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white"
+                      aria-hidden="true"
+                    />
+
+                    <div className="min-w-0 flex-1">
+                      <p>
+                        <strong className="text-xl">Apr 30:</strong>{' '}
+                        Sponsorship Announcement — We are pleased to welcome{' '}
+                        <a
+                          href="https://about.google/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                        >
+                          Google
+                        </a>{' '}
+                        as a sponsor.
+                      </p>
+
+                      <div className="mt-4 border-l-4 border-white/50 pl-4">
+                        <p className="text-sm font-semibold uppercase tracking-wider text-white/70">
+                          About Google
+                        </p>
+
+                        <p className="mt-2 w-full leading-relaxed text-white/90">
+                          Google is a global technology company whose mission is to
+                          organize the world’s information and make it universally
+                          accessible and useful. Its products and platforms help
+                          billions of people search for information, communicate,
+                          navigate, learn, work, create, and grow their businesses.
+                          Google’s portfolio includes Search, YouTube, Maps, Gmail,
+                          Chrome, Android, Google Workspace, Google Cloud, Pixel
+                          devices, and advertising solutions. The company also
+                          advances artificial intelligence through Google DeepMind,
+                          Google Research, and AI-powered features integrated across
+                          its services. Guided by a focus on users, Google develops
+                          accessible, secure, and helpful technologies for
+                          individuals, businesses, developers, institutions, and
+                          communities worldwide. Its advertising business funds
+                          many widely available products, while subscriptions,
+                          devices, applications, and enterprise services provide
+                          additional revenue. Google further supports digital
+                          skills, sustainability, scientific research, social
+                          impact, and economic opportunity through partnerships,
+                          training initiatives, responsible innovation, and
+                          philanthropic work, aiming to make technology beneficial
+                          and practical for everyone across the globe.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              {/* March 20 */}
+              <li className="text-lg">
+                <strong className="text-xl">Mar 20:</strong>{' '}
+                Community and Society Announcement — supported by{' '}
+                <strong>IEEE Benelux</strong>
+              </li>
+
+              {/* March 6 */}
+              <li className="text-lg">
+                <strong className="text-xl">Mar 06:</strong>{' '}
+                Community and Society Announcement — supported by{' '}
+                <strong>EURASIP</strong>
+              </li>
+
+              {/* Luxembourg Convention Bureau */}
+              <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                <div className="flex flex-col items-start gap-5 sm:flex-row">
+                  <a
+                    href="https://luxembourg-convention-bureau.lu/en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                    aria-label="Visit Luxembourg Convention Bureau website"
+                  >
+                    <img
+                      src={`${basePath}/partners/luxembourg_convention_bureau.png`}
+                      alt="Luxembourg Convention Bureau logo"
+                      className="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </a>
+
+                  <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                    <span
+                      className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white"
+                      aria-hidden="true"
+                    />
+
+                    <div className="min-w-0 flex-1">
+                      <p>
+                        <strong className="text-xl">Feb 26:</strong>{' '}
+                        Sponsorship Announcement — We are thrilled to welcome{' '}
+                        <a
+                          href="https://luxembourg-convention-bureau.lu/en"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                        >
+                          Luxembourg Convention Bureau
+                        </a>{' '}
+                        as a sponsor.
+                      </p>
+
+                      <div className="mt-4 border-l-4 border-white/50 pl-4">
+                        <p className="text-sm font-semibold uppercase tracking-wider text-white/70">
+                          About Luxembourg Convention Bureau
+                        </p>
+
+                        <p className="mt-2 w-full leading-relaxed text-white/90">
+                          Created by Luxembourg City and the Ministry of the
+                          Economy, the Luxembourg Convention Bureau is the official
+                          body promoting the Grand Duchy as a leading destination
+                          for professional events. It provides event organisers
+                          with free, impartial, and tailored support for meetings,
+                          conferences, congresses, and corporate gatherings.
+                          Through expert advice, venue selection, supplier
+                          connections, site visits, and familiarisation trips, the
+                          Bureau simplifies event planning while showcasing
+                          Luxembourg’s accessibility, multilingual expertise,
+                          innovative ecosystem, high-quality infrastructure, and
+                          hospitality.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              {/* February 16 */}
+              <li className="text-lg">
+                <strong className="text-xl">Feb 16:</strong>{' '}
+                <a href={pdfHref} download className="underline">
+                  Call for Papers
+                </a>{' '}
+                is posted and can be downloaded.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* Important dates */}
       <section className="bg-container text-container-foreground">
