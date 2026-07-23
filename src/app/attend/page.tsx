@@ -26,6 +26,195 @@ export default function AttendPage() {
         </div>
       </section>
 
+
+      {/* Registration */}
+      <section className="bg-background text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">Registration</h2>
+              <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
+            </div>
+          </div>
+
+          <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
+            <h3 className="text-xl font-extrabold md:text-2xl">Registration deadlines</h3>
+            <p className="mt-3 text-base leading-relaxed opacity-80 md:text-lg">
+              Early registration fees apply to payments received on or before{' '}
+              <strong>25 August 2026</strong>. Payments received from <strong>26 August 2026</strong> onward will be
+              charged at the late-registration rate.
+            </p>
+          </div>
+
+          <div className="border-muted mt-8 overflow-hidden border shadow-sm">
+            <div className="bg-container px-5 py-4 md:px-6">
+              <h3 className="text-xl font-extrabold md:text-2xl">Registration Fees</h3>
+              <p className="mt-1 text-base opacity-75 md:text-lg">All fees are listed in euros.</p>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[760px] text-left">
+                <thead>
+                  <tr className="border-muted border-b">
+                    <th className="px-5 py-4 text-base font-bold md:px-6 md:text-lg">Registration Category</th>
+                    <th className="px-5 py-4 text-base font-bold md:px-6 md:text-lg">Registration Type</th>
+                    <th className="px-5 py-4 text-base font-bold md:px-6 md:text-lg">Early Fee</th>
+                    <th className="px-5 py-4 text-base font-bold md:px-6 md:text-lg">Late Fee</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr className="border-muted border-b">
+                    <td rowSpan={3} className="px-5 py-4 align-top text-base font-extrabold md:px-6 md:text-lg">
+                      IEEE / EURASIP Members
+                    </td>
+                    <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">Full</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€850</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€975</td>
+                  </tr>
+                  <tr className="border-muted border-b">
+                    <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">Student or Life Member</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€500</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€575</td>
+                  </tr>
+                  <tr className="border-muted border-b">
+                    <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">1-Day Pass</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€300</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€345</td>
+                  </tr>
+
+                  <tr className="border-muted border-b">
+                    <td rowSpan={3} className="px-5 py-4 align-top text-base font-extrabold md:px-6 md:text-lg">
+                      Non-members
+                    </td>
+                    <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">Full</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€1,025</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€1,175</td>
+                  </tr>
+                  <tr className="border-muted border-b">
+                    <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">Student</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€600</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€690</td>
+                  </tr>
+                  <tr className="border-muted border-b">
+                    <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">1-Day Pass</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€375</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€430</td>
+                  </tr>
+
+                  <tr>
+                    <td className="px-5 py-4 text-base font-extrabold md:px-6 md:text-lg">
+                      Low Income Economy Countries Authors
+                    </td>
+                    <td className="px-5 py-4 text-base opacity-70 md:px-6 md:text-lg"></td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€125</td>
+                    <td className="px-5 py-4 text-base md:px-6 md:text-lg">€125</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+            <div>
+              <h3 className="text-2xl font-extrabold">Registration fees include</h3>
+              <ul className="mt-5 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>
+                  Admission to all keynotes and technical sessions, including special sessions, oral sessions, poster
+                  sessions, and tutorials, held in a dedicated conference room at the conference hotel.
+                </li>
+                <li>Four sit-down lunches.</li>
+                <li>Welcome reception.</li>
+                <li>Gala dinner on a cruise.</li>
+                <li>Guided tour of Luxembourg.</li>
+                <li>Coffee breaks.</li>
+                <li>
+                  Dedicated transport to conference programme locations, including the gala dinner venue and guided-tour
+                  locations.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-extrabold">Important notes</h3>
+              <ul className="mt-5 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>
+                  Each regular or special-session paper must be covered by a Full registration at either the IEEE /
+                  EURASIP Member or Non-member rate.
+                </li>
+                <li>One Full registration can cover up to three accepted papers.</li>
+                <li>A Student Session paper requires either a Student registration or a Full registration.</li>
+                <li>
+                  A 1-Day Pass covers attendance on one selected conference day and can be used to cover a dissemination
+                  paper.
+                </li>
+                <li>
+                  Early and late fees are determined by the date payment is received. Payments received after the early
+                  deadline are charged at the late rate.
+                </li>
+                <li>
+                  To receive the member rate, the registrant must be an IEEE or EURASIP member at the time of
+                  registration.
+                </li>
+                <li>
+                  Student registration must be supported by evidence of current student status, such as a student ID,
+                  enrolment record, or department letter.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-muted mt-10 grid gap-8 border-t pt-10 lg:grid-cols-3">
+            <div>
+              <h3 className="text-xl font-extrabold md:text-2xl">Registration Policy</h3>
+              <ul className="mt-4 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>Each attendee must register separately.</li>
+                <li>
+                  Registrants must be an IEEE or EURASIP member at the time of registration to receive the respective
+                  member discount. Membership numbers are requested on the registration form.
+                </li>
+                <li>Accompanying persons may attend the gala dinner for an additional fee.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-extrabold md:text-2xl">Author No-Show Policy</h3>
+              <div className="mt-4 space-y-4 text-base leading-relaxed opacity-80 md:text-lg">
+                <p>
+                  IEEE reserves the right to exclude a paper from distribution after the conference, including removal
+                  from IEEE Xplore, when the paper is not presented at the conference.
+                </p>
+                <p>
+                  EUVIP 2026 requires each accepted paper to be presented in person by one of its authors or by a
+                  qualified substitute at the conference site and according to the published technical programme,
+                  unless special permission has been obtained. A paper accepted into the technical programme but not
+                  presented on site will be withdrawn from the proceedings published on IEEE Xplore.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-extrabold md:text-2xl">Cancellation and Refund Policy</h3>
+              <ul className="mt-4 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>
+                  Cancellations must be submitted in writing by email to{' '}
+                  <a className="font-bold underline" href="mailto:euvip2026@uni.lu">
+                    euvip2026@uni.lu
+                  </a>
+                  .
+                </li>
+                <li>
+                  Cancellations received at least 30 days before the conference start date will be refunded, subject to a
+                  €50 processing fee.
+                </li>
+                <li>No refunds will be made for cancellations received within 30 days of the conference start date.</li>
+                <li>Refunds will be processed within 7 to 10 business days after receipt of the cancellation request.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Location */}
       <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
