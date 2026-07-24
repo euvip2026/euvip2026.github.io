@@ -120,6 +120,11 @@ export default function Home() {
         <div className="mt-6">
           <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
             <ul className="space-y-4">
+              {/* July 23 */}
+              <li className="text-lg">
+                <strong className="text-xl">July 23:</strong>{' '}
+                Paper decisions have been released and communicated to all authors!
+              </li>
               {/* Incode */}
               <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
                 <div className="flex flex-col items-start gap-5 sm:flex-row">
