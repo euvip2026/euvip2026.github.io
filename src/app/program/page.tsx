@@ -1,18 +1,38 @@
 'use client'
 
 import { useState } from 'react'
-import schedule from '@/data/schedule.json'
-import { Program } from '@/components/Images'
+import scheduleData from '@/data/schedule.json'
 
-const sessionTypeColors: Record<string, string> = {
-  keynote: 'bg-accent text-white',
-  tutorial: 'bg-primary-light text-white',
-  session: 'bg-primary text-white',
-  poster: 'bg-primary/80 text-white',
-  break: 'bg-gray-200 text-gray-700',
-  social: 'bg-accent/80 text-white',
-  ceremony: 'bg-accent text-white',
+type Session = {
+  time: string
+  title: string
+  type: string
+  speaker?: string
+  location?: string
+  description?: string
 }
+
+type ScheduleDay = {
+  date: string
+  label: string
+  title: string
+  sessions: Session[]
+}
+
+type Schedule = {
+  days: ScheduleDay[]
+}
+
+const schedule = scheduleData as Schedule
+// const sessionTypeColors: Record<string, string> = {
+//   keynote: 'bg-accent text-white',
+//   tutorial: 'bg-primary-light text-white',
+//   session: 'bg-primary text-white',
+//   poster: 'bg-primary/80 text-white',
+//   break: 'bg-gray-200 text-gray-700',
+//   social: 'bg-accent/80 text-white',
+//   ceremony: 'bg-accent text-white',
+// }
 
 export default function SchedulePage() {
   const [activeDay, setActiveDay] = useState(0)
