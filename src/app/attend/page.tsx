@@ -37,7 +37,7 @@ export default function AttendPage() {
           </div>
           <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
             <h3 className="text-xl font-extrabold md:text-2xl">Registrations open</h3>
-            <p className="mt-3 text-base leading-relaxed opacity-80 md:text-lg">
+            <p className="mt-3 text-base leading-relaxed md:text-lg">
               To register for the conference, please{' '}
               <strong>
                 <u>
@@ -49,7 +49,7 @@ export default function AttendPage() {
           </div>
           <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
             <h3 className="text-xl font-extrabold md:text-2xl">Registration deadlines</h3>
-            <p className="mt-3 text-base leading-relaxed opacity-80 md:text-lg">
+            <p className="mt-3 text-base leading-relaxed md:text-lg">
               Early registration fees apply to payments received on or before <strong>25 August 2026</strong>. Payments
               received from <strong>26 August 2026</strong> onward will be charged at the late-registration rate.
             </p>
@@ -188,7 +188,7 @@ export default function AttendPage() {
 
             <div>
               <h3 className="text-xl font-extrabold md:text-2xl">Author No-Show Policy</h3>
-              <div className="mt-4 space-y-4 text-base leading-relaxed opacity-80 md:text-lg">
+              <div className="mt-4 space-y-4 text-base leading-relaxed md:text-lg">
                 <p>
                   IEEE reserves the right to exclude a paper from distribution after the conference, including removal
                   from IEEE Xplore, when the paper is not presented at the conference.
@@ -231,11 +231,11 @@ export default function AttendPage() {
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
             <div className="max-w-2xl">
-              <p className="text-base leading-relaxed opacity-80 md:text-lg">The conference will take place at:</p>
+              <p className="text-base leading-relaxed md:text-lg">The conference will take place at:</p>
               <p className="mt-4 text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference and Spa</p>
-              <p className="mt-1 text-base font-semibold opacity-80 md:text-lg">Luxembourg</p>
+              <p className="mt-1 text-base font-semibold md:text-lg">Luxembourg</p>
 
-              <p className="mt-6 text-base leading-relaxed opacity-80 md:text-lg">
+              <p className="mt-6 text-base leading-relaxed md:text-lg">
                 The Parc Alvisse Hotel Conference and Spa is a modern conference venue located in a green and quiet
                 area, while remaining well connected to the city centre. The venue offers dedicated conference
                 facilities, on-site accommodation, restaurant services, and wellness areas, providing a convenient
@@ -339,9 +339,9 @@ export default function AttendPage() {
 
           <div className="mt-8">
             <h3 className="text-xl font-extrabold md:text-2xl">Parc Alvisse Hotel Conference and Spa</h3>
-            <p className="mt-1 text-base font-semibold opacity-80 md:text-lg">On-site accommodation</p>
+            <p className="mt-1 text-base font-semibold md:text-lg">On-site accommodation</p>
 
-            <p className="mt-6 w-full text-base leading-relaxed opacity-80 md:text-lg">
+            <p className="mt-6 w-full text-base leading-relaxed md:text-lg">
               Conference participants can stay directly at the event venue and benefit from preferential EUVIP 2026
               rates. The hotel offers comfortable rooms together with an on-site restaurant, bar, conference facilities,
               and wellness areas.
@@ -386,20 +386,20 @@ export default function AttendPage() {
 
             <p className="mt-3 text-base leading-relaxed opacity-70 md:text-lg">
               The Comfort and Superior room prices shown above are preferential rates reserved for EUVIP 2026
-              participants.
+              participants (including breakfast).
             </p>
 
             {/* Booking instructions */}
             <div className="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
               <div>
-                <h4 className="text-2xl font-extrabold">How to Make a Reservation</h4>
+                <h4 className="text-xl font-extrabold">How to Make a Reservation</h4>
 
                 <ol className="mt-5 space-y-4 text-lg">
                   <li className="flex gap-4">
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       1
                     </span>
-                    <p className="pt-1 leading-relaxed opacity-80">
+                    <p className="pt-1 leading-relaxed">
                       Click "Book Your Room" to open the hotel's online booking page.
                     </p>
                   </li>
@@ -408,20 +408,20 @@ export default function AttendPage() {
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       2
                     </span>
-                    <p className="pt-1 leading-relaxed opacity-80">Enter your planned check-in and check-out dates.</p>
+                    <p className="pt-1 leading-relaxed">Enter your planned check-in and check-out dates.</p>
                   </li>
 
                   <li className="flex gap-4">
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       3
                     </span>
-                    <p className="pt-1 leading-relaxed opacity-80">Enter the EUVIP promotional code.</p>
+                    <p className="pt-1 leading-relaxed">Enter the EUVIP promotional code.</p>
                   </li>
                   <li className="flex gap-4">
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       4
                     </span>
-                    <p className="pt-1 leading-relaxed opacity-80">
+                    <p className="pt-1 leading-relaxed">
                       Click the SEARCH AVAILABLE ROOMS button to show the available room options.
                     </p>
                   </li>
@@ -433,13 +433,13 @@ export default function AttendPage() {
                   rel="noreferrer"
                   className="bg-accent mt-7 inline-flex items-center justify-center px-5 py-3 text-base font-bold text-white shadow-sm transition hover:opacity-90 md:text-lg"
                 >
-                  Book Your Room
+                  Book your Room
                 </a>
               </div>
 
               {/* Promotional code and deadline */}
               <aside className="border-accent bg-container border-l-4 p-6 shadow-sm">
-                <p className="text-base font-bold tracking-wide uppercase opacity-70 md:text-lg">Promotional code</p>
+                <p className="font-extrabold">Promotional code</p>
 
                 <div className="mt-3">
                   <code className="border-muted bg-background inline-block border px-4 py-2 text-lg font-extrabold tracking-wider">
@@ -447,7 +447,7 @@ export default function AttendPage() {
                   </code>
                 </div>
 
-                <p className="mt-5 text-base leading-relaxed opacity-80 md:text-lg">
+                <p className="mt-5 text-base leading-relaxed md:text-lg">
                   Both the stay dates and the promotional code must be entered on the booking page. Otherwise, the
                   preferential rates will not be displayed.
                 </p>
@@ -470,14 +470,14 @@ export default function AttendPage() {
               <div className="mt-5 grid gap-5 md:grid-cols-3">
                 <div className="border-muted border p-5">
                   <h5 className="font-extrabold">Payment</h5>
-                  <p className="mt-2 text-base leading-relaxed opacity-80 md:text-lg">
+                  <p className="mt-2 text-base leading-relaxed md:text-lg">
                     Full payment is required at the time of booking.
                   </p>
                 </div>
 
                 <div className="border-muted border p-5">
                   <h5 className="font-extrabold">Cancellation</h5>
-                  <p className="mt-2 text-base leading-relaxed opacity-80 md:text-lg">
+                  <p className="mt-2 text-base leading-relaxed md:text-lg">
                     Reservations may be cancelled free of charge up to one day before arrival. Cancellations made within
                     this period will receive a full refund.
                   </p>
@@ -485,11 +485,39 @@ export default function AttendPage() {
 
                 <div className="border-muted border p-5">
                   <h5 className="font-extrabold">No-show</h5>
-                  <p className="mt-2 text-base leading-relaxed opacity-80 md:text-lg">
+                  <p className="mt-2 text-base leading-relaxed md:text-lg">
                     In the case of a no-show, 100% of the total booking value will be charged.
                   </p>
                 </div>
               </div>
+            </div>
+            {/* Notice */}
+            <div className="border-muted mt-10 border-t pt-8">
+              <h4 className="text-xl font-extrabold">Additional Information</h4>
+              <p className="mt-5 text-base leading-relaxed text-[#be2222ff] md:text-lg">
+                Booking at this hotel is only possible within the window of <strong>27/09/2026</strong> to{' '}
+                <strong>01/10/2026</strong>.
+              </p>
+              <p className="text-base md:text-lg">
+                For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
+                airport (the <strong>preferential</strong> rate for EUVIP attendees is 120 euros, breakfast included):
+                Ibis & Ibis Budget Luxembourg Airport Route de Trèves, 2632 Findel, Luxembourg
+              </p>
+              <p className="text-base md:text-lg">
+                If you're interested, please download and complete the{' '}
+                <strong>
+                  <u>
+                    <a href="EUVIP2026-Booking form.pdf" download>
+                      registration form here
+                    </a>
+                  </u>
+                </strong>{' '}
+                and send it to{' '}
+                <u>
+                  <a href="mailto:Marat.APANESYAN@accor.com">Marat.APANESYAN@accor.com</a>{' '}
+                </u>
+                .
+              </p>
             </div>
           </div>
         </div>

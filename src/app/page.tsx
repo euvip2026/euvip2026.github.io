@@ -92,10 +92,11 @@ export default function Home() {
               applications.
             </p>
             <p>
-              The first day of the conference will be dedicated to one-day tutorials. The main Conference Programme will
-              include keynote talks, oral and poster sessions, special sessions, panel discussions, and
-              industry-oriented activities, providing a forum for presenting recent advances and discussing emerging
-              challenges in the field.
+              The Conference Programme will feature keynote talks, tutorials, oral and poster sessions, special
+              sessions, panel discussions, demos, and industry-oriented activities, offering a forum to present recent
+              advances and discuss emerging challenges in the field. The programme will also include social activities,
+              such as a guided tour of Luxembourg on the first day and a gala dinner (third day) aboard a cruise on the
+              Moselle River.
             </p>
           </div>
         </div>
