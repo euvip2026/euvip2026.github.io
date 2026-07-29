@@ -26,7 +26,6 @@ export default function AttendPage() {
         </div>
       </section>
 
-
       {/* Registration */}
       <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
@@ -36,13 +35,23 @@ export default function AttendPage() {
               <div className="bg-accent mt-3 h-1 w-16 rounded-full" aria-hidden="true" />
             </div>
           </div>
-
+          <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
+            <h3 className="text-xl font-extrabold md:text-2xl">Registrations open</h3>
+            <p className="mt-3 text-base leading-relaxed opacity-80 md:text-lg">
+              To register for the conference, please{' '}
+              <strong>
+                <u>
+                  <a href="https://sntevents.uni.lu/product/euvip-2026-registration/">register using this link</a>
+                </u>
+              </strong>
+              .
+            </p>
+          </div>
           <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
             <h3 className="text-xl font-extrabold md:text-2xl">Registration deadlines</h3>
             <p className="mt-3 text-base leading-relaxed opacity-80 md:text-lg">
-              Early registration fees apply to payments received on or before{' '}
-              <strong>25 August 2026</strong>. Payments received from <strong>26 August 2026</strong> onward will be
-              charged at the late-registration rate.
+              Early registration fees apply to payments received on or before <strong>25 August 2026</strong>. Payments
+              received from <strong>26 August 2026</strong> onward will be charged at the late-registration rate.
             </p>
           </div>
 
@@ -186,9 +195,9 @@ export default function AttendPage() {
                 </p>
                 <p>
                   EUVIP 2026 requires each accepted paper to be presented in person by one of its authors or by a
-                  qualified substitute at the conference site and according to the published technical programme,
-                  unless special permission has been obtained. A paper accepted into the technical programme but not
-                  presented on site will be withdrawn from the proceedings published on IEEE Xplore.
+                  qualified substitute at the conference site and according to the published technical programme, unless
+                  special permission has been obtained. A paper accepted into the technical programme but not presented
+                  on site will be withdrawn from the proceedings published on IEEE Xplore.
                 </p>
               </div>
             </div>
@@ -204,11 +213,13 @@ export default function AttendPage() {
                   .
                 </li>
                 <li>
-                  Cancellations received at least 30 days before the conference start date will be refunded, subject to a
-                  €50 processing fee.
+                  Cancellations received at least 30 days before the conference start date will be refunded, subject to
+                  a €50 processing fee.
                 </li>
                 <li>No refunds will be made for cancellations received within 30 days of the conference start date.</li>
-                <li>Refunds will be processed within 7 to 10 business days after receipt of the cancellation request.</li>
+                <li>
+                  Refunds will be processed within 7 to 10 business days after receipt of the cancellation request.
+                </li>
               </ul>
             </div>
           </div>
@@ -332,8 +343,8 @@ export default function AttendPage() {
 
             <p className="mt-6 w-full text-base leading-relaxed opacity-80 md:text-lg">
               Conference participants can stay directly at the event venue and benefit from preferential EUVIP 2026
-              rates. The hotel offers comfortable rooms together with an on-site restaurant, bar, conference
-              facilities, and wellness areas.
+              rates. The hotel offers comfortable rooms together with an on-site restaurant, bar, conference facilities,
+              and wellness areas.
             </p>
 
             {/* Room rates */}
@@ -357,14 +368,14 @@ export default function AttendPage() {
                   <tbody>
                     <tr className="border-muted border-b">
                       <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">Single</td>
-                      <td className="px-5 py-4 text-base opacity-70 line-through md:px-6 md:text-lg">€254.00</td>
+                      <td className="px-5 py-4 text-base line-through opacity-70 md:px-6 md:text-lg">€254.00</td>
                       <td className="px-5 py-4 text-base font-extrabold md:px-6 md:text-lg">€115.00</td>
                       <td className="px-5 py-4 text-base font-extrabold md:px-6 md:text-lg">€155.00</td>
                     </tr>
 
                     <tr>
                       <td className="px-5 py-4 text-base font-semibold md:px-6 md:text-lg">Double / Twin</td>
-                      <td className="px-5 py-4 text-base opacity-70 line-through md:px-6 md:text-lg">€276.00</td>
+                      <td className="px-5 py-4 text-base line-through opacity-70 md:px-6 md:text-lg">€276.00</td>
                       <td className="px-5 py-4 text-base font-extrabold md:px-6 md:text-lg">€137.00</td>
                       <td className="px-5 py-4 text-base font-extrabold md:px-6 md:text-lg">€177.00</td>
                     </tr>
@@ -397,18 +408,14 @@ export default function AttendPage() {
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       2
                     </span>
-                    <p className="pt-1 leading-relaxed opacity-80">
-                      Enter your planned check-in and check-out dates.
-                    </p>
+                    <p className="pt-1 leading-relaxed opacity-80">Enter your planned check-in and check-out dates.</p>
                   </li>
 
                   <li className="flex gap-4">
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       3
                     </span>
-                    <p className="pt-1 leading-relaxed opacity-80">
-                      Enter the EUVIP promotional code.
-                    </p>
+                    <p className="pt-1 leading-relaxed opacity-80">Enter the EUVIP promotional code.</p>
                   </li>
                   <li className="flex gap-4">
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
@@ -432,7 +439,7 @@ export default function AttendPage() {
 
               {/* Promotional code and deadline */}
               <aside className="border-accent bg-container border-l-4 p-6 shadow-sm">
-                <p className="text-base font-bold uppercase tracking-wide opacity-70 md:text-lg">Promotional code</p>
+                <p className="text-base font-bold tracking-wide uppercase opacity-70 md:text-lg">Promotional code</p>
 
                 <div className="mt-3">
                   <code className="border-muted bg-background inline-block border px-4 py-2 text-lg font-extrabold tracking-wider">
@@ -471,8 +478,8 @@ export default function AttendPage() {
                 <div className="border-muted border p-5">
                   <h5 className="font-extrabold">Cancellation</h5>
                   <p className="mt-2 text-base leading-relaxed opacity-80 md:text-lg">
-                    Reservations may be cancelled free of charge up to one day before arrival. Cancellations made
-                    within this period will receive a full refund.
+                    Reservations may be cancelled free of charge up to one day before arrival. Cancellations made within
+                    this period will receive a full refund.
                   </p>
                 </div>
 
