@@ -37,7 +37,8 @@ export default function SchedulePage() {
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
           <div className="mt-4">
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
-              Four days of research and networking. The schedule is preliminary and may change. All times are shown in local time, CET (UTC+1).
+              Four days of research and networking. The schedule is preliminary and may change. All times are shown in
+              local time, CET (UTC+1).
             </p>
           </div>
         </div>
@@ -98,8 +99,16 @@ export default function SchedulePage() {
 
                     {/* Content */}
                     <div className="flex-1 p-4">
-                      <div className="mb-2 flex flex-wrap items-start gap-2"></div>
                       <h3 className="text-lg font-semibold text-gray-900">{session.title}</h3>
+
+                      {session.speaker && <p className="mt-1 text-sm font-medium text-gray-700">{session.speaker}</p>}
+
+                      {session.location && (
+                        <p className="mt-1 text-sm text-gray-600">
+                          <span className="font-medium">Location:</span> {session.location}
+                        </p>
+                      )}
+
                       {session.description && <p className="mt-1 text-sm text-gray-600">{session.description}</p>}
                     </div>
                   </div>

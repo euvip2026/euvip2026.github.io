@@ -6,6 +6,11 @@
       "title": "Tutorials and Welcome",
       "sessions": [
         {
+          "time": "08:15 - 09:00",
+          "title": "Welcome and Badge Retrieval",
+          "type": "registration"
+        },
+        {
           "time": "09:00 - 10:30",
           "title": "Tutorial I",
           "type": "tutorial"
@@ -17,32 +22,46 @@
         },
         {
           "time": "11:00 - 12:30",
-          "title": "Tutorial I (continued)",
-          "type": "tutorial"
-        },
-        {
-          "time": "12:30 - 13:30",
-          "title": "Lunch",
-          "type": "break"
-        },
-        {
-          "time": "13:30 - 15:00",
           "title": "Tutorial II",
           "type": "tutorial"
         },
         {
-          "time": "15:00 - 15:30",
-          "title": "Coffee Break",
+          "time": "12:30 - 14:00",
+          "title": "Lunch",
           "type": "break"
         },
         {
-          "time": "15:30 - 17:00",
-          "title": "Tutorial II (continued)",
-          "type": "tutorial"
+          "time": "14:00 - 14:30",
+          "title": "Transfer to Luxembourg City",
+          "type": "transfer"
         },
         {
-          "time": "17:30 - 19:00",
-          "title": "Guided Tour and Welcome Dinner",
+          "time": "14:30 - 16:30",
+          "title": "Guided Tour",
+          "location": "Luxembourg City",
+          "type": "social"
+        },
+        {
+          "time": "16:30 - 17:00",
+          "title": "Transfer to Abbaye de Neumünster",
+          "type": "transfer"
+        },
+        {
+          "time": "17:00 - 18:00",
+          "title": "Opening Keynote — Dima Damen",
+          "speaker": "Dima Damen",
+          "location": "Abbaye de Neumünster",
+          "type": "keynote"
+        },
+        {
+          "time": "18:00 - 19:30",
+          "title": "Welcome Drink",
+          "location": "Abbaye de Neumünster",
+          "type": "social"
+        },
+        {
+          "time": "from 20:00",
+          "title": "Social Dinner on Your Own — Junior & Senior Researchers Matching",
           "type": "social"
         }
       ]
@@ -53,146 +72,161 @@
       "title": "Conference and Sessions",
       "sessions": [
         {
-          "time": "09:00 - 09:30",
-          "title": "Opening of EUVIP",
-          "type": "ceremony"
-        },
-        {
-          "time": "09:30 - 10:30",
-          "title": "Keynote Speaker I",
+          "time": "09:00 - 10:00",
+          "title": "Keynote — Elisa Ricci",
+          "speaker": "Elisa Ricci",
           "type": "keynote"
         },
         {
-          "time": "10:30 - 11:00",
+          "time": "10:00 - 10:30",
           "title": "Coffee Break",
           "type": "break"
         },
         {
-          "time": "11:00 - 12:40",
-          "title": "Oral Session I",
-          "description": "4 papers: 20 min + 5 min Q&A",
+          "time": "10:30 - 12:00",
+          "title": "Paper Session",
           "type": "session"
         },
         {
-          "time": "12:40 - 14:00",
+          "time": "12:00 - 13:00",
+          "title": "Demo Session",
+          "type": "special"
+        },
+        {
+          "time": "13:00 - 14:30",
           "title": "Lunch",
           "type": "break"
         },
         {
-          "time": "14:00 - 15:30",
-          "title": "Oral Session II",
-          "description": "4 papers: 20 min + 5 min Q&A",
+          "time": "14:30 - 16:00",
+          "title": "Paper Session",
           "type": "session"
         },
         {
-          "time": "15:30 - 16:00",
+          "time": "16:00 - 16:30",
           "title": "Coffee Break",
           "type": "break"
         },
         {
-          "time": "16:00 - 17:30",
-          "title": "Poster Session I",
-          "type": "poster"
+          "time": "16:30 - 17:15",
+          "title": "Panel Discussion",
+          "type": "special"
         },
         {
-          "time": "19:00",
-          "title": "Dinner for the Organizing Committee",
-          "type": "social"
+          "time": "17:15 - 18:45",
+          "title": "Paper Session",
+          "type": "session"
         }
       ]
     },
     {
       "date": "2026-09-30",
       "label": "Day 3",
-      "title": "Conference and Sessions",
+      "title": "Conference and Gala Dinner",
       "sessions": [
         {
-          "time": "09:30 - 10:30",
-          "title": "Keynote Speaker II",
+          "time": "09:00 - 10:00",
+          "title": "Keynote — Fatma Güney",
+          "speaker": "Fatma Güney",
           "type": "keynote"
         },
         {
-          "time": "10:30 - 11:00",
+          "time": "10:00 - 10:30",
           "title": "Coffee Break",
           "type": "break"
         },
         {
-          "time": "11:00 - 12:40",
-          "title": "Oral Session III",
-          "description": "4 papers: 20 min + 5 min Q&A",
+          "time": "10:30 - 12:00",
+          "title": "Paper Session",
           "type": "session"
         },
         {
-          "time": "12:40 - 14:00",
+          "time": "12:00 - 13:00",
+          "title": "Demo & Industrial Exhibition Session",
+          "type": "special"
+        },
+        {
+          "time": "13:00 - 14:30",
           "title": "Lunch",
           "type": "break"
         },
         {
-          "time": "14:00 - 15:30",
-          "title": "Oral Session IV",
-          "description": "4 papers: 20 min + 5 min Q&A",
+          "time": "14:30 - 16:00",
+          "title": "Paper Session",
           "type": "session"
         },
         {
-          "time": "15:30 - 16:00",
+          "time": "16:00 - 16:30",
           "title": "Coffee Break",
           "type": "break"
         },
         {
-          "time": "16:00 - 17:30",
-          "title": "Poster Session II",
-          "type": "poster"
+          "time": "16:30 - 17:15",
+          "title": "Panel Discussion",
+          "type": "special"
         },
         {
-          "time": "19:00",
+          "time": "17:15 - 18:15",
+          "title": "Paper Session",
+          "type": "session"
+        },
+        {
+          "time": "18:15 - 18:45",
+          "title": "Transfer to Grevenmacher",
+          "type": "transfer"
+        },
+        {
+          "time": "19:00 - 23:00",
           "title": "Gala Dinner",
+          "location": "Grevenmacher",
+          "description": "Dinner on a river cruise.",
           "type": "social"
+        },
+        {
+          "time": "23:00 - 23:45",
+          "title": "Transfer back to Parc Alvisse",
+          "type": "transfer"
         }
       ]
     },
     {
       "date": "2026-10-01",
       "label": "Day 4",
-      "title": "Industry and Closing",
+      "title": "Conference and Closing",
       "sessions": [
         {
-          "time": "09:30 - 10:30",
-          "title": "Keynote Speaker III",
+          "time": "09:00 - 10:00",
+          "title": "Keynote — Silvia Zuffi",
+          "speaker": "Silvia Zuffi",
           "type": "keynote"
         },
         {
-          "time": "10:30 - 11:00",
+          "time": "10:00 - 10:30",
           "title": "Coffee Break",
           "type": "break"
         },
         {
-          "time": "11:00 - 12:40",
-          "title": "Oral Session V",
-          "description": "4 papers: 20 min + 5 min Q&A",
+          "time": "10:30 - 12:30",
+          "title": "Paper Session",
           "type": "session"
         },
         {
-          "time": "12:40 - 14:00",
+          "time": "12:30 - 14:00",
           "title": "Lunch",
           "type": "break"
         },
         {
           "time": "14:00 - 15:30",
-          "title": "Industrial Exhibition",
+          "title": "Paper Session",
           "type": "session"
         },
         {
-          "time": "15:30 - 16:00",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "15:30 - 17:30",
+          "title": "Student Session",
+          "type": "special"
         },
         {
-          "time": "16:00 - 17:00",
-          "title": "Panel Discussion",
-          "type": "session"
-        },
-        {
-          "time": "17:00 - 17:30",
+          "time": "17:30 - 17:45",
           "title": "Closing Ceremony",
           "type": "ceremony"
         }
