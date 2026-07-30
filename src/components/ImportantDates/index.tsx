@@ -66,7 +66,7 @@ export default function ImportantDates() {
     ['Demo Submissions', '15 July 2026, 23:59'],
     ['Demo Notifications', '23 July 2026, 23:59 (<s>18 July 2026</s>)'],
     ['Camera Ready Paper Submissions', '5 August 2026, 23:59'],
-    ['Project Dissemination Papers Submission', '30 July 2026, 23:59'],
+    ['Project Dissemination Papers Submission', '6 August 2026, 23:59 (<s>30 July 2026</s>)'],
     ['Project Dissemination Papers Notifications', '15 August 2026, 23:59'],
     ['Special Sessions Submissions', '15 May 2026, 23:59 (<s>30 April 2026</s>)'],
     ['Special Sessions Notifications', '23 May 2026, 23:59 (<s>8 May 2026</s>)'],

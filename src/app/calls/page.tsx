@@ -337,7 +337,7 @@ export default function CallsPage() {
           },
         ],
         daterows: [
-          ['Submission Deadline', '30 July 2026, 23:59'],
+          ['Submission Deadline', '6 August 2026, 23:59 (<s>30 July 2026</s>)'],
           ['Decision Notifications', '15 August 2026, 23:59'],
         ],
       },

@@ -116,6 +116,10 @@ export default function Home() {
           <div className="mt-6">
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="space-y-4">
+                {/* July 30 */}
+                <li className="text-lg">
+                  <strong className="text-xl">July 30:</strong> Submission deadline for the project dissemination papers extended!
+                </li>
                 {/* July 29 */}
                 <li className="text-lg">
                   <strong className="text-xl">July 29:</strong> Registration for the conference is now open!{' '}
