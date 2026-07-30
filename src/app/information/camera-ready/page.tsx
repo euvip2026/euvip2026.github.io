@@ -23,16 +23,41 @@ export default function CameraReadyInstructions() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl md:px-4">
-        <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
-          <h3 className="text-container-foreground text-xl font-extrabold md:text-2xl">
-            Camera-ready deadline: 5 August 2026 (23:59 AoE)
-          </h3>
+        <div className="bg-background mx-auto mt-8 mb-8 max-w-3xl shadow-md">
+          <table className="w-full border-collapse text-left text-sm">
+            <thead>
+              <tr className="border-container-foreground border-b">
+                <th className="text-container-foreground px-6 py-4 text-2xl font-semibold">Submission Requirement</th>
+
+                <th className="text-container-foreground px-6 py-4 text-right text-2xl font-semibold">
+                  <span className="flex flex-col">
+                    Deadline
+                    <span className="text-xs font-normal">(AoE)</span>
+                  </span>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr className="bg-container">
+                <td className="text-container-foreground px-6 py-4 text-lg">
+                  Camera-ready paper and IEEE electronic Copyright Form (eCF)
+                </td>
+
+                <td className="text-container-foreground px-6 py-4 text-right text-lg whitespace-nowrap">
+                  <span className="font-semibold">5 August 2026, 23:59</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4">
           <p className="text-container-foreground mt-3 text-base leading-relaxed md:text-lg">
             Your camera-ready paper and the IEEE electronic Copyright Form (eCF) must both be submitted through the
             EUVIP 2026 submission system no later than 5 August 2026, 23:59 AoE.
           </p>
         </div>
-        <p className="text-muted-foreground mt-4 text-base leading-relaxed md:text-lg">
+        <p className="text-container-foreground mt-4 text-base leading-relaxed md:text-lg">
           Please read these instructions carefully. Papers that are not IEEE Xplore®-compliant, do not carry the correct
           copyright notice, or are not accompanied by a completed eCF cannot be included in the proceedings or the IEEE
           Xplore® Digital Library.{' '}
@@ -220,7 +245,7 @@ export default function CameraReadyInstructions() {
                 </div>
 
                 <div className="border-container-foreground text-container-foreground mt-8 border-2 p-4 text-lg leading-relaxed">
-                  <h3 className="text-lg font-bold text-[#F57327]">Important:</h3>
+                  <h3 className="text-container-foreground text-xl font-extrabold">Important:</h3>
 
                   <p>
                     Any change made to a PDF after PDF eXpress conversion or checking—including inserting the copyright
@@ -257,7 +282,7 @@ export default function CameraReadyInstructions() {
                 </p>
 
                 <div className="border-container-foreground text-container-foreground mt-8 border-2 p-4 text-lg leading-relaxed">
-                  <h3 className="text-lg font-bold text-[#F57327]">Important:</h3>
+                  <h3 className="text-container-foreground text-xl font-extrabold">Important:</h3>
 
                   <p>
                     <strong>
