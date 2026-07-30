@@ -27,7 +27,7 @@ export default function CameraReadyInstructions() {
           <h3 className="text-container-foreground text-xl font-extrabold md:text-2xl">
             Camera-ready deadline: 5 August 2026 (23:59 AoE)
           </h3>
-          <p className="mt-3 text-base leading-relaxed md:text-lg">
+          <p className="text-container-foreground mt-3 text-base leading-relaxed md:text-lg">
             Your camera-ready paper and the IEEE electronic Copyright Form (eCF) must both be submitted through the
             EUVIP 2026 submission system no later than 5 August 2026, 23:59 AoE.
           </p>
