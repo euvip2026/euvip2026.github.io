@@ -16,6 +16,7 @@ const INFORMATION_ITEMS = [
   { href: '/information/paper-kit-guidelines', label: 'PAPER KIT AND GUIDELINES' },
   { href: '/information/paper-submission', label: 'PAPER SUBMISSION' },
   { href: '/information/tutorial-submission', label: 'TUTORIAL SUBMISSION' },
+  { href: '/information/camera-ready', label: 'CAMERA-READY PAPER PREPARATION AND SUBMISSION INSTRUCTIONS' },
   // { href: '/information/project-dissemination', label: 'PROJECT DISSEMINATION' },
   // { href: '/information/student-session', label: 'STUDENT SESSION' },
 ] as const
@@ -148,11 +149,7 @@ export function Header() {
             CALLS
           </Link>
 
-          <DropdownMenu
-            open={desktopSpecialSessionsOpen}
-            onOpenChange={setDesktopSpecialSessionsOpen}
-            modal={false}
-          >
+          <DropdownMenu open={desktopSpecialSessionsOpen} onOpenChange={setDesktopSpecialSessionsOpen} modal={false}>
             <DropdownMenuTrigger asChild>
               <button
                 className={`${navLinkClassName(isSpecialSessionsActive)} gap-2 bg-transparent outline-none`}
@@ -168,7 +165,7 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
-              className="border-muted bg-background/95 text-container-foreground min-w-[280px] max-w-[420px] p-2 shadow-lg backdrop-blur-md"
+              className="border-muted bg-background/95 text-container-foreground max-w-[420px] min-w-[280px] p-2 shadow-lg backdrop-blur-md"
               onMouseEnter={cancelDesktopSpecialSessionsClose}
               onMouseLeave={scheduleDesktopSpecialSessionsClose}
             >
