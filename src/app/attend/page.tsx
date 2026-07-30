@@ -38,20 +38,15 @@ export default function AttendPage() {
           <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
             <h3 className="text-xl font-extrabold md:text-2xl">Registrations open</h3>
             <p className="mt-3 text-base leading-relaxed md:text-lg">
-              To register for the conference, please{' '}
+               Registration to EUVIP 2026 is now open. Please register by <strong>25 August 2026 (23:59 Luxembourg time, UTC+2)</strong> to benefit from the early-registration rate. Note that payments received from <strong>26 August 2026</strong> onward will be charged at the late-registration rate.
+              Please register using the following{' '}
               <strong>
                 <u>
-                  <a href="https://sntevents.uni.lu/product/euvip-2026-registration/">register using this link</a>
+                  <a target="_blank" href="https://sntevents.uni.lu/product/euvip-2026-registration/">
+                    link 
+                  </a>
                 </u>
-              </strong>
-              .
-            </p>
-          </div>
-          <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
-            <h3 className="text-xl font-extrabold md:text-2xl">Registration deadlines</h3>
-            <p className="mt-3 text-base leading-relaxed md:text-lg">
-              Early registration fees apply to payments received on or before <strong>25 August 2026</strong>. Payments
-              received from <strong>26 August 2026</strong> onward will be charged at the late-registration rate.
+              </strong>.
             </p>
           </div>
 
@@ -408,7 +403,7 @@ export default function AttendPage() {
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       2
                     </span>
-                    <p className="pt-1 leading-relaxed">Enter your planned check-in and check-out dates.</p>
+                    <p className="pt-1 leading-relaxed">Enter your planned stay dates (<u>availabilities between 27/09 and 01/10 only</u>).</p>
                   </li>
 
                   <li className="flex gap-4">
@@ -507,7 +502,7 @@ export default function AttendPage() {
                 If you're interested, please download and complete the{' '}
                 <strong>
                   <u>
-                    <a href="EUVIP2026-Booking form.pdf" download>
+                    <a target="_blank" href="/EUVIP2026-Booking form.pdf" download>
                       registration form here
                     </a>
                   </u>
