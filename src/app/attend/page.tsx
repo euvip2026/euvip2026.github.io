@@ -499,53 +499,48 @@ export default function AttendPage() {
                 <strong>01/10/2026</strong>.
               </p>
               <p className="mt-2 text-base md:text-lg">Thank you for choosing to have your event with us.</p>
+              <ul className="mt-5 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>
+                  <p className="mt-2 text-base md:text-lg">
+                    For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
+                    airport (the <strong>preferential</strong> rate for EUVIP attendees is 120 euros, breakfast
+                    included): Ibis & Ibis Budget Luxembourg Airport Route de Trèves, 2632 Findel, Luxembourg
+                  </p>
 
-              <p className="text-base md:text-lg">
-                Here's your reservation link your guest can use to make reservations:
-              </p>
-              <p className="text-base md:text-lg">
-                <a
-                  href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
-                >
-                  <strong>Book your group rate for EUVIP2026</strong>
-                </a>
-              </p>
-              <p className="mt-4 text-base md:text-lg">
-                You will find the information for your online reservation link below. If you have questions or need help
-                with the link, please do not hesitate to ask. We appreciate your business and look forward to a
-                successful event.
-              </p>
-              <div className="mt-4 grid grid-cols-[max-content_1fr] gap-x-4 gap-y-1 text-base md:text-lg">
-                <span className="font-semibold">Event Summary:</span>
-                <span>EUVIP2026</span>
-
-                <span className="font-semibold">Start Date:</span>
-                <span>Thursday, October 01, 2026</span>
-
-                <span className="font-semibold">End Date:</span>
-                <span>Friday, October 02, 2026</span>
-
-                <span className="col-span-2 font-semibold">Hotel(s) offering your special group rate:</span>
-
-                <ul className="col-span-2 ml-8 list-disc">
-                  <li>
-                    Moxy Luxembourg Airport for 174.00 EUR per night
-                    <p className="text-base md:text-lg">
-                      <a
-                        href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
-                      >
-                        <strong>Book your group rate for EUVIP2026</strong>
-                      </a>
-                    </p>
-                  </li>
-                </ul>
-              </div>
+                  <p className="text-base md:text-lg">
+                    If you're interested, please download and complete the{' '}
+                    <strong>
+                      <u>
+                        <a target="_blank" href="/EUVIP2026-Booking form.pdf" download>
+                          registration form here
+                        </a>
+                      </u>
+                    </strong>{' '}
+                    and send it to{' '}
+                    <u>
+                      <a href="mailto:Marat.APANESYAN@accor.com">Marat.APANESYAN@accor.com</a>{' '}
+                    </u>
+                  </p>
+                </li>
+                <li>
+                  <p className="mt-2 text-base md:text-lg">
+                    For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
+                    airport (the <strong>preferential</strong> rate for EUVIP attendees is 174 euros, breakfast
+                    included): Moxy Luxembourg Airport, 2632 Findel, Luxembourg
+                  </p>
+                  <p className="text-base md:text-lg">
+                    If you're interested, your reservation link your guest can use to make reservations:{' '}
+                    <a
+                      href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
+                    >
+                      <strong>Book your group rate for EUVIP2026</strong>
+                    </a>
+                  </p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
