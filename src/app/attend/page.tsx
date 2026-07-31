@@ -494,19 +494,19 @@ export default function AttendPage() {
             {/* Notice */}
             <div className="border-muted mt-10 border-t pt-8">
               <h4 className="text-xl font-extrabold">Additional Information</h4>
-              <p className="mt-2 text-base md:text-lg">Thank you for choosing to have your event with us.</p>
               
               <ul className="mt-5 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
                 <li>
-                <p className="mt-5 text-base leading-relaxed text-[#be2222ff] md:text-lg">
-                Booking at this hotel is only possible within the window of <strong>27/09/2026</strong> to{' '}
-                <strong>01/10/2026</strong>.
-              </p>
+               
                   <p className="mt-2 text-base md:text-lg">
                     For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
                     airport (the <strong>preferential</strong> rate for EUVIP attendees is 120 euros, breakfast
                     included): Ibis & Ibis Budget Luxembourg Airport Route de Trèves, 2632 Findel, Luxembourg
                   </p>
+                  <p className="mt-5 text-base leading-relaxed text-[#be2222ff] md:text-lg">
+                Booking at this hotel is only possible within the window of <strong>27/09/2026</strong> to{' '}
+                <strong>01/10/2026</strong>.
+              </p>
 
                   <p className="text-base md:text-lg">
                     If you're interested, please download and complete the{' '}
