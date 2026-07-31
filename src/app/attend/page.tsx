@@ -38,15 +38,18 @@ export default function AttendPage() {
           <div className="border-accent bg-container mt-8 border-l-4 p-5 shadow-sm md:p-6">
             <h3 className="text-xl font-extrabold md:text-2xl">Registrations open</h3>
             <p className="mt-3 text-base leading-relaxed md:text-lg">
-               Registration to EUVIP 2026 is now open. Please register by <strong>25 August 2026 (23:59 Luxembourg time, UTC+2)</strong> to benefit from the early-registration rate. Note that payments received from <strong>26 August 2026</strong> onward will be charged at the late-registration rate.
-              Please register using the following{' '}
+              Registration to EUVIP 2026 is now open. Please register by{' '}
+              <strong>25 August 2026 (23:59 Luxembourg time, UTC+2)</strong> to benefit from the early-registration
+              rate. Note that payments received from <strong>26 August 2026</strong> onward will be charged at the
+              late-registration rate. Please register using the following{' '}
               <strong>
                 <u>
                   <a target="_blank" href="https://sntevents.uni.lu/product/euvip-2026-registration/">
-                    link 
+                    link
                   </a>
                 </u>
-              </strong>.
+              </strong>
+              .
             </p>
           </div>
 
@@ -403,7 +406,9 @@ export default function AttendPage() {
                     <span className="bg-accent flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg font-extrabold text-white">
                       2
                     </span>
-                    <p className="pt-1 leading-relaxed">Enter your planned stay dates (<u>availabilities between 27/09 and 01/10 only</u>).</p>
+                    <p className="pt-1 leading-relaxed">
+                      Enter your planned stay dates (<u>availabilities between 27/09 and 01/10 only</u>).
+                    </p>
                   </li>
 
                   <li className="flex gap-4">
@@ -493,26 +498,54 @@ export default function AttendPage() {
                 Booking at this hotel is only possible within the window of <strong>27/09/2026</strong> to{' '}
                 <strong>01/10/2026</strong>.
               </p>
+              <p className="mt-2 text-base md:text-lg">Thank you for choosing to have your event with us.</p>
+
               <p className="text-base md:text-lg">
-                For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
-                airport (the <strong>preferential</strong> rate for EUVIP attendees is 120 euros, breakfast included):
-                Ibis & Ibis Budget Luxembourg Airport Route de Trèves, 2632 Findel, Luxembourg
+                Here's your reservation link your guest can use to make reservations:
               </p>
               <p className="text-base md:text-lg">
-                If you're interested, please download and complete the{' '}
-                <strong>
-                  <u>
-                    <a target="_blank" href="/EUVIP2026-Booking form.pdf" download>
-                      registration form here
-                    </a>
-                  </u>
-                </strong>{' '}
-                and send it to{' '}
-                <u>
-                  <a href="mailto:Marat.APANESYAN@accor.com">Marat.APANESYAN@accor.com</a>{' '}
-                </u>
-                .
+                <a
+                  href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
+                >
+                  <strong>Book your group rate for EUVIP2026</strong>
+                </a>
               </p>
+              <p className="mt-4 text-base md:text-lg">
+                You will find the information for your online reservation link below. If you have questions or need help
+                with the link, please do not hesitate to ask. We appreciate your business and look forward to a
+                successful event.
+              </p>
+              <div className="mt-4 grid grid-cols-[max-content_1fr] gap-x-4 gap-y-1 text-base md:text-lg">
+                <span className="font-semibold">Event Summary:</span>
+                <span>EUVIP2026</span>
+
+                <span className="font-semibold">Start Date:</span>
+                <span>Thursday, October 01, 2026</span>
+
+                <span className="font-semibold">End Date:</span>
+                <span>Friday, October 02, 2026</span>
+
+                <span className="col-span-2 font-semibold">Hotel(s) offering your special group rate:</span>
+
+                <ul className="col-span-2 ml-8 list-disc">
+                  <li>
+                    Moxy Luxembourg Airport for 174.00 EUR per night
+                    <p className="text-base md:text-lg">
+                      <a
+                        href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
+                      >
+                        <strong>Book your group rate for EUVIP2026</strong>
+                      </a>
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
