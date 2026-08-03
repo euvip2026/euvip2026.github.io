@@ -533,7 +533,7 @@ export default function Home() {
               <a href={`https://forms.gle/SuqN2dMZDuKKsoYRA`} target="_blank" className="font-bold underline">
                 travel support application
               </a>
-              . If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
+               (Deadline: 5 August 2026, 23:59 AoE). If you have any questions, concerns, or feedback related to these efforts at EUVIP 2026, please{' '}
               <a href={`${basePath}/contact/`} className="font-bold underline">
                 contact us
               </a>
