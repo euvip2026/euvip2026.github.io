@@ -111,7 +111,7 @@ export default function AttendPage() {
 
                   <tr>
                     <td className="px-5 py-4 text-base font-extrabold md:px-6 md:text-lg">
-                      Low Income Economy Countries Authors
+                      Low Income Economy Countries Authors*
                     </td>
                     <td className="px-5 py-4 text-base opacity-70 md:px-6 md:text-lg"></td>
                     <td className="px-5 py-4 text-base md:px-6 md:text-lg">€125</td>
@@ -120,7 +120,56 @@ export default function AttendPage() {
                 </tbody>
               </table>
             </div>
+            
           </div>
+        
+
+<div className="mt-6">
+  <p className="text-sm">
+    <strong> *2026 low-income countries, as defined by the World Bank:</strong>
+  </p>
+
+  <ul className="mt-3 grid list-disc gap-x-8 gap-y-1 pl-5 text-sm sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      "Afghanistan",
+      "Burkina Faso",
+      "Burundi",
+      "Central African Republic",
+      "Chad",
+      "Congo, Dem. Rep.",
+      "Eritrea",
+      "Ethiopia",
+      "Gambia, The",
+      "Guinea-Bissau",
+      "Korea, Dem. People's Rep.",
+      "Liberia",
+      "Madagascar",
+      "Malawi",
+      "Mali",
+      "Mozambique",
+      "Niger",
+      "Rwanda",
+      "Sierra Leone",
+      "Somalia",
+      "South Sudan",
+      "Sudan",
+      "Syrian Arab Republic",
+      "Uganda",
+      "Yemen, Rep.",
+    ].map((country) => (
+      <li key={country}>{country}</li>
+    ))}
+  </ul>
+
+  <a
+    className="border-muted bg-background hover:bg-background/80 mt-6 inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold shadow-sm transition"
+    href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Source: World Bank country and lending groups
+  </a>
+</div>
 
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <div>
