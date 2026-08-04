@@ -123,7 +123,7 @@ export default function CameraReadyInstructions() {
                     </li>
 
                     <li>
-                      <span className="font-semibold">All authors employed by the European Union:</span>{' '}
+                      <span className="font-semibold">All authors employed by the European Union (i.e., European Union-affiliated institution):</span>{' '}
                       979-8-3195-3697-6/26/$31.00 ©2026 European Union
                     </li>
 
