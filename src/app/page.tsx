@@ -117,6 +117,59 @@ export default function Home() {
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="space-y-4">
 
+                {/* IEE */}
+                <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                  <div className="flex flex-col items-start gap-5 sm:flex-row">
+                    <a
+                      href="https://www.iee-sensing.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                      aria-label="Visit IEE website"
+                    >
+                      <img
+                        src={`${basePath}/partners/iee.png`}
+                        alt="IEE logo"
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
+
+                      <div className="min-w-0 flex-1">
+                        <p>
+                          <strong className="text-xl">August 4:</strong> Sponsorship Announcement — We are pleased to
+                          welcome{' '}
+                          <a
+                            href="https://www.iee-sensing.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                          >
+                            IEE
+                          </a>{' '}
+                          as a sponsor.
+                        </p>
+
+                        <div className="mt-4 border-l-4 border-white/50 pl-4">
+                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About IEE</p>
+
+                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                            IEE is a global leader in innovative sensing solutions for the automotive, building management, 
+                            security, and health tech industries. We design sensors for smart IoT devices, focusing on quality 
+                            and innovation. Our advanced technologies improve safety in vehicles worldwide through automotive 
+                            sensors, optimize space and monitor occupancy in building management, and enhance health performance 
+                            with insole sensors. Operating worldwide, we value customer satisfaction, mutual respect, innovation, 
+                            teamwork, and open communication.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
                 {/* Luxprovide */}
                 <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
                   <div className="flex flex-col items-start gap-5 sm:flex-row">
