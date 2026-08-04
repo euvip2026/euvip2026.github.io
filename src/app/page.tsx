@@ -140,8 +140,8 @@ export default function Home() {
 
                       <div className="min-w-0 flex-1">
                         <p>
-                          <strong className="text-xl">August 4:</strong> Sponsorship Announcement — We are pleased to
-                          welcome{' '}
+                          <strong className="text-xl">August 4:</strong> Sponsorship Announcement — We are happy to
+                          announce that{' '}
                           <a
                             href="https://www.iee-sensing.com"
                             target="_blank"
@@ -150,7 +150,7 @@ export default function Home() {
                           >
                             IEE
                           </a>{' '}
-                          as a sponsor.
+                          is sponsoring EUVIP 2026.
                         </p>
 
                         <div className="mt-4 border-l-4 border-white/50 pl-4">
