@@ -198,7 +198,7 @@ export default function AttendPage() {
                   Each regular or special-session paper must be covered by a Full registration at either the IEEE /
                   EURASIP Member or Non-member rate.
                 </li>
-                <li>One Full registration can cover up to three accepted papers.</li>
+                <li>One Full registration can cover up to two accepted papers.</li>
                 <li>A Student Session paper requires either a Student registration or a Full registration.</li>
                 <li>
                   A 1-Day Pass covers attendance on one selected conference day and can be used to cover a dissemination
