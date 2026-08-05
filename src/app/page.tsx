@@ -117,6 +117,54 @@ export default function Home() {
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="space-y-4">
 
+                      {/* Deep by Post */}
+                      <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                  <div className="flex flex-col items-start gap-5 sm:flex-row">
+                    <a
+                      href="https://www.deep.eu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                      aria-label="Visit Deep by POST website"
+                    >
+                      <img
+                        src={`${basePath}/partners/deep_by_post.png`}
+                        alt="Deep by POST logo"
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
+
+                      <div className="min-w-0 flex-1">
+                        <p>
+                          <strong className="text-xl">August 5:</strong> Sponsorship Announcement — We are happy to
+                          announce that{' '}
+                          <a
+                            href="https://www.deep.eu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                          >
+                            Deep by POST
+                          </a>{' '}
+                          is sponsoring EUVIP 2026.
+                        </p>
+
+                        <div className="mt-4 border-l-4 border-white/50 pl-4">
+                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About Deep by POST</p>
+
+                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                          DEEP brings together the ICT expertise and resources of POST Luxembourg Group to support businesses, institutions and associations in managing their IT resources and accelerating their digital transformation. With more than 750 employees and a resilient, sovereign Telecom & ICT infrastructure, DEEP delivers professional digital services in Luxembourg, the Greater Region and across Europe. Its integrated portfolio covers Cloud, Cybersecurity and Data, helping organisations innovate, improve agility and create lasting value. By combining advanced technologies with expert guidance, DEEP provides tailored solutions that address each client’s specific challenges while ensuring security, performance and reliability. Committed to digital sovereignty and responsible innovation, DEEP works alongside its customers to build sustainable, future-ready IT environments. Through continuous technological exploration and a customer-centric approach, its advisors and specialists empower organisations to confidently embrace the opportunities of the digital age and successfully adapt to tomorrow’s evolving digital landscape.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
                 {/* IEE */}
                 <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
                   <div className="flex flex-col items-start gap-5 sm:flex-row">
