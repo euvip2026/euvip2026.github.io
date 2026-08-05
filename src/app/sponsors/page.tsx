@@ -6,6 +6,69 @@ export const metadata: Metadata = {
   alternates: { canonical: '/sponsors/' },
 }
 
+// TODO: replace the placeholder `href: '#'` values with each sponsor's website.
+const sponsorTiers = [
+  {
+    tier: 'PLATINUM',
+    bgColor: 'bg-[#f7fbfc]',
+    iconSrc: '/sponsors-platinum.png',
+    logoHeight: 'h-32 md:h-40',
+    columns: 'grid-cols-1 sm:grid-cols-2',
+    sponsors: [
+      { name: 'FNR', imageSrc: '/sponsors/platinum/1-fnr.png', href: 'https://www.fnr.lu/' },
+      { name: 'University of Luxembourg', imageSrc: '/sponsors/platinum/2-unilu.png', href: 'https://www.uni.lu/' },
+    ],
+  },
+  {
+    tier: 'GOLD',
+    bgColor: 'bg-[#fcfaf2]',
+    iconSrc: '/sponsors-gold.png',
+    logoHeight: 'h-24 md:h-32',
+    columns: 'grid-cols-1 sm:grid-cols-2',
+    sponsors: [
+      { name: 'Google', imageSrc: '/sponsors/gold/1-google.png', href: 'https://about.google/' },
+      { name: 'Deep by POST', imageSrc: '/sponsors/gold/2-deep-post.png', href: 'https://www.deep.eu/' },
+    ],
+  },
+  {
+    tier: 'SILVER',
+    bgColor: 'bg-[#f6f6f6]',
+    iconSrc: '/sponsors-silver.png',
+    logoHeight: 'h-20 md:h-24',
+    columns: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
+    sponsors: [
+      { name: 'Incode', imageSrc: '/sponsors/silver/1-incode.png', href: 'https://www.incode.com/' },
+      { name: 'LuxProvide MeluXina', imageSrc: '/sponsors/silver/2-luxprovide-meluxina.png', href: 'https://www.luxprovide.lu/' },
+      { name: 'IEE', imageSrc: '/sponsors/silver/3-iee.png', href: 'https://www.iee-sensing.com/' },
+    ],
+  },
+  {
+    tier: 'BRONZE',
+    bgColor: 'bg-[#ede4d9]',
+    iconSrc: '/sponsors-bronze.png',
+    logoHeight: 'h-16 md:h-20',
+    columns: 'grid-cols-1 sm:grid-cols-2',
+    sponsors: [
+      { name: 'Luxembourg Convention Centre', imageSrc: '/sponsors/bronze/1-lux-convention-center.png', href: 'https://luxembourg-convention-bureau.lu/en' },
+      { name: 'The Dots Luxembourg', imageSrc: '/sponsors/bronze/2-the-dots.png', href: 'https://thedots.lu/' },
+    ],
+  },
+  {
+    tier: 'TECHNICAL',
+    bgColor: 'bg-white',
+    iconSrc: '/sponsors-logo.png',
+    logoHeight: 'h-16 md:h-20',
+    columns: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5',
+    sponsors: [
+      { name: 'EURASIP', imageSrc: '/sponsors/technical/1-eurasip.png', href: '#' },
+      { name: 'IEEE', imageSrc: '/sponsors/technical/2-ieee.png', href: '#' },
+      { name: 'IEEE Student Branch', imageSrc: '/sponsors/technical/3-ieee-students.jpeg', href: '#' },
+      { name: 'IEEE Sensors', imageSrc: '/sponsors/technical/4-ieee.webp', href: '#' },
+      { name: 'IEEE Signal Processing Society', imageSrc: '/sponsors/technical/5-ieee-signal-processing.png', href: '#' },
+    ],
+  },
+]
+
 const packages = [
   {
     title: 'PLATINUM PACKAGE',
@@ -86,6 +149,62 @@ const packages = [
     ],
   },
 ]
+
+interface SponsorTierSectionProps {
+  tier: string
+  bgColor: string
+  iconSrc: string
+  logoHeight: string
+  columns: string
+  sponsors: { name: string; imageSrc: string; href: string }[]
+}
+
+function SponsorTierSection({ tier, bgColor, iconSrc, logoHeight, columns, sponsors }: SponsorTierSectionProps) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+
+  return (
+    <section className={`relative w-full overflow-hidden ${bgColor}`}>
+      <div className="mx-auto max-w-7xl py-10 md:px-4 lg:py-12">
+        {/* Header Tab */}
+        <div className="relative z-10 mb-6 flex min-h-[90px] w-[90%] max-w-[500px] items-center gap-4 rounded-r-[100px] bg-[#2f566e] py-3 pr-8 pl-4 font-['Roboto',sans-serif] text-white shadow-md sm:w-[80%] sm:pl-8 md:w-[65%] lg:mb-8 lg:w-[70%]">
+          {/* Header Icon */}
+          <div className="flex h-12 w-12 items-center justify-center md:h-20 md:w-20">
+            <img
+              src={`${basePath}${iconSrc}`}
+              alt=""
+              className="h-full w-full object-contain opacity-90"
+              style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
+            />
+          </div>
+
+          <h2 className="text-lg leading-tight font-semibold tracking-wide uppercase sm:text-xl md:text-2xl lg:text-[28px]">
+            {tier}
+          </h2>
+        </div>
+
+        <ul className={`grid items-center gap-6 px-6 sm:px-12 md:px-20 lg:px-0 ${columns}`}>
+          {sponsors.map((sponsor) => (
+            <li key={sponsor.name}>
+              <a
+                href={sponsor.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={sponsor.name}
+                className="flex h-full items-center justify-center bg-white p-6 shadow-sm transition hover:shadow-md focus-visible:ring-2 focus-visible:ring-[#2f566e] focus-visible:outline-none"
+              >
+                <img
+                  src={`${basePath}${sponsor.imageSrc}`}
+                  alt={`${sponsor.name} logo`}
+                  className={`w-full ${logoHeight} object-contain`}
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
 
 interface PackageSectionProps {
   title: string
@@ -178,15 +297,17 @@ export default function SponsorsPage() {
       </section>
 
       <main className="bg-gray-50">
-          <section className={`relative w-full overflow-hidden`}>
-            <div className="mx-auto max-w-7xl py-12 md:px-4 lg:py-16">
-              <img src={`${basePath}/partners/ranked-sponsors/1.png`} alt="Sponsors Image" className="w-full object-cover" />
-              <img src={`${basePath}/partners/ranked-sponsors/2.png`} alt="Sponsors Image" className="w-full object-cover" />
-              <img src={`${basePath}/partners/ranked-sponsors/3.png`} alt="Sponsors Image" className="w-full object-cover" />
-              <img src={`${basePath}/partners/ranked-sponsors/4.png`} alt="Sponsors Image" className="w-full object-cover" />
-              <img src={`${basePath}/partners/ranked-sponsors/5.png`} alt="Sponsors Image" className="w-full object-cover" />
-            </div>
-          </section>
+        {sponsorTiers.map((tier) => (
+          <SponsorTierSection
+            key={tier.tier}
+            tier={tier.tier}
+            bgColor={tier.bgColor}
+            iconSrc={tier.iconSrc}
+            logoHeight={tier.logoHeight}
+            columns={tier.columns}
+            sponsors={tier.sponsors}
+          />
+        ))}
 
         {packages.map((pkg) => (
           <PackageSection
