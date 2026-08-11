@@ -546,49 +546,61 @@ export default function AttendPage() {
               
               <ul className="mt-5 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
                 <li>
-               
-                  <p className="mt-2 text-base md:text-lg">
-                    For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
-                    airport (the <strong>preferential</strong> rate for EUVIP attendees is 120 euros, breakfast
-                    included): Ibis & Ibis Budget Luxembourg Airport Route de Trèves, 2632 Findel, Luxembourg
-                  </p>
-                  <p className="mt-5 text-base leading-relaxed text-[#be2222ff] md:text-lg">
-                Booking at this hotel is only possible within the window of <strong>27/09/2026</strong> to{' '}
-                <strong>01/10/2026</strong>.
-              </p>
-
-                  <p className="text-base md:text-lg">
-                    If you're interested, please download and complete the{' '}
-                    <strong>
-                      <u>
-                        <a target="_blank" href="/EUVIP2026-Booking form.pdf" download>
-                          registration form here
-                        </a>
-                      </u>
-                    </strong>{' '}
-                    and send it to{' '}
-                    <u>
-                      <a href="mailto:Marat.APANESYAN@accor.com">Marat.APANESYAN@accor.com</a>{' '}
-                    </u>
-                  </p>
+                  Please note that Parc Alvisse Hotel Conference and Spa is <strong>fully booked on the night of 01/10/2026 to 02/10/2026</strong>. For this reason,{' '}
+                  <span className="text-base leading-relaxed text-[#be2222ff] md:text-lg">
+                    booking at this hotel is only possible within the window of{' '}
+                    <strong>27/09/2026</strong> to <strong>01/10/2026</strong>.
+                  </span>
                 </li>
                 <li>
                   <p className="mt-2 text-base md:text-lg">
-                    For those who wish to stay the night of 01/10 to 02/10, we have arranged another hotel next to the
-                    airport (the <strong>preferential</strong> rate for EUVIP attendees is 174 euros, breakfast
-                    included): Moxy Luxembourg Airport, 2632 Findel, Luxembourg
+                    For those who wish to stay the night of 01/10/2026 to 02/10/2026, we have arranged two hotel options next to the airport:
                   </p>
-                  <p className="text-base md:text-lg">
-                    If you're interested, your reservation link your guest can use to make reservations:{' '}
-                    <a
-                      href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
-                    >
-                      <strong>Book your group rate for EUVIP2026</strong>
-                    </a>
-                  </p>
+
+                  <ul className="mt-2 list-disc pl-6 space-y-4">
+                    <li>
+                      <p className="text-base md:text-lg">
+                        <strong>Ibis & Ibis Budget Luxembourg Airport</strong> — Route de Trèves, 2632 Findel, Luxembourg.
+                        The <strong>preferential</strong> rate for EUVIP attendees is 120 euros, breakfast included.
+                      </p>
+                      <p className="text-base md:text-lg">
+                        If you're interested, please download and complete the{' '}
+                        <strong>
+                          <u>
+                            <a target="_blank" href="/EUVIP2026-Booking form.pdf" download>
+                              registration form here
+                            </a>
+                          </u>
+                        </strong>{' '}
+                        and send it to{' '}
+                        <u>
+                          <a href="mailto:Marat.APANESYAN@accor.com">
+                            Marat.APANESYAN@accor.com
+                          </a>
+                        </u>
+                        .
+                      </p>
+                    </li>
+
+                    <li>
+                      <p className="text-base md:text-lg">
+                        <strong>Moxy Luxembourg Airport</strong> — 2632 Findel, Luxembourg.
+                        The <strong>preferential</strong> rate for EUVIP attendees is 174 euros, breakfast included.
+                      </p>
+                      <p className="text-base md:text-lg">
+                        If you're interested, you can make your reservation using the following link:{' '}
+                        <a
+                          href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1785495585115&key=GRP&app=resvlink&_branch_match_id=1611756269017482387&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXTywo0MtNLCrKzC8p0UvOz9UvSi0uy0wtN7IHytiCODmZedlqmSm2huYWpiaWpqYWpoaGpmrZqZW27kEBanVFqWmpQO156fFJRfnlxalFtsGJaYlFmQC6Wyy4YQAAAA%3D%3D"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:text-primary-dark font-medium underline underline-offset-2"
+                        >
+                          <strong>Book your group rate for EUVIP2026</strong>
+                        </a>
+                        .
+                      </p>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
