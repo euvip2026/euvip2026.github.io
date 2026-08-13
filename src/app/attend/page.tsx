@@ -401,6 +401,20 @@ export default function AttendPage() {
         </div>
       </section>
 
+            {/* YouTube Video */}
+      <section className="mx-auto max-w-7xl px-4 pt-6">
+        <div className="aspect-video w-full overflow-hidden shadow-sm">
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube.com/embed/Yds_drwxZVI"
+            title="Programme Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       {/* Visa and Travel Authorization */}
       <section className="bg-container text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">

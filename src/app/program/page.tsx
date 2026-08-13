@@ -160,19 +160,6 @@ export default function SchedulePage() {
           </div>
         </div>
       </section>
-      {/* YouTube Video */}
-      <section className="mx-auto max-w-7xl px-4 pt-6">
-        <div className="aspect-video w-full overflow-hidden shadow-sm">
-          <iframe
-            className="h-full w-full"
-            src="https://www.youtube.com/embed/Yds_drwxZVI"
-            title="Programme Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
-      </section>
     </>
   )
 }
