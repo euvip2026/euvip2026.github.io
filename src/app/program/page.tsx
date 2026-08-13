@@ -24,15 +24,6 @@ type Schedule = {
 }
 
 const schedule = scheduleData as Schedule
-// const sessionTypeColors: Record<string, string> = {
-//   keynote: 'bg-accent text-white',
-//   tutorial: 'bg-primary-light text-white',
-//   session: 'bg-primary text-white',
-//   poster: 'bg-primary/80 text-white',
-//   break: 'bg-gray-200 text-gray-700',
-//   social: 'bg-accent/80 text-white',
-//   ceremony: 'bg-accent text-white',
-// }
 
 export default function SchedulePage() {
   const [activeDay, setActiveDay] = useState(0)
@@ -43,11 +34,17 @@ export default function SchedulePage() {
       {/* Hero */}
       <section className="mx-auto max-w-7xl md:px-4">
         <div className="relative h-56 overflow-hidden shadow-sm sm:h-[208px]">
-          <img src={`${basePath}/program.png`} alt="Program Image" className="h-full w-full object-cover" />
+          <img
+            src={`${basePath}/program.png`}
+            alt="Program Image"
+            className="h-full w-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
 
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Programme Schedule</h2>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              Programme Schedule
+            </h2>
             <div className="mt-3 h-1 w-16 bg-white/90" aria-hidden="true" />
           </div>
         </div>
@@ -80,7 +77,9 @@ export default function SchedulePage() {
                 }`}
               >
                 <span
-                  className={`text-md block tracking-wider uppercase ${activeDay === index ? 'text-primary-foreground' : 'text-muted-500'}`}
+                  className={`text-md block tracking-wider uppercase ${
+                    activeDay === index ? 'text-primary-foreground' : 'text-muted-500'
+                  }`}
                 >
                   {day.label}
                 </span>
@@ -92,7 +91,9 @@ export default function SchedulePage() {
           {/* Active Day Schedule */}
           <div>
             <div className="mb-10 text-center">
-              <h2 className="text-primary mb-2 text-2xl font-bold">{schedule.days[activeDay].title}</h2>
+              <h2 className="text-primary mb-2 text-2xl font-bold">
+                {schedule.days[activeDay].title}
+              </h2>
               <p className="text-container-foreground-600">
                 {new Date(schedule.days[activeDay].date).toLocaleDateString('en-US', {
                   weekday: 'long',
@@ -107,35 +108,69 @@ export default function SchedulePage() {
               {schedule.days[activeDay].sessions.map((session, index) => (
                 <div
                   key={index}
-                  className={`overflow-hidden ${session.type === 'break' ? 'bg-[#FCECD8]' : 'text-container-foreground bg-container'}`}
+                  className={`overflow-hidden ${
+                    session.type === 'break'
+                      ? 'bg-[#FCECD8]'
+                      : 'text-container-foreground bg-container'
+                  }`}
                 >
                   <div className="flex flex-col sm:flex-row">
                     {/* Time */}
                     <div
-                      className={`shrink-0 p-4 sm:w-36 ${session.type === 'break' ? 'bg-[#E3CDC1]' : 'bg-primary/10'}`}
+                      className={`shrink-0 p-4 sm:w-36 ${
+                        session.type === 'break'
+                          ? 'bg-[#E3CDC1]'
+                          : 'bg-primary/10'
+                      }`}
                     >
-                      <span className="text-primary font-semibold">{session.time}</span>
+                      <span className="text-primary font-semibold">
+                        {session.time}
+                      </span>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">{session.title}</h3>
+                      <h3 className="text-lg font-semibold text-gray-900">
+                        {session.title}
+                      </h3>
 
-                      {session.speaker && <p className="mt-1 text-sm font-medium text-gray-700">{session.speaker}</p>}
-
-                      {session.location && (
-                        <p className="mt-1 text-sm text-gray-600">
-                          <span className="font-medium">Location:</span> {session.location}
+                      {session.speaker && (
+                        <p className="mt-1 text-sm font-medium text-gray-700">
+                          {session.speaker}
                         </p>
                       )}
 
-                      {session.description && <p className="mt-1 text-sm text-gray-600">{session.description}</p>}
+                      {session.location && (
+                        <p className="mt-1 text-sm text-gray-600">
+                          <span className="font-medium">Location:</span>{' '}
+                          {session.location}
+                        </p>
+                      )}
+
+                      {session.description && (
+                        <p className="mt-1 text-sm text-gray-600">
+                          {session.description}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
+      </section>
+      {/* YouTube Video */}
+      <section className="mx-auto max-w-7xl px-4 pt-6">
+        <div className="aspect-video w-full overflow-hidden shadow-sm">
+          <iframe
+            className="h-full w-full"
+            src="https://www.youtube.com/embed/Yds_drwxZVI"
+            title="Programme Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
       </section>
     </>
