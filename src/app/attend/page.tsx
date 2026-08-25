@@ -57,11 +57,13 @@ export default function AttendPage() {
 
             <p className="mt-3 text-base leading-relaxed md:text-lg">
               Registration to EUVIP 2026 is now open. Please register by{' '}
-              <strong>25 August 2026 (23:59 Luxembourg time, UTC+2)</strong> to
-              benefit from the early-registration rate. Note that payments
-              received from <strong>26 August 2026</strong> onward will be
-              charged at the late-registration rate. Please register using the
-              following{' '}
+              <strong>
+                {/* <s>25 August 2026 (23:59 Luxembourg time, UTC+2)</s>{' '} */}
+                04 September 2026 (23:59 Luxembourg time, UTC+2)
+              </strong>{' '}
+              to benefit from the early-registration rate. Note that payments received
+              from <strong>05 September 2026</strong> onward will be charged at the
+              late-registration rate. Please register using the following{' '}
               <strong>
                 <u>
                   <a
