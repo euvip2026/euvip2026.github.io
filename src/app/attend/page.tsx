@@ -404,7 +404,7 @@ export default function AttendPage() {
       </section>
 
             {/* YouTube Video */}
-      <section className="mx-auto max-w-7xl px-4 pt-6">
+      {/* <section className="mx-auto max-w-7xl px-4 pt-6">
         <div className="aspect-video w-full overflow-hidden shadow-sm">
           <iframe
             className="h-full w-full"
@@ -415,7 +415,7 @@ export default function AttendPage() {
             allowFullScreen
           />
         </div>
-      </section>
+      </section> */}
 
       {/* Visa and Travel Authorization */}
       <section className="bg-container text-container-foreground">
