@@ -848,197 +848,191 @@ export default function AttendPage() {
       </section>
 
       {/* About Luxembourg */}
-      <section className="bg-container text-container-foreground py-8">
-        <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
-          <div>
-            <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">
-              Luxembourg at a Glance
-            </h2>
-            <div
-              className="bg-accent mt-3 h-1 w-16 rounded-full"
-              aria-hidden="true"
-            />
-          </div>
-        </div>
-
-        <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
-          <div className="bg-container rounded-lg">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-container-foreground mb-6 text-lg leading-relaxed">
-                EUVIP 2026 will be held in Luxembourg, a centrally located
-                European country offering a stable, international, and
-                research-driven environment.
-              </p>
-
-              <p className="text-container-foreground mb-6 text-lg leading-relaxed">
-                Luxembourg is situated at the crossroads of Europe and is easily
-                reachable from major European cities. The country hosts a highly
-                multicultural society, with more than 170 nationalities, and is
-                home to several major European institutions, including the
-                European Court of Justice and the European Investment Bank.
-              </p>
-
-              <p className="text-container-foreground mb-6 text-lg leading-relaxed">
-                With one of the highest GDPs per capita worldwide, Luxembourg
-                has established itself as a strong hub for research, innovation,
-                and technology, with strategic focus areas including artificial
-                intelligence, space, cybersecurity, mobility, 6G, and FinTech.
-              </p>
-
-              <p className="text-container-foreground mb-6 text-lg leading-relaxed">
-                Luxembourg City is also known for its UNESCO-listed Old Town and
-                historic fortifications, as well as for its cultural life,
-                natural landscapes, and high quality of life.
-              </p>
-
-              <p className="text-container-foreground text-lg leading-relaxed">
-                To get inspired about what you can do and discover during your
-                trip to Luxembourg, take some time to explore{' '}
-                <a
-                  href="https://www.visitluxembourg.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-bold underline"
-                >
-                  visitluxembourg.com
-                </a>
-                .
-              </p>
+      <section className="bg-container text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+                Luxembourg at a Glance
+              </h2>
+              <div
+                className="bg-accent mt-3 h-1 w-16 rounded-full"
+                aria-hidden="true"
+              />
             </div>
           </div>
-        </div>
 
-        <div className="mx-auto mb-4 max-w-4xl">
-          <Slider />
+          <div className="mt-8 space-y-6 text-base leading-relaxed md:text-lg">
+            <p>
+              EUVIP 2026 will be held in Luxembourg, a centrally located
+              European country offering a stable, international, and
+              research-driven environment.
+            </p>
+
+            <p>
+              Luxembourg is situated at the crossroads of Europe and is easily
+              reachable from major European cities. The country hosts a highly
+              multicultural society, with more than 170 nationalities, and is
+              home to several major European institutions, including the
+              European Court of Justice and the European Investment Bank.
+            </p>
+
+            <p>
+              With one of the highest GDPs per capita worldwide, Luxembourg
+              has established itself as a strong hub for research, innovation,
+              and technology, with strategic focus areas including artificial
+              intelligence, space, cybersecurity, mobility, 6G, and FinTech.
+            </p>
+
+            <p>
+              Luxembourg City is also known for its UNESCO-listed Old Town and
+              historic fortifications, as well as for its cultural life,
+              natural landscapes, and high quality of life.
+            </p>
+
+            <p>
+              To get inspired about what you can do and discover during your
+              trip to Luxembourg, take some time to explore{' '}
+              <a
+                href="https://www.visitluxembourg.com"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold underline"
+              >
+                visitluxembourg.com
+              </a>
+              .
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-4xl">
+            <Slider />
+          </div>
         </div>
       </section>
 
       {/* Getting There */}
-      <section className="bg-container text-container-foreground py-8">
-        <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
-          <div>
-            <h2 className="text-container-foreground text-3xl font-extrabold tracking-tight md:text-4xl">
-              Getting There
-            </h2>
-            <div
-              className="bg-accent mt-3 h-1 w-16 rounded-full"
-              aria-hidden="true"
-            />
+      <section className="bg-background text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+                Getting There
+              </h2>
+              <div
+                className="bg-accent mt-3 h-1 w-16 rounded-full"
+                aria-hidden="true"
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="bg-container mx-auto flex max-w-7xl flex-wrap items-end justify-between gap-4 p-4 px-6 md:px-8">
-          <div className="bg-container rounded-lg">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-container-foreground mb-10 text-lg leading-relaxed">
-                Luxembourg is centrally located in Europe and well connected by
-                air, train, and road.
+          <p className="mt-8 text-base leading-relaxed md:text-lg">
+            Luxembourg is centrally located in Europe and well connected by
+            air, train, and road.
+          </p>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-3">
+            <div>
+              <h3 className="mb-4 flex items-center gap-3 text-xl font-bold">
+                By Air
+              </h3>
+
+              <p className="mb-4 text-base leading-relaxed md:text-lg">
+                Luxembourg is well connected within Europe and
+                internationally.
               </p>
 
-              <div className="grid gap-8 lg:grid-cols-3">
-                <div>
-                  <h3 className="text-container-foreground mb-4 flex items-center gap-3 text-xl font-bold">
-                    By Air
-                  </h3>
+              <ul className="list-disc space-y-2 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>
+                  Direct flights from numerous European destinations.
+                </li>
+                <li>Direct flights to more than 100 destinations.</li>
+                <li>
+                  Airport is approximately 10 minutes from the city centre.
+                </li>
+                <li>
+                  Less than a one-hour flight from major international hubs
+                  such as Paris, Frankfurt, Amsterdam, and Geneva.
+                </li>
+              </ul>
+            </div>
 
-                  <p className="text-container-foreground mb-4 text-lg leading-relaxed">
-                    Luxembourg is well connected within Europe and
-                    internationally.
-                  </p>
+            <div className="border-muted border-l-2 pl-8">
+              <h3 className="mb-4 flex items-center gap-3 text-xl font-bold">
+                By Train or Car
+              </h3>
 
-                  <ul className="text-container-foreground list-disc space-y-2 pl-6 marker:text-[#2f566e]">
-                    <li>
-                      Direct flights from numerous European destinations.
-                    </li>
-                    <li>Direct flights to more than 100 destinations.</li>
-                    <li>
-                      Airport is approximately 10 minutes from the city centre.
-                    </li>
-                    <li>
-                      Less than a one-hour flight from major international hubs
-                      such as Paris, Frankfurt, Amsterdam, and Geneva.
-                    </li>
-                  </ul>
-                </div>
+              <p className="mb-4 text-base leading-relaxed md:text-lg">
+                Bordered by Belgium, France, and Germany with excellent
+                connections.
+              </p>
 
-                <div className="border-container-foreground/60 border-l-2 pl-8">
-                  <h3 className="text-container-foreground mb-4 flex items-center gap-3 text-xl font-bold">
-                    By Train or Car
-                  </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-muted border-b">
+                      <th className="py-2 text-left font-medium">
+                        City
+                      </th>
+                      <th className="py-2 text-left font-medium">
+                        By Car
+                      </th>
+                      <th className="py-2 text-left font-medium">
+                        By Train
+                      </th>
+                    </tr>
+                  </thead>
 
-                  <p className="text-container-foreground mb-4 text-lg leading-relaxed">
-                    Bordered by Belgium, France, and Germany with excellent
-                    connections.
-                  </p>
-
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b border-gray-300">
-                          <th className="text-container-foreground py-2 text-left font-medium">
-                            City
-                          </th>
-                          <th className="text-container-foreground py-2 text-left font-medium">
-                            By Car
-                          </th>
-                          <th className="text-container-foreground py-2 text-left font-medium">
-                            By Train
-                          </th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        {travelTimes.map((item) => (
-                          <tr
-                            key={item.city}
-                            className="border-muted border-b"
-                          >
-                            <td className="text-container-foreground py-2">
-                              {item.city}
-                            </td>
-                            <td className="text-container-foreground py-2">
-                              {item.byCar}
-                            </td>
-                            <td className="text-container-foreground py-2">
-                              {item.byTrain}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <div className="border-container-foreground/60 border-l-2 pl-8">
-                  <h3 className="text-container-foreground mb-4 flex items-center gap-3 text-xl font-bold">
-                    Local Mobility
-                  </h3>
-
-                  <ul className="text-container-foreground list-disc space-y-2 pl-6 marker:text-[#2f566e]">
-                    <li>
-                      Public transport is free of charge nationwide, including
-                      buses, trams, and trains.
-                    </li>
-                    <li>
-                      Taxi services are widely available, including app-based
-                      services such as Uber and Webtaxi.
-                    </li>
-                    <li>
-                      For public transport information in Luxembourg, consult
-                      the{' '}
-                      <a
-                        href="https://www.mobiliteit.lu/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="font-bold hover:underline"
+                  <tbody>
+                    {travelTimes.map((item) => (
+                      <tr
+                        key={item.city}
+                        className="border-muted border-b"
                       >
-                        Mobiliteit journey planner
-                      </a>{' '}
-                      for routes and schedules.
-                    </li>
-                  </ul>
-                </div>
+                        <td className="py-2">
+                          {item.city}
+                        </td>
+                        <td className="py-2">
+                          {item.byCar}
+                        </td>
+                        <td className="py-2">
+                          {item.byTrain}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
+            </div>
+
+            <div className="border-muted border-l-2 pl-8">
+              <h3 className="mb-4 flex items-center gap-3 text-xl font-bold">
+                Local Mobility
+              </h3>
+
+              <ul className="list-disc space-y-2 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>
+                  Public transport is free of charge nationwide, including
+                  buses, trams, and trains.
+                </li>
+                <li>
+                  Taxi services are widely available, including app-based
+                  services such as Uber and Webtaxi.
+                </li>
+                <li>
+                  For public transport information in Luxembourg, consult
+                  the{' '}
+                  <a
+                    href="https://www.mobiliteit.lu/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-bold hover:underline"
+                  >
+                    Mobiliteit journey planner
+                  </a>{' '}
+                  for routes and schedules.
+                </li>
+              </ul>
             </div>
           </div>
         </div>

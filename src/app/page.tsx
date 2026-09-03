@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ImportantDates from '@/components/ImportantDates'
+import { ExpandableText } from '@/components/ExpandableText'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -153,13 +154,9 @@ export default function Home() {
                           is sponsoring EUVIP 2026.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About Deep by POST</p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                        <ExpandableText label="About Deep by POST">
                           DEEP brings together the ICT expertise and resources of POST Luxembourg Group to support businesses, institutions and associations in managing their IT resources and accelerating their digital transformation. With more than 750 employees and a resilient, sovereign Telecom & ICT infrastructure, DEEP delivers professional digital services in Luxembourg, the Greater Region and across Europe. Its integrated portfolio covers Cloud, Cybersecurity and Data, helping organisations innovate, improve agility and create lasting value. By combining advanced technologies with expert guidance, DEEP provides tailored solutions that address each client’s specific challenges while ensuring security, performance and reliability. Committed to digital sovereignty and responsible innovation, DEEP works alongside its customers to build sustainable, future-ready IT environments. Through continuous technological exploration and a customer-centric approach, its advisors and specialists empower organisations to confidently embrace the opportunities of the digital age and successfully adapt to tomorrow’s evolving digital landscape.
-                          </p>
-                        </div>
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>
@@ -201,18 +198,14 @@ export default function Home() {
                           is sponsoring EUVIP 2026.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About IEE</p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
-                            IEE is a global leader in innovative sensing solutions for the automotive, building management, 
-                            security, and health tech industries. We design sensors for smart IoT devices, focusing on quality 
-                            and innovation. Our advanced technologies improve safety in vehicles worldwide through automotive 
-                            sensors, optimize space and monitor occupancy in building management, and enhance health performance 
-                            with insole sensors. Operating worldwide, we value customer satisfaction, mutual respect, innovation, 
+                        <ExpandableText label="About IEE">
+                            IEE is a global leader in innovative sensing solutions for the automotive, building management,
+                            security, and health tech industries. We design sensors for smart IoT devices, focusing on quality
+                            and innovation. Our advanced technologies improve safety in vehicles worldwide through automotive
+                            sensors, optimize space and monitor occupancy in building management, and enhance health performance
+                            with insole sensors. Operating worldwide, we value customer satisfaction, mutual respect, innovation,
                             teamwork, and open communication.
-                          </p>
-                        </div>
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>
@@ -254,13 +247,9 @@ export default function Home() {
                           as a sponsor.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About Luxprovide</p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
-                          LuxProvide is at the forefront of digital intelligence, combining data science expertise with supercomputing capabilities. Centered around MeluXina, EuroHPC’s advanced supercomputer in Luxembourg, LuxProvide focuses on accuracy, security, and sustainability in the digital realm. The company transcends traditional technological boundaries, fostering innovative solutions that elevate the human experience and drive positive change. LuxProvide is dedicated to pioneering a future where technology not only evolves but enhances every aspect of life. 
-                          </p>
-                        </div>
+                        <ExpandableText label="About Luxprovide">
+                          LuxProvide is at the forefront of digital intelligence, combining data science expertise with supercomputing capabilities. Centered around MeluXina, EuroHPC’s advanced supercomputer in Luxembourg, LuxProvide focuses on accuracy, security, and sustainability in the digital realm. The company transcends traditional technological boundaries, fostering innovative solutions that elevate the human experience and drive positive change. LuxProvide is dedicated to pioneering a future where technology not only evolves but enhances every aspect of life.
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>
@@ -321,10 +310,7 @@ export default function Home() {
                           as a sponsor.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About Incode</p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                        <ExpandableText label="About Incode">
                             Incode Technologies is a global leader in AI-powered identity verification and biometric
                             authentication. Powered by in-house developed technology in machine learning and liveness
                             detection, Incode develops secure, privacy-conscious identity solutions for governments and
@@ -334,8 +320,7 @@ export default function Home() {
                             high-assurance identity, Incode helps organizations build trusted digital experiences at
                             scale. Headquartered in San Francisco, Incode operates globally across North America,
                             Europe, Latin America, and other international markets.
-                          </p>
-                        </div>
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>
@@ -387,12 +372,7 @@ export default function Home() {
                           as a sponsor.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">
-                            About The Dots Luxembourg
-                          </p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                        <ExpandableText label="About The Dots Luxembourg">
                             Based in Luxembourg, The Dots is a marketing and events agency dedicated to the technology
                             ecosystem. It supports companies, institutions, startups, and innovative organizations in
                             building meaningful brands, strengthening market presence, and engaging key audiences.
@@ -400,8 +380,7 @@ export default function Home() {
                             building, lead generation, and event management, The Dots delivers tailored, end-to-end
                             solutions that increase visibility, create lasting impact, foster valuable connections, and
                             transform ideas into experiences that support sustainable business growth.
-                          </p>
-                        </div>
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>
@@ -479,10 +458,7 @@ export default function Home() {
                           as a sponsor.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">About Google</p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                        <ExpandableText label="About Google">
                             Google is a global technology company whose mission is to organize the world’s information
                             and make it universally accessible and useful. Its products and platforms help billions of
                             people search for information, communicate, navigate, learn, work, create, and grow their
@@ -497,8 +473,7 @@ export default function Home() {
                             scientific research, social impact, and economic opportunity through partnerships, training
                             initiatives, responsible innovation, and philanthropic work, aiming to make technology
                             beneficial and practical for everyone across the globe.
-                          </p>
-                        </div>
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>
@@ -552,12 +527,7 @@ export default function Home() {
                           as a sponsor.
                         </p>
 
-                        <div className="mt-4 border-l-4 border-white/50 pl-4">
-                          <p className="text-sm font-semibold tracking-wider text-white/70 uppercase">
-                            About Luxembourg Convention Bureau
-                          </p>
-
-                          <p className="mt-2 w-full leading-relaxed text-white/90">
+                        <ExpandableText label="About Luxembourg Convention Bureau">
                             Created by Luxembourg City and the Ministry of the Economy, the Luxembourg Convention Bureau
                             is the official body promoting the Grand Duchy as a leading destination for professional
                             events. It provides event organisers with free, impartial, and tailored support for
@@ -565,8 +535,7 @@ export default function Home() {
                             selection, supplier connections, site visits, and familiarisation trips, the Bureau
                             simplifies event planning while showcasing Luxembourg’s accessibility, multilingual
                             expertise, innovative ecosystem, high-quality infrastructure, and hospitality.
-                          </p>
-                        </div>
+                        </ExpandableText>
                       </div>
                     </div>
                   </div>

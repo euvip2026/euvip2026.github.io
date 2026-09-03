@@ -50,19 +50,19 @@ const TYPE_STYLES: Record<
   BlockType,
   { row: string; accent: string; label: string }
 > = {
-  welcome: { row: 'bg-white', accent: 'text-gray-700', label: 'General' },
-  keynote: { row: 'bg-[#EDE7F6]', accent: 'text-[#6A3FA0]', label: 'Keynote' },
-  tutorial: { row: 'bg-[#DCEEFB]', accent: 'text-[#1D6FA5]', label: 'Tutorial' },
-  tour: { row: 'bg-[#FDE9D9]', accent: 'text-[#C1670B]', label: 'Demo / Exhibition' },
-  coffee: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
-  oral: { row: 'bg-[#E3F3E1]', accent: 'text-[#2F7A3B]', label: 'Paper Session' },
-  lunch: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
-  poster: { row: 'bg-[#FDF3D0]', accent: 'text-[#9C7A0A]', label: 'Poster Session' },
-  panel: { row: 'bg-[#FBE1E4]', accent: 'text-[#B23A4E]', label: 'Panel Discussion' },
-  social: { row: 'bg-[#D6F0ED]', accent: 'text-[#0F766E]', label: 'Social Activity' },
-  closing: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Closing' },
-  free: { row: 'bg-white', accent: 'text-gray-400', label: 'Free Time' },
-  student: { row: 'bg-[#F1E7D6]', accent: 'text-[#8B5E34]', label: 'Student Session' },
+  welcome: { row: 'bg-white', accent: 'text-[#3d5f77]', label: 'General' },
+  keynote: { row: 'bg-[#fff0f0]', accent: 'text-[#8a3a3a]', label: 'Keynote' },
+  tutorial: { row: 'bg-[#e4f0f6]', accent: 'text-[#2e6580]', label: 'Tutorial' },
+  tour: { row: 'bg-[#efe7d8]', accent: 'text-[#6b5530]', label: 'Demo / Exhibition' },
+  coffee: { row: 'bg-[#eef0f2]', accent: 'text-[#5a6570]', label: 'Break' },
+  oral: { row: 'bg-[#dde8e5]', accent: 'text-[#2e5e54]', label: 'Paper Session' },
+  lunch: { row: 'bg-[#eef0f2]', accent: 'text-[#5a6570]', label: 'Break' },
+  poster: { row: 'bg-[#f0ebd6]', accent: 'text-[#6a5828]', label: 'Poster Session' },
+  panel: { row: 'bg-[#f0e0e2]', accent: 'text-[#7a3a44]', label: 'Panel Discussion' },
+  social: { row: 'bg-[#dff1ee]', accent: 'text-[#2a6e5e]', label: 'Social Activity' },
+  closing: { row: 'bg-[#eef0f2]', accent: 'text-[#5a6570]', label: 'Closing' },
+  free: { row: 'bg-white', accent: 'text-[#8a9099]', label: 'Free Time' },
+  student: { row: 'bg-[#ece0e4]', accent: 'text-[#6b4058]', label: 'Student Session' },
 }
 
 const LEGEND_TYPES: BlockType[] = [
@@ -170,16 +170,6 @@ export default function SchedulePage() {
       {/* Schedule Content */}
       <section className="bg-background py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Legend */}
-          <div className="mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2">
-            {LEGEND_TYPES.map((type) => (
-              <div key={type} className="flex items-center gap-2">
-                <span className={`h-3 w-3 shrink-0 ${TYPE_STYLES[type].row} border border-black/10`} />
-                <span className="text-xs text-gray-600">{TYPE_STYLES[type].label}</span>
-              </div>
-            ))}
-          </div>
-
           {/* Full week grid, days side by side with a shared timeline — identical clock
               times land on the same row across all four columns, like the printed programme. */}
           <div className="overflow-x-auto border border-black/10 shadow-sm">
@@ -209,7 +199,8 @@ export default function SchedulePage() {
               {timeline.rows.map((dayRows, dayIndex) =>
                 dayRows.map(({ block, rowStart, rowEnd }, index) => {
                   const style = TYPE_STYLES[block.type]
-                  const isEmbedded = Boolean(block.heading) && block.layout !== 'split'
+                  const plainTypes: BlockType[] = ['welcome', 'coffee', 'lunch', 'closing', 'free']
+                  const isEmbedded = !plainTypes.includes(block.type) && block.layout !== 'split'
                   const embeddedBorder = style.accent.replace('text-', 'border-l-')
                   return (
                     <div
@@ -284,6 +275,109 @@ export default function SchedulePage() {
           <p className="mt-3 text-center text-xs text-gray-500 lg:hidden">
             Scroll horizontally to see all four days.
           </p>
+
+          {/* Legend */}
+          <div className="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {LEGEND_TYPES.map((type) => (
+              <div key={type} className="flex items-center gap-2">
+                <span className={`h-3 w-3 shrink-0 ${TYPE_STYLES[type].row} border border-black/10`} />
+                <span className="text-xs text-gray-600">{TYPE_STYLES[type].label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Program */}
+      <section className="bg-container py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-primary text-3xl font-extrabold tracking-tight md:text-4xl">
+            Social Programme
+          </h2>
+          <div className="bg-primary mt-3 h-1 w-16" aria-hidden="true" />
+
+          <div className="mt-10 space-y-12">
+            {/* Guided Tour */}
+            <div className="flex flex-col gap-4 md:flex-row md:items-center">
+              <div className="shrink-0 md:w-[38%]">
+                <img
+                  src={`${basePath}/social-tour.png`}
+                  alt="Luxembourg City at night — Grund district and Bock Casemates"
+                  className="h-auto w-full"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-[#2a6e5e] uppercase">
+                  <span>Monday 28 September 2026</span>
+                  <span className="text-muted-foreground">|</span>
+                  <span>14:00 – 16:30</span>
+                  <span className="text-muted-foreground">|</span>
+                  <span>Luxembourg City</span>
+                </div>
+                <h3 className="text-primary mt-3 text-2xl font-bold md:text-3xl">Guided Tour in Luxembourg City</h3>
+                <p className="text-container-foreground mt-4 leading-relaxed">
+                  Before the conference sessions begin, attendees are invited to discover the charm of
+                  Luxembourg City through a guided walking tour. Explore the historic Grund district,
+                  the Bock Casemates, and the Corniche, known as &ldquo;Europe&rsquo;s most beautiful
+                  balcony.&rdquo;
+                </p>
+              </div>
+            </div>
+
+            {/* Welcome Drink */}
+            <div className="flex flex-col gap-4 md:flex-row md:items-center">
+              <div className="shrink-0 md:w-[38%]">
+                <img
+                  src={`${basePath}/social-abbaye.png`}
+                  alt="Abbaye de Neumünster at night"
+                  className="h-auto w-full"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-[#2a6e5e] uppercase">
+                  <span>Monday 28 September 2026</span>
+                  <span className="text-muted-foreground">|</span>
+                  <span>18:00 – 20:00</span>
+                  <span className="text-muted-foreground">|</span>
+                  <span>Abbaye de Neumünster</span>
+                </div>
+                <h3 className="text-primary mt-3 text-2xl font-bold md:text-3xl">Welcome Drink &amp; Researchers Matching</h3>
+                <p className="text-container-foreground mt-4 leading-relaxed">
+                  Join fellow attendees for the opening social event at the historic Abbaye de
+                  Neumünster, located in Luxembourg City&rsquo;s picturesque Grund district. The evening
+                  will begin with the Opening Keynote by Dima Damen, followed by a welcome drink and an
+                  opportunity to connect with researchers, colleagues, and friends from around the world
+                  while enjoying a first taste of Luxembourgish hospitality.
+                </p>
+              </div>
+            </div>
+
+            {/* Gala Dinner */}
+            <div className="flex flex-col gap-4 md:flex-row md:items-center">
+              <div className="shrink-0 md:w-[38%]">
+                <img
+                  src={`${basePath}/social-cruise.png`}
+                  alt="Gala Dinner river cruise on the Moselle at sunset"
+                  className="h-auto w-full"
+                />
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-[#2a6e5e] uppercase">
+                  <span>Wednesday 30 September 2026</span>
+                  <span className="text-muted-foreground">|</span>
+                  <span>18:15 – 23:45</span>
+                  <span className="text-muted-foreground">|</span>
+                  <span>Grevenmacher (River Cruise)</span>
+                </div>
+                <h3 className="text-primary mt-3 text-2xl font-bold md:text-3xl">Gala Dinner — River Cruise</h3>
+                <p className="text-container-foreground mt-4 leading-relaxed">
+                  The conference gala dinner will take place aboard a river cruise on the Moselle,
+                  departing from Grevenmacher. Enjoy an evening of fine dining, live entertainment,
+                  and scenic views along the wine-growing region.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
