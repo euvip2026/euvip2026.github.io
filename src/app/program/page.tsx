@@ -1,33 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import scheduleData from '@/data/schedule.json'
-
-type Session = {
-  time: string
-  title: string
-  type: string
-  speaker?: string
-  location?: string
-  description?: string
-}
-
-type ScheduleDay = {
-  date: string
-  label: string
-  title: string
-  sessions: Session[]
-}
-
-type Schedule = {
-  days: ScheduleDay[]
-}
-
-const schedule = scheduleData as Schedule
-
 export default function SchedulePage() {
-  const [activeDay, setActiveDay] = useState(0)
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+  const pdfUrl = `${basePath}/EUVIP2026_Program_summary_final_version.pdf`
 
   return (
     <>
@@ -52,111 +27,40 @@ export default function SchedulePage() {
 
       <section className="bg-background text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-4 py-6">
-          <div className="mt-4">
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
-              Four days of research and networking. The schedule is preliminary and may change. All times are shown in
-              local time, CET (UTC+1).
+              The full conference programme is available below. The schedule is preliminary and may change.
             </p>
+            <a
+              href={pdfUrl}
+              download="EUVIP2026_Program_summary_final_version.pdf"
+              className="bg-primary text-primary-foreground inline-flex shrink-0 items-center justify-center px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90"
+            >
+              Download programme (PDF)
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Schedule Content */}
-      <section className="bg-background py-8">
+      {/* Program PDF */}
+      <section className="bg-background pb-8">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          {/* Day Tabs */}
-          <div className="mb-12 flex flex-wrap justify-center gap-3">
-            {schedule.days.map((day, index) => (
-              <button
-                key={day.date}
-                onClick={() => setActiveDay(index)}
-                className={`text-md px-6 py-4 font-medium transition-all hover:cursor-pointer ${
-                  activeDay === index
-                    ? 'bg-primary text-primary-foreground shadow-lg'
-                    : 'bg-background text-container-foreground hover:bg-muted'
-                }`}
-              >
-                <span
-                  className={`text-md block tracking-wider uppercase ${
-                    activeDay === index ? 'text-primary-foreground' : 'text-muted-500'
-                  }`}
+          <div className="h-[85vh] w-full overflow-hidden border border-black/10 shadow-sm">
+            <object data={pdfUrl} type="application/pdf" className="h-full w-full">
+              <div className="flex h-full w-full flex-col items-center justify-center gap-4 p-6 text-center">
+                <p className="text-container-foreground text-base">
+                  Your browser can&apos;t display the PDF preview here.
+                </p>
+                <a
+                  href={pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary text-primary-foreground inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90"
                 >
-                  {day.label}
-                </span>
-                <span className="text-md block font-semibold">{day.title}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Active Day Schedule */}
-          <div>
-            <div className="mb-10 text-center">
-              <h2 className="text-primary mb-2 text-2xl font-bold">
-                {schedule.days[activeDay].title}
-              </h2>
-              <p className="text-container-foreground-600">
-                {new Date(schedule.days[activeDay].date).toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric',
-                })}
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              {schedule.days[activeDay].sessions.map((session, index) => (
-                <div
-                  key={index}
-                  className={`overflow-hidden ${
-                    session.type === 'break'
-                      ? 'bg-[#FCECD8]'
-                      : 'text-container-foreground bg-container'
-                  }`}
-                >
-                  <div className="flex flex-col sm:flex-row">
-                    {/* Time */}
-                    <div
-                      className={`shrink-0 p-4 sm:w-36 ${
-                        session.type === 'break'
-                          ? 'bg-[#E3CDC1]'
-                          : 'bg-primary/10'
-                      }`}
-                    >
-                      <span className="text-primary font-semibold">
-                        {session.time}
-                      </span>
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 p-4">
-                      <h3 className="text-lg font-semibold text-gray-900">
-                        {session.title}
-                      </h3>
-
-                      {session.speaker && (
-                        <p className="mt-1 text-sm font-medium text-gray-700">
-                          {session.speaker}
-                        </p>
-                      )}
-
-                      {session.location && (
-                        <p className="mt-1 text-sm text-gray-600">
-                          <span className="font-medium">Location:</span>{' '}
-                          {session.location}
-                        </p>
-                      )}
-
-                      {session.description && (
-                        <p className="mt-1 text-sm text-gray-600">
-                          {session.description}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  Download the programme (PDF)
+                </a>
+              </div>
+            </object>
           </div>
         </div>
       </section>
