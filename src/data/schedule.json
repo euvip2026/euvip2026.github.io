@@ -3,232 +3,436 @@
     {
       "date": "2026-09-28",
       "label": "Day 1",
-      "title": "Tutorials and Welcome",
-      "sessions": [
+      "title": "Monday",
+      "blocks": [
         {
-          "time": "08:15 - 09:00",
-          "title": "Welcome and Badge Retrieval",
-          "type": "registration"
+          "time": "08:00–14:00",
+          "type": "welcome",
+          "items": [
+            {
+              "title": "Welcome & Badge Retrieval"
+            }
+          ]
         },
         {
-          "time": "09:00 - 10:30",
-          "title": "Tutorial I",
-          "type": "tutorial"
+          "time": "09:00–10:30",
+          "type": "tutorial",
+          "items": [
+            {
+              "title": "Tutorial I",
+              "subtitle": "Object-based Visual Localization",
+              "speaker": "Vincent Gaudillière"
+            }
+          ]
         },
         {
-          "time": "10:30 - 11:00",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "10:30–11:00",
+          "type": "coffee",
+          "items": [
+            {
+              "title": "Coffee Break"
+            }
+          ]
         },
         {
-          "time": "11:00 - 12:30",
-          "title": "Tutorial II",
-          "type": "tutorial"
+          "time": "11:00–12:30",
+          "type": "tutorial",
+          "layout": "split",
+          "items": [
+            {
+              "title": "Tutorial II",
+              "subtitle": "Assessing the Compression Performance of Video Coding Schemes",
+              "speaker": "Mattias Wien"
+            },
+            {
+              "title": "Tutorial III",
+              "subtitle": "Neural Model Compression and Efficiency",
+              "speaker": "Hedi Tabia, Peyman Rostami, Lincen Bai"
+            }
+          ]
         },
         {
-          "time": "12:30 - 14:00",
-          "title": "Lunch",
-          "type": "break"
+          "time": "12:30–14:00",
+          "type": "lunch",
+          "items": [
+            {
+              "title": "Lunch"
+            }
+          ]
         },
         {
-          "time": "14:00 - 14:30",
-          "title": "Transfer to Luxembourg City",
-          "type": "transfer"
+          "time": "14:00–14:30",
+          "type": "social",
+          "items": [
+            {
+              "title": "Transfer to Luxembourg City"
+            }
+          ]
         },
         {
-          "time": "14:30 - 16:30",
-          "title": "Guided Tour",
-          "location": "Luxembourg City",
-          "type": "social"
+          "time": "14:30–16:30",
+          "type": "social",
+          "items": [
+            {
+              "title": "Guided Tour in Luxembourg City"
+            }
+          ]
         },
         {
-          "time": "16:30 - 17:00",
-          "title": "Transfer to Abbaye de Neumünster",
-          "type": "transfer"
+          "time": "16:30–17:00",
+          "type": "social",
+          "items": [
+            {
+              "title": "Transfer to Abbaye de Neumünster"
+            }
+          ]
         },
         {
-          "time": "17:00 - 18:00",
-          "title": "Opening Keynote — Dima Damen",
-          "speaker": "Dima Damen",
-          "location": "Abbaye de Neumünster",
-          "type": "keynote"
+          "time": "17:00–18:00",
+          "type": "keynote",
+          "items": [
+            {
+              "title": "Opening Keynote",
+              "subtitle": "Modeling in an Ego-Sensed World",
+              "speaker": "Dima Damen"
+            }
+          ]
         },
         {
-          "time": "18:00 - 19:30",
-          "title": "Welcome Drink",
-          "location": "Abbaye de Neumünster",
-          "type": "social"
-        },
-        {
-          "time": "from 20:00",
-          "title": "Social Dinner on Your Own — Junior & Senior Researchers Matching",
-          "type": "social"
+          "time": "18:00–19:30 · 20:00",
+          "type": "social",
+          "items": [
+            {
+              "title": "Welcome Drink & Researchers Matching (Optional Dinner)"
+            }
+          ]
         }
       ]
     },
     {
       "date": "2026-09-29",
       "label": "Day 2",
-      "title": "Conference and Sessions",
-      "sessions": [
+      "title": "Tuesday",
+      "blocks": [
         {
-          "time": "09:00 - 10:00",
-          "title": "Keynote — Elisa Ricci",
-          "speaker": "Elisa Ricci",
-          "type": "keynote"
+          "time": "08:00–16:00",
+          "type": "welcome",
+          "items": [
+            {
+              "title": "Welcome & Badge Retrieval"
+            }
+          ]
         },
         {
-          "time": "10:00 - 10:30",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "08:45–09:45",
+          "type": "keynote",
+          "items": [
+            {
+              "title": "Keynote II",
+              "subtitle": "Rethinking Multimodal AI Models: Beyond Accuracy, Towards Trust",
+              "speaker": "Elisa Ricci"
+            }
+          ]
         },
         {
-          "time": "10:30 - 12:00",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "09:45–10:30",
+          "type": "tour",
+          "items": [
+            {
+              "title": "Demo Session Tour",
+              "meta": "+ Coffee Break 10:00–10:30"
+            }
+          ]
         },
         {
-          "time": "12:00 - 13:00",
-          "title": "Demo Session",
-          "type": "special"
+          "time": "10:30–12:30",
+          "type": "oral",
+          "items": [
+            {
+              "title": "Special Session I — Medical Imaging",
+              "meta": "6 papers",
+              "ids": "170, 172, 19, 113, 115, 114"
+            },
+            {
+              "title": "Oral Session I — Evaluating and Understanding Deep Learning Models",
+              "meta": "4 papers",
+              "ids": "77, 135, 6, 161"
+            }
+          ],
+          "heading": "Oral Paper Presentations"
         },
         {
-          "time": "13:00 - 14:30",
-          "title": "Lunch",
-          "type": "break"
+          "time": "12:30–13:45",
+          "type": "lunch",
+          "items": [
+            {
+              "title": "Lunch"
+            }
+          ]
         },
         {
-          "time": "14:30 - 16:00",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "13:45–15:45",
+          "type": "oral",
+          "items": [
+            {
+              "title": "Oral Session II — Image and Video Coding",
+              "meta": "4 papers",
+              "ids": "72, 75, 79, 116"
+            },
+            {
+              "title": "Oral Session III — Computational Methods for Industrial Inspection",
+              "meta": "6 papers",
+              "ids": "8, 17, 81, 48, 123, 100"
+            }
+          ],
+          "heading": "Oral Paper Presentations"
         },
         {
-          "time": "16:00 - 16:30",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "15:45–16:45",
+          "type": "poster",
+          "items": [
+            {
+              "title": "Poster Session I",
+              "meta": "+ Coffee Break 16:15–16:45",
+              "ids": "72, 75, 79, 116, 8, 17, 81, 48, 123, 100, 77, 135, 6, 114, 115, 170, 172, 19, 161, 113"
+            }
+          ]
         },
         {
-          "time": "16:30 - 17:15",
-          "title": "Panel Discussion",
-          "type": "special"
-        },
-        {
-          "time": "17:15 - 18:45",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "16:45–17:30",
+          "type": "panel",
+          "items": [
+            {
+              "title": "Panel Discussion I",
+              "subtitle": "The Next Frontiers in an Ego-Sensed World"
+            }
+          ]
         }
       ]
     },
     {
       "date": "2026-09-30",
       "label": "Day 3",
-      "title": "Conference and Gala Dinner",
-      "sessions": [
+      "title": "Wednesday",
+      "blocks": [
         {
-          "time": "09:00 - 10:00",
-          "title": "Keynote — Fatma Güney",
-          "speaker": "Fatma Güney",
-          "type": "keynote"
+          "time": "08:00–16:00",
+          "type": "welcome",
+          "items": [
+            {
+              "title": "Welcome & Badge Retrieval"
+            }
+          ]
         },
         {
-          "time": "10:00 - 10:30",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "08:45–09:45",
+          "type": "keynote",
+          "items": [
+            {
+              "title": "Keynote III",
+              "subtitle": "Is Computer Vision Ready for Autonomous Systems?",
+              "speaker": "Fatma Güney"
+            }
+          ]
         },
         {
-          "time": "10:30 - 12:00",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "09:45–10:30",
+          "type": "tour",
+          "items": [
+            {
+              "title": "Demo & Exhibition Tour",
+              "meta": "+ Coffee Break 10:00–10:30"
+            }
+          ]
         },
         {
-          "time": "12:00 - 13:00",
-          "title": "Demo & Industrial Exhibition Session",
-          "type": "special"
+          "time": "10:30–12:30",
+          "type": "oral",
+          "items": [
+            {
+              "title": "Special Session II — Multimodal Data Fusion and Visual AI for Earth Observation",
+              "meta": "5 papers",
+              "ids": "18, 174, 180, 14, 66"
+            },
+            {
+              "title": "Oral Session IV — 3D Vision, Scene Understanding and SLAM",
+              "meta": "4 papers",
+              "ids": "20, 141, 107, 120"
+            }
+          ],
+          "heading": "Oral Paper Presentations"
         },
         {
-          "time": "13:00 - 14:30",
-          "title": "Lunch",
-          "type": "break"
+          "time": "12:30–13:45",
+          "type": "lunch",
+          "items": [
+            {
+              "title": "Lunch"
+            }
+          ]
         },
         {
-          "time": "14:30 - 16:00",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "13:45–15:45",
+          "type": "oral",
+          "items": [
+            {
+              "title": "Oral Session V — Biometrics, Forensics, and Deepfake Detection",
+              "meta": "4 papers",
+              "ids": "7, 9, 103, 150"
+            },
+            {
+              "title": "Oral Session VI — Vision for Earth and Space",
+              "meta": "6 papers",
+              "ids": "11, 76, 153, 158, 83, 108"
+            }
+          ],
+          "heading": "Oral Paper Presentations"
         },
         {
-          "time": "16:00 - 16:30",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "15:45–16:45",
+          "type": "poster",
+          "items": [
+            {
+              "title": "Poster Session II",
+              "meta": "+ Coffee Break 16:15–16:45",
+              "ids": "11, 76, 153, 158, 83, 108, 7, 9, 103, 150, 20, 141, 107, 120, 18, 174, 180, 14, 66"
+            }
+          ]
         },
         {
-          "time": "16:30 - 17:15",
-          "title": "Panel Discussion",
-          "type": "special"
+          "time": "16:45–17:30",
+          "type": "panel",
+          "items": [
+            {
+              "title": "Panel Discussion II",
+              "subtitle": "Advancing Visual AI: Research, Industry & Innovation"
+            }
+          ]
         },
         {
-          "time": "17:15 - 18:15",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "17:30–18:15",
+          "type": "free",
+          "items": [
+            {
+              "title": "Free Time"
+            }
+          ]
         },
         {
-          "time": "18:15 - 18:45",
-          "title": "Transfer to Grevenmacher",
-          "type": "transfer"
-        },
-        {
-          "time": "19:00 - 23:00",
-          "title": "Gala Dinner",
-          "location": "Grevenmacher",
-          "description": "Dinner on a river cruise.",
-          "type": "social"
-        },
-        {
-          "time": "23:00 - 23:45",
-          "title": "Transfer back to Parc Alvisse",
-          "type": "transfer"
+          "time": "18:15–19:00 · 19:00–23:00 · 23:00–23:45",
+          "type": "social",
+          "items": [
+            {
+              "title": "Transfer → Gala Dinner → Return",
+              "subtitle": "Transfer to Grevenmacher · Gala Dinner (river cruise) · Transfer back to Parc Alvisse Hotel"
+            }
+          ]
         }
       ]
     },
     {
       "date": "2026-10-01",
       "label": "Day 4",
-      "title": "Conference and Closing",
-      "sessions": [
+      "title": "Thursday",
+      "blocks": [
         {
-          "time": "09:00 - 10:00",
-          "title": "Keynote — Silvia Zuffi",
-          "speaker": "Silvia Zuffi",
-          "type": "keynote"
+          "time": "08:00–14:00",
+          "type": "welcome",
+          "items": [
+            {
+              "title": "Welcome & Badge Retrieval"
+            }
+          ]
         },
         {
-          "time": "10:00 - 10:30",
-          "title": "Coffee Break",
-          "type": "break"
+          "time": "08:45–09:45",
+          "type": "keynote",
+          "items": [
+            {
+              "title": "Keynote IV",
+              "subtitle": "Understanding Animals from Visual Data",
+              "speaker": "Silvia Zuffi"
+            }
+          ]
         },
         {
-          "time": "10:30 - 12:30",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "09:45–10:30",
+          "type": "student",
+          "items": [
+            {
+              "title": "Student Session — Part 1 (Meet the Mentors)",
+              "meta": "+ Coffee Break 10:00–10:30"
+            }
+          ]
         },
         {
-          "time": "12:30 - 14:00",
-          "title": "Lunch",
-          "type": "break"
+          "time": "10:30–12:30",
+          "type": "oral",
+          "items": [
+            {
+              "title": "Special Session III — Face and Body Analysis and Generation",
+              "meta": "5 papers",
+              "ids": "185, 21, 22, 64, 137"
+            },
+            {
+              "title": "Oral Session VII — Detection, Recognition and Segmentation",
+              "meta": "5 papers",
+              "ids": "10, 70, 16, 102, 139"
+            }
+          ],
+          "heading": "Oral Paper Presentations"
         },
         {
-          "time": "14:00 - 15:30",
-          "title": "Paper Session",
-          "type": "session"
+          "time": "12:30–13:45",
+          "type": "lunch",
+          "items": [
+            {
+              "title": "Lunch"
+            }
+          ]
         },
         {
-          "time": "15:30 - 17:30",
-          "title": "Student Session",
-          "type": "special"
+          "time": "13:45–14:45",
+          "type": "oral",
+          "items": [
+            {
+              "title": "Oral Session VIII — Image Filtering, Restoration, and Enhancement",
+              "meta": "5 papers",
+              "ids": "4, 67, 136, 125, 133"
+            }
+          ],
+          "heading": "Oral Paper Presentations"
         },
         {
-          "time": "17:30 - 17:45",
-          "title": "Closing Ceremony",
-          "type": "ceremony"
+          "time": "14:45–15:45",
+          "type": "student",
+          "items": [
+            {
+              "title": "Student Session — Part 2",
+              "meta": "10 short oral paper presentations",
+              "ids": "146, 169, 176, 177, 178, 182, 183, 186, 189, 190"
+            }
+          ]
+        },
+        {
+          "time": "15:45–16:45",
+          "type": "poster",
+          "items": [
+            {
+              "title": "Poster Session III",
+              "meta": "+ Coffee Break 16:15–16:45",
+              "ids": "4, 67, 136, 125, 133, 10, 70, 16, 102, 139, 185, 21, 22, 64, 137, 146, 169, 176, 177, 178, 181, 182, 183, 186, 187, 189, 190"
+            }
+          ]
+        },
+        {
+          "time": "16:45–17:00",
+          "type": "closing",
+          "items": [
+            {
+              "title": "Closing Remarks"
+            }
+          ]
         }
       ]
     }
