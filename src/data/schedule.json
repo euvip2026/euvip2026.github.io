@@ -42,7 +42,7 @@
             {
               "title": "Tutorial II",
               "subtitle": "Assessing the Compression Performance of Video Coding Schemes",
-              "speaker": "Mattias Wien"
+              "speaker": "Mathias Wien"
             },
             {
               "title": "Tutorial III",
@@ -103,7 +103,7 @@
           "type": "social",
           "items": [
             {
-              "title": "Welcome Drink & Researchers Matching (Optional Dinner)"
+              "title": "Welcome Drink & Researchers Matching (Dinner on your own)"
             }
           ]
         }
@@ -204,7 +204,16 @@
           "items": [
             {
               "title": "Panel Discussion I",
-              "subtitle": "The Next Frontiers in an Ego-Sensed World"
+              "subtitle": "The Next Frontiers of AI and Visual Information Processing"
+            }
+          ]
+        },
+        {
+          "time": "from 19:00",
+          "type": "free",
+          "items": [
+            {
+              "title": "EUVIP Committee dinner"
             }
           ]
         }
