@@ -57,7 +57,7 @@ const TYPE_STYLES: Record<
   coffee: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
   oral: { row: 'bg-[#d0e6ec]', accent: 'text-[#153d46]', label: 'Paper Session' },
   lunch: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
-  poster: { row: 'bg-[#dceef3]', accent: 'text-[#1a4a54]', label: 'Poster Session' },
+  poster: { row: 'bg-[#e8dbd4]', accent: 'text-[#1a4a54]', label: 'Poster Session' },
   panel: { row: 'bg-[#a8cdd6]', accent: 'text-[#0e2a31]', label: 'Panel Discussion' },
   social: { row: 'bg-[#fff2eb]', accent: 'text-[#153d46]', label: 'Social Activity' },
   closing: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Closing' },
@@ -170,16 +170,6 @@ export default function SchedulePage() {
       {/* Schedule Content */}
       <section className="bg-background py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Legend */}
-          <div className="mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2">
-            {LEGEND_TYPES.map((type) => (
-              <div key={type} className="flex items-center gap-2">
-                <span className={`h-3 w-3 shrink-0 ${TYPE_STYLES[type].row} border border-black/10`} />
-                <span className="text-xs text-gray-600">{TYPE_STYLES[type].label}</span>
-              </div>
-            ))}
-          </div>
-
           {/* Full week grid, days side by side with a shared timeline — identical clock
               times land on the same row across all four columns, like the printed programme. */}
           <div className="overflow-x-auto border border-black/10 shadow-sm">
@@ -197,11 +187,11 @@ export default function SchedulePage() {
                 >
                   <p className="text-sm font-bold tracking-wide uppercase">{day.title}</p>
                   <p className="text-primary-foreground/80 text-xs">
-                    {new Date(day.date).toLocaleDateString('en-US', {
-                      day: 'numeric',
-                      month: 'short',
-                      year: 'numeric',
-                    })}
+                    {(() => {
+                      const [y, m, d] = day.date.split('-')
+                      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                      return `${months[Number(m) - 1]} ${Number(d)}, ${y}`
+                    })()}
                   </p>
                 </div>
               ))}
