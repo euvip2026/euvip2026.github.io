@@ -284,6 +284,8 @@ export default function SchedulePage() {
           <p className="mt-3 text-center text-xs text-gray-500 lg:hidden">
             Scroll horizontally to see all four days.
           </p>
+
+
         </div>
       </section>
 
