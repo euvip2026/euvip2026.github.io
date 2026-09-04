@@ -211,7 +211,7 @@ export default function SchedulePage() {
                     >
                       <p
                         className={`mb-1 text-xs whitespace-nowrap ${
-                          block.type === 'free' ? 'font-normal text-gray-400' : 'font-semibold text-gray-800'
+                          block.type === 'free' ? 'font-normal text-gray-400' : 'font-bold text-gray-900'
                         }`}
                       >
                         {block.time}
@@ -251,15 +251,15 @@ export default function SchedulePage() {
                               {item.title}
                             </p>
                             {item.subtitle && (
-                              <p className="mt-1 text-xs text-gray-700 italic">&ldquo;{item.subtitle}&rdquo;</p>
+                              <p className="mt-1 text-xs text-gray-900 italic">&ldquo;{item.subtitle}&rdquo;</p>
                             )}
                             {item.speaker && (
-                              <p className="mt-1 text-xs font-medium text-gray-800">{item.speaker}</p>
+                              <p className="mt-1 text-xs font-semibold text-gray-900">{item.speaker}</p>
                             )}
-                            {item.meta && <p className="mt-1 text-[11px] text-gray-500">{item.meta}</p>}
+                            {item.meta && <p className="mt-1 text-xs text-gray-700">{item.meta}</p>}
                             {item.ids && (
-                              <p className="mt-1 text-[11px] text-gray-500">
-                                <span className="font-medium">IDs:</span> {item.ids}
+                              <p className="mt-1 text-xs text-gray-700">
+                                <span className="font-semibold">IDs:</span> {item.ids}
                               </p>
                             )}
                           </div>
