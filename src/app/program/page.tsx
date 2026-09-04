@@ -51,18 +51,18 @@ const TYPE_STYLES: Record<
   { row: string; accent: string; label: string }
 > = {
   welcome: { row: 'bg-white', accent: 'text-gray-700', label: 'General' },
-  keynote: { row: 'bg-[#EDE7F6]', accent: 'text-[#6A3FA0]', label: 'Keynote' },
-  tutorial: { row: 'bg-[#DCEEFB]', accent: 'text-[#1D6FA5]', label: 'Tutorial' },
-  tour: { row: 'bg-[#FDE9D9]', accent: 'text-[#C1670B]', label: 'Demo / Exhibition' },
+  keynote: { row: 'bg-[#ffe2d3]', accent: 'text-[#153d46]', label: 'Keynote' },
+  tutorial: { row: 'bg-[#b5d6de]', accent: 'text-[#153d46]', label: 'Tutorial' },
+  tour: { row: 'bg-[#ffccb2]', accent: 'text-[#153d46]', label: 'Demo / Exhibition' },
   coffee: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
-  oral: { row: 'bg-[#E3F3E1]', accent: 'text-[#2F7A3B]', label: 'Paper Session' },
+  oral: { row: 'bg-[#d0e6ec]', accent: 'text-[#153d46]', label: 'Paper Session' },
   lunch: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
-  poster: { row: 'bg-[#FDF3D0]', accent: 'text-[#9C7A0A]', label: 'Poster Session' },
-  panel: { row: 'bg-[#FBE1E4]', accent: 'text-[#B23A4E]', label: 'Panel Discussion' },
-  social: { row: 'bg-[#D6F0ED]', accent: 'text-[#0F766E]', label: 'Social Activity' },
+  poster: { row: 'bg-[#dceef3]', accent: 'text-[#1a4a54]', label: 'Poster Session' },
+  panel: { row: 'bg-[#a8cdd6]', accent: 'text-[#0e2a31]', label: 'Panel Discussion' },
+  social: { row: 'bg-[#fff2eb]', accent: 'text-[#153d46]', label: 'Social Activity' },
   closing: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Closing' },
   free: { row: 'bg-white', accent: 'text-gray-400', label: 'Free Time' },
-  student: { row: 'bg-[#F1E7D6]', accent: 'text-[#8B5E34]', label: 'Student Session' },
+  student: { row: 'bg-[#f0f8fa]', accent: 'text-[#1a4a54]', label: 'Student Session' },
 }
 
 const LEGEND_TYPES: BlockType[] = [
