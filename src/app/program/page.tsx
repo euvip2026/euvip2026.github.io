@@ -50,19 +50,19 @@ const TYPE_STYLES: Record<
   BlockType,
   { row: string; accent: string; label: string }
 > = {
-  welcome: { row: 'bg-white', accent: 'text-[#3d5f77]', label: 'General' },
-  keynote: { row: 'bg-[#fff0f0]', accent: 'text-[#8a3a3a]', label: 'Keynote' },
-  tutorial: { row: 'bg-[#e4f0f6]', accent: 'text-[#2e6580]', label: 'Tutorial' },
-  tour: { row: 'bg-[#efe7d8]', accent: 'text-[#6b5530]', label: 'Demo / Exhibition' },
-  coffee: { row: 'bg-[#eef0f2]', accent: 'text-[#5a6570]', label: 'Break' },
-  oral: { row: 'bg-[#dde8e5]', accent: 'text-[#2e5e54]', label: 'Paper Session' },
-  lunch: { row: 'bg-[#eef0f2]', accent: 'text-[#5a6570]', label: 'Break' },
-  poster: { row: 'bg-[#f0ebd6]', accent: 'text-[#6a5828]', label: 'Poster Session' },
-  panel: { row: 'bg-[#f0e0e2]', accent: 'text-[#7a3a44]', label: 'Panel Discussion' },
-  social: { row: 'bg-[#dff1ee]', accent: 'text-[#2a6e5e]', label: 'Social Activity' },
-  closing: { row: 'bg-[#eef0f2]', accent: 'text-[#5a6570]', label: 'Closing' },
-  free: { row: 'bg-white', accent: 'text-[#8a9099]', label: 'Free Time' },
-  student: { row: 'bg-[#ece0e4]', accent: 'text-[#6b4058]', label: 'Student Session' },
+  welcome: { row: 'bg-white', accent: 'text-gray-700', label: 'General' },
+  keynote: { row: 'bg-[#EDE7F6]', accent: 'text-[#6A3FA0]', label: 'Keynote' },
+  tutorial: { row: 'bg-[#DCEEFB]', accent: 'text-[#1D6FA5]', label: 'Tutorial' },
+  tour: { row: 'bg-[#FDE9D9]', accent: 'text-[#C1670B]', label: 'Demo / Exhibition' },
+  coffee: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
+  oral: { row: 'bg-[#E3F3E1]', accent: 'text-[#2F7A3B]', label: 'Paper Session' },
+  lunch: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Break' },
+  poster: { row: 'bg-[#FDF3D0]', accent: 'text-[#9C7A0A]', label: 'Poster Session' },
+  panel: { row: 'bg-[#FBE1E4]', accent: 'text-[#B23A4E]', label: 'Panel Discussion' },
+  social: { row: 'bg-[#D6F0ED]', accent: 'text-[#0F766E]', label: 'Social Activity' },
+  closing: { row: 'bg-[#F2F2F2]', accent: 'text-gray-600', label: 'Closing' },
+  free: { row: 'bg-white', accent: 'text-gray-400', label: 'Free Time' },
+  student: { row: 'bg-[#F1E7D6]', accent: 'text-[#8B5E34]', label: 'Student Session' },
 }
 
 const LEGEND_TYPES: BlockType[] = [
@@ -170,6 +170,16 @@ export default function SchedulePage() {
       {/* Schedule Content */}
       <section className="bg-background py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Legend */}
+          <div className="mb-8 flex flex-wrap justify-center gap-x-4 gap-y-2">
+            {LEGEND_TYPES.map((type) => (
+              <div key={type} className="flex items-center gap-2">
+                <span className={`h-3 w-3 shrink-0 ${TYPE_STYLES[type].row} border border-black/10`} />
+                <span className="text-xs text-gray-600">{TYPE_STYLES[type].label}</span>
+              </div>
+            ))}
+          </div>
+
           {/* Full week grid, days side by side with a shared timeline — identical clock
               times land on the same row across all four columns, like the printed programme. */}
           <div className="overflow-x-auto border border-black/10 shadow-sm">
@@ -199,8 +209,7 @@ export default function SchedulePage() {
               {timeline.rows.map((dayRows, dayIndex) =>
                 dayRows.map(({ block, rowStart, rowEnd }, index) => {
                   const style = TYPE_STYLES[block.type]
-                  const plainTypes: BlockType[] = ['welcome', 'coffee', 'lunch', 'closing', 'free']
-                  const isEmbedded = !plainTypes.includes(block.type) && block.layout !== 'split'
+                  const isEmbedded = Boolean(block.heading) && block.layout !== 'split'
                   const embeddedBorder = style.accent.replace('text-', 'border-l-')
                   return (
                     <div
@@ -275,16 +284,6 @@ export default function SchedulePage() {
           <p className="mt-3 text-center text-xs text-gray-500 lg:hidden">
             Scroll horizontally to see all four days.
           </p>
-
-          {/* Legend */}
-          <div className="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-2">
-            {LEGEND_TYPES.map((type) => (
-              <div key={type} className="flex items-center gap-2">
-                <span className={`h-3 w-3 shrink-0 ${TYPE_STYLES[type].row} border border-black/10`} />
-                <span className="text-xs text-gray-600">{TYPE_STYLES[type].label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
