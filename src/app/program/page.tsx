@@ -164,11 +164,25 @@ export default function SchedulePage() {
               Download programme (PDF)
             </a>
           </div>
+          <nav className="mt-6 flex gap-3" aria-label="Programme sections">
+            <a
+              href="#schedule"
+              className="border-primary text-primary border-b-2 px-4 py-2 text-sm font-semibold transition-colors hover:bg-black/5"
+            >
+              Schedule
+            </a>
+            <a
+              href="#social-programme"
+              className="text-container-foreground border-b-2 border-transparent px-4 py-2 text-sm font-semibold transition-colors hover:border-primary/40 hover:bg-black/5"
+            >
+              Social Programme
+            </a>
+          </nav>
         </div>
       </section>
 
       {/* Schedule Content */}
-      <section className="bg-background py-8">
+      <section id="schedule" className="scroll-mt-24 bg-background py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Full week grid, days side by side with a shared timeline — identical clock
               times land on the same row across all four columns, like the printed programme. */}
@@ -280,7 +294,7 @@ export default function SchedulePage() {
       </section>
 
       {/* Social Program */}
-      <section className="bg-container py-14 md:py-20">
+      <section id="social-programme" className="scroll-mt-24 bg-container py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-primary text-3xl font-extrabold tracking-tight md:text-4xl">
             Social Programme
@@ -290,15 +304,18 @@ export default function SchedulePage() {
           <div className="mt-10 space-y-12">
             {/* Guided Tour */}
             <div className="flex flex-col gap-4 md:flex-row md:items-center">
-              <div className="shrink-0 md:w-[38%]">
+              <div className="relative shrink-0 md:w-[38%]">
                 <img
                   src={`${basePath}/social-tour.png`}
                   alt="Luxembourg City at night — Grund district and Bock Casemates"
                   className="h-auto w-full"
                 />
+                <span className="absolute bottom-0 left-0 bg-black/50 px-2 py-1 text-[10px] text-white/80">
+                  &copy; Sabino Parente / LIMH Luxembourg
+                </span>
               </div>
               <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-[#2a6e5e] uppercase">
+                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-primary uppercase">
                   <span>Monday 28 September 2026</span>
                   <span className="text-muted-foreground">|</span>
                   <span>14:00 – 16:30</span>
@@ -317,15 +334,18 @@ export default function SchedulePage() {
 
             {/* Welcome Drink */}
             <div className="flex flex-col gap-4 md:flex-row md:items-center">
-              <div className="shrink-0 md:w-[38%]">
+              <div className="relative shrink-0 md:w-[38%]">
                 <img
                   src={`${basePath}/social-abbaye.png`}
                   alt="Abbaye de Neumünster at night"
                   className="h-auto w-full"
                 />
+                <span className="absolute bottom-0 left-0 bg-black/50 px-2 py-1 text-[10px] text-white/80">
+                  &copy; Sandrine Feyereisen / Luxembourg Travel
+                </span>
               </div>
               <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-[#2a6e5e] uppercase">
+                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-primary uppercase">
                   <span>Monday 28 September 2026</span>
                   <span className="text-muted-foreground">|</span>
                   <span>18:00 – 20:00</span>
@@ -345,15 +365,18 @@ export default function SchedulePage() {
 
             {/* Gala Dinner */}
             <div className="flex flex-col gap-4 md:flex-row md:items-center">
-              <div className="shrink-0 md:w-[38%]">
+              <div className="relative shrink-0 md:w-[38%]">
                 <img
                   src={`${basePath}/social-cruise.png`}
                   alt="Gala Dinner river cruise on the Moselle at sunset"
                   className="h-auto w-full"
                 />
+                <span className="absolute bottom-0 left-0 bg-black/50 px-2 py-1 text-[10px] text-white/80">
+                  &copy; Navitours Remich / Luxembourg Travel
+                </span>
               </div>
               <div className="flex-1">
-                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-[#2a6e5e] uppercase">
+                <div className="flex flex-wrap items-center gap-x-2 text-sm font-semibold tracking-wide text-primary uppercase">
                   <span>Wednesday 30 September 2026</span>
                   <span className="text-muted-foreground">|</span>
                   <span>18:15 – 23:45</span>

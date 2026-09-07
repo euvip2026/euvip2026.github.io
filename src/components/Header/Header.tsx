@@ -218,7 +218,7 @@ export function Header() {
           </DropdownMenu>
 
           <Link href="/program" className={navLinkClassName(pathname.includes('/program'))}>
-            PROGRAM
+            PROGRAMME
           </Link>
           <Link href="/attend" className={navLinkClassName(pathname.includes('/attend'))}>
             ATTEND
@@ -368,7 +368,7 @@ export function Header() {
                   onClick={() => setMobileOpen(false)}
                   className={pathname.includes('/program') ? 'text-accent-foreground' : 'text-container-foreground'}
                 >
-                  PROGRAM
+                  PROGRAMME
                 </Link>
               </li>
               <li>
