@@ -46,11 +46,12 @@ const sponsorTiers = [
     tier: 'BRONZE',
     bgColor: 'bg-[#ede4d9]',
     iconSrc: '/sponsors-bronze.png',
-    logoHeight: 'h-16 md:h-20',
-    columns: 'grid-cols-1 sm:grid-cols-2',
+    logoHeight: 'h-20 md:h-24',
+    columns: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3',
     sponsors: [
       { name: 'Luxembourg Convention Centre', imageSrc: '/sponsors/bronze/1-lux-convention-center.png', href: 'https://luxembourg-convention-bureau.lu/en' },
       { name: 'The Dots Luxembourg', imageSrc: '/sponsors/bronze/2-the-dots.png', href: 'https://thedots.lu/' },
+      { name: 'Luxembourg Nation Branding', imageSrc: '/sponsors/bronze/3-luxembourg.jpg', href: 'https://luxembourg.public.lu/' },
     ],
   },
   {
