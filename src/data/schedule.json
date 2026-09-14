@@ -124,6 +124,15 @@
           ]
         },
         {
+          "time": "08:30–08:45",
+          "type": "welcome",
+          "items": [
+            {
+              "title": "Opening Remarks"
+            }
+          ]
+        },
+        {
           "time": "08:45–09:45",
           "type": "keynote",
           "items": [
