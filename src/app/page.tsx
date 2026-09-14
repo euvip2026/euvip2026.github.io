@@ -118,6 +118,50 @@ export default function Home() {
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="space-y-4">
 
+                {/* LMIH */}
+                <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                  <div className="flex flex-col items-start gap-5 sm:flex-row">
+                    <a
+                      href="https://lmih.lu/en/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex h-28 w-40 shrink-0 items-center justify-center rounded-xl bg-white p-3 shadow-sm transition hover:scale-[1.02]"
+                      aria-label="Visit LMIH website"
+                    >
+                      <img
+                        src={`${basePath}/partners/lmih.png`}
+                        alt="LuXembourg – Let's Make It Happen logo"
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+
+                    <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                      <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
+
+                      <div className="min-w-0 flex-1">
+                        <p>
+                          <strong className="text-xl">September 9:</strong> Sponsorship Announcement — We are happy to
+                          announce that{' '}
+                          <a
+                            href="https://lmih.lu/en/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                          >
+                            LuXembourg – Let&apos;s Make It Happen
+                          </a>{' '}
+                          is sponsoring EUVIP 2026.
+                        </p>
+
+                        <ExpandableText label="About LMIH">
+                          Launched in 2016, &ldquo;LuXembourg – Let&apos;s Make It Happen&rdquo; is Luxembourg&apos;s nation branding initiative. It brings together stakeholders from the public and private sectors and civil society around an authentic and consistent communication strategy to strengthen Luxembourg&apos;s image internationally. Built on the values of openness, dynamism and reliability, the initiative aims to make Luxembourg&apos;s values and faces known and appreciated around the world. Through a collective and long-term approach, &ldquo;LuXembourg – Let&apos;s Make It Happen&rdquo; supports and connects those who contribute to promoting the country, helping them tell Luxembourg&apos;s story in their own way and context.
+                        </ExpandableText>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
                       {/* Deep by Post */}
                       <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
                   <div className="flex flex-col items-start gap-5 sm:flex-row">
