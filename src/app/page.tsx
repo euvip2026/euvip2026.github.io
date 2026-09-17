@@ -141,7 +141,7 @@ export default function Home() {
 
                       <div className="min-w-0 flex-1">
                         <p>
-                          <strong className="text-xl">September 9:</strong> Sponsorship Announcement — We are happy to
+                          <strong className="text-xl">September 9:</strong> Partnership Announcement — We are happy to
                           announce that{' '}
                           <a
                             href="https://lmih.lu/en/"
@@ -151,11 +151,11 @@ export default function Home() {
                           >
                             LuXembourg – Let&apos;s Make It Happen
                           </a>{' '}
-                          is sponsoring EUVIP 2026.
+                          is partnering with EUVIP 2026.
                         </p>
 
                         <ExpandableText label="About LMIH">
-                          Launched in 2016, &ldquo;LuXembourg – Let&apos;s Make It Happen&rdquo; is Luxembourg&apos;s nation branding initiative. It brings together stakeholders from the public and private sectors and civil society around an authentic and consistent communication strategy to strengthen Luxembourg&apos;s image internationally. Built on the values of openness, dynamism and reliability, the initiative aims to make Luxembourg&apos;s values and faces known and appreciated around the world. Through a collective and long-term approach, &ldquo;LuXembourg – Let&apos;s Make It Happen&rdquo; supports and connects those who contribute to promoting the country, helping them tell Luxembourg&apos;s story in their own way and context.
+                          Launched in 2016, &ldquo;LuXembourg – Let&apos;s Make It Happen&rdquo; is Luxembourg&apos;s nation-branding initiative. It brings together stakeholders from the public and private sectors and civil society around an authentic and consistent communication strategy designed to strengthen Luxembourg&apos;s image internationally. Built on the values of openness, dynamism and reliability, the initiative aims to make Luxembourg&apos;s values and people known and appreciated around the world. Its priorities—creativity, diversity and sustainability—are united through the &ldquo;Grower&apos;s Mindset&rdquo; narrative. Through a collective, long-term approach, the initiative supports and connects those promoting the country, empowering them to tell Luxembourg&apos;s story in their own way and context.
                         </ExpandableText>
                       </div>
                     </div>

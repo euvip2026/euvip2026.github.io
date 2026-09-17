@@ -51,13 +51,22 @@ const sponsorTiers = [
     sponsors: [
       { name: 'Luxembourg Convention Centre', imageSrc: '/sponsors/bronze/1-lux-convention-center.png', href: 'https://luxembourg-convention-bureau.lu/en' },
       { name: 'The Dots Luxembourg', imageSrc: '/sponsors/bronze/2-the-dots.png', href: 'https://thedots.lu/' },
-      { name: 'Luxembourg Nation Branding', imageSrc: '/sponsors/bronze/3-luxembourg.jpg', href: 'https://luxembourg.public.lu/' },
+    ],
+  },
+  {
+    tier: 'INSTITUTIONAL PARTNER',
+    bgColor: 'bg-white',
+    iconSrc: '',
+    logoHeight: 'h-20 md:h-24',
+    columns: 'grid-cols-1',
+    sponsors: [
+      { name: 'LuXembourg – Let\'s Make It Happen', imageSrc: '/partners/lmih.png', href: 'https://lmih.lu/en/' },
     ],
   },
   {
     tier: 'TECHNICAL',
     bgColor: 'bg-white',
-    iconSrc: '/sponsors-logo.png',
+    iconSrc: '',
     logoHeight: 'h-16 md:h-20',
     columns: 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-5',
     sponsors: [
@@ -169,14 +178,16 @@ function SponsorTierSection({ tier, bgColor, iconSrc, logoHeight, columns, spons
         {/* Header Tab */}
         <div className="relative z-10 mb-6 flex min-h-[90px] w-[90%] max-w-[500px] items-center gap-4 rounded-r-[100px] bg-[#2f566e] py-3 pr-8 pl-4 font-['Roboto',sans-serif] text-white shadow-md sm:w-[80%] sm:pl-8 md:w-[65%] lg:mb-8 lg:w-[70%]">
           {/* Header Icon */}
-          <div className="flex h-12 w-12 items-center justify-center md:h-20 md:w-20">
-            <img
-              src={`${basePath}${iconSrc}`}
-              alt=""
-              className="h-full w-full object-contain opacity-90"
-              style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
-            />
-          </div>
+          {iconSrc ? (
+            <div className="flex h-12 w-12 items-center justify-center md:h-20 md:w-20">
+              <img
+                src={`${basePath}${iconSrc}`}
+                alt=""
+                className="h-full w-full object-contain opacity-90"
+                style={{ filter: 'brightness(0) invert(1) opacity(0.8)' }}
+              />
+            </div>
+          ) : null}
 
           <h2 className="text-lg leading-tight font-semibold tracking-wide uppercase sm:text-xl md:text-2xl lg:text-[28px]">
             {tier}
