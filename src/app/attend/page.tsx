@@ -417,6 +417,140 @@ export default function AttendPage() {
         </div>
       </section> */}
 
+      {/* Good to Know Before Travelling */}
+      <section className="bg-container text-container-foreground">
+        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
+                Good to Know Before Travelling
+              </h2>
+              <div
+                className="bg-accent mt-3 h-1 w-16 rounded-full"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
+
+          <p className="mt-8 text-base leading-relaxed md:text-lg">
+            Here is some practical information to help you prepare for your trip to Luxembourg and make the most of your time at EUVIP 2026.
+          </p>
+
+          <a
+            href={`${basePath}/EUVIP_2026_Good_to_know.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent mt-6 inline-flex items-center justify-center gap-2 px-5 py-3 text-base font-bold text-white shadow-sm transition hover:opacity-90 md:text-lg"
+          >
+            Download the full guide (PDF)
+          </a>
+
+          {/* Getting to the Venue */}
+          <div className="mt-12">
+            <h3 className="text-2xl font-extrabold">Getting to the Venue</h3>
+
+            <p className="mt-4 text-base leading-relaxed md:text-lg">
+              Public transport in Luxembourg is <strong>free</strong>, including buses, trams and trains. For schedules and routes, use the{' '}
+              <a
+                href="https://www.mobiliteit.lu/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold underline"
+              >
+                Mobiliteit.lu
+              </a>{' '}
+              website or mobile application.
+            </p>
+
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
+              <div className="border-muted border p-5">
+                <h4 className="text-lg font-extrabold">From Luxembourg Central Station</h4>
+                <div className="mt-3 space-y-2 text-base leading-relaxed md:text-lg">
+                  <p><strong>By public transport:</strong> Take bus line 6 towards Kockelscheuer and get off at Alvisse. Approximate journey time: 30–35 minutes.</p>
+                  <p><strong>By taxi:</strong> Approximate journey time: 20–25 minutes. Estimated cost: €80–€100.</p>
+                </div>
+              </div>
+
+              <div className="border-muted border p-5">
+                <h4 className="text-lg font-extrabold">From Luxembourg Airport</h4>
+                <div className="mt-3 space-y-2 text-base leading-relaxed md:text-lg">
+                  <p><strong>By public transport:</strong> Take the tram from the airport to Luxembourg Central Station, then bus line 6 towards Kockelscheuer and get off at Alvisse. Approximate journey time: 45–50 minutes.</p>
+                  <p><strong>By taxi:</strong> Approximate journey time: 20–25 minutes. Estimated cost: €35–€50.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Practical Information Grid */}
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="border-muted border p-5">
+              <h4 className="text-lg font-extrabold">Weather</h4>
+              <p className="mt-2 text-base leading-relaxed md:text-lg">
+                Expect mild early-autumn weather, with temperatures typically ranging from 10°C to 17°C. Rain is possible — we recommend bringing a light waterproof jacket, umbrella and comfortable walking shoes.
+              </p>
+            </div>
+
+            <div className="border-muted border p-5">
+              <h4 className="text-lg font-extrabold">Time Zone</h4>
+              <p className="mt-2 text-base leading-relaxed md:text-lg">
+                During the conference, Luxembourg will be on Central European Summer Time — <strong>CEST</strong> (UTC+2).
+              </p>
+            </div>
+
+            <div className="border-muted border p-5">
+              <h4 className="text-lg font-extrabold">Currency</h4>
+              <p className="mt-2 text-base leading-relaxed md:text-lg">
+                The currency used in Luxembourg is the Euro (€).
+              </p>
+            </div>
+
+            <div className="border-muted border p-5">
+              <h4 className="text-lg font-extrabold">Electricity</h4>
+              <p className="mt-2 text-base leading-relaxed md:text-lg">
+                Luxembourg uses Type C and Type F plugs. The standard voltage is 230V, with a frequency of 50Hz.
+              </p>
+            </div>
+          </div>
+
+          {/* Emergency Information */}
+          <div className="border-accent bg-background mt-8 border-l-4 p-5 shadow-sm md:p-6">
+            <h4 className="text-lg font-extrabold">Emergency Information</h4>
+            <p className="mt-2 text-base leading-relaxed md:text-lg">
+              For emergencies, call <strong>112</strong>.
+            </p>
+            <p className="mt-2 text-base leading-relaxed md:text-lg">
+              Nearest hospital to Parc Alvisse Hotel: <strong>Hôpital Kirchberg</strong>, 9 Rue Edward Steichen, L-2540 Luxembourg.
+            </p>
+          </div>
+
+          {/* Accessibility & Dietary */}
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="text-2xl font-extrabold">Accessibility</h3>
+
+              <ul className="mt-4 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>Parc Alvisse Hotel offers step-free access and elevators. Conference areas and corridors are designed for comfortable access for participants with reduced mobility.</li>
+                <li>Luxembourg&apos;s buses, trams and trains are generally accessible to passengers with reduced mobility, with low-floor access, ramps, dedicated spaces and audio/visual announcements.</li>
+                <li>The boat hosting the Gala Dinner is equipped with an elevator.</li>
+                <li>If you have specific accessibility requirements, please contact the organising team before travelling at{' '}
+                  <a href="mailto:euvip2026@uni.lu" className="font-bold underline">euvip2026@uni.lu</a>.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-extrabold">Dietary Requirements</h3>
+
+              <ul className="mt-4 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
+                <li>Vegetarian and vegan options will be available during the conference.</li>
+                <li>A halal option will also be available for the Gala Dinner.</li>
+                <li>Dietary preferences, allergies and intolerances indicated during registration have been taken into account.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Visa and Travel Authorization */}
       <section className="bg-container text-container-foreground">
         <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
@@ -1038,139 +1172,6 @@ export default function AttendPage() {
         </div>
       </section>
 
-      {/* Good to Know Before Travelling */}
-      <section className="bg-container text-container-foreground">
-        <div className="mx-auto w-full max-w-7xl px-6 py-14 md:px-8 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl">
-                Good to Know Before Travelling
-              </h2>
-              <div
-                className="bg-accent mt-3 h-1 w-16 rounded-full"
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-
-          <p className="mt-8 text-base leading-relaxed md:text-lg">
-            Here is some practical information to help you prepare for your trip to Luxembourg and make the most of your time at EUVIP 2026.
-          </p>
-
-          <a
-            href={`${basePath}/EUVIP_2026_Good_to_know.pdf`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-accent mt-6 inline-flex items-center justify-center gap-2 px-5 py-3 text-base font-bold text-white shadow-sm transition hover:opacity-90 md:text-lg"
-          >
-            Download the full guide (PDF)
-          </a>
-
-          {/* Getting to the Venue */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-extrabold">Getting to the Venue</h3>
-
-            <p className="mt-4 text-base leading-relaxed md:text-lg">
-              Public transport in Luxembourg is <strong>free</strong>, including buses, trams and trains. For schedules and routes, use the{' '}
-              <a
-                href="https://www.mobiliteit.lu/"
-                target="_blank"
-                rel="noreferrer"
-                className="font-bold underline"
-              >
-                Mobiliteit.lu
-              </a>{' '}
-              website or mobile application.
-            </p>
-
-            <div className="mt-6 grid gap-6 md:grid-cols-2">
-              <div className="border-muted border p-5">
-                <h4 className="text-lg font-extrabold">From Luxembourg Central Station</h4>
-                <div className="mt-3 space-y-2 text-base leading-relaxed md:text-lg">
-                  <p><strong>By public transport:</strong> Take bus line 6 towards Kockelscheuer and get off at Alvisse. Approximate journey time: 30–35 minutes.</p>
-                  <p><strong>By taxi:</strong> Approximate journey time: 20–25 minutes. Estimated cost: €80–€100.</p>
-                </div>
-              </div>
-
-              <div className="border-muted border p-5">
-                <h4 className="text-lg font-extrabold">From Luxembourg Airport</h4>
-                <div className="mt-3 space-y-2 text-base leading-relaxed md:text-lg">
-                  <p><strong>By public transport:</strong> Take the tram from the airport to Luxembourg Central Station, then bus line 6 towards Kockelscheuer and get off at Alvisse. Approximate journey time: 45–50 minutes.</p>
-                  <p><strong>By taxi:</strong> Approximate journey time: 20–25 minutes. Estimated cost: €35–€50.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Practical Information Grid */}
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="border-muted border p-5">
-              <h4 className="text-lg font-extrabold">Weather</h4>
-              <p className="mt-2 text-base leading-relaxed md:text-lg">
-                Expect mild early-autumn weather, with temperatures typically ranging from 10°C to 17°C. Rain is possible — we recommend bringing a light waterproof jacket, umbrella and comfortable walking shoes.
-              </p>
-            </div>
-
-            <div className="border-muted border p-5">
-              <h4 className="text-lg font-extrabold">Time Zone</h4>
-              <p className="mt-2 text-base leading-relaxed md:text-lg">
-                During the conference, Luxembourg will be on Central European Summer Time — <strong>CEST</strong> (UTC+2).
-              </p>
-            </div>
-
-            <div className="border-muted border p-5">
-              <h4 className="text-lg font-extrabold">Currency</h4>
-              <p className="mt-2 text-base leading-relaxed md:text-lg">
-                The currency used in Luxembourg is the Euro (€).
-              </p>
-            </div>
-
-            <div className="border-muted border p-5">
-              <h4 className="text-lg font-extrabold">Electricity</h4>
-              <p className="mt-2 text-base leading-relaxed md:text-lg">
-                Luxembourg uses Type C and Type F plugs. The standard voltage is 230V, with a frequency of 50Hz.
-              </p>
-            </div>
-          </div>
-
-          {/* Emergency Information */}
-          <div className="border-accent bg-background mt-8 border-l-4 p-5 shadow-sm md:p-6">
-            <h4 className="text-lg font-extrabold">Emergency Information</h4>
-            <p className="mt-2 text-base leading-relaxed md:text-lg">
-              For emergencies, call <strong>112</strong>.
-            </p>
-            <p className="mt-2 text-base leading-relaxed md:text-lg">
-              Nearest hospital to Parc Alvisse Hotel: <strong>Hôpital Kirchberg</strong>, 9 Rue Edward Steichen, L-2540 Luxembourg.
-            </p>
-          </div>
-
-          {/* Accessibility & Dietary */}
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
-            <div>
-              <h3 className="text-2xl font-extrabold">Accessibility</h3>
-
-              <ul className="mt-4 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
-                <li>Parc Alvisse Hotel offers step-free access and elevators. Conference areas and corridors are designed for comfortable access for participants with reduced mobility.</li>
-                <li>Luxembourg&apos;s buses, trams and trains are generally accessible to passengers with reduced mobility, with low-floor access, ramps, dedicated spaces and audio/visual announcements.</li>
-                <li>The boat hosting the Gala Dinner is equipped with an elevator.</li>
-                <li>If you have specific accessibility requirements, please contact the organising team before travelling at{' '}
-                  <a href="mailto:euvip2026@uni.lu" className="font-bold underline">euvip2026@uni.lu</a>.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-extrabold">Dietary Requirements</h3>
-
-              <ul className="mt-4 list-disc space-y-3 pl-6 text-base leading-relaxed marker:text-[#2f566e] md:text-lg">
-                <li>Vegetarian and vegan options will be available during the conference.</li>
-                <li>A halal option will also be available for the Gala Dinner.</li>
-                <li>Dietary preferences, allergies and intolerances indicated during registration have been taken into account.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
