@@ -1144,37 +1144,6 @@ export default function AttendPage() {
             </p>
           </div>
 
-          {/* Social & Networking Events */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-extrabold">Social &amp; Networking Events</h3>
-
-            <div className="mt-6 grid gap-6 md:grid-cols-3">
-              <div className="border-muted border p-5">
-                <h4 className="text-lg font-extrabold">Luxembourg Guided Tour</h4>
-                <p className="mt-1 text-sm font-semibold opacity-75">28 September 2026 | 14:00–16:00</p>
-                <p className="mt-3 text-base leading-relaxed md:text-lg">
-                  Discover Luxembourg City&apos;s upper town and UNESCO-listed old town with an official guide, including the Grand Ducal Palace, the Corniche, historic fortifications and panoramic viewpoints.
-                </p>
-              </div>
-
-              <div className="border-muted border p-5">
-                <h4 className="text-lg font-extrabold">Welcome Drink</h4>
-                <p className="mt-1 text-sm font-semibold opacity-75">28 September 2026 | From 18:00</p>
-                <p className="mt-3 text-base leading-relaxed md:text-lg">
-                  The Welcome Drink will take place at Neimënster, located in Luxembourg City&apos;s historic Grund district. Originally known as Neumünster Abbey, it is one of the city&apos;s most important historic landmarks, at the foot of the Bock cliffs.
-                </p>
-              </div>
-
-              <div className="border-muted border p-5">
-                <h4 className="text-lg font-extrabold">Gala Dinner Cruise</h4>
-                <p className="mt-1 text-sm font-semibold opacity-75">30 September 2026</p>
-                <p className="mt-3 text-base leading-relaxed md:text-lg">
-                  The Gala Dinner will take place aboard the MS Princesse Marie-Astrid on the Moselle River. Round-trip transportation will be provided by bus. Departure from Parc Alvisse Hotel at approximately 18:30, return at approximately 23:30.
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Accessibility & Dietary */}
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             <div>
