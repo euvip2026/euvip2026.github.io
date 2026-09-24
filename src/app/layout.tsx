@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     template: '%s | EUVIP 2026',
   },
   description: 'EUVIP 2026 conference in Luxembourg.',
+  icons: {
+    icon: '/favicon.svg',
+  },
   alternates: {
     canonical: '/',
   },
