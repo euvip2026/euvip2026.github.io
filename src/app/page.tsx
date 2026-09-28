@@ -118,6 +118,26 @@ export default function Home() {
             <div className="border-muted/60 bg-primary border p-6 text-white shadow-sm inset-shadow-sm">
               <ul className="space-y-4">
 
+                {/* Full Programme */}
+                <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
+                  <div className="flex min-w-0 flex-1 gap-3 text-lg">
+                    <span className="mt-2.5 h-2.5 w-2.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
+                    <div className="min-w-0 flex-1">
+                      <p>
+                        <strong className="text-xl">September 28:</strong> The full conference programme is now available.{' '}
+                        <a
+                          href={`${basePath}/EUVIP2026_Main_Conference_Programme.pdf`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold underline decoration-white/50 underline-offset-4 transition hover:decoration-white"
+                        >
+                          Download the Main Conference Programme (PDF)
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
                 {/* LMIH */}
                 <li className="rounded-xl border border-white/20 bg-white/5 p-5 shadow-sm">
                   <div className="flex flex-col items-start gap-5 sm:flex-row">
