@@ -127,6 +127,7 @@ function buildTimeline(days: ScheduleDay[]) {
 export default function SchedulePage() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
   const pdfUrl = `${basePath}/EUVIP2026_Program_summary_final_version.pdf`
+  const fullProgramPdfUrl = `${basePath}/EUVIP2026_Main_Conference_Programme.pdf`
   const timeline = buildTimeline(schedule.days)
 
   return (
@@ -156,13 +157,23 @@ export default function SchedulePage() {
             <p className="text-container-foreground text-base leading-relaxed md:text-lg">
               The conference programme is available below. All times are shown in local time (Luxembourg).
             </p>
-            <a
-              href={pdfUrl}
-              download="EUVIP2026_Program_summary_final_version.pdf"
-              className="bg-primary text-primary-foreground inline-flex shrink-0 items-center justify-center px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90"
-            >
-              Download programme (PDF)
-            </a>
+            <div className="flex shrink-0 gap-3">
+              <a
+                href={fullProgramPdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground inline-flex shrink-0 items-center justify-center px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90"
+              >
+                Full programme (PDF)
+              </a>
+              <a
+                href={pdfUrl}
+                download="EUVIP2026_Program_summary_final_version.pdf"
+                className="bg-primary/80 text-primary-foreground inline-flex shrink-0 items-center justify-center px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-90"
+              >
+                Programme summary (PDF)
+              </a>
+            </div>
           </div>
           <nav className="mt-6 flex gap-3" aria-label="Programme sections">
             <a
